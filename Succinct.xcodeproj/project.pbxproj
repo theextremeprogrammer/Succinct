@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
-		522D99981FAD2A9D009BB1B9 /* SuccinctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99971FAD2A9D009BB1B9 /* SuccinctTests.swift */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		522D99A51FAD2AF6009BB1B9 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIViewExtensions.swift */; };
+		522D99AA1FAD2B25009BB1B9 /* UIViewExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A91FAD2B25009BB1B9 /* UIViewExtensionsTest.swift */; };
+		522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */; };
+		522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */; };
+		522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +31,12 @@
 		522D998C1FAD2A9C009BB1B9 /* Succinct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Succinct.h; sourceTree = "<group>"; };
 		522D998D1FAD2A9C009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		522D99921FAD2A9D009BB1B9 /* SuccinctTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuccinctTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		522D99971FAD2A9D009BB1B9 /* SuccinctTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccinctTests.swift; sourceTree = "<group>"; };
 		522D99991FAD2A9D009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522D99A41FAD2AF6009BB1B9 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		522D99A91FAD2B25009BB1B9 /* UIViewExtensionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTest.swift; sourceTree = "<group>"; };
+		522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerBuilder.swift; sourceTree = "<group>"; };
+		522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBuilder.swift; sourceTree = "<group>"; };
+		522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		522D998B1FAD2A9C009BB1B9 /* Succinct */ = {
 			isa = PBXGroup;
 			children = (
+				522D99A31FAD2ADA009BB1B9 /* UIView */,
 				522D998C1FAD2A9C009BB1B9 /* Succinct.h */,
 				522D998D1FAD2A9C009BB1B9 /* Info.plist */,
 			);
@@ -80,10 +89,37 @@
 		522D99961FAD2A9D009BB1B9 /* SuccinctTests */ = {
 			isa = PBXGroup;
 			children = (
-				522D99971FAD2A9D009BB1B9 /* SuccinctTests.swift */,
+				522D99AD1FAD2CEE009BB1B9 /* Builders */,
 				522D99991FAD2A9D009BB1B9 /* Info.plist */,
+				522D99A61FAD2B09009BB1B9 /* UIView */,
 			);
 			path = SuccinctTests;
+			sourceTree = "<group>";
+		};
+		522D99A31FAD2ADA009BB1B9 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				522D99A41FAD2AF6009BB1B9 /* UIViewExtensions.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		522D99A61FAD2B09009BB1B9 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				522D99A91FAD2B25009BB1B9 /* UIViewExtensionsTest.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		522D99AD1FAD2CEE009BB1B9 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
+				522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */,
+				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +184,7 @@
 				TargetAttributes = {
 					522D99881FAD2A9C009BB1B9 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					522D99911FAD2A9D009BB1B9 = {
@@ -196,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522D99A51FAD2AF6009BB1B9 /* UIViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522D99981FAD2A9D009BB1B9 /* SuccinctTests.swift in Sources */,
+				522D99AA1FAD2B25009BB1B9 /* UIViewExtensionsTest.swift in Sources */,
+				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
+				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
+				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +375,7 @@
 		522D999E1FAD2A9D009BB1B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +398,7 @@
 		522D999F1FAD2A9D009BB1B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +420,7 @@
 		522D99A11FAD2A9D009BB1B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LFKG3J295;
 				INFOPLIST_FILE = SuccinctTests/Info.plist;
@@ -390,6 +435,7 @@
 		522D99A21FAD2A9D009BB1B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LFKG3J295;
 				INFOPLIST_FILE = SuccinctTests/Info.plist;
