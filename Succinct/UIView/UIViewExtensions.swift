@@ -10,8 +10,7 @@ extension UIView {
             }
 
             if (subview.subviews.count > 0) {
-                let maybeButton = subview.findButton(withText: searchText)
-                if let button = maybeButton {
+                if let button = subview.findButton(withText: searchText) {
                     return button
                 }
             }
