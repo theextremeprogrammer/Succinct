@@ -18,6 +18,7 @@
 		525FF7DB203252C6007AE6C8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; };
 		525FF7DC203252D4007AE6C8 /* Nimble.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525FF7DD203252D4007AE6C8 /* Quick.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBuilder.swift; sourceTree = "<group>"; };
 		525FF7D8203252C6007AE6C8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		525FF7D9203252C6007AE6C8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */,
+				525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */,
 				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
 				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
 			);
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
+				525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */,
 				522D99AA1FAD2B25009BB1B9 /* UIView+FindUIKitObject.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
