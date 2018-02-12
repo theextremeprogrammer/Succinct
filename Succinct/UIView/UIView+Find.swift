@@ -1,21 +1,11 @@
 import UIKit
 
+// MARK: - UIButton
 extension UIView {
     func findButton(withText searchText: String) -> UIButton? {
-        for subview in subviews {
-            if let button = subview as? UIButton {
-                if (button.titleLabel?.text == searchText) {
-                    return button
-                }
-            }
-
-            if (subview.subviews.count > 0) {
-                if let button = subview.findButton(withText: searchText) {
-                    return button
-                }
-            }
-        }
-
-        return nil
+        return subviews
+            .flatMap { $0 as? UIButton ?? $0.findButton(withText: searchText) }
+            .filter { $0.titleLabel?.text == searchText }
+            .first
     }
 }
