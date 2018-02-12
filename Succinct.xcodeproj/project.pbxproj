@@ -72,8 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				525FF7DA203252C6007AE6C8 /* Quick.framework in Frameworks */,
 				525FF7DB203252C6007AE6C8 /* Nimble.framework in Frameworks */,
+				525FF7DA203252C6007AE6C8 /* Quick.framework in Frameworks */,
 				522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,10 +84,10 @@
 		522D997F1FAD2A9C009BB1B9 = {
 			isa = PBXGroup;
 			children = (
+				525FF7D7203252C5007AE6C8 /* Frameworks */,
+				522D998A1FAD2A9C009BB1B9 /* Products */,
 				522D998B1FAD2A9C009BB1B9 /* Succinct */,
 				522D99961FAD2A9D009BB1B9 /* SuccinctTests */,
-				522D998A1FAD2A9C009BB1B9 /* Products */,
-				525FF7D7203252C5007AE6C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				522D99A31FAD2ADA009BB1B9 /* UIView */,
-				522D998C1FAD2A9C009BB1B9 /* Succinct.h */,
 				522D998D1FAD2A9C009BB1B9 /* Info.plist */,
+				522D998C1FAD2A9C009BB1B9 /* Succinct.h */,
 			);
 			path = Succinct;
 			sourceTree = "<group>";
@@ -114,8 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				522D99AD1FAD2CEE009BB1B9 /* Builders */,
-				522D99991FAD2A9D009BB1B9 /* Info.plist */,
 				522D99A61FAD2B09009BB1B9 /* UIView */,
+				522D99991FAD2A9D009BB1B9 /* Info.plist */,
 			);
 			path = SuccinctTests;
 			sourceTree = "<group>";
@@ -139,9 +139,9 @@
 		522D99AD1FAD2CEE009BB1B9 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
-				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
 				522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */,
 				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
+				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -275,10 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522D99AA1FAD2B25009BB1B9 /* UIViewExtensionsTest.swift in Sources */,
-				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
-				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
+				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
+				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
+				522D99AA1FAD2B25009BB1B9 /* UIViewExtensionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
