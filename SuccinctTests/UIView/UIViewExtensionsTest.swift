@@ -16,8 +16,8 @@ class UIViewExtensionsSpec: QuickSpec {
                 let result = viewController.view.findButton(withText: "Login")
 
 
-                XCTAssertNotNil(result)
-                XCTAssertEqual(result?.titleLabel?.text, "Login")
+                expect(result).toNot(beNil())
+                expect(result?.titleLabel?.text).to(equal("Login"))
             }
 
             it("can find a button when it exists in the second subview") {
@@ -35,8 +35,8 @@ class UIViewExtensionsSpec: QuickSpec {
                 let result = viewController.view.findButton(withText: "Login")
 
 
-                XCTAssertNotNil(result)
-                XCTAssertEqual(result?.titleLabel?.text, "Login")
+                expect(result).toNot(beNil())
+                expect(result?.titleLabel?.text).to(equal("Login"))
             }
         }
     }
