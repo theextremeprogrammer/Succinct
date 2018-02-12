@@ -22,4 +22,11 @@ extension UIView {
     func hasLabel(withExactText searchText: String) -> Bool {
         return findLabel(withExactText: searchText) != nil
     }
+
+    func findLabel(containingText searchText: String) -> UILabel? {
+        return subviews
+            .flatMap { $0 as? UILabel ?? $0.findLabel(containingText: searchText) }
+            .filter { $0.text?.contains(searchText) ?? false }
+            .first
+    }
 }

@@ -149,5 +149,59 @@ class UIView_FindUIKitObjectSpec: QuickSpec {
                 }
             }
         }
+
+        describe("finding labels by containing text") {
+            context("when a label exists in the first subview") {
+                it("can find a label whose text contains the search text") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().withTitleText("Username:").build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.findLabel(containingText: "Username")
+
+
+                    expect(result).toNot(beNil())
+                    expect(result?.text).to(equal("Username:"))
+                }
+
+                it("cannot find a label whose text does not contain the search text") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().withTitleText("Username:").build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.findLabel(containingText: "ABCD")
+
+
+                    expect(result).to(beNil())
+                }
+            }
+
+            context("when a label exists in the second subview") {
+                it("can find a label whose text contains the search text") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UILabelBuilder().withTitleText("Username:").build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.findLabel(containingText: "Username")
+
+
+                    expect(result).toNot(beNil())
+                    expect(result?.text).to(equal("Username:"))
+                }
+            }
+        }
     }
 }
