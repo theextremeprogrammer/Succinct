@@ -6,37 +6,41 @@ import Nimble
 class UIView_FindUIKitObjectSpec: QuickSpec {
     override func spec() {
         describe("finding buttons") {
-            it("can find a button when it exists in the first subview") {
-                let viewController = UIViewControllerBuilder()
-                    .withSubview(
-                        UIButtonBuilder().withTitleText("Login").build())
-                    .build()
+            context("when a button exists in the first subview") {
+                it("can find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIButtonBuilder().withTitleText("Login").build())
+                        .build()
 
 
-                let result = viewController.view.findButton(withText: "Login")
+                    let result = viewController.view.findButton(withText: "Login")
 
 
-                expect(result).toNot(beNil())
-                expect(result?.titleLabel?.text).to(equal("Login"))
+                    expect(result).toNot(beNil())
+                    expect(result?.titleLabel?.text).to(equal("Login"))
+                }
             }
 
-            it("can find a button when it exists in the second subview") {
-                let viewController = UIViewControllerBuilder()
-                    .withSubview(
-                        UIViewBuilder()
-                            .withSubview(
-                                UIButtonBuilder().withTitleText("Login").build()
-                            )
-                            .build()
-                    )
-                    .build()
+            context("when a button exists in the second subview") {
+                it("can find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UIButtonBuilder().withTitleText("Login").build()
+                                )
+                                .build()
+                        )
+                        .build()
 
 
-                let result = viewController.view.findButton(withText: "Login")
+                    let result = viewController.view.findButton(withText: "Login")
 
 
-                expect(result).toNot(beNil())
-                expect(result?.titleLabel?.text).to(equal("Login"))
+                    expect(result).toNot(beNil())
+                    expect(result?.titleLabel?.text).to(equal("Login"))
+                }
             }
         }
     }
