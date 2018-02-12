@@ -19,6 +19,7 @@
 		525FF7DC203252D4007AE6C8 /* Nimble.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525FF7DD203252D4007AE6C8 /* Quick.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
+		525FF7E320325FC5007AE6C8 /* Optional+NilCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7E220325FC5007AE6C8 /* Optional+NilCheck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		525FF7D8203252C6007AE6C8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		525FF7D9203252C6007AE6C8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
+		525FF7E220325FC5007AE6C8 /* Optional+NilCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheck.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				522D99A31FAD2ADA009BB1B9 /* UIView */,
 				522D998D1FAD2A9C009BB1B9 /* Info.plist */,
+				525FF7E220325FC5007AE6C8 /* Optional+NilCheck.swift */,
 				522D998C1FAD2A9C009BB1B9 /* Succinct.h */,
 			);
 			path = Succinct;
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525FF7E320325FC5007AE6C8 /* Optional+NilCheck.swift in Sources */,
 				522D99A51FAD2AF6009BB1B9 /* UIView+FindUIKitObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,7 +20,7 @@ extension UIView {
     }
 
     func hasLabel(withExactText searchText: String) -> Bool {
-        return findLabel(withExactText: searchText) != nil
+        return findLabel(withExactText: searchText).isNotNil()
     }
 
     func findLabel(containingText searchText: String) -> UILabel? {
@@ -31,6 +31,6 @@ extension UIView {
     }
 
     func hasLabel(containingText searchText: String) -> Bool {
-        return findLabel(containingText: searchText) != nil
+        return findLabel(containingText: searchText).isNotNil()
     }
 }
