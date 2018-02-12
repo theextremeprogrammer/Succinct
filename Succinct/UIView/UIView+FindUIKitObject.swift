@@ -29,4 +29,8 @@ extension UIView {
             .filter { $0.text?.contains(searchText) ?? false }
             .first
     }
+
+    func hasLabel(containingText searchText: String) -> Bool {
+        return findLabel(containingText: searchText) != nil
+    }
 }

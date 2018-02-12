@@ -203,5 +203,57 @@ class UIView_FindUIKitObjectSpec: QuickSpec {
                 }
             }
         }
+
+        describe("has label by containing text") {
+            context("when a label exists in the first subview") {
+                it("can find a label whose text contains the search text") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().withTitleText("Username:").build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.hasLabel(containingText: "Username")
+
+
+                    expect(result).to(beTrue())
+                }
+
+                it("cannot find a label whose text does not contain the search text") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().withTitleText("Username:").build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.hasLabel(containingText: "ABCD")
+
+
+                    expect(result).to(beFalse())
+                }
+            }
+
+            context("when a label exists in the second subview") {
+                it("can find a label whose text contains the search text") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UILabelBuilder().withTitleText("Username:").build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.hasLabel(containingText: "Username")
+
+
+                    expect(result).to(beTrue())
+                }
+            }
+        }
     }
 }
