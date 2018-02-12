@@ -2,9 +2,9 @@ import UIKit
 
 // MARK: - UIButton
 extension UIView {
-    func findButton(withText searchText: String) -> UIButton? {
+    func findButton(withExactText searchText: String) -> UIButton? {
         return subviews
-            .flatMap { $0 as? UIButton ?? $0.findButton(withText: searchText) }
+            .flatMap { $0 as? UIButton ?? $0.findButton(withExactText: searchText) }
             .filter { $0.titleLabel?.text == searchText }
             .first
     }

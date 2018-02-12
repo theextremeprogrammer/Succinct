@@ -14,7 +14,7 @@ class UIView_FindUIKitObjectSpec: QuickSpec {
                         .build()
 
 
-                    let result = viewController.view.findButton(withText: "Login")
+                    let result = viewController.view.findButton(withExactText: "Login")
 
 
                     expect(result).toNot(beNil())
@@ -35,7 +35,7 @@ class UIView_FindUIKitObjectSpec: QuickSpec {
                         .build()
 
 
-                    let result = viewController.view.findButton(withText: "Login")
+                    let result = viewController.view.findButton(withExactText: "Login")
 
 
                     expect(result).toNot(beNil())
