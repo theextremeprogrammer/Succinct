@@ -3,7 +3,7 @@ import Quick
 import Nimble
 @testable import Succinct
 
-class UIViewExtensionsSpec: QuickSpec {
+class UIView_FindUIKitObjectSpec: QuickSpec {
     override func spec() {
         describe("finding buttons") {
             it("can find a button when it exists in the first subview") {
