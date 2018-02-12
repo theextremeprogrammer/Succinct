@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		522D99A51FAD2AF6009BB1B9 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIViewExtensions.swift */; };
+		522D99A51FAD2AF6009BB1B9 /* UIView+Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+Find.swift */; };
 		522D99AA1FAD2B25009BB1B9 /* UIViewExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A91FAD2B25009BB1B9 /* UIViewExtensionsTest.swift */; };
 		522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */; };
 		522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */; };
@@ -51,7 +51,7 @@
 		522D998D1FAD2A9C009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		522D99921FAD2A9D009BB1B9 /* SuccinctTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuccinctTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D99991FAD2A9D009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		522D99A41FAD2AF6009BB1B9 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		522D99A41FAD2AF6009BB1B9 /* UIView+Find.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Find.swift"; sourceTree = "<group>"; };
 		522D99A91FAD2B25009BB1B9 /* UIViewExtensionsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionsTest.swift; sourceTree = "<group>"; };
 		522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerBuilder.swift; sourceTree = "<group>"; };
 		522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBuilder.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		522D99A31FAD2ADA009BB1B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				522D99A41FAD2AF6009BB1B9 /* UIViewExtensions.swift */,
+				522D99A41FAD2AF6009BB1B9 /* UIView+Find.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522D99A51FAD2AF6009BB1B9 /* UIViewExtensions.swift in Sources */,
+				522D99A51FAD2AF6009BB1B9 /* UIView+Find.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
