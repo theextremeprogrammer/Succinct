@@ -10,7 +10,7 @@ extension UIView {
     }
 }
 
-// MARK: - Labels
+// MARK: - Finding UILabels
 extension UIView {
     func findLabel(withExactText searchText: String) -> UILabel? {
         return subviews
@@ -19,15 +19,18 @@ extension UIView {
             .first
     }
 
-    func hasLabel(withExactText searchText: String) -> Bool {
-        return findLabel(withExactText: searchText).isNotNil()
-    }
-
     func findLabel(containingText searchText: String) -> UILabel? {
         return subviews
             .flatMap { $0 as? UILabel ?? $0.findLabel(containingText: searchText) }
             .filter { $0.text?.contains(searchText) ?? false }
             .first
+    }
+}
+
+// MARK: - Has UILabels
+extension UIView {
+    func hasLabel(withExactText searchText: String) -> Bool {
+        return findLabel(withExactText: searchText).isNotNil()
     }
 
     func hasLabel(containingText searchText: String) -> Bool {
