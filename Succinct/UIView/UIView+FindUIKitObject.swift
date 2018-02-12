@@ -18,4 +18,8 @@ extension UIView {
             .filter { $0.text == searchText }
             .first
     }
+
+    func hasLabel(withExactText searchText: String) -> Bool {
+        return findLabel(withExactText: searchText) != nil
+    }
 }

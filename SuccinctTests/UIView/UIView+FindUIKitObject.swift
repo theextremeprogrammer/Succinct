@@ -97,5 +97,57 @@ class UIView_FindUIKitObjectSpec: QuickSpec {
                 }
             }
         }
+
+        describe("has label by exact text") {
+            context("when a label exists in the first subview") {
+                it("can find a label whose text matches exactly") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().withTitleText("Username:").build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.hasLabel(withExactText: "Username:")
+
+
+                    expect(result).to(beTrue())
+                }
+
+                it("cannot find a label whose text does not match exactly") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().withTitleText("Username:").build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.hasLabel(withExactText: "Username")
+
+
+                    expect(result).to(beFalse())
+                }
+            }
+
+            context("when a label exists in the second subview") {
+                it("can find a label whose text matches exactly") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UILabelBuilder().withTitleText("Username:").build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    let result = viewController.view.hasLabel(withExactText: "Username:")
+
+
+                    expect(result).to(beTrue())
+                }
+            }
+        }
     }
 }
