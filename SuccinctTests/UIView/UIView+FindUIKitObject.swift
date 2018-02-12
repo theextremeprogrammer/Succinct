@@ -54,10 +54,11 @@ class UIView_FindUIKitObjectSpec: QuickSpec {
                         .build()
 
 
-                    let result = viewController.view.hasLabel(withExactText: "Username:")
+                    let result = viewController.view.findLabel(withExactText: "Username:")
 
 
-                    expect(result).to(beTrue())
+                    expect(result).toNot(beNil())
+                    expect(result?.text).to(equal("Username:"))
                 }
 
                 it("cannot find a label whose text does not match exactly") {
@@ -68,10 +69,10 @@ class UIView_FindUIKitObjectSpec: QuickSpec {
                         .build()
 
 
-                    let result = viewController.view.hasLabel(withExactText: "Username")
+                    let result = viewController.view.findLabel(withExactText: "Username")
 
 
-                    expect(result).to(beFalse())
+                    expect(result).to(beNil())
                 }
             }
 
@@ -88,10 +89,11 @@ class UIView_FindUIKitObjectSpec: QuickSpec {
                         .build()
 
 
-                    let result = viewController.view.hasLabel(withExactText: "Username:")
+                    let result = viewController.view.findLabel(withExactText: "Username:")
 
 
-                    expect(result).to(beTrue())
+                    expect(result).toNot(beNil())
+                    expect(result?.text).to(equal("Username:"))
                 }
             }
         }
