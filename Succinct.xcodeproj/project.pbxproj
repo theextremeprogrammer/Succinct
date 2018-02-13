@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B14EBBE19590BBB175D5C2A /* UIView+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EC1F0D5DF6E932BFDCB5 /* UIView+UILabelSpec.swift */; };
+		3B14EEB6848544CF2CD93037 /* UIView+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */; };
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		522D99A51FAD2AF6009BB1B9 /* UIView+FindUIKitObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+FindUIKitObject.swift */; };
-		522D99AA1FAD2B25009BB1B9 /* UIView+FindUIKitObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A91FAD2B25009BB1B9 /* UIView+FindUIKitObject.swift */; };
+		522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */; };
+		522D99AA1FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A91FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift */; };
 		522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */; };
 		522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */; };
 		522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */; };
@@ -48,13 +50,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UILabel.swift"; sourceTree = "<group>"; };
+		3B14EC1F0D5DF6E932BFDCB5 /* UIView+UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UILabelSpec.swift"; sourceTree = "<group>"; };
 		522D99891FAD2A9C009BB1B9 /* Succinct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Succinct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D998C1FAD2A9C009BB1B9 /* Succinct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Succinct.h; sourceTree = "<group>"; };
 		522D998D1FAD2A9C009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		522D99921FAD2A9D009BB1B9 /* SuccinctTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuccinctTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D99991FAD2A9D009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		522D99A41FAD2AF6009BB1B9 /* UIView+FindUIKitObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindUIKitObject.swift"; sourceTree = "<group>"; };
-		522D99A91FAD2B25009BB1B9 /* UIView+FindUIKitObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FindUIKitObject.swift"; sourceTree = "<group>"; };
+		522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIButton.swift"; sourceTree = "<group>"; };
+		522D99A91FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerBuilder.swift; sourceTree = "<group>"; };
 		522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBuilder.swift; sourceTree = "<group>"; };
 		522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBuilder.swift; sourceTree = "<group>"; };
@@ -128,7 +132,8 @@
 		522D99A31FAD2ADA009BB1B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				522D99A41FAD2AF6009BB1B9 /* UIView+FindUIKitObject.swift */,
+				522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */,
+				3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -136,7 +141,8 @@
 		522D99A61FAD2B09009BB1B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				522D99A91FAD2B25009BB1B9 /* UIView+FindUIKitObject.swift */,
+				522D99A91FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift */,
+				3B14EC1F0D5DF6E932BFDCB5 /* UIView+UILabelSpec.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -274,7 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				525FF7E320325FC5007AE6C8 /* Optional+NilCheck.swift in Sources */,
-				522D99A51FAD2AF6009BB1B9 /* UIView+FindUIKitObject.swift in Sources */,
+				522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */,
+				3B14EEB6848544CF2CD93037 /* UIView+UILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +291,8 @@
 			files = (
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
 				525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */,
-				522D99AA1FAD2B25009BB1B9 /* UIView+FindUIKitObject.swift in Sources */,
+				522D99AA1FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift in Sources */,
+				3B14EBBE19590BBB175D5C2A /* UIView+UILabelSpec.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
 			);
