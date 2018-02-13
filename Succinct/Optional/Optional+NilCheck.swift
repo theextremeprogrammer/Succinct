@@ -1,9 +1,9 @@
 extension Optional {
-    func isNil() -> Bool {
+    public func isNil() -> Bool {
         return self == nil
     }
 
-    func isNotNil() -> Bool {
+    public func isNotNil() -> Bool {
         return self != nil
     }
 }

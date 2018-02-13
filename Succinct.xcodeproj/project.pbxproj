@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E2376D3AE2A0B051C507 /* Optional+NilCheck.swift */; };
 		3B14EBBE19590BBB175D5C2A /* UIView+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EC1F0D5DF6E932BFDCB5 /* UIView+UILabelSpec.swift */; };
 		3B14EEB6848544CF2CD93037 /* UIView+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */; };
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
@@ -21,7 +22,7 @@
 		525FF7DC203252D4007AE6C8 /* Nimble.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525FF7DD203252D4007AE6C8 /* Quick.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
-		525FF7E320325FC5007AE6C8 /* Optional+NilCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7E220325FC5007AE6C8 /* Optional+NilCheck.swift */; };
+		525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B14E2376D3AE2A0B051C507 /* Optional+NilCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheck.swift"; sourceTree = "<group>"; };
 		3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UILabel.swift"; sourceTree = "<group>"; };
 		3B14EC1F0D5DF6E932BFDCB5 /* UIView+UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UILabelSpec.swift"; sourceTree = "<group>"; };
 		522D99891FAD2A9C009BB1B9 /* Succinct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Succinct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +67,7 @@
 		525FF7D8203252C6007AE6C8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		525FF7D9203252C6007AE6C8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
-		525FF7E220325FC5007AE6C8 /* Optional+NilCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheck.swift"; sourceTree = "<group>"; };
+		525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheckSpec.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +113,9 @@
 		522D998B1FAD2A9C009BB1B9 /* Succinct */ = {
 			isa = PBXGroup;
 			children = (
+				525FF7ED20331DBD007AE6C8 /* Optional */,
 				522D99A31FAD2ADA009BB1B9 /* UIView */,
 				522D998D1FAD2A9C009BB1B9 /* Info.plist */,
-				525FF7E220325FC5007AE6C8 /* Optional+NilCheck.swift */,
 				522D998C1FAD2A9C009BB1B9 /* Succinct.h */,
 			);
 			path = Succinct;
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				522D99AD1FAD2CEE009BB1B9 /* Builders */,
+				525FF7EE20331DD7007AE6C8 /* Optional */,
 				522D99A61FAD2B09009BB1B9 /* UIView */,
 				522D99991FAD2A9D009BB1B9 /* Info.plist */,
 			);
@@ -165,6 +168,22 @@
 				525FF7D8203252C6007AE6C8 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		525FF7ED20331DBD007AE6C8 /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				3B14E2376D3AE2A0B051C507 /* Optional+NilCheck.swift */,
+			);
+			path = Optional;
+			sourceTree = "<group>";
+		};
+		525FF7EE20331DD7007AE6C8 /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */,
+			);
+			path = Optional;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				525FF7E320325FC5007AE6C8 /* Optional+NilCheck.swift in Sources */,
+				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
 				522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */,
 				3B14EEB6848544CF2CD93037 /* UIView+UILabel.swift in Sources */,
 			);
@@ -289,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
 				525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */,
 				522D99AA1FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift in Sources */,
