@@ -1,7 +1,7 @@
 import XCTest
 import Quick
 import Nimble
-@testable import Succinct
+import Succinct
 
 class UIView_FindUIKitObjectSpec: QuickSpec {
     override func spec() {
