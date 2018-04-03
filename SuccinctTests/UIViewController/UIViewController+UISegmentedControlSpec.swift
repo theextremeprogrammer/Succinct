@@ -3,7 +3,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UIView_UISegmentedControlSpec: QuickSpec {
+class UIViewController_UISegmentedControlSpec: QuickSpec {
     override func spec() {
         describe("finding selected segment by exact text") {
             context("when a segmented control exists in the first subview") {
@@ -22,15 +22,15 @@ class UIView_UISegmentedControlSpec: QuickSpec {
                 }
 
                 it("returns true for a segment whose text matches exactly and is selected") {
-                    expect(viewController.hasSegmentedControlSelected(withExactText: "DEF")).to(beTrue())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "DEF")).to(beTrue())
                 }
 
                 it("returns false for a segment whose text matches exactly and is not selected") {
-                    expect(viewController.hasSegmentedControlSelected(withExactText: "ABC")).to(beFalse())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "ABC")).to(beFalse())
                 }
 
                 it("returns false for a segmented control when the text is not found") {
-                    expect(viewController.hasSegmentedControlSelected(withExactText: "XYZ")).to(beFalse())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "XYZ")).to(beFalse())
                 }
             }
 
@@ -54,15 +54,15 @@ class UIView_UISegmentedControlSpec: QuickSpec {
                 }
 
                 it("returns true for a segment whose text matches exactly and is selected") {
-                    expect(viewController.hasSegmentedControlSelected(withExactText: "DEF")).to(beTrue())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "DEF")).to(beTrue())
                 }
 
                 it("returns false for a segment whose text matches exactly and is not selected") {
-                    expect(viewController.hasSegmentedControlSelected(withExactText: "ABC")).to(beFalse())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "ABC")).to(beFalse())
                 }
 
                 it("returns false for a segmented control when the text is not found") {
-                    expect(viewController.hasSegmentedControlSelected(withExactText: "XYZ")).to(beFalse())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "XYZ")).to(beFalse())
                 }
             }
         }

@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView {
-    public func hasSegmentedControlSelected(withExactText searchText: String) -> Bool {
+    public func hasSegmentedControlSegmentSelected(withExactText searchText: String) -> Bool {
         for subview in subviews {
             if let segmentedControl = subview as? UISegmentedControl {
                 let selectedSegmentIndex = segmentedControl.selectedSegmentIndex
@@ -14,7 +14,7 @@ extension UIView {
                     }
                 }
             } else if subview.subviews.count > 0 {
-                if subview.hasSegmentedControlSelected(withExactText: searchText) {
+                if subview.hasSegmentedControlSegmentSelected(withExactText: searchText) {
                     return true
                 }
             }

@@ -12,6 +12,7 @@
 		3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EA94F94F4C40DB2C604D /* UIButton+Tap.swift */; };
 		3B14E5701AAF98B39C2E6791 /* UIView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E6688347C8F6D067590C /* UIView+UIView.swift */; };
 		3B14E6207FE400CF70CE5A1F /* UISlider+SetValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EB571F0977180CC3EB04 /* UISlider+SetValue.swift */; };
+		3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E0531A59BD80586AFF4E /* UIViewController+UISegmentedControlSpec.swift */; };
 		3B14EBBE19590BBB175D5C2A /* UIView+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EC1F0D5DF6E932BFDCB5 /* UIView+UILabelSpec.swift */; };
 		3B14EDC64BD0D4315A13C89C /* UIViewController+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E7673EACFC681FC9485B /* UIViewController+Testing.swift */; };
 		3B14EE0A47F5AE484EE47FA2 /* UIView+UISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E053556933C8E8A707E6 /* UIView+UISlider.swift */; };
@@ -25,7 +26,6 @@
 		522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */; };
 		522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */; };
 		522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */; };
-		524D6F962072F76F004C9B34 /* UIView+UISegmentedControlSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D6F952072F76F004C9B34 /* UIView+UISegmentedControlSpec.swift */; };
 		524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */; };
 		525FF7DA203252C6007AE6C8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; };
 		525FF7DB203252C6007AE6C8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; };
@@ -62,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B14E0531A59BD80586AFF4E /* UIViewController+UISegmentedControlSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISegmentedControlSpec.swift"; sourceTree = "<group>"; };
 		3B14E053556933C8E8A707E6 /* UIView+UISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UISlider.swift"; sourceTree = "<group>"; };
 		3B14E2376D3AE2A0B051C507 /* Optional+NilCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheck.swift"; sourceTree = "<group>"; };
 		3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UILabel.swift"; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerBuilder.swift; sourceTree = "<group>"; };
 		522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBuilder.swift; sourceTree = "<group>"; };
 		522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBuilder.swift; sourceTree = "<group>"; };
-		524D6F952072F76F004C9B34 /* UIView+UISegmentedControlSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControlSpec.swift"; sourceTree = "<group>"; };
 		525FF7D8203252C6007AE6C8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		525FF7D9203252C6007AE6C8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
@@ -178,7 +178,6 @@
 			children = (
 				522D99A91FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift */,
 				3B14EC1F0D5DF6E932BFDCB5 /* UIView+UILabelSpec.swift */,
-				524D6F952072F76F004C9B34 /* UIView+UISegmentedControlSpec.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -223,6 +222,7 @@
 		52AAB3852072F1BF0021BA62 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3B14E0531A59BD80586AFF4E /* UIViewController+UISegmentedControlSpec.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -396,8 +396,8 @@
 				524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */,
 				522D99AA1FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift in Sources */,
 				3B14EBBE19590BBB175D5C2A /* UIView+UILabelSpec.swift in Sources */,
-				524D6F962072F76F004C9B34 /* UIView+UISegmentedControlSpec.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
+				3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,8 +33,8 @@ extension UIViewController {
 
 // MARK: - Segmented Controls
 extension UIViewController {
-    public func hasSegmentedControlSelected(withExactText searchText: String) -> Bool {
-        return view.hasSegmentedControlSelected(withExactText: searchText)
+    public func hasSegmentedControlSegmentSelected(withExactText searchText: String) -> Bool {
+        return view.hasSegmentedControlSegmentSelected(withExactText: searchText)
     }
 }
 
