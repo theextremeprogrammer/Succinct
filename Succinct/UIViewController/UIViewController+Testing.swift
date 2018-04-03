@@ -31,6 +31,13 @@ extension UIViewController {
     }
 }
 
+// MARK: - Segmented Controls
+extension UIViewController {
+    public func hasSegmentedControlSelected(withExactText searchText: String) -> Bool {
+        return view.hasSegmentedControlSelected(withExactText: searchText)
+    }
+}
+
 // MARK: - Sliders
 extension UIViewController {
     public func setValueOf(sliderWithValue searchValue: Float, toValue newValue: Float) {
