@@ -1,7 +1,18 @@
 import UIKit
 
+// MARK: - Testing Utilities
+extension UIViewController {
+    public func loadViewControllerForUnitTest() {
+        view.setNeedsLayout()
+    }
+}
+
 // MARK: - Buttons
 extension UIViewController {
+    public func hasButton(withExactText searchText: String) -> Bool {
+        return view.findButton(withExactText: searchText) != nil
+    }
+
     public func tapButton(withExactText searchText: String) {
         view.findButton(withExactText: searchText)?
             .tapAndFireTargetEvent()
@@ -10,10 +21,6 @@ extension UIViewController {
 
 // MARK: - Labels
 extension UIViewController {
-    public func hasButton(withExactText searchText: String) -> Bool {
-        return view.findButton(withExactText: searchText) != nil
-    }
-
     public func hasLabel(withExactText searchText: String) -> Bool {
         return view.hasLabel(withExactText: searchText)
     }
@@ -29,17 +36,16 @@ extension UIViewController {
     public func findLabel(containingText searchText: String) -> UILabel? {
         return view.findLabel(containingText: searchText)
     }
+}
 
+// MARK: UIViews
+extension UIViewController {
     public func containsView(withBackgroundColor searchColor: UIColor) -> Bool {
         return view.containsView(withBackgroundColor: searchColor)
     }
 
     public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
         return view.countOfViews(withBackgroundColor: searchColor)
-    }
-
-    public func hasSlider(withValue searchValue: Float) -> Bool {
-        return view.hasSlider(withValue: searchValue)
     }
 }
 
@@ -56,6 +62,10 @@ extension UIViewController {
 
 // MARK: - Sliders
 extension UIViewController {
+    public func hasSlider(withValue searchValue: Float) -> Bool {
+        return view.hasSlider(withValue: searchValue)
+    }
+
     public func sliderCount() -> Int {
         return view.sliderCount()
     }
@@ -106,12 +116,5 @@ extension UIViewController {
     public func hasPickerSelection(withText searchText: String) -> Bool {
         return view.findPicker()?
             .hasSelection(withText: searchText) ?? false
-    }
-}
-
-// MARK: - Testing Utilities
-extension UIViewController {
-    public func loadViewControllerForUnitTest() {
-        view.setNeedsLayout()
     }
 }
