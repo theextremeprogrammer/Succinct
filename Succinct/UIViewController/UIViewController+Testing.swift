@@ -56,6 +56,10 @@ extension UIViewController {
 
 // MARK: - Sliders
 extension UIViewController {
+    public func sliderCount() -> Int {
+        return view.sliderCount()
+    }
+
     public func setValueOf(sliderWithValue searchValue: Float, toValue newValue: Float) {
         if let slider = view.findSlider(withValue: searchValue) {
             slider.setValueAndFireTargetEvent(newValue)
