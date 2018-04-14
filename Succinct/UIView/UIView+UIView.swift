@@ -65,9 +65,7 @@ extension UIView {
                 }
             }
 
-            if (subview.subviews.count) > 0 {
-                viewsCounted += subview.countOfViews(withBackgroundColor: searchColor)
-            }
+            viewsCounted += subview.countOfViews(withBackgroundColor: searchColor)
         }
 
         return viewsCounted

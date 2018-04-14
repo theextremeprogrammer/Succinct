@@ -7,10 +7,8 @@ extension UIView {
                 return pickerView
             }
 
-            if (subview.subviews.count > 0) {
-                if let pickerView = subview.findPicker() {
-                    return pickerView
-                }
+            if let pickerView = subview.findPicker() {
+                return pickerView
             }
         }
 

@@ -13,10 +13,8 @@ extension UIView {
                         return true
                     }
                 }
-            } else if subview.subviews.count > 0 {
-                if subview.hasSegmentedControlSegmentSelected(withExactText: searchText) {
-                    return true
-                }
+            } else if subview.hasSegmentedControlSegmentSelected(withExactText: searchText) {
+                return true
             }
         }
 
@@ -34,7 +32,7 @@ extension UIView {
                         segmentedControl.sendActions(for: .valueChanged)
                     }
                 }
-            } else if subview.subviews.count > 0 {
+            } else {
                 subview.selectSegment(withTitleText: searchText)
             }
         }

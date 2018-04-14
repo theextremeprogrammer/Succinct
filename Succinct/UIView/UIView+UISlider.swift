@@ -10,10 +10,8 @@ extension UIView {
                 }
             }
 
-            if (subview.subviews.count > 0) {
-                if let slider = subview.findSlider(withValue: searchValue) {
-                    return slider
-                }
+            if let slider = subview.findSlider(withValue: searchValue) {
+                return slider
             }
         }
 
@@ -38,9 +36,7 @@ extension UIView {
                 sliderCount += 1
             }
 
-            if (subview.subviews.count > 0) {
-                sliderCount += subview.sliderCount()
-            }
+            sliderCount += subview.sliderCount()
         }
 
         return sliderCount

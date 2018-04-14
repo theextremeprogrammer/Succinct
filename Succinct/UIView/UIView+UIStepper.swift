@@ -8,12 +8,10 @@ extension UIView {
                 thisLoopCount = thisLoopCount + 1
             }
 
-            if (subview.subviews.count > 0) {
                 let updatedCount = subview.hasStepper(currentCount: thisLoopCount)
                 if (updatedCount != thisLoopCount) {
                     return updatedCount
                 }
-            }
         }
 
         return thisLoopCount
@@ -25,11 +23,9 @@ extension UIView {
                 return stepper
             }
 
-            if (subview.subviews.count > 0) {
                 if let stepper = subview.findStepper(withTag: tag) {
                     return stepper
                 }
-            }
         }
 
         return nil
