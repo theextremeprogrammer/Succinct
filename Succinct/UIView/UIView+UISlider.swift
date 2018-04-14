@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - Finding UISliders
 extension UIView {
     public func findSlider(withValue searchValue: Float) -> UISlider? {
         for subview in subviews {
@@ -17,5 +18,12 @@ extension UIView {
         }
 
         return nil
+    }
+}
+
+// MARK: - Has UISliders
+extension UIView {
+    public func hasSlider(withValue searchValue: Float) -> Bool {
+        return findSlider(withValue: searchValue).isNotNil()
     }
 }

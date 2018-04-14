@@ -29,6 +29,10 @@ extension UIViewController {
     public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
         return view.countOfViews(withBackgroundColor: searchColor)
     }
+
+    public func hasSlider(withValue searchValue: Float) -> Bool {
+        return view.hasSlider(withValue: searchValue)
+    }
 }
 
 // MARK: - Segmented Controls
