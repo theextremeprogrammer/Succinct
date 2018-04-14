@@ -22,4 +22,21 @@ extension UIView {
 
         return false
     }
+
+    public func selectSegment(withTitleText searchText: String) {
+        for subview in subviews {
+            if let segmentedControl = subview as? UISegmentedControl {
+                for index in 0..<segmentedControl.numberOfSegments {
+                    let segmentTitle = segmentedControl.titleForSegment(at: index)
+
+                    if segmentTitle == searchText {
+                        segmentedControl.selectedSegmentIndex = index
+                        segmentedControl.sendActions(for: .valueChanged)
+                    }
+                }
+            } else if subview.subviews.count > 0 {
+                subview.selectSegment(withTitleText: searchText)
+            }
+        }
+    }
 }
