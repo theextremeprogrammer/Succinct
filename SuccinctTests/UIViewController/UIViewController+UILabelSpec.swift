@@ -18,11 +18,11 @@ class UIView_UILabelSpec: QuickSpec {
                 }
 
                 it("can find a label whose text matches exactly") {
-                    expect(viewController.view.findLabel(withExactText: "Username:")).toNot(beNil())
+                    expect(viewController.findLabel(withExactText: "Username:")).toNot(beNil())
                 }
 
                 it("cannot find a label whose text does not match exactly") {
-                    expect(viewController.view.findLabel(withExactText: "Username")).to(beNil())
+                    expect(viewController.findLabel(withExactText: "Username")).to(beNil())
                 }
             }
 
@@ -39,7 +39,7 @@ class UIView_UILabelSpec: QuickSpec {
                         .build()
 
 
-                    expect(viewController.view.findLabel(withExactText: "Username:")).toNot(beNil())
+                    expect(viewController.findLabel(withExactText: "Username:")).toNot(beNil())
                 }
             }
         }
@@ -57,11 +57,11 @@ class UIView_UILabelSpec: QuickSpec {
                 }
 
                 it("can find a label whose text matches exactly") {
-                    expect(viewController.view.hasLabel(withExactText: "Username:")).to(beTrue())
+                    expect(viewController.hasLabel(withExactText: "Username:")).to(beTrue())
                 }
 
                 it("cannot find a label whose text does not match exactly") {
-                    expect(viewController.view.hasLabel(withExactText: "Username")).to(beFalse())
+                    expect(viewController.hasLabel(withExactText: "Username")).to(beFalse())
                 }
             }
 
@@ -78,7 +78,7 @@ class UIView_UILabelSpec: QuickSpec {
                         .build()
 
 
-                    expect(viewController.view.hasLabel(withExactText: "Username:")).to(beTrue())
+                    expect(viewController.hasLabel(withExactText: "Username:")).to(beTrue())
                 }
             }
         }
@@ -96,7 +96,7 @@ class UIView_UILabelSpec: QuickSpec {
                 }
 
                 it("can find a label whose text contains the search text") {
-                    let result = viewController.view.findLabel(containingText: "Username")
+                    let result = viewController.findLabel(containingText: "Username")
 
 
                     expect(result).toNot(beNil())
@@ -104,7 +104,7 @@ class UIView_UILabelSpec: QuickSpec {
                 }
 
                 it("cannot find a label whose text does not contain the search text") {
-                    expect(viewController.view.findLabel(containingText: "ABCD")).to(beNil())
+                    expect(viewController.findLabel(containingText: "ABCD")).to(beNil())
                 }
             }
 
@@ -121,7 +121,7 @@ class UIView_UILabelSpec: QuickSpec {
                         .build()
 
 
-                    let result = viewController.view.findLabel(containingText: "Username")
+                    let result = viewController.findLabel(containingText: "Username")
 
 
                     expect(result).toNot(beNil())
@@ -143,11 +143,11 @@ class UIView_UILabelSpec: QuickSpec {
                 }
 
                 it("can find a label whose text contains the search text") {
-                    expect(viewController.view.hasLabel(containingText: "Username")).to(beTrue())
+                    expect(viewController.hasLabel(containingText: "Username")).to(beTrue())
                 }
 
                 it("cannot find a label whose text does not contain the search text") {
-                    expect(viewController.view.hasLabel(containingText: "ABCD")).to(beFalse())
+                    expect(viewController.hasLabel(containingText: "ABCD")).to(beFalse())
                 }
             }
 
@@ -164,7 +164,7 @@ class UIView_UILabelSpec: QuickSpec {
                         .build()
 
 
-                    let result = viewController.view.hasLabel(containingText: "Username")
+                    let result = viewController.hasLabel(containingText: "Username")
 
 
                     expect(result).to(beTrue())

@@ -22,6 +22,14 @@ extension UIViewController {
         return view.hasLabel(containingText: searchText)
     }
 
+    public func findLabel(withExactText searchText: String) -> UILabel? {
+        return view.findLabel(withExactText: searchText)
+    }
+
+    public func findLabel(containingText searchText: String) -> UILabel? {
+        return view.findLabel(containingText: searchText)
+    }
+
     public func containsView(withBackgroundColor searchColor: UIColor) -> Bool {
         return view.containsView(withBackgroundColor: searchColor)
     }
