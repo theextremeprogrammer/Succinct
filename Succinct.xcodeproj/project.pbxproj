@@ -33,6 +33,7 @@
 		525FF7DD203252D4007AE6C8 /* Quick.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */; };
+		52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */; };
 		52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		525FF7D9203252C6007AE6C8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
 		525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheckSpec.swift"; sourceTree = "<group>"; };
+		52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Testing.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 			children = (
 				525FF7ED20331DBD007AE6C8 /* Optional */,
 				52C77EB62051591C00552CB4 /* UIButton */,
+				52970E5C20833AC800297EF9 /* UICollectionView */,
 				52C77EB82051594400552CB4 /* UIPickerView */,
 				52C77EB92051594400552CB4 /* UISlider */,
 				522D99A31FAD2ADA009BB1B9 /* UIView */,
@@ -216,6 +219,14 @@
 				525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */,
 			);
 			path = Optional;
+			sourceTree = "<group>";
+		};
+		52970E5C20833AC800297EF9 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */,
+			);
+			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 		52AAB3852072F1BF0021BA62 /* UIViewController */ = {
@@ -373,6 +384,7 @@
 			files = (
 				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
 				3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */,
+				52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */,
 				3B14E52C804E819D50011851 /* UIPickerView+SelectComponent.swift in Sources */,
 				3B14E6207FE400CF70CE5A1F /* UISlider+SetValue.swift in Sources */,
 				522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */,

@@ -2,37 +2,29 @@ import UIKit
 
 extension UIView {
     public func containsView(withBackgroundColor searchColor: UIColor) -> Bool {
+        if backgroundColor == searchColor {
+            return true
+        }
+
         for subview in subviews {
             if subview.backgroundColor == searchColor {
                 return true
             }
 
             if let collectionView = subview as? UICollectionView {
-                let numberOfSections = collectionView.numberOfSections
-                for section in 0..<numberOfSections {
-                    let numberOfItems = collectionView.numberOfItems(inSection: section)
-                    for item in 0..<numberOfItems {
-                        let indexPath = IndexPath(item: item, section: section)
-                        if let cell = collectionView.dataSource?.collectionView(collectionView, cellForItemAt: indexPath)
-                        {
-                            if cell.backgroundColor == searchColor {
-                                return true
-                            }
-
-                            if (cell.subviews.count) > 0 {
-                                if (cell.containsView(withBackgroundColor: searchColor)) {
-                                    return true
-                                }
-                            }
-                        }
+                if (collectionView.containsCell(satisfyingCondition: { cell in
+                    if cell.containsView(withBackgroundColor: searchColor) {
+                        return true
                     }
+
+                    return false
+                })) {
+                    return true
                 }
             }
 
-            if subview.subviews.count > 0 {
-                if (subview.containsView(withBackgroundColor: searchColor)) {
-                    return true
-                }
+            if (subview.containsView(withBackgroundColor: searchColor)) {
+                return true
             }
         }
 
@@ -51,8 +43,7 @@ extension UIView {
                     let numberOfItems = collectionView.numberOfItems(inSection: section)
                     for item in 0..<numberOfItems {
                         let indexPath = IndexPath(item: item, section: section)
-                        if let cell = collectionView.dataSource?.collectionView(collectionView, cellForItemAt: indexPath)
-                        {
+                        if let cell = collectionView.dataSource?.collectionView(collectionView, cellForItemAt: indexPath) {
                             if cell.backgroundColor == searchColor {
                                 viewsCounted += 1
                             }
