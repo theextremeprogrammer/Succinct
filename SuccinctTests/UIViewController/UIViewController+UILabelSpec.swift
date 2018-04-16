@@ -54,7 +54,7 @@ class UIView_UILabelSpec: QuickSpec {
                                         titleLabelText: "Username:"
                                     )
                                 )
-                            .build()
+                                .build()
                         )
                         .build()
 
@@ -78,7 +78,7 @@ class UIView_UILabelSpec: QuickSpec {
                                         titleLabelText: "Username:"
                                     )
                                 )
-                            .build()
+                                .build()
                         )
                         .build()
 

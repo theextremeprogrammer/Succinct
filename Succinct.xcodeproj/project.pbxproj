@@ -12,6 +12,7 @@
 		3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EA94F94F4C40DB2C604D /* UIButton+Tap.swift */; };
 		3B14E5701AAF98B39C2E6791 /* UIView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E6688347C8F6D067590C /* UIView+UIView.swift */; };
 		3B14E6207FE400CF70CE5A1F /* UISlider+SetValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EB571F0977180CC3EB04 /* UISlider+SetValue.swift */; };
+		3B14E9258548F0334E0DF82E /* UnitTestUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E2A27FD3DE04785E0276 /* UnitTestUITableView.swift */; };
 		3B14EA0AECFD06E28FB32A18 /* UIViewController+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EB825E002B1E92154DB9 /* UIViewController+UILabelSpec.swift */; };
 		3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E0531A59BD80586AFF4E /* UIViewController+UISegmentedControlSpec.swift */; };
 		3B14EDC64BD0D4315A13C89C /* UIViewController+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E7673EACFC681FC9485B /* UIViewController+Testing.swift */; };
@@ -33,8 +34,11 @@
 		525FF7DD203252D4007AE6C8 /* Quick.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */; };
-		526DC7D620844A57001314A7 /* UnitTestUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7D520844A57001314A7 /* UnitTestUITableView.swift */; };
 		526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FA20846AB9001314A7 /* UITableViewConfigurationSpec.swift */; };
+		526DC7FD208475C1001314A7 /* UITableViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FC208475C1001314A7 /* UITableViewBuilder.swift */; };
+		526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FE208475DC001314A7 /* UITableViewConfiguration.swift */; };
+		526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC800208475E4001314A7 /* UITableViewCellConfiguration.swift */; };
+		526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC8022084761C001314A7 /* IndexPathFixture.swift */; };
 		52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */; };
 		52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +72,7 @@
 		3B14E0531A59BD80586AFF4E /* UIViewController+UISegmentedControlSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISegmentedControlSpec.swift"; sourceTree = "<group>"; };
 		3B14E053556933C8E8A707E6 /* UIView+UISlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UISlider.swift"; sourceTree = "<group>"; };
 		3B14E2376D3AE2A0B051C507 /* Optional+NilCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheck.swift"; sourceTree = "<group>"; };
+		3B14E2A27FD3DE04785E0276 /* UnitTestUITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTestUITableView.swift; sourceTree = "<group>"; };
 		3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UILabel.swift"; sourceTree = "<group>"; };
 		3B14E4A77852DD11B2A8ABFA /* UIView+UIPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIPickerView.swift"; sourceTree = "<group>"; };
 		3B14E6688347C8F6D067590C /* UIView+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIView.swift"; sourceTree = "<group>"; };
@@ -92,8 +97,11 @@
 		525FF7D9203252C6007AE6C8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
 		525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheckSpec.swift"; sourceTree = "<group>"; };
-		526DC7D520844A57001314A7 /* UnitTestUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestUITableView.swift; sourceTree = "<group>"; };
 		526DC7FA20846AB9001314A7 /* UITableViewConfigurationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewConfigurationSpec.swift; sourceTree = "<group>"; };
+		526DC7FC208475C1001314A7 /* UITableViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewBuilder.swift; sourceTree = "<group>"; };
+		526DC7FE208475DC001314A7 /* UITableViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewConfiguration.swift; sourceTree = "<group>"; };
+		526DC800208475E4001314A7 /* UITableViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellConfiguration.swift; sourceTree = "<group>"; };
+		526DC8022084761C001314A7 /* IndexPathFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathFixture.swift; sourceTree = "<group>"; };
 		52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Testing.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,9 +203,9 @@
 				522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */,
 				525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */,
 				3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */,
+				526DC7FC208475C1001314A7 /* UITableViewBuilder.swift */,
 				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
 				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
-				526DC7D520844A57001314A7 /* UnitTestUITableView.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -230,7 +238,11 @@
 		526DC7F920846AA1001314A7 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				526DC8022084761C001314A7 /* IndexPathFixture.swift */,
+				526DC800208475E4001314A7 /* UITableViewCellConfiguration.swift */,
+				526DC7FE208475DC001314A7 /* UITableViewConfiguration.swift */,
 				526DC7FA20846AB9001314A7 /* UITableViewConfigurationSpec.swift */,
+				3B14E2A27FD3DE04785E0276 /* UnitTestUITableView.swift */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -416,17 +428,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
 				525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */,
 				524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */,
+				526DC7FD208475C1001314A7 /* UITableViewBuilder.swift in Sources */,
+				526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */,
+				526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */,
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
 				522D99AA1FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				3B14EA0AECFD06E28FB32A18 /* UIViewController+UILabelSpec.swift in Sources */,
 				3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
-				526DC7D620844A57001314A7 /* UnitTestUITableView.swift in Sources */,
+				3B14E9258548F0334E0DF82E /* UnitTestUITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

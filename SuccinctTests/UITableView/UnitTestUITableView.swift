@@ -1,49 +1,5 @@
 import UIKit
 
-struct UITableViewConfiguration {
-    let tableViewStyle: UITableViewStyle
-    let cellDefinitions: [IndexPath: UITableViewCellConfiguration]
-
-    var numberOfSections: Int {
-        get {
-            let countOfSections = cellDefinitions
-                .map { indexPath, _ in indexPath.section }
-                .count
-
-            return countOfSections > 0 ? countOfSections : 1
-        }
-    }
-
-    func numberOfRows(inSection searchSection: Int) -> Int {
-        return cellDefinitions
-            .filter { indexPath, _ in indexPath.section == searchSection }
-            .count
-    }
-}
-
-struct UITableViewCellConfiguration {
-    let indexPath: IndexPath
-    let titleLabelText: String
-}
-
-class UITableViewBuilder {
-    private var cellConfigurations: [IndexPath: UITableViewCellConfiguration] = [:]
-
-    func withCellConfiguration(_ cellConfiguration: UITableViewCellConfiguration) -> UITableViewBuilder {
-        cellConfigurations[cellConfiguration.indexPath] = cellConfiguration
-        return self
-    }
-
-    func build() -> UITableView {
-        let config = UITableViewConfiguration(
-            tableViewStyle: UITableViewStyle.plain,
-            cellDefinitions: cellConfigurations
-        )
-
-        return UnitTestUITableView(configuration: config)
-    }
-}
-
 class UnitTestUITableView: UITableView {
     private var configuration: UITableViewConfiguration!
 
