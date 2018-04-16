@@ -6,7 +6,7 @@ import Succinct
 class UIView_UILabelSpec: QuickSpec {
     override func spec() {
         describe("finding labels by exact text") {
-            context("when a label exists in the first subview") {
+            context("when a UILabel exists in the first subview") {
                 var viewController: UIViewController!
 
                 beforeEach {
@@ -26,7 +26,7 @@ class UIView_UILabelSpec: QuickSpec {
                 }
             }
 
-            context("when a label exists in the second subview") {
+            context("when a UILabel exists in the second subview") {
                 it("can find a label whose text matches exactly") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
@@ -35,6 +35,50 @@ class UIView_UILabelSpec: QuickSpec {
                                     UILabelBuilder().withTitleText("Username:").build()
                                 )
                                 .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(withExactText: "Username:")).toNot(beNil())
+                }
+            }
+
+            context("when a UILabel exists as a tableview cell") {
+                it("can find a label in the first table view cell whose text matches exactly") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Username:"
+                                    )
+                                )
+                            .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(withExactText: "Username:")).toNot(beNil())
+                }
+
+                it("can find a label in the second table view cell whose text matches exactly") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Sample text"
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 1, section: 0),
+                                        titleLabelText: "Username:"
+                                    )
+                                )
+                            .build()
                         )
                         .build()
 
