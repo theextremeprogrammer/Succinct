@@ -104,17 +104,20 @@ extension UIViewController {
     }
 
     public func choosePickerComponent(component: Int, withText searchText: String) {
-        view.findPicker()?
+        view
+            .findPicker()?
             .selectSpecific(component: component, withText: searchText)
     }
 
     public func choosePickerComponent(withText searchText: String) {
-        view.findPicker()?
+        view
+            .findPicker()?
             .selectComponent(withText: searchText)
     }
 
     public func hasPickerSelection(withText searchText: String) -> Bool {
-        return view.findPicker()?
+        return view
+            .findPicker()?
             .hasSelection(withText: searchText) ?? false
     }
 }
