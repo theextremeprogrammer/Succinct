@@ -1,4 +1,3 @@
-import XCTest
 import Quick
 import Nimble
 import Succinct
