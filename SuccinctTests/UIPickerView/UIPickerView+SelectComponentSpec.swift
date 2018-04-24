@@ -4,19 +4,15 @@ import Succinct
 
 class UIPickerView_SelectComponentSpec: QuickSpec {
     override func spec() {
-        describe("confirming if a picker view contains an option that is selected in any component") {
+        describe("confirming if a picker view contains a selected option in any component") {
             var viewController: UIViewController!
 
             beforeEach {
                 viewController = UIViewControllerBuilder()
                     .withSubview(
                         UIPickerViewBuilder()
-                            .withComponentConfiguration(
-                                ["One", "Two"]
-                            )
-                            .withComponentConfiguration(
-                                ["Sarah", "Michael"]
-                            )
+                            .withComponentConfiguration(["One", "Two"])
+                            .withComponentConfiguration(["Sarah", "Michael"])
                             .build()
                     )
                     .build()
@@ -47,6 +43,45 @@ class UIPickerView_SelectComponentSpec: QuickSpec {
 
                 it("does not contain the option in the second component at all") {
                     expect(viewController.hasPickerSelection(withText: "Roger")).to(beFalse())
+                }
+            }
+        }
+
+        describe("confirming if a picker view contains an option in any component (selected or not)") {
+            var viewController: UIViewController!
+
+            beforeEach {
+                viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UIPickerViewBuilder()
+                            .withComponentConfiguration(["One", "Two"])
+                            .withComponentConfiguration(["Sarah", "Michael"])
+                            .build()
+                    )
+                    .build()
+            }
+
+            context("when there is only one component") {
+                it("contains the option in the first component") {
+                    expect(viewController.hasPickerOption(withText: "One")).to(beTrue())
+                    expect(viewController.hasPickerOption(withText: "Two")).to(beTrue())
+                }
+
+                it("does not contain the option in the first component at all") {
+                    expect(viewController.hasPickerOption(withText: "Three")).to(beFalse())
+                    expect(viewController.hasPickerOption(withText: "Four")).to(beFalse())
+                }
+            }
+
+            context("for options within the second component") {
+                it("contains the option in the second component") {
+                    expect(viewController.hasPickerOption(withText: "Sarah")).to(beTrue())
+                    expect(viewController.hasPickerOption(withText: "Michael")).to(beTrue())
+                }
+
+                it("does not contain the option in the second component at all") {
+                    expect(viewController.hasPickerOption(withText: "Lacy")).to(beFalse())
+                    expect(viewController.hasPickerOption(withText: "Jay")).to(beFalse())
                 }
             }
         }

@@ -33,4 +33,20 @@ extension UIPickerView {
 
         return false
     }
+
+    public func hasOption(withText searchText: String) -> Bool {
+        for componentIndex in 0...self.numberOfComponents - 1 {
+            let numberOfRows = self.numberOfRows(inComponent: componentIndex)
+
+            for rowIndex in 0...numberOfRows - 1 {
+                let rowTitle = self.delegate?.pickerView?(self, titleForRow: rowIndex, forComponent: componentIndex)
+
+                if (rowTitle == searchText) {
+                    return true
+                }
+            }
+        }
+
+        return false
+    }
 }

@@ -120,4 +120,10 @@ extension UIViewController {
             .findPicker()?
             .hasSelection(withText: searchText) ?? false
     }
+
+    public func hasPickerOption(withText searchText: String) -> Bool {
+        return view
+            .findPicker()?
+            .hasOption(withText: searchText) ?? false
+    }
 }
