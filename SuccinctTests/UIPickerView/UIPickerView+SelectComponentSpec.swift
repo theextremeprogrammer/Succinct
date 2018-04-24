@@ -7,19 +7,22 @@ class UIPickerView_SelectComponentSpec: QuickSpec {
         describe("confirming if a picker view contains an option that is selected in any component") {
             var viewController: UIViewController!
 
-            context("when there is only one component") {
-                beforeEach {
-                    viewController = UIViewControllerBuilder()
-                        .withSubview(
-                            UIPickerViewBuilder()
-                                .withComponentConfiguration(
-                                    ["One", "Two"]
-                                )
-                                .build()
-                        )
-                        .build()
-                }
+            beforeEach {
+                viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UIPickerViewBuilder()
+                            .withComponentConfiguration(
+                                ["One", "Two"]
+                            )
+                            .withComponentConfiguration(
+                                ["Sarah", "Michael"]
+                            )
+                            .build()
+                    )
+                    .build()
+            }
 
+            context("for options within the first component") {
                 it("contains the option in the first component and is selected") {
                     expect(viewController.hasPickerSelection(withText: "One")).to(beTrue())
                 }
@@ -33,22 +36,7 @@ class UIPickerView_SelectComponentSpec: QuickSpec {
                 }
             }
 
-            context("when there is two components") {
-                beforeEach {
-                    viewController = UIViewControllerBuilder()
-                        .withSubview(
-                            UIPickerViewBuilder()
-                                .withComponentConfiguration(
-                                    ["One", "Two"]
-                                )
-                                .withComponentConfiguration(
-                                    ["Sarah", "Michael"]
-                                )
-                                .build()
-                        )
-                        .build()
-                }
-
+            context("for options within the second component") {
                 it("contains the option in the second component and is selected") {
                     expect(viewController.hasPickerSelection(withText: "Sarah")).to(beTrue())
                 }
