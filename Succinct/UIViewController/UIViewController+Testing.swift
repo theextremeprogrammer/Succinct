@@ -10,7 +10,7 @@ extension UIViewController {
 // MARK: - Buttons
 extension UIViewController {
     public func hasButton(withExactText searchText: String) -> Bool {
-        return view.findButton(withExactText: searchText) != nil
+        return view.findButton(withExactText: searchText).isNotNil()
     }
 
     public func tapButton(withExactText searchText: String) {
@@ -100,7 +100,7 @@ extension UIViewController {
 // MARK: - Pickers
 extension UIViewController {
     public func hasPicker() -> Bool {
-        return view.findPicker() != nil
+        return view.findPicker().isNotNil()
     }
 
     public func choosePickerComponent(component: Int, withText searchText: String) {
