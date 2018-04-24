@@ -20,7 +20,7 @@ extension UIPickerView {
         }
     }
 
-    public func hasSelection(withText searchText: String) -> Bool {
+    public func hasSelectedOption(withText searchText: String) -> Bool {
         for componentIndex in 0...self.numberOfComponents - 1 {
             let selectedRow = self.selectedRow(inComponent: componentIndex)
 

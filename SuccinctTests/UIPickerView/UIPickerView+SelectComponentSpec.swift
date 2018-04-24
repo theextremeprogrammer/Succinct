@@ -20,29 +20,29 @@ class UIPickerView_SelectComponentSpec: QuickSpec {
 
             context("for options within the first component") {
                 it("contains the option in the first component and is selected") {
-                    expect(viewController.hasPickerSelection(withText: "One")).to(beTrue())
+                    expect(viewController.hasSelectedPickerOption(withText: "One")).to(beTrue())
                 }
 
                 it("contains the option in the first component but is not selected") {
-                    expect(viewController.hasPickerSelection(withText: "Two")).to(beFalse())
+                    expect(viewController.hasSelectedPickerOption(withText: "Two")).to(beFalse())
                 }
 
                 it("does not contain the option in the first component at all") {
-                    expect(viewController.hasPickerSelection(withText: "Three")).to(beFalse())
+                    expect(viewController.hasSelectedPickerOption(withText: "Three")).to(beFalse())
                 }
             }
 
             context("for options within the second component") {
                 it("contains the option in the second component and is selected") {
-                    expect(viewController.hasPickerSelection(withText: "Sarah")).to(beTrue())
+                    expect(viewController.hasSelectedPickerOption(withText: "Sarah")).to(beTrue())
                 }
 
                 it("contains the option in the second component but is not selected") {
-                    expect(viewController.hasPickerSelection(withText: "Michael")).to(beFalse())
+                    expect(viewController.hasSelectedPickerOption(withText: "Michael")).to(beFalse())
                 }
 
                 it("does not contain the option in the second component at all") {
-                    expect(viewController.hasPickerSelection(withText: "Roger")).to(beFalse())
+                    expect(viewController.hasSelectedPickerOption(withText: "Roger")).to(beFalse())
                 }
             }
         }
