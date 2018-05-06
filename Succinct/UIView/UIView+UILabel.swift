@@ -44,7 +44,7 @@ extension UIView {
 
     public func findLabel(containingText searchText: String) -> UILabel? {
         return subviews
-            .flatMap { $0 as? UILabel ?? $0.findLabel(containingText: searchText) }
+            .compactMap { $0 as? UILabel ?? $0.findLabel(containingText: searchText) }
             .filter { $0.text?.contains(searchText) ?? false }
             .first
     }
