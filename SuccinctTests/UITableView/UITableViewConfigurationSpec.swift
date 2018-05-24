@@ -6,22 +6,26 @@ class UITableViewConfigurationSpec: QuickSpec {
     override func spec() {
         let firstSectionFirstCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section0.Cell0,
-            titleLabelText: "S1: First cell"
+            titleLabelText: "S1: First cell",
+            selected: false
         )
 
         let firstSectionSecondCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section0.Cell1,
-            titleLabelText: "S1: Second cell"
+            titleLabelText: "S1: Second cell",
+            selected: false
         )
 
         let secondSectionFirstCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section1.Cell0,
-            titleLabelText: "S2: Second cell"
+            titleLabelText: "S2: Second cell",
+            selected: false
         )
 
         let secondSectionSecondCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section1.Cell0,
-            titleLabelText: "S2: Second cell"
+            titleLabelText: "S2: Second cell",
+            selected: false
         )
 
         describe("determining the number of rows for a section") {

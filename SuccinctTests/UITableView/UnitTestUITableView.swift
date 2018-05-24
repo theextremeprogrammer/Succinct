@@ -35,6 +35,10 @@ extension UnitTestUITableView: UITableViewDataSource {
 
         cell?.textLabel?.text = configuration.cellDefinitions[indexPath]?.titleLabelText
 
+        if let isSelected = configuration.cellDefinitions[indexPath]?.selected {
+            cell?.isSelected = isSelected
+        }
+
         return cell ?? UITableViewCell()
     }
 }

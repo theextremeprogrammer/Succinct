@@ -50,7 +50,8 @@ class UIView_UILabelSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Username:"
+                                        titleLabelText: "Username:",
+                                        selected: false
                                     )
                                 )
                                 .build()
@@ -68,13 +69,15 @@ class UIView_UILabelSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Sample text"
+                                        titleLabelText: "Sample text",
+                                        selected: false
                                     )
                                 )
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 1, section: 0),
-                                        titleLabelText: "Username:"
+                                        titleLabelText: "Username:",
+                                        selected: false
                                     )
                                 )
                                 .build()
