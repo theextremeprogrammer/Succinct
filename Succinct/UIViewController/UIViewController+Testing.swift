@@ -25,7 +25,12 @@ extension UIViewController {
         if let leftBarButtonItem = navigationItem.leftBarButtonItem,
            let action = leftBarButtonItem.action,
            let target = leftBarButtonItem.target {
-            let returnValue = UIApplication.shared.sendAction(action, to: target, from: nil, for: nil)
+            let returnValue = UIApplication.shared.sendAction(
+                action,
+                to: target,
+                from: nil,
+                for: nil
+            )
             debugPrint("returnValue: \(returnValue)")
         }
     }
