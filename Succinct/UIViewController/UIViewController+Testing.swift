@@ -64,6 +64,10 @@ extension UIViewController {
     public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
         return view.countOfViews(withBackgroundColor: searchColor)
     }
+
+    public func containsImage(_ searchImage: UIImage) -> Bool {
+        return view.containsImage(searchImage)
+    }
 }
 
 // MARK: - UITableViews

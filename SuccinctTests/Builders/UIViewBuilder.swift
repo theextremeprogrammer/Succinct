@@ -12,6 +12,12 @@ struct UIViewBuilder {
         return self
     }
 
+    func withImageView(_ image: UIImage) -> UIViewBuilder {
+        let imageView = UIImageView(image: image)
+        view.addSubview(imageView)
+        return self
+    }
+
     func build() -> UIView {
         return view
     }
