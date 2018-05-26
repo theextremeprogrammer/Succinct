@@ -2,13 +2,10 @@ import UIKit
 
 extension UIView {
     public func containsImage(_ searchImage: UIImage) -> Bool {
-        let maybeSearchImageData = UIImagePNGRepresentation(searchImage)
-
         for subview in subviews {
             if let imageView = subview as? UIImageView,
-               let compareImage = imageView.image,
-               let compareImageData = UIImagePNGRepresentation(compareImage) {
-                if maybeSearchImageData == compareImageData {
+               let compareImage = imageView.image {
+                if compareImage == searchImage {
                     return true
                 }
             }
