@@ -3,7 +3,10 @@ import UIKit
 class UnitTestUITableView: UITableView {
     private var configuration: UITableViewConfiguration!
 
-    init(configuration: UITableViewConfiguration) {
+    init(
+        maybeDelegate: UITableViewDelegate?,
+        configuration: UITableViewConfiguration
+    ) {
         self.configuration = configuration
 
         super.init(frame: CGRect.zero, style: configuration.tableViewStyle)
@@ -12,7 +15,12 @@ class UnitTestUITableView: UITableView {
             UITableViewCell.self,
             forCellReuseIdentifier: String(describing: UITableViewCell.self)
         )
+
         dataSource = self
+
+        if let newDelegate = maybeDelegate {
+            delegate = newDelegate
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -20,6 +28,7 @@ class UnitTestUITableView: UITableView {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension UnitTestUITableView: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return configuration.numberOfSections
