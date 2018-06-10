@@ -17,6 +17,11 @@ extension UIViewController {
         view.findButton(withExactText: searchText)?
             .tapAndFireTargetEvent()
     }
+
+    public func tapButton(withImage searchImage: UIImage) {
+        view.findButton(withImage: searchImage)?
+            .tapAndFireTargetEvent()
+    }
 }
 
 // MARK: - UIBarButtonItem
