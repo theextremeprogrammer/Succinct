@@ -31,7 +31,6 @@ extension UIViewController {
                 from: nil,
                 for: nil
             )
-            debugPrint("returnValue: \(returnValue)")
         }
     }
 }
@@ -103,7 +102,7 @@ extension UIViewController {
                         if let cell = tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) {
                             if let _ = cell.findLabel(withExactText: searchText) {
                                 tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-                                tableView.delegate?.tableView!(tableView, didSelectRowAt: indexPath)
+                                tableView.delegate?.tableView?(tableView, didSelectRowAt: indexPath)
                             }
                         }
                     }

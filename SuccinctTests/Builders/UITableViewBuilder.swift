@@ -1,10 +1,10 @@
 import UIKit
 
 class UITableViewBuilder {
-    private var delegate: UITableViewDelegate?
+    private var delegate: UITableViewDelegate? = nil
     private var cellConfigurations: [IndexPath: UITableViewCellConfiguration] = [:]
 
-    func withDelegate(_ delegate: UITableViewDelegate) -> UITableViewBuilder {
+    func withDelegate(_ delegate: UITableViewDelegate?) -> UITableViewBuilder {
         self.delegate = delegate
         return self
     }

@@ -62,6 +62,25 @@ class UIViewController_UITableViewSpec: QuickSpec {
                 self.didSelectRowAtIndexPath_argument_indexPath = nil
             }
 
+            it("does not thrown an error when there is no delegate set") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UITableViewBuilder()
+                            .withDelegate(nil)
+                            .withCellConfiguration(
+                                UITableViewCellConfiguration(
+                                    indexPath: IndexPath(row: 0, section: 0),
+                                    titleLabelText: "Bob",
+                                    selected: false
+                                )
+                            )
+                            .build())
+                    .build()
+
+
+                expect(viewController.tapCell(withExactText: "Bob")).toNot(throwError())
+            }
+
             it("does not tap a cell that it cannot find") {
                 let viewController = UIViewControllerBuilder()
                     .withSubview(
