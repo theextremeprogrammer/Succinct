@@ -13,6 +13,10 @@ extension UIViewController {
         return view.findButton(withExactText: searchText).isNotNil()
     }
 
+    public func hasButton(withImage searchImage: UIImage) -> Bool {
+        return view.findButton(withImage: searchImage).isNotNil()
+    }
+
     public func tapButton(withExactText searchText: String) {
         view.findButton(withExactText: searchText)?
             .tapAndFireTargetEvent()
