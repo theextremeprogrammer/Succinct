@@ -36,6 +36,11 @@
 		522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */; };
 		522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */; };
 		5230D81420EC89FE00E9459B /* SuccinctContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230D81320EC89FE00E9459B /* SuccinctContainerTests.swift */; };
+		5230D82020ECBC0F00E9459B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; };
+		5230D82120ECBC0F00E9459B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; };
+		5230D82420ECBC2900E9459B /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
+		5230D82A20ECBDDE00E9459B /* Nimble.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5230D82B20ECBDDE00E9459B /* Quick.framework in Carthage: Copy Files */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5235C2A3208F511700C0CEEA /* UIPickerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235C2A2208F511700C0CEEA /* UIPickerViewBuilder.swift */; };
 		5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235C2A4208F51AD00C0CEEA /* UnitTestUIPickerView.swift */; };
 		524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */; };
@@ -71,9 +76,28 @@
 			remoteGlobalIDString = 5230D7FB20EC89FC00E9459B;
 			remoteInfo = SuccinctContainer;
 		};
+		5230D82220ECBC2300E9459B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 522D99801FAD2A9C009BB1B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 522D99881FAD2A9C009BB1B9;
+			remoteInfo = Succinct;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5230D82520ECBC3600E9459B /* Carthage: Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5230D82A20ECBDDE00E9459B /* Nimble.framework in Carthage: Copy Files */,
+				5230D82B20ECBDDE00E9459B /* Quick.framework in Carthage: Copy Files */,
+			);
+			name = "Carthage: Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		525FF7D620325288007AE6C8 /* Carthage: Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -172,6 +196,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5230D82020ECBC0F00E9459B /* Nimble.framework in Frameworks */,
+				5230D82120ECBC0F00E9459B /* Quick.framework in Frameworks */,
+				5230D82420ECBC2900E9459B /* Succinct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,10 +514,12 @@
 				5230D80B20EC89FE00E9459B /* Sources */,
 				5230D80C20EC89FE00E9459B /* Frameworks */,
 				5230D80D20EC89FE00E9459B /* Resources */,
+				5230D82520ECBC3600E9459B /* Carthage: Copy Files */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5230D82320ECBC2300E9459B /* PBXTargetDependency */,
 				5230D81120EC89FE00E9459B /* PBXTargetDependency */,
 			);
 			name = SuccinctContainerTests;
@@ -662,6 +691,11 @@
 			isa = PBXTargetDependency;
 			target = 5230D7FB20EC89FC00E9459B /* SuccinctContainer */;
 			targetProxy = 5230D81020EC89FE00E9459B /* PBXContainerItemProxy */;
+		};
+		5230D82320ECBC2300E9459B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 522D99881FAD2A9C009BB1B9 /* Succinct */;
+			targetProxy = 5230D82220ECBC2300E9459B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -910,6 +944,10 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LFKG3J295;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SuccinctContainerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -929,6 +967,10 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LFKG3J295;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SuccinctContainerTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

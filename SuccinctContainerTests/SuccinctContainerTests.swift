@@ -1,8 +1,13 @@
-import XCTest
-@testable import SuccinctContainer
+import Quick
+import Nimble
+@testable import Succinct
 
-class SuccinctContainerTests: XCTestCase {
-    func wiringTest() {
-        XCTAssertTrue(true)
+class SuccinctContainerSpec: QuickSpec {
+    override func spec() {
+        describe("wiring test") {
+            it("works") {
+                expect(true).to(equal(true))
+            }
+        }
     }
 }
