@@ -61,4 +61,19 @@ extension UIView {
 
         return viewsCounted
     }
+
+    public func countOfImages(_ searchImage: UIImage) -> Int {
+        var imagesCounted = 0
+
+        for subview in subviews {
+            if let imageView = subview as? UIImageView,
+                imageView.image == searchImage {
+                imagesCounted += 1
+            }
+
+            imagesCounted += subview.countOfImages(searchImage)
+        }
+
+        return imagesCounted
+    }
 }
