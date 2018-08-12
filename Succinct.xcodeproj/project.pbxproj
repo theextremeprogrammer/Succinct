@@ -173,6 +173,10 @@
 		526DC8022084761C001314A7 /* IndexPathFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathFixture.swift; sourceTree = "<group>"; };
 		52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Testing.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
+		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		B8FE917E2120F5F30097274D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B8FE917F2120F5F30097274D /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,11 +230,15 @@
 			isa = PBXGroup;
 			children = (
 				525FF7D7203252C5007AE6C8 /* Frameworks */,
+				B8FE917D2120F5F30097274D /* Makefile */,
 				522D998A1FAD2A9C009BB1B9 /* Products */,
 				522D998B1FAD2A9C009BB1B9 /* Succinct */,
 				5230D7FD20EC89FD00E9459B /* SuccinctContainer */,
 				5230D81220EC89FE00E9459B /* SuccinctContainerTests */,
 				522D99961FAD2A9D009BB1B9 /* SuccinctTests */,
+				B8FE917F2120F5F30097274D /* Cartfile.private */,
+				B8FE917C2120F5F30097274D /* Cartfile.resolved */,
+				B8FE917E2120F5F30097274D /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
