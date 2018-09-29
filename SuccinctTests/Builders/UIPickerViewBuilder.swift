@@ -1,6 +1,6 @@
 import UIKit
 
-class UIPickerViewBuilder {
+final class UIPickerViewBuilder {
     private var componentConfiguration: [[String]] = []
 
     func withComponentConfiguration(_ componentConfiguration: [String]) -> UIPickerViewBuilder {

@@ -1,6 +1,6 @@
 import UIKit
 
-class UITableViewBuilder {
+final class UITableViewBuilder {
     private var delegate: UITableViewDelegate? = nil
     private var cellConfigurations: [IndexPath: UITableViewCellConfiguration] = [:]
 

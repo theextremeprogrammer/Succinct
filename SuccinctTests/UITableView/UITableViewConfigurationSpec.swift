@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UITableViewConfigurationSpec: QuickSpec {
+final class UITableViewConfigurationSpec: QuickSpec {
     override func spec() {
         let firstSectionFirstCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section0.Cell0,

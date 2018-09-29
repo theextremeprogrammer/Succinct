@@ -16,5 +16,5 @@ extension UIImage {
     }
 }
 
-class SomeClassDefinedWithinTheUnitTestingBundle {
+final class SomeClassDefinedWithinTheUnitTestingBundle {
 }

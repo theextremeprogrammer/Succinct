@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UIViewController_UIViewSpec: QuickSpec {
+final class UIViewController_UIViewSpec: QuickSpec {
     override func spec() {
         describe("finding a view that contains an image") {
             it("knows when the search image cannot be found in the view hierarchy") {

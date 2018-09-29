@@ -2,7 +2,7 @@ import Quick
 import Nimble
 @testable import Succinct
 
-class UIViewController_UIButtonSpec: QuickSpec {
+final class UIViewController_UIButtonSpec: QuickSpec {
     private var buttonWasTapped = false
 
     private func unitTestButtonWasTapped() {

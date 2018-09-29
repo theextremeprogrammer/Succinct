@@ -2,7 +2,7 @@ import Quick
 import Nimble
 @testable import Succinct
 
-class UIViewController_UIBarButtonItemSpec: QuickSpec {
+final class UIViewController_UIBarButtonItemSpec: QuickSpec {
     private var buttonWasTapped: Bool = false
 
     private func didTapBarButtonItem() {

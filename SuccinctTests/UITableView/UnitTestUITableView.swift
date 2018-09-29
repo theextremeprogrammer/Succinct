@@ -1,6 +1,6 @@
 import UIKit
 
-class UnitTestUITableView: UITableView {
+final class UnitTestUITableView: UITableView {
     private var configuration: UITableViewConfiguration!
 
     init(

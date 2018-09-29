@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UIViewController_UISegmentedControlSpec: QuickSpec {
+final class UIViewController_UISegmentedControlSpec: QuickSpec {
     override func spec() {
         describe("finding selected segment by exact text") {
             context("when a segmented control exists in the first subview") {

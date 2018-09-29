@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class Optional_NilCheckSpec: QuickSpec {
+final class Optional_NilCheckSpec: QuickSpec {
     override func spec() {
         describe("checking when optional is nil") {
             it("knows if the object is nil") {

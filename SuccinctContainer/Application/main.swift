@@ -9,7 +9,7 @@ func startApplication(delegateClassName: String) {
     )
 }
 
-class TestingAppDelegate: UIApplication, UIApplicationDelegate {}
+final class TestingAppDelegate: UIApplication, UIApplicationDelegate {}
 
 if NSClassFromString("XCTestCase") != nil {
     startApplication(delegateClassName: NSStringFromClass(TestingAppDelegate.self))

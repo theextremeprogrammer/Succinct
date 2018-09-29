@@ -1,6 +1,6 @@
 import UIKit
 
-class UnitTestUIPickerView: UIPickerView {
+final class UnitTestUIPickerView: UIPickerView {
     private var configuration: [[String]]!
 
     init(configuration: [[String]]) {

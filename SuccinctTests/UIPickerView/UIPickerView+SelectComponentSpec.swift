@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UIPickerView_SelectComponentSpec: QuickSpec {
+final class UIPickerView_SelectComponentSpec: QuickSpec {
     override func spec() {
         describe("confirming if a picker view contains a selected option in any component") {
             var viewController: UIViewController!

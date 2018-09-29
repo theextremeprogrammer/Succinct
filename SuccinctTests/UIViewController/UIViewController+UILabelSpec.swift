@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UIView_UILabelSpec: QuickSpec {
+final class UIView_UILabelSpec: QuickSpec {
     override func spec() {
         describe("finding labels by exact text") {
             context("when a UILabel exists in the first subview") {

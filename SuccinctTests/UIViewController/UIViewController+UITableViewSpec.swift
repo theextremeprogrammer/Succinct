@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UIViewController_UITableViewSpec: QuickSpec {
+final class UIViewController_UITableViewSpec: QuickSpec {
     private var didSelectRowAtIndexPathWasCalled: Bool = false
     private var didSelectRowAtIndexPath_argument_indexPath: IndexPath? = nil
 
