@@ -1,7 +1,7 @@
 import UIKit
 
 struct UITableViewConfiguration {
-    let tableViewStyle: UITableViewStyle
+    let tableViewStyle: UITableView.Style
     let cellDefinitions: [IndexPath : UITableViewCellConfiguration]
 
     var numberOfSections: Int {

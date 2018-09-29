@@ -16,7 +16,7 @@ final class UITableViewBuilder {
     
     func build() -> UITableView {
         let config = UITableViewConfiguration(
-            tableViewStyle: UITableViewStyle.plain,
+            tableViewStyle: UITableView.Style.plain,
             cellDefinitions: cellConfigurations
         )
         
