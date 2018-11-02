@@ -15,7 +15,7 @@ struct UIViewControllerBuilder {
     func withLeftBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem,
             targetAction: TargetAction
-        ) -> UIViewControllerBuilder {
+    ) -> UIViewControllerBuilder {
         let barButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem.action,
             target: targetAction,
