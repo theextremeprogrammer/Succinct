@@ -12,18 +12,18 @@ extension UIView {
             }
 
             if let collectionView = subview as? UICollectionView {
-                if (collectionView.containsCell(satisfyingCondition: { cell in
+                if collectionView.containsCell(satisfyingCondition: { cell in
                     if cell.containsView(withBackgroundColor: searchColor) {
                         return true
                     }
 
                     return false
-                })) {
+                }) {
                     return true
                 }
             }
 
-            if (subview.containsView(withBackgroundColor: searchColor)) {
+            if subview.containsView(withBackgroundColor: searchColor) {
                 return true
             }
         }
@@ -48,7 +48,7 @@ extension UIView {
                                 viewsCounted += 1
                             }
 
-                            if (cell.subviews.count) > 0 {
+                            if cell.subviews.count > 0 {
                                 viewsCounted += cell.countOfViews(withBackgroundColor: searchColor)
                             }
                         }

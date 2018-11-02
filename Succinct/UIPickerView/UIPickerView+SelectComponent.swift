@@ -7,7 +7,7 @@ extension UIPickerView {
         for rowIndex in 0...numberOfRows - 1 {
             let rowTitle = self.delegate?.pickerView?(self, titleForRow: rowIndex, forComponent: componentIndex)
 
-            if (rowTitle == searchText) {
+            if rowTitle == searchText {
                 self.delegate?.pickerView?(self, didSelectRow: rowIndex, inComponent: componentIndex)
                 return
             }
@@ -26,7 +26,7 @@ extension UIPickerView {
 
             let selectedRowTitle = self.delegate?.pickerView?(self, titleForRow: selectedRow, forComponent: componentIndex)
 
-            if (selectedRowTitle == searchText) {
+            if selectedRowTitle == searchText {
                 return true
             }
         }
@@ -41,7 +41,7 @@ extension UIPickerView {
             for rowIndex in 0...numberOfRows - 1 {
                 let rowTitle = self.delegate?.pickerView?(self, titleForRow: rowIndex, forComponent: componentIndex)
 
-                if (rowTitle == searchText) {
+                if rowTitle == searchText {
                     return true
                 }
             }

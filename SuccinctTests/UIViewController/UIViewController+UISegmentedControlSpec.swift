@@ -67,4 +67,3 @@ final class UIViewController_UISegmentedControlSpec: QuickSpec {
         }
     }
 }
-
