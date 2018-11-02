@@ -75,6 +75,7 @@
 		B89E2D18218BFA66004FE2A6 /* UIViewController+UISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D17218BFA66004FE2A6 /* UIViewController+UISlider.swift */; };
 		B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */; };
 		B89E2D1C218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */; };
+		B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +198,7 @@
 		B89E2D17218BFA66004FE2A6 /* UIViewController+UISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISlider.swift"; sourceTree = "<group>"; };
 		B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIStepper.swift"; sourceTree = "<group>"; };
 		B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIPickerView.swift"; sourceTree = "<group>"; };
+		B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextField.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		B8FE917E2120F5F30097274D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -302,7 +304,6 @@
 				524FF43E20B689A000CA71D4 /* UIImage */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
 				526DC7F920846AA1001314A7 /* UITableView */,
-				B1D05E5B2160B0270044D2AD /* UITextField */,
 				522D99A61FAD2B09009BB1B9 /* UIView */,
 				52AAB3852072F1BF0021BA62 /* UIViewController */,
 				522D99991FAD2A9D009BB1B9 /* Info.plist */,
@@ -499,6 +500,7 @@
 				B89E2D17218BFA66004FE2A6 /* UIViewController+UISlider.swift */,
 				B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */,
 				B89E2D13218BFA50004FE2A6 /* UIViewController+UITableView.swift */,
+				B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */,
 				B89E2D11218BFA48004FE2A6 /* UIViewController+UIView.swift */,
 			);
 			path = UIViewController;
@@ -518,13 +520,6 @@
 				3B14EB571F0977180CC3EB04 /* UISlider+SetValue.swift */,
 			);
 			path = UISlider;
-			sourceTree = "<group>";
-		};
-		B1D05E5B2160B0270044D2AD /* UITextField */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -729,6 +724,7 @@
 				B89E2D18218BFA66004FE2A6 /* UIViewController+UISlider.swift in Sources */,
 				B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */,
 				B89E2D14218BFA50004FE2A6 /* UIViewController+UITableView.swift in Sources */,
+				B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */,
 				B89E2D12218BFA48004FE2A6 /* UIViewController+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
