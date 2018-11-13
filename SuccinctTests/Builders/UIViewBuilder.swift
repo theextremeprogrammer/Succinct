@@ -12,6 +12,14 @@ struct UIViewBuilder {
         return self
     }
 
+    func withSubviews(_ subviews: UIView...) -> UIViewBuilder {
+        subviews.forEach { subview in
+            view.addSubview(subview)
+        }
+        
+        return self
+    }
+
     func withImageView(_ image: UIImage) -> UIViewBuilder {
         let imageView = UIImageView(image: image)
         view.addSubview(imageView)

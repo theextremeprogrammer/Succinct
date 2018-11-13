@@ -24,6 +24,8 @@ extension UIView {
                     buttons.append(button)
                 }
             }
+            
+            buttons.append(contentsOf: subview.findButtons(withState: searchState))
         }
         
         return buttons
