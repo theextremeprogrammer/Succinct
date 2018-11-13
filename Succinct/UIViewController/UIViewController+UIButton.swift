@@ -1,6 +1,14 @@
 import UIKit
 
 extension UIViewController {
+    public func findButton(withExactText searchText: String) -> UIButton? {
+        return view.findButton(withExactText: searchText)
+    }
+    
+    public func findButton(withImage searchImage: UIImage) -> UIButton? {
+        return view.findButton(withImage: searchImage)
+    }
+    
     public func hasButton(withExactText searchText: String) -> Bool {
         return view
             .findButton(withExactText: searchText)

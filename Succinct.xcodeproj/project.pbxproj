@@ -35,7 +35,6 @@
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */; };
-		522D99AA1FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A91FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift */; };
 		522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */; };
 		522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */; };
 		522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */; };
@@ -66,6 +65,7 @@
 		B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */; };
 		B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */; };
 		B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E602160B5170044D2AD /* UIView+UITextField.swift */; };
+		B85D4DF1219A48DF00B9828E /* UIViewController_UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController_UIButtonSpec.swift */; };
 		B89E2D0C218BF422004FE2A6 /* UIViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */; };
 		B89E2D0E218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0D218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift */; };
 		B89E2D10218BFA3D004FE2A6 /* UIViewController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0F218BFA3D004FE2A6 /* UIViewController+UILabel.swift */; };
@@ -164,7 +164,6 @@
 		522D99921FAD2A9D009BB1B9 /* SuccinctTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuccinctTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D99991FAD2A9D009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIButton.swift"; sourceTree = "<group>"; };
-		522D99A91FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerBuilder.swift; sourceTree = "<group>"; };
 		522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBuilder.swift; sourceTree = "<group>"; };
 		522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewBuilder.swift; sourceTree = "<group>"; };
@@ -189,6 +188,7 @@
 		B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
 		B1D05E602160B5170044D2AD /* UIView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextField.swift"; sourceTree = "<group>"; };
+		B85D4DF0219A48DF00B9828E /* UIViewController_UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_UIButtonSpec.swift; sourceTree = "<group>"; };
 		B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton.swift"; sourceTree = "<group>"; };
 		B89E2D0D218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		B89E2D0F218BFA3D004FE2A6 /* UIViewController+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UILabel.swift"; sourceTree = "<group>"; };
@@ -304,7 +304,6 @@
 				524FF43E20B689A000CA71D4 /* UIImage */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
 				526DC7F920846AA1001314A7 /* UITableView */,
-				522D99A61FAD2B09009BB1B9 /* UIView */,
 				52AAB3852072F1BF0021BA62 /* UIViewController */,
 				522D99991FAD2A9D009BB1B9 /* Info.plist */,
 			);
@@ -323,14 +322,6 @@
 				3B14E883AEE14B5712B4379A /* UIView+UIStepper.swift */,
 				B1D05E602160B5170044D2AD /* UIView+UITextField.swift */,
 				3B14E6688347C8F6D067590C /* UIView+UIView.swift */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		522D99A61FAD2B09009BB1B9 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				522D99A91FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -476,6 +467,7 @@
 				3B14ED2A55D7B067E5D43B41 /* UIViewController+UITableViewSpec.swift */,
 				B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */,
 				524FF43620B667D400CA71D4 /* UIViewController+UIView.swift */,
+				B85D4DF0219A48DF00B9828E /* UIViewController_UIButtonSpec.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -746,8 +738,8 @@
 				526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */,
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
 				B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */,
-				522D99AA1FAD2B25009BB1B9 /* UIView+UIButtonSpec.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
+				B85D4DF1219A48DF00B9828E /* UIViewController_UIButtonSpec.swift in Sources */,
 				3B14EA0AECFD06E28FB32A18 /* UIViewController+UILabelSpec.swift in Sources */,
 				3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */,
 				3B14E8FE4FD978528E9CEFE7 /* UIViewController+UITableViewSpec.swift in Sources */,

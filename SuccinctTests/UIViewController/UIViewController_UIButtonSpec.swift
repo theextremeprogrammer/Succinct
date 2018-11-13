@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-final class UIView_UIButtonSpec: QuickSpec {
+class UIViewController_UIButtonSpec: QuickSpec {
     override func spec() {
         describe("finding buttons") {
             context("when a button exists in the first subview") {
@@ -11,16 +11,16 @@ final class UIView_UIButtonSpec: QuickSpec {
                         .withSubview(
                             UIButtonBuilder().withTitleText("Login").build())
                         .build()
-
-
-                    let result = viewController.view.findButton(withExactText: "Login")
-
-
+                    
+                    
+                    let result = viewController.findButton(withExactText: "Login")
+                    
+                    
                     expect(result).toNot(beNil())
                     expect(result?.titleLabel?.text).to(equal("Login"))
                 }
             }
-
+            
             context("when a button exists in the second subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
@@ -32,11 +32,11 @@ final class UIView_UIButtonSpec: QuickSpec {
                                 .build()
                         )
                         .build()
-
-
-                    let result = viewController.view.findButton(withExactText: "Login")
-
-
+                    
+                    
+                    let result = viewController.findButton(withExactText: "Login")
+                    
+                    
                     expect(result).toNot(beNil())
                     expect(result?.titleLabel?.text).to(equal("Login"))
                 }
