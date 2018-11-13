@@ -14,4 +14,18 @@ extension UIView {
             .filter { $0.image(for: .normal) == searchImage }
             .first
     }
+    
+    public func findButtons(withState searchState: UIControl.State) -> [UIButton] {
+        var buttons: [UIButton] = []
+        
+        for subview in subviews {
+            if let button = subview as? UIButton {
+                if button.state == searchState {
+                    buttons.append(button)
+                }
+            }
+        }
+        
+        return buttons
+    }
 }

@@ -30,4 +30,8 @@ extension UIViewController {
         view.findButton(withImage: searchImage)?
             .tapAndFireTargetEvent()
     }
+    
+    public func findButtons(withState state: UIControl.State) -> [UIButton] {
+        return view.findButtons(withState: state)
+    }
 }

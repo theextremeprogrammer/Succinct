@@ -8,10 +8,30 @@ struct UIButtonBuilder {
     }
 
     func withTitleText(_ titleText: String) -> UIButtonBuilder {
-        button.titleLabel?.text = titleText
+        button.setTitle(titleText, for: .normal)
         return self
     }
 
+    func withState(_ state: UIControl.State) -> UIButtonBuilder {
+        switch state {
+        case .selected:
+            button.isSelected = true
+            
+        case .highlighted:
+            button.isHighlighted = true
+
+        case .disabled:
+            button.isEnabled = false
+            
+        default:
+            button.isSelected = false
+            button.isHighlighted = false
+            button.isEnabled = true
+        }
+        
+        return self
+    }
+    
     func build() -> UIButton {
         return button
     }
