@@ -29,6 +29,21 @@ final class UIViewController_UIViewSpec: QuickSpec {
 
                 expect(viewController.containsImage(UIImage(assetIdentifier: .obligatoryCatImage))).to(beTrue())
             }
+
+            it("can retrieve the imageview containing the specified image found within the view hierarchy") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UIViewBuilder()
+                            .withImageView(UIImage(assetIdentifier: .obligatoryCatImage)!)
+                            .build()
+                    )
+                    .build()
+                
+                
+                let maybeImageView = viewController.getImageView(for: UIImage(assetIdentifier: .obligatoryCatImage))
+                expect(maybeImageView).to(beAKindOf(UIImageView.self))
+                expect(maybeImageView?.isHidden).to(beFalse())
+            }
         }
     }
 }
