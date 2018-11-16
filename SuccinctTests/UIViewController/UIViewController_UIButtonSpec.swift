@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UIViewController_UIButtonSpec: QuickSpec {
+final class UIViewController_UIButtonSpec: QuickSpec {
     override func spec() {
         describe("finding a single button using text") {
             context("when a button exists in the first subview") {
