@@ -49,11 +49,16 @@ hasLabel(containingText searchText: String) -> Bool
 ... and much more still to be documented.
 
 ## Getting Setup
+Succinct supports installation via Carthage. Simple include Succinct in your Cartfile.private (`github "derekleerock/Succinct"`) and [include it in your test target](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework).
+
+## Making a Contribution
+If there is functionality that you're looking for that is not included, please feel free to make a PR with your suggested feature and tests so we can discuss. 
+
+### Running the tests
 All of Succinct's tests have been written using Quick and Nimble. Assuming you already have Carthage installed, you can easily fetch these dependencies by executing:
 
 `$ make bootstrap`
 
-## Running the tests
 There are two different test suites for Succinct: one which does not require the simulator to run, and one that does. 
 
 #### Unit Tests
@@ -64,9 +69,6 @@ There are two different test suites for Succinct: one which does not require the
 
 #### Execute All Tests
 `$ make alltests`
-
-## Making a Contribution
-If there is functionality that you're looking for that is not included, please feel free to make a PR with your suggested feature so we can discuss. 
 
 ## License
 Succinct is licensed under the MIT License. Please see the [`LICENSE`](https://github.com/derekleerock/succinct/blob/master/LICENSE) file.
