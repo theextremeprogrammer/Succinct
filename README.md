@@ -3,15 +3,15 @@
 
 I started to build out this framework so I could have a de-coupled approach to testing my iOS apps using a BDD-style approach. After re-creating the same style of tests several times I thought it'd be best to pull them together into a framework to help myself and possibly others. 
 
-**_Caveat:_** Succinct doesn't support every single aspect of testing various iOS views just yet. I'm slowly adding functionality in as I need it. If there's something you'd like to see included please feel free to make a PR and we can discuss. 
+**_Caveat:_** _Succinct doesn't support every single aspect of testing various iOS views just yet. I'm slowly adding functionality in as I need it. If there's something you'd like to see included please feel free to make a PR._ 👍🏻
 
-Some of the functionality included currently includes:
+Some of the functionality currently includes:
 
 ## UIViewController
-UIViewController methods give a convenient way of interacting with the objects located within that view controller's hierarchy without coupling yourself to the private details that the VC contains.  
+UIViewController methods give a convenient way of interacting with the objects located within that view controller's hierarchy without coupling to the private details that the view controller contains. Keep your UIViews private within your view controller and simply utilize the following methods to discover what is contained within.
 
 ### UIButton
-Simply specify the text or image that is displayed on the button to tap it, de-coupling you from the button instance and target action. Your button instance and target action can be private in the implementation.    
+Simply specify the text or image that is displayed on the button to tap it, de-coupling you from the button instance and target action. Your button instance property and target action method can both be private in the implementation.    
 
 #### Commands
 ```
