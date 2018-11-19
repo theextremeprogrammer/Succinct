@@ -72,4 +72,4 @@ If there is functionality that you're looking for that is not included, please f
 
 ### Code
 
-Succinct is licensed under the MIT License. Please see the [`LICENSE` file](https://github.com/derekleerock/succinct/blob/master/LICENSE) file
+Succinct is licensed under the MIT License. Please see the [`LICENSE`](https://github.com/derekleerock/succinct/blob/master/LICENSE) file.
