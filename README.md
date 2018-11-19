@@ -3,7 +3,9 @@
 
 I started to build out this framework so I could have a de-coupled approach to testing my iOS apps using a BDD-style approach. After re-creating the same style of tests several times I thought it'd be best to pull them together into a framework to help myself and possibly others. 
 
-Succinct doesn't support every single aspect of testing an iOS app just yet. As functionality is needed, I'm slowly adding it in. Functionality at the current time includes:
+**_Caveat:_** Succinct doesn't support every single aspect of testing various iOS views just yet. I'm slowly adding functionality in as I need it. If there's something you'd like to see included please feel free to make a PR and we can discuss. 
+
+Some of the functionality included currently includes:
 
 ## UIViewController
 UIViewController methods give a convenient way of interacting with the objects located within that view controller's hierarchy without coupling yourself to the private details that the VC contains.  
@@ -44,4 +46,30 @@ hasLabel(withExactText searchText: String) -> Bool
 hasLabel(containingText searchText: String) -> Bool
 ```
 
-...
+... and much more still to be documented.
+
+## Getting Setup
+All of Succinct's tests have been written using Quick and Nimble. Assuming you already have Carthage installed, you can easily fetch these dependencies by executing:
+
+`$ make bootstrap`
+
+## Running the tests
+There are two different test suites for Succinct: one which does not require the simulator to run, and one that does. 
+
+#### Unit Tests
+`$ make tests`
+
+#### Simulator Tests
+`$ make simulator-tests`
+
+#### Execute All Tests
+`$ make alltests`
+
+## Making a Contribution
+If there is functionality that you're looking for that is not included, please feel free to make a PR with your suggested feature so we can discuss. 
+
+## License
+
+### Code
+
+Succinct is licensed under the MIT License. Please see the [`LICENSE` file](https://github.com/derekleerock/succinct/blob/master/LICENSE) file
