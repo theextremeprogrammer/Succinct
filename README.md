@@ -1,4 +1,6 @@
 # Succinct
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 *Write de-coupled BDD-style tests for your iOS apps.*
 
 I started to build out this framework so I could have a de-coupled approach to testing my iOS apps using a BDD-style approach. After re-creating the same style of tests several times I thought it'd be best to pull them together into a framework to help myself and possibly others. 
