@@ -66,6 +66,7 @@
 		B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */; };
 		B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E602160B5170044D2AD /* UIView+UITextField.swift */; };
 		B85D4DF1219A48DF00B9828E /* UIViewController_UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController_UIButtonSpec.swift */; };
+		B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */; };
 		B89E2D0C218BF422004FE2A6 /* UIViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */; };
 		B89E2D0E218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0D218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift */; };
 		B89E2D10218BFA3D004FE2A6 /* UIViewController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0F218BFA3D004FE2A6 /* UIViewController+UILabel.swift */; };
@@ -189,6 +190,7 @@
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
 		B1D05E602160B5170044D2AD /* UIView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextField.swift"; sourceTree = "<group>"; };
 		B85D4DF0219A48DF00B9828E /* UIViewController_UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_UIButtonSpec.swift; sourceTree = "<group>"; };
+		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		B89A3EB521A2AFD2008B15C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton.swift"; sourceTree = "<group>"; };
 		B89E2D0D218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIBarButtonItem.swift"; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				525FF7ED20331DBD007AE6C8 /* Optional */,
+				B88F5E7021A52A7C0074ADBE /* UIBarButtonItem */,
 				52C77EB62051591C00552CB4 /* UIButton */,
 				52970E5C20833AC800297EF9 /* UICollectionView */,
 				52C77EB82051594400552CB4 /* UIPickerView */,
@@ -516,6 +519,14 @@
 			path = UISlider;
 			sourceTree = "<group>";
 		};
+		B88F5E7021A52A7C0074ADBE /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -696,6 +707,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
+				B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */,
 				3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */,
 				52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */,
 				3B14E52C804E819D50011851 /* UIPickerView+SelectComponent.swift in Sources */,

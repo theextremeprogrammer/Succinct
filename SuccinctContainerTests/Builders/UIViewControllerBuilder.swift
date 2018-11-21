@@ -17,7 +17,7 @@ struct UIViewControllerBuilder {
             targetAction: TargetAction
     ) -> UIViewControllerBuilder {
         let barButtonItem = UIBarButtonItem(
-            barButtonSystemItem: UIBarButtonSystemItem.action,
+            barButtonSystemItem: barButtonSystemItem,
             target: targetAction,
             action: #selector(TargetAction.action(sender:))
         )
@@ -27,6 +27,21 @@ struct UIViewControllerBuilder {
         return self
     }
 
+    func withRightBarButtonItem(
+        barButtonSystemItem: UIBarButtonSystemItem,
+        targetAction: TargetAction
+    ) -> UIViewControllerBuilder {
+        let barButtonItem = UIBarButtonItem(
+            barButtonSystemItem: barButtonSystemItem,
+            target: targetAction,
+            action: #selector(TargetAction.action(sender:))
+        )
+        
+        viewController.navigationItem.rightBarButtonItem = barButtonItem
+        
+        return self
+    }
+    
     func build() -> UIViewController {
         return viewController
     }
