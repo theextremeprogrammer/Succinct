@@ -65,7 +65,7 @@
 		B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */; };
 		B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */; };
 		B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E602160B5170044D2AD /* UIView+UITextField.swift */; };
-		B836272B21AC1C8C008264C5 /* UIViewController+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836272A21AC1C8C008264C5 /* UIViewController+UISwitch.swift */; };
+		B836272B21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836272A21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift */; };
 		B836272D21AC1D27008264C5 /* UISwitchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836272C21AC1D27008264C5 /* UISwitchBuilder.swift */; };
 		B836272F21AC1DBB008264C5 /* UIViewController+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836272E21AC1DBB008264C5 /* UIViewController+UISwitch.swift */; };
 		B836273121AC1F3A008264C5 /* UIViewController+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836273021AC1F3A008264C5 /* UIViewController+UIImage.swift */; };
@@ -193,7 +193,7 @@
 		B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
 		B1D05E602160B5170044D2AD /* UIView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextField.swift"; sourceTree = "<group>"; };
-		B836272A21AC1C8C008264C5 /* UIViewController+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISwitch.swift"; sourceTree = "<group>"; };
+		B836272A21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISwitchSpec.swift"; sourceTree = "<group>"; };
 		B836272C21AC1D27008264C5 /* UISwitchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitchBuilder.swift; sourceTree = "<group>"; };
 		B836272E21AC1DBB008264C5 /* UIViewController+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISwitch.swift"; sourceTree = "<group>"; };
 		B836273021AC1F3A008264C5 /* UIViewController+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIImage.swift"; sourceTree = "<group>"; };
@@ -478,7 +478,7 @@
 			children = (
 				3B14EB825E002B1E92154DB9 /* UIViewController+UILabelSpec.swift */,
 				3B14E0531A59BD80586AFF4E /* UIViewController+UISegmentedControlSpec.swift */,
-				B836272A21AC1C8C008264C5 /* UIViewController+UISwitch.swift */,
+				B836272A21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift */,
 				3B14ED2A55D7B067E5D43B41 /* UIViewController+UITableViewSpec.swift */,
 				B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */,
 				524FF43620B667D400CA71D4 /* UIViewController+UIView.swift */,
@@ -770,7 +770,7 @@
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				3B14EA0AECFD06E28FB32A18 /* UIViewController+UILabelSpec.swift in Sources */,
 				3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */,
-				B836272B21AC1C8C008264C5 /* UIViewController+UISwitch.swift in Sources */,
+				B836272B21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift in Sources */,
 				3B14E8FE4FD978528E9CEFE7 /* UIViewController+UITableViewSpec.swift in Sources */,
 				B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */,
 				524FF43720B667D400CA71D4 /* UIViewController+UIView.swift in Sources */,
