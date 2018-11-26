@@ -81,6 +81,7 @@
 		B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */; };
 		B89E2D1C218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */; };
 		B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */; };
+		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIStepper.swift"; sourceTree = "<group>"; };
 		B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIPickerView.swift"; sourceTree = "<group>"; };
 		B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextField.swift"; sourceTree = "<group>"; };
+		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		B8FE917E2120F5F30097274D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */,
 				3B14E053556933C8E8A707E6 /* UIView+UISlider.swift */,
 				3B14E883AEE14B5712B4379A /* UIView+UIStepper.swift */,
+				B8D21E4321AC22200059333E /* UIView+UISwitch.swift */,
 				B1D05E602160B5170044D2AD /* UIView+UITextField.swift */,
 				3B14E6688347C8F6D067590C /* UIView+UIView.swift */,
 			);
@@ -731,6 +734,7 @@
 				52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */,
 				3B14EE0A47F5AE484EE47FA2 /* UIView+UISlider.swift in Sources */,
 				3B14EE3C4841A6BA7F54906A /* UIView+UIStepper.swift in Sources */,
+				B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */,
 				B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */,
 				3B14E5701AAF98B39C2E6791 /* UIView+UIView.swift in Sources */,
 				3B14EDC64BD0D4315A13C89C /* UIViewController+Testing.swift in Sources */,
