@@ -52,6 +52,23 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                     expect(switchCount).to(equal(1))
                 }
             }
+            
+            context("when there are switches with different statuses") {
+                it("can find the switch") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UISwitchBuilder().withIsOn(false).build())
+                        .withSubview(
+                            UISwitchBuilder().withIsOn(true).build())
+                        .build()
+
+                    
+                    let switchCount = viewController.countOfSwitches(switchIsOn: false)
+                    
+                    
+                    expect(switchCount).to(equal(1))
+                }
+            }
         }
     }
 }

@@ -5,7 +5,8 @@ extension UIView {
         var switchesCounted = 0
         
         for subview in subviews {
-            if let _ = subview as? UISwitch {
+            if let uiSwitch = subview as? UISwitch,
+                uiSwitch.isOn == switchIsOn {
                 switchesCounted += 1
             }
             
