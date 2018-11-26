@@ -8,16 +8,4 @@ extension UIViewController {
     public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
         return view.countOfViews(withBackgroundColor: searchColor)
     }
-    
-    public func containsImage(_ searchImage: UIImage) -> Bool {
-        return view.containsImage(searchImage)
-    }
-    
-    public func getImageView(for searchImage: UIImage) -> UIImageView? {
-        return view.getImageView(for: searchImage)
-    }
-    
-    public func countOfImages(_ searchImage: UIImage) -> Int {
-        return view.countOfImages(searchImage)
-    }
 }
