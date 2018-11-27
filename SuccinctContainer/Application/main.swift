@@ -1,7 +1,7 @@
 import UIKit
 
 func startApplication(delegateClassName: String) {
-    UIApplicationMain(
+    let _ = UIApplicationMain(
         CommandLine.argc,
         UnsafeMutableRawPointer(CommandLine.unsafeArgv).bindMemory(to: UnsafeMutablePointer<Int8>.self, capacity: Int(CommandLine.argc)),
         NSStringFromClass(UIApplication.self),
