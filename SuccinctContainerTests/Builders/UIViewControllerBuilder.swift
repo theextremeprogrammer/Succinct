@@ -13,7 +13,7 @@ struct UIViewControllerBuilder {
     }
 
     func withLeftBarButtonItem(
-            barButtonSystemItem: UIBarButtonSystemItem,
+            barButtonSystemItem: UIBarButtonItem.SystemItem,
             targetAction: TargetAction
     ) -> UIViewControllerBuilder {
         let barButtonItem = UIBarButtonItem(
@@ -28,7 +28,7 @@ struct UIViewControllerBuilder {
     }
 
     func withRightBarButtonItem(
-        barButtonSystemItem: UIBarButtonSystemItem,
+        barButtonSystemItem: UIBarButtonItem.SystemItem,
         targetAction: TargetAction
     ) -> UIViewControllerBuilder {
         let barButtonItem = UIBarButtonItem(
