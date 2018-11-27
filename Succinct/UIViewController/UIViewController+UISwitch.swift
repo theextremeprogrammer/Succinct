@@ -6,15 +6,7 @@ extension UIViewController {
     }
     
     public func tapSwitch(containedInView viewClass: AnyClass) {
-        for subview in view.subviews {
-            if subview.isKind(of: viewClass) {
-                for subSubView in subview.subviews {
-                    if let uiSwitch = subSubView as? UISwitch {
-                        uiSwitch.tapAndFireTargetEvent()
-                        return
-                    }
-                }
-            }
-        }
+        view.findSwitch(containedInView: viewClass)?
+            .tapAndFireTargetEvent()
     }
 }
