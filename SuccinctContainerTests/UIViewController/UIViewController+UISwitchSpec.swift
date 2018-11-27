@@ -41,14 +41,17 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                 }
                 
                 context("when the contained in view DOES exist in the view hierarchy") {
-                    it("can tap a switch") {
+                    var viewController: UIViewController!
+                    
+                    beforeEach {
                         let targetAction = TargetAction(self.unitTestSwitchWasTapped)
                         
                         let uiSwitch = UISwitchBuilder()
+                            .withIsOn(false)
                             .withTargetAction(targetAction)
                             .build()
                         
-                        let viewController = UIViewControllerBuilder()
+                        viewController = UIViewControllerBuilder()
                             .withSubview(
                                 ViewBuilder<SomeUniqueUIView>()
                                     .withSubview(uiSwitch)
@@ -59,9 +62,15 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         
                         
                         viewController.tapSwitch(containedInView: SomeUniqueUIView.self)
-                        
-                        
+                    }
+                    
+                    it("can tap a switch") {
                         expect(self.switch_wasTapped).to(beTrue())
+                    }
+                    
+                    it("updates the isOn property of the switch because Apple won't do this for us from a unit test even though they do it as a part of UIKit") {
+                        let currentSwitch = viewController.view.findSwitch(containedInView: UIView.self)
+                        expect(currentSwitch?.isOn).to(beTrue())
                     }
                 }
             }
