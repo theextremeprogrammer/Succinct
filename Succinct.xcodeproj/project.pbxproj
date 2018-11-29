@@ -47,7 +47,6 @@
 		5235C2A3208F511700C0CEEA /* UIPickerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235C2A2208F511700C0CEEA /* UIPickerViewBuilder.swift */; };
 		5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235C2A4208F51AD00C0CEEA /* UnitTestUIPickerView.swift */; };
 		524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */; };
-		524FF43720B667D400CA71D4 /* UIViewController+UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524FF43620B667D400CA71D4 /* UIViewController+UIViewSpec.swift */; };
 		524FF44020B689B700CA71D4 /* UIImage+TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524FF43F20B689B700CA71D4 /* UIImage+TestAssets.swift */; };
 		525FF7DA203252C6007AE6C8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; };
 		525FF7DB203252C6007AE6C8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; };
@@ -90,6 +89,7 @@
 		B8B56E6E21B015B00008514A /* UIViewController+UISliderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6D21B015B00008514A /* UIViewController+UISliderSpec.swift */; };
 		B8B56E7021B016250008514A /* UISliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6F21B016250008514A /* UISliderBuilder.swift */; };
 		B8B56E7221B01A320008514A /* TargetActionWithArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7121B01A320008514A /* TargetActionWithArg.swift */; };
+		B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -187,7 +187,6 @@
 		5230D83620ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIBarButtonItemSpec.swift"; sourceTree = "<group>"; };
 		5235C2A2208F511700C0CEEA /* UIPickerViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewBuilder.swift; sourceTree = "<group>"; };
 		5235C2A4208F51AD00C0CEEA /* UnitTestUIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestUIPickerView.swift; sourceTree = "<group>"; };
-		524FF43620B667D400CA71D4 /* UIViewController+UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIViewSpec.swift"; sourceTree = "<group>"; };
 		524FF43F20B689B700CA71D4 /* UIImage+TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestAssets.swift"; sourceTree = "<group>"; };
 		525FF7D8203252C6007AE6C8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		525FF7D9203252C6007AE6C8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -229,6 +228,7 @@
 		B8B56E6D21B015B00008514A /* UIViewController+UISliderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISliderSpec.swift"; sourceTree = "<group>"; };
 		B8B56E6F21B016250008514A /* UISliderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderBuilder.swift; sourceTree = "<group>"; };
 		B8B56E7121B01A320008514A /* TargetActionWithArg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetActionWithArg.swift; sourceTree = "<group>"; };
+		B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIImageViewSpec.swift"; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -507,13 +507,13 @@
 			isa = PBXGroup;
 			children = (
 				B85D4DF0219A48DF00B9828E /* UIViewController+UIButtonSpec.swift */,
+				B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */,
 				3B14EB825E002B1E92154DB9 /* UIViewController+UILabelSpec.swift */,
 				3B14E0531A59BD80586AFF4E /* UIViewController+UISegmentedControlSpec.swift */,
 				B8B56E6921B0118D0008514A /* UIViewController+UISliderSpec.swift */,
 				B836272A21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift */,
 				3B14ED2A55D7B067E5D43B41 /* UIViewController+UITableViewSpec.swift */,
 				B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */,
-				524FF43620B667D400CA71D4 /* UIViewController+UIViewSpec.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -816,6 +816,7 @@
 				526DC7FD208475C1001314A7 /* UITableViewBuilder.swift in Sources */,
 				526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */,
 				526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */,
+				B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */,
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
 				B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
@@ -826,7 +827,6 @@
 				B836272B21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift in Sources */,
 				3B14E8FE4FD978528E9CEFE7 /* UIViewController+UITableViewSpec.swift in Sources */,
 				B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */,
-				524FF43720B667D400CA71D4 /* UIViewController+UIViewSpec.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
 				5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */,
 				3B14E9258548F0334E0DF82E /* UnitTestUITableView.swift in Sources */,
