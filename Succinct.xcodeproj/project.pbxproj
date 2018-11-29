@@ -73,7 +73,7 @@
 		B83F5CD121ACD1330061494E /* UISwitchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD021ACD1320061494E /* UISwitchBuilder.swift */; };
 		B83F5CD321ACD65E0061494E /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD221ACD65E0061494E /* ViewBuilder.swift */; };
 		B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */; };
-		B85D4DF1219A48DF00B9828E /* UIViewController_UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController_UIButtonSpec.swift */; };
+		B85D4DF1219A48DF00B9828E /* UIViewController+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButtonSpec.swift */; };
 		B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */; };
 		B89E2D0C218BF422004FE2A6 /* UIViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */; };
 		B89E2D0E218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0D218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift */; };
@@ -85,6 +85,8 @@
 		B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */; };
 		B89E2D1C218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */; };
 		B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */; };
+		B8B56E6A21B0118D0008514A /* UIViewController+UISliderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6921B0118D0008514A /* UIViewController+UISliderSpec.swift */; };
+		B8B56E6C21B012B10008514A /* UISliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6B21B012B10008514A /* UISliderBuilder.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -206,7 +208,7 @@
 		B83F5CD021ACD1320061494E /* UISwitchBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchBuilder.swift; sourceTree = "<group>"; };
 		B83F5CD221ACD65E0061494E /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Tap.swift"; sourceTree = "<group>"; };
-		B85D4DF0219A48DF00B9828E /* UIViewController_UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_UIButtonSpec.swift; sourceTree = "<group>"; };
+		B85D4DF0219A48DF00B9828E /* UIViewController+UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		B89A3EB521A2AFD2008B15C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton.swift"; sourceTree = "<group>"; };
@@ -219,6 +221,8 @@
 		B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIStepper.swift"; sourceTree = "<group>"; };
 		B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIPickerView.swift"; sourceTree = "<group>"; };
 		B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextField.swift"; sourceTree = "<group>"; };
+		B8B56E6921B0118D0008514A /* UIViewController+UISliderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISliderSpec.swift"; sourceTree = "<group>"; };
+		B8B56E6B21B012B10008514A /* UISliderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderBuilder.swift; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -323,13 +327,14 @@
 			isa = PBXGroup;
 			children = (
 				522D99AD1FAD2CEE009BB1B9 /* Builders */,
+				522D99991FAD2A9D009BB1B9 /* Info.plist */,
 				525FF7EE20331DD7007AE6C8 /* Optional */,
 				524FF43820B6688600CA71D4 /* Resources */,
 				524FF43E20B689A000CA71D4 /* UIImage */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
+				B8B56E6821B0115B0008514A /* UISlider */,
 				526DC7F920846AA1001314A7 /* UITableView */,
 				52AAB3852072F1BF0021BA62 /* UIViewController */,
-				522D99991FAD2A9D009BB1B9 /* Info.plist */,
 			);
 			path = SuccinctTests;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */,
 				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
 				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
+				B8B56E6B21B012B10008514A /* UISliderBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -497,7 +503,8 @@
 				3B14ED2A55D7B067E5D43B41 /* UIViewController+UITableViewSpec.swift */,
 				B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */,
 				524FF43620B667D400CA71D4 /* UIViewController+UIView.swift */,
-				B85D4DF0219A48DF00B9828E /* UIViewController_UIButtonSpec.swift */,
+				B85D4DF0219A48DF00B9828E /* UIViewController+UIButtonSpec.swift */,
+				B8B56E6921B0118D0008514A /* UIViewController+UISliderSpec.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -560,6 +567,13 @@
 				B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */,
 			);
 			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		B8B56E6821B0115B0008514A /* UISlider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UISlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -789,6 +803,7 @@
 				5235C2A3208F511700C0CEEA /* UIPickerViewBuilder.swift in Sources */,
 				524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */,
 				B836272D21AC1D27008264C5 /* UISwitchBuilder.swift in Sources */,
+				B8B56E6A21B0118D0008514A /* UIViewController+UISliderSpec.swift in Sources */,
 				526DC7FD208475C1001314A7 /* UITableViewBuilder.swift in Sources */,
 				526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */,
 				526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */,
@@ -798,10 +813,11 @@
 				3B14EA0AECFD06E28FB32A18 /* UIViewController+UILabelSpec.swift in Sources */,
 				3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */,
 				B836272B21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift in Sources */,
+				B8B56E6C21B012B10008514A /* UISliderBuilder.swift in Sources */,
 				3B14E8FE4FD978528E9CEFE7 /* UIViewController+UITableViewSpec.swift in Sources */,
 				B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */,
 				524FF43720B667D400CA71D4 /* UIViewController+UIView.swift in Sources */,
-				B85D4DF1219A48DF00B9828E /* UIViewController_UIButtonSpec.swift in Sources */,
+				B85D4DF1219A48DF00B9828E /* UIViewController+UIButtonSpec.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
 				5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */,
 				3B14E9258548F0334E0DF82E /* UnitTestUITableView.swift in Sources */,
