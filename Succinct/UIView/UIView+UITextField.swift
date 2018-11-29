@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - Has UILabels
+// MARK: - Has UITextFields
 extension UIView {
     public func hasTextField(withExactPlaceholderText searchText: String) -> Bool {
         return findTextField(withExactPlaceholderText: searchText).isNotNil()
