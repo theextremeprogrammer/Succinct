@@ -17,9 +17,7 @@ final class UIViewController_UISliderSpec: QuickSpec {
 
             it("can find a slider located in the first subview") {
                 let viewController = UIViewControllerBuilder()
-                    .withSubview(
-                        UISliderBuilder().withValue(1.0).build()
-                    )
+                    .withSubview(UISliderBuilder().withValue(1.0).build())
                     .build()
                 
                 
@@ -57,6 +55,36 @@ final class UIViewController_UISliderSpec: QuickSpec {
                 
                 
                 expect(hasSlider).to(beFalse())
+            }
+        }
+
+        describe("the count of sliders") {
+            it("can count sliders found in the first subview") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(UISliderBuilder().build())
+                    .build()
+                
+                
+                let count = viewController.sliderCount()
+
+
+                expect(count).to(equal(1))
+            }
+
+            it("can count sliders found in the second subview") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UIViewBuilder()
+                            .withSubview(UISliderBuilder().withValue(1.0).build())
+                            .build()
+                    )
+                    .build()
+                
+                
+                let count = viewController.sliderCount()
+                
+                
+                expect(count).to(equal(1))
             }
         }
     }
