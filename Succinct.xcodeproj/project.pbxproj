@@ -91,6 +91,7 @@
 		B8B56E7221B01A320008514A /* TargetActionWithArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7121B01A320008514A /* TargetActionWithArg.swift */; };
 		B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */; };
 		B8B56E7821B0B3EC0008514A /* UIViewController+UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */; };
+		B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -231,6 +232,7 @@
 		B8B56E7121B01A320008514A /* TargetActionWithArg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetActionWithArg.swift; sourceTree = "<group>"; };
 		B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIImageViewSpec.swift"; sourceTree = "<group>"; };
 		B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIViewSpec.swift"; sourceTree = "<group>"; };
+		B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewBuilder.swift; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 				B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */,
 				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
 				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
+				B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
 				5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */,
 				3B14E9258548F0334E0DF82E /* UnitTestUITableView.swift in Sources */,
+				B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,18 +12,18 @@ final class UIViewController_UIViewSpec: QuickSpec {
                         .build()
                     
                     
-                    expect(viewController.containsView(withBackgroundColor: .black)).to(beFalse())
+                    expect(viewController.containsView(withBackgroundColor: .purple)).to(beFalse())
                 }
             }
             
             context("when the view controller's view is the desired color") {
                 it("can be found") {
                     let viewController = UIViewControllerBuilder()
-                        .withBackgroundColor(.black)
+                        .withBackgroundColor(.purple)
                         .build()
                     
                     
-                    expect(viewController.containsView(withBackgroundColor: .black)).to(beTrue())
+                    expect(viewController.containsView(withBackgroundColor: .purple)).to(beTrue())
                 }
             }
             
@@ -32,11 +32,11 @@ final class UIViewController_UIViewSpec: QuickSpec {
                 it("can be found") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
-                            UIViewBuilder().withBackgroundColor(.black).build())
+                            UIViewBuilder().withBackgroundColor(.purple).build())
                         .build()
                     
                     
-                    expect(viewController.containsView(withBackgroundColor: .black)).to(beTrue())
+                    expect(viewController.containsView(withBackgroundColor: .purple)).to(beTrue())
                 }
             }
             
@@ -45,13 +45,37 @@ final class UIViewController_UIViewSpec: QuickSpec {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
                             UIViewBuilder()
-                                .withSubview(UIViewBuilder().withBackgroundColor(.black).build())
+                                .withSubview(UIViewBuilder().withBackgroundColor(.purple).build())
                                 .build()
                         )
                         .build()
                     
                     
-                    expect(viewController.containsView(withBackgroundColor: .black)).to(beTrue())
+                    expect(viewController.containsView(withBackgroundColor: .purple)).to(beTrue())
+                }
+            }
+            
+            describe("when the view with the desired color is in a collection view") {
+                context("when the collection view does not contain any cells") {
+                    it("cannot be found") {
+                        let viewController = UIViewControllerBuilder()
+                            .withSubview(UICollectionViewBuilder().build())
+                            .build()
+                        
+                        
+                        expect(viewController.containsView(withBackgroundColor: .purple)).to(beFalse())
+                    }
+                }
+
+                context("when the collection view does not contain any cells that satisfy the condition") {
+                    it("cannot be found") {
+                        let viewController = UIViewControllerBuilder()
+                            .withSubview(UICollectionViewBuilder().build())
+                            .build()
+                        
+                        
+                        expect(viewController.containsView(withBackgroundColor: .purple)).to(beFalse())
+                    }
                 }
             }
         }
