@@ -18,7 +18,7 @@ final class UITableViewConfigurationSpec: QuickSpec {
 
         let secondSectionFirstCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section1.Cell0,
-            titleLabelText: "S2: Second cell",
+            titleLabelText: "S2: First cell",
             selected: false
         )
 
@@ -42,7 +42,10 @@ final class UITableViewConfigurationSpec: QuickSpec {
             it("knows how many sections when one section is configured") {
                 let config = UITableViewConfiguration(
                     tableViewStyle: UITableView.Style.plain,
-                    cellDefinitions: [IndexPathFixture.Section0.Cell0 : firstSectionFirstCell]
+                    cellDefinitions: [
+                        IndexPathFixture.Section0.Cell0 : firstSectionFirstCell,
+                        IndexPathFixture.Section0.Cell1 : firstSectionSecondCell
+                    ]
                 )
 
 
@@ -52,7 +55,10 @@ final class UITableViewConfigurationSpec: QuickSpec {
             it("knows how many sections when two sections are configured") {
                 let config = UITableViewConfiguration(
                     tableViewStyle: UITableView.Style.plain,
-                    cellDefinitions: [IndexPathFixture.Section0.Cell0 : firstSectionFirstCell, IndexPathFixture.Section1.Cell0 : secondSectionSecondCell]
+                    cellDefinitions: [
+                        IndexPathFixture.Section0.Cell0 : firstSectionFirstCell,
+                        IndexPathFixture.Section1.Cell0 : secondSectionFirstCell
+                    ]
                 )
 
 
@@ -75,7 +81,9 @@ final class UITableViewConfigurationSpec: QuickSpec {
             it("knows how many rows are in the first section with one cell") {
                 let config = UITableViewConfiguration(
                     tableViewStyle: UITableView.Style.plain,
-                    cellDefinitions: [IndexPathFixture.Section0.Cell0 : firstSectionFirstCell]
+                    cellDefinitions: [
+                        IndexPathFixture.Section0.Cell0 : firstSectionFirstCell
+                    ]
                 )
 
 
@@ -85,7 +93,10 @@ final class UITableViewConfigurationSpec: QuickSpec {
             it("knows how many rows are in the first section with two cells") {
                 let config = UITableViewConfiguration(
                     tableViewStyle: UITableView.Style.plain,
-                    cellDefinitions: [IndexPathFixture.Section0.Cell0 : firstSectionFirstCell, IndexPathFixture.Section0.Cell1 : firstSectionSecondCell]
+                    cellDefinitions: [
+                        IndexPathFixture.Section0.Cell0 : firstSectionFirstCell,
+                        IndexPathFixture.Section0.Cell1 : firstSectionSecondCell
+                    ]
                 )
 
 
@@ -95,7 +106,10 @@ final class UITableViewConfigurationSpec: QuickSpec {
             it("knows how many rows are in a different section with two cells") {
                 let config = UITableViewConfiguration(
                     tableViewStyle: UITableView.Style.plain,
-                    cellDefinitions: [IndexPathFixture.Section1.Cell0 : secondSectionFirstCell, IndexPathFixture.Section1.Cell1 : secondSectionSecondCell]
+                    cellDefinitions: [
+                        IndexPathFixture.Section1.Cell0 : secondSectionFirstCell,
+                        IndexPathFixture.Section1.Cell1 : secondSectionSecondCell
+                    ]
                 )
 
 

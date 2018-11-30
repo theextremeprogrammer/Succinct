@@ -6,10 +6,11 @@ struct UITableViewConfiguration {
 
     var numberOfSections: Int {
         get {
-            let countOfSections = cellDefinitions
+            let sections = cellDefinitions
                 .map { indexPath, _ in indexPath.section }
-                .count
 
+            let countOfSections = Set(sections).count
+            
             return countOfSections > 0 ? countOfSections : 1
         }
     }
