@@ -92,6 +92,9 @@
 		B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */; };
 		B8B56E7821B0B3EC0008514A /* UIViewController+UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */; };
 		B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */; };
+		B8B80B6221B0C39600EA315D /* UICollectionViewConfigurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6121B0C39600EA315D /* UICollectionViewConfigurationSpec.swift */; };
+		B8B80B6421B0C42100EA315D /* UICollectionViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6321B0C42100EA315D /* UICollectionViewCellConfiguration.swift */; };
+		B8B80B6621B0C4E600EA315D /* UICollectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +236,9 @@
 		B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIImageViewSpec.swift"; sourceTree = "<group>"; };
 		B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIViewSpec.swift"; sourceTree = "<group>"; };
 		B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewBuilder.swift; sourceTree = "<group>"; };
+		B8B80B6121B0C39600EA315D /* UICollectionViewConfigurationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewConfigurationSpec.swift; sourceTree = "<group>"; };
+		B8B80B6321B0C42100EA315D /* UICollectionViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellConfiguration.swift; sourceTree = "<group>"; };
+		B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewConfiguration.swift; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -339,6 +345,7 @@
 				522D99AD1FAD2CEE009BB1B9 /* Builders */,
 				525FF7EE20331DD7007AE6C8 /* Optional */,
 				524FF43820B6688600CA71D4 /* Resources */,
+				B8B80B6021B0C38300EA315D /* UICollectionView */,
 				524FF43E20B689A000CA71D4 /* UIImage */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
 				B8B56E6821B0115B0008514A /* UISlider */,
@@ -370,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */,
+				B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */,
 				525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */,
 				5235C2A2208F511700C0CEEA /* UIPickerViewBuilder.swift */,
 				3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */,
@@ -379,7 +387,6 @@
 				B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */,
 				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
 				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
-				B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -589,6 +596,16 @@
 			children = (
 			);
 			path = UISlider;
+			sourceTree = "<group>";
+		};
+		B8B80B6021B0C38300EA315D /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B8B80B6321B0C42100EA315D /* UICollectionViewCellConfiguration.swift */,
+				B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */,
+				B8B80B6121B0C39600EA315D /* UICollectionViewConfigurationSpec.swift */,
+			);
+			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -812,6 +829,10 @@
 				526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
+				B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */,
+				B8B80B6421B0C42100EA315D /* UICollectionViewCellConfiguration.swift in Sources */,
+				B8B80B6621B0C4E600EA315D /* UICollectionViewConfiguration.swift in Sources */,
+				B8B80B6221B0C39600EA315D /* UICollectionViewConfigurationSpec.swift in Sources */,
 				524FF44020B689B700CA71D4 /* UIImage+TestAssets.swift in Sources */,
 				525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */,
 				521E6951208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift in Sources */,
@@ -837,7 +858,6 @@
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
 				5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */,
 				3B14E9258548F0334E0DF82E /* UnitTestUITableView.swift in Sources */,
-				B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
