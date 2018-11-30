@@ -19,6 +19,11 @@ struct UIViewControllerBuilder {
         
         return self
     }
+    
+    func withBackgroundColor(_ color: UIColor) -> UIViewControllerBuilder {
+        viewController.view.backgroundColor = color
+        return self
+    }
 
     func build() -> UIViewController {
         return viewController

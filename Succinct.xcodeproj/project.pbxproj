@@ -90,6 +90,7 @@
 		B8B56E7021B016250008514A /* UISliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6F21B016250008514A /* UISliderBuilder.swift */; };
 		B8B56E7221B01A320008514A /* TargetActionWithArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7121B01A320008514A /* TargetActionWithArg.swift */; };
 		B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */; };
+		B8B56E7821B0B3EC0008514A /* UIViewController+UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -229,6 +230,7 @@
 		B8B56E6F21B016250008514A /* UISliderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderBuilder.swift; sourceTree = "<group>"; };
 		B8B56E7121B01A320008514A /* TargetActionWithArg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetActionWithArg.swift; sourceTree = "<group>"; };
 		B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIImageViewSpec.swift"; sourceTree = "<group>"; };
+		B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIViewSpec.swift"; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -514,6 +516,7 @@
 				B836272A21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift */,
 				3B14ED2A55D7B067E5D43B41 /* UIViewController+UITableViewSpec.swift */,
 				B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */,
+				B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -816,17 +819,18 @@
 				526DC7FD208475C1001314A7 /* UITableViewBuilder.swift in Sources */,
 				526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */,
 				526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */,
-				B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */,
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
 				B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				B85D4DF1219A48DF00B9828E /* UIViewController+UIButtonSpec.swift in Sources */,
+				B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */,
 				3B14EA0AECFD06E28FB32A18 /* UIViewController+UILabelSpec.swift in Sources */,
 				3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */,
 				B8B56E6A21B0118D0008514A /* UIViewController+UISliderSpec.swift in Sources */,
 				B836272B21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift in Sources */,
 				3B14E8FE4FD978528E9CEFE7 /* UIViewController+UITableViewSpec.swift in Sources */,
 				B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */,
+				B8B56E7821B0B3EC0008514A /* UIViewController+UIViewSpec.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
 				5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */,
 				3B14E9258548F0334E0DF82E /* UnitTestUITableView.swift in Sources */,

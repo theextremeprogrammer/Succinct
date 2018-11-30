@@ -25,6 +25,11 @@ struct UIViewBuilder {
         view.addSubview(imageView)
         return self
     }
+    
+    func withBackgroundColor(_ color: UIColor) -> UIViewBuilder {
+        view.backgroundColor = color
+        return self
+    }
 
     func build() -> UIView {
         return view
