@@ -95,6 +95,8 @@
 		B8B80B6221B0C39600EA315D /* UICollectionViewConfigurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6121B0C39600EA315D /* UICollectionViewConfigurationSpec.swift */; };
 		B8B80B6421B0C42100EA315D /* UICollectionViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6321B0C42100EA315D /* UICollectionViewCellConfiguration.swift */; };
 		B8B80B6621B0C4E600EA315D /* UICollectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */; };
+		B8BC557621B26F4C00A1CD8C /* TestImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BC557521B26F4C00A1CD8C /* TestImages.xcassets */; };
+		B8BC557921B26F6200A1CD8C /* UIImage+TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC557821B26F6200A1CD8C /* UIImage+TestAssets.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -239,6 +241,8 @@
 		B8B80B6121B0C39600EA315D /* UICollectionViewConfigurationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewConfigurationSpec.swift; sourceTree = "<group>"; };
 		B8B80B6321B0C42100EA315D /* UICollectionViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellConfiguration.swift; sourceTree = "<group>"; };
 		B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewConfiguration.swift; sourceTree = "<group>"; };
+		B8BC557521B26F4C00A1CD8C /* TestImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestImages.xcassets; sourceTree = "<group>"; };
+		B8BC557821B26F6200A1CD8C /* UIImage+TestAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TestAssets.swift"; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -404,6 +408,8 @@
 			children = (
 				5230D83520ECC2D100E9459B /* Application */,
 				5230D83320ECC24E00E9459B /* Builders */,
+				B8BC557421B26F4C00A1CD8C /* Resources */,
+				B8BC557721B26F6200A1CD8C /* UIImage */,
 				5230D83420ECC25900E9459B /* UIViewController */,
 			);
 			path = SuccinctContainerTests;
@@ -608,6 +614,22 @@
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
+		B8BC557421B26F4C00A1CD8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC557521B26F4C00A1CD8C /* TestImages.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B8BC557721B26F6200A1CD8C /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC557821B26F6200A1CD8C /* UIImage+TestAssets.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -779,6 +801,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8BC557621B26F4C00A1CD8C /* TestImages.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -877,6 +900,7 @@
 				3B14EDF8CA0D6DBA450F762B /* TargetAction.swift in Sources */,
 				B8B56E7221B01A320008514A /* TargetActionWithArg.swift in Sources */,
 				3B14EB5EFAD20644873A38E5 /* UIButtonBuilder.swift in Sources */,
+				B8BC557921B26F6200A1CD8C /* UIImage+TestAssets.swift in Sources */,
 				B8B56E7021B016250008514A /* UISliderBuilder.swift in Sources */,
 				B83F5CD121ACD1330061494E /* UISwitchBuilder.swift in Sources */,
 				5230D83720ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift in Sources */,

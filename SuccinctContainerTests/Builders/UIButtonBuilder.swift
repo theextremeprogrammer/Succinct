@@ -8,7 +8,12 @@ struct UIButtonBuilder {
     }
 
     func withTitleText(_ titleText: String) -> UIButtonBuilder {
-        button.titleLabel?.text = titleText
+        button.setTitle(titleText, for: .normal)
+        return self
+    }
+    
+    func withImage(_ image: UIImage) -> UIButtonBuilder {
+        button.setImage(image, for: .normal)
         return self
     }
 
