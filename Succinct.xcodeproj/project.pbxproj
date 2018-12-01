@@ -62,6 +62,8 @@
 		52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */; };
 		52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */; };
 		5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */; };
+		B129324121B2A866009AE9D1 /* UIViewController+UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324021B2A866009AE9D1 /* UIViewController+UINavigationController.swift */; };
+		B129324421B2AB1D009AE9D1 /* UINavigationControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */; };
 		B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */; };
 		B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */; };
 		B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E602160B5170044D2AD /* UIView+UITextField.swift */; };
@@ -213,6 +215,8 @@
 		52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Testing.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
 		5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIButtonSpec.swift"; sourceTree = "<group>"; };
+		B129324021B2A866009AE9D1 /* UIViewController+UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UINavigationController.swift"; sourceTree = "<group>"; };
+		B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerBuilder.swift; sourceTree = "<group>"; };
 		B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
 		B1D05E602160B5170044D2AD /* UIView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextField.swift"; sourceTree = "<group>"; };
@@ -398,6 +402,7 @@
 				522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */,
 				B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */,
 				525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */,
+				B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */,
 				5235C2A2208F511700C0CEEA /* UIPickerViewBuilder.swift */,
 				3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */,
 				B8B56E6B21B012B10008514A /* UISliderBuilder.swift */,
@@ -568,6 +573,7 @@
 				B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */,
 				B836273021AC1F3A008264C5 /* UIViewController+UIImage.swift */,
 				B89E2D0F218BFA3D004FE2A6 /* UIViewController+UILabel.swift */,
+				B129324021B2A866009AE9D1 /* UIViewController+UINavigationController.swift */,
 				B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */,
 				B89E2D15218BFA5C004FE2A6 /* UIViewController+UISegmentedControl.swift */,
 				B89E2D17218BFA66004FE2A6 /* UIViewController+UISlider.swift */,
@@ -880,6 +886,7 @@
 				B89E2D0C218BF422004FE2A6 /* UIViewController+UIButton.swift in Sources */,
 				B836273121AC1F3A008264C5 /* UIViewController+UIImage.swift in Sources */,
 				B89E2D10218BFA3D004FE2A6 /* UIViewController+UILabel.swift in Sources */,
+				B129324121B2A866009AE9D1 /* UIViewController+UINavigationController.swift in Sources */,
 				B89E2D1C218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift in Sources */,
 				B89E2D16218BFA5C004FE2A6 /* UIViewController+UISegmentedControl.swift in Sources */,
 				B89E2D18218BFA66004FE2A6 /* UIViewController+UISlider.swift in Sources */,
@@ -906,6 +913,7 @@
 				B8B80B6221B0C39600EA315D /* UICollectionViewConfigurationSpec.swift in Sources */,
 				524FF44020B689B700CA71D4 /* UIImage+TestAssets.swift in Sources */,
 				525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */,
+				B129324421B2AB1D009AE9D1 /* UINavigationControllerBuilder.swift in Sources */,
 				521E6951208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift in Sources */,
 				5235C2A3208F511700C0CEEA /* UIPickerViewBuilder.swift in Sources */,
 				524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */,

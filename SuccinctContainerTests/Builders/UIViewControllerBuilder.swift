@@ -41,7 +41,17 @@ struct UIViewControllerBuilder {
         
         return self
     }
-    
+
+    func withNavigationController(_ navigationController: UINavigationController) -> UIViewControllerBuilder {
+        navigationController.setViewControllers([viewController], animated: false)
+        return self
+    }
+
+    func withNavigationBarTitle(_ title: String) -> UIViewControllerBuilder {
+        viewController.title = title
+        return self
+    }
+
     func build() -> UIViewController {
         return viewController
     }
