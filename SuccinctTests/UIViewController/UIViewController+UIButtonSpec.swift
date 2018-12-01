@@ -17,8 +17,7 @@ final class UIViewController_UIButtonSpec: QuickSpec {
             context("when button text does not match") {
                 it("cannot find the button") {
                     let viewController = UIViewControllerBuilder()
-                        .withSubview(
-                            UIButtonBuilder().withTitleText("Login").build())
+                        .withSubview(UIButtonBuilder().withTitleText("Login").build())
                         .build()
                     
                     
@@ -26,11 +25,10 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                 }
             }
             
-            context("when a button exists in the first subview") {
+            context("when a button exists with the expected text in the first subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
-                        .withSubview(
-                            UIButtonBuilder().withTitleText("Login").build())
+                        .withSubview(UIButtonBuilder().withTitleText("Login").build())
                         .build()
                     
                     
@@ -42,14 +40,12 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                 }
             }
             
-            context("when a button exists in the second subview") {
+            context("when a button exists with the expected text in the second subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
                             UIViewBuilder()
-                                .withSubview(
-                                    UIButtonBuilder().withTitleText("Login").build()
-                                )
+                                .withSubview(UIButtonBuilder().withTitleText("Login").build())
                                 .build()
                         )
                         .build()
@@ -77,8 +73,7 @@ final class UIViewController_UIButtonSpec: QuickSpec {
             context("when button text does not match") {
                 it("cannot find the button") {
                     let viewController = UIViewControllerBuilder()
-                        .withSubview(
-                            UIButtonBuilder().withTitleText("Login").build())
+                        .withSubview(UIButtonBuilder().withTitleText("Login").build())
                         .build()
                     
                     
@@ -86,11 +81,10 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                 }
             }
             
-            context("when a button exists in the first subview") {
+            context("when a button exists with the expected text in the first subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
-                        .withSubview(
-                            UIButtonBuilder().withTitleText("Login").build())
+                        .withSubview(UIButtonBuilder().withTitleText("Login").build())
                         .build()
                     
                     
@@ -98,14 +92,12 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                 }
             }
             
-            context("when a button exists in the second subview") {
+            context("when a button exists with the expected text in the second subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
                             UIViewBuilder()
-                                .withSubview(
-                                    UIButtonBuilder().withTitleText("Login").build()
-                                )
+                                .withSubview(UIButtonBuilder().withTitleText("Login").build())
                                 .build()
                         )
                         .build()
@@ -116,6 +108,115 @@ final class UIViewController_UIButtonSpec: QuickSpec {
             }
         }
 
+        describe("finding a single button using an image") {
+            let catImage = UIImage(assetIdentifier: .obligatoryCatImage)!
+            let foliageImage = UIImage(assetIdentifier: .obligatoryFoliageImage)!
+
+            context("when no buttons exist") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder().build()
+                    
+                    
+                    expect(viewController.findButton(withImage: catImage)).to(beNil())
+                }
+            }
+            
+            context("when button image does not match") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIButtonBuilder().withImage(catImage).build())
+                        .build()
+                    
+                    
+                    expect(viewController.findButton(withImage: foliageImage)).to(beNil())
+                }
+            }
+            
+            context("when a button exists with the expected image in the first subview") {
+                it("can find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIButtonBuilder().withImage(catImage).build())
+                        .build()
+                    
+                    
+                    let result = viewController.findButton(withImage: catImage)
+                    
+                    
+                    expect(result).toNot(beNil())
+                    expect(result?.image(for: .normal)).to(equal(catImage))
+                }
+            }
+            
+            context("when a button exists with the expected image in the second subview") {
+                it("can find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(UIButtonBuilder().withImage(catImage).build())
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    let result = viewController.findButton(withImage: catImage)
+
+                    
+                    expect(result).toNot(beNil())
+                    expect(result?.image(for: .normal)).to(equal(catImage))
+                }
+            }
+        }
+        
+        describe("if a view controller has a single button using an image") {
+            let catImage = UIImage(assetIdentifier: .obligatoryCatImage)!
+            let foliageImage = UIImage(assetIdentifier: .obligatoryFoliageImage)!
+
+            context("when no buttons exist") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder().build()
+                    
+                    
+                    expect(viewController.hasButton(withImage: foliageImage)).to(beFalse())
+                }
+            }
+            
+            context("when button image does not match") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIButtonBuilder().withImage(catImage).build())
+                        .build()
+                    
+                    
+                    expect(viewController.hasButton(withImage: foliageImage)).to(beFalse())
+                }
+            }
+            
+            context("when a button exists with the expected image in the first subview") {
+                it("can find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIButtonBuilder().withImage(catImage).build())
+                        .build()
+                    
+                    
+                    expect(viewController.hasButton(withImage: catImage)).to(beTrue())
+                }
+            }
+            
+            context("when a button exists with the expected image in the second subview") {
+                it("can find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(UIButtonBuilder().withImage(catImage).build())
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    expect(viewController.hasButton(withImage: catImage)).to(beTrue())
+                }
+            }
+        }
         
         describe("finding multiple buttons by button state") {
             context("when a button exists in the first subview") {

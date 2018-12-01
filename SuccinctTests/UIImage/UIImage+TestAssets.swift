@@ -5,6 +5,7 @@ extension UIImage {
 
     enum AssetIdentifier: String {
         case obligatoryCatImage
+        case obligatoryFoliageImage
     }
 
     convenience init!(assetIdentifier: AssetIdentifier) {

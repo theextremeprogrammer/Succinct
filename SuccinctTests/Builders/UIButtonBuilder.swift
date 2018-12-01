@@ -12,6 +12,11 @@ struct UIButtonBuilder {
         return self
     }
 
+    func withImage(_ image: UIImage) -> UIButtonBuilder {
+        button.setImage(image, for: .normal)
+        return self
+    }
+
     func withState(_ state: UIControl.State) -> UIButtonBuilder {
         switch state {
         case .selected:
