@@ -16,7 +16,7 @@ extension UIView {
     public func findLabel(withExactText searchText: String) -> UILabel? {
         for subview in subviews {
             if let label = subview as? UILabel,
-               label.text == searchText {
+                label.text == searchText {
                 return label
             }
 
