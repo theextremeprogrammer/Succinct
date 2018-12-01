@@ -61,6 +61,7 @@
 		526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC8022084761C001314A7 /* IndexPathFixture.swift */; };
 		52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */; };
 		52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */; };
+		5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */; };
 		B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */; };
 		B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */; };
 		B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E602160B5170044D2AD /* UIView+UITextField.swift */; };
@@ -97,6 +98,11 @@
 		B8B80B6621B0C4E600EA315D /* UICollectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */; };
 		B8BC557621B26F4C00A1CD8C /* TestImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8BC557521B26F4C00A1CD8C /* TestImages.xcassets */; };
 		B8BC557921B26F6200A1CD8C /* UIImage+TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC557821B26F6200A1CD8C /* UIImage+TestAssets.swift */; };
+		B8BC557C21B2816200A1CD8C /* SuccinctConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC557B21B2816200A1CD8C /* SuccinctConfig.swift */; };
+		B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558121B28F8100A1CD8C /* Logger.swift */; };
+		B8BC558421B28F9800A1CD8C /* Succinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558321B28F9800A1CD8C /* Succinct.swift */; };
+		B8BC558621B28FB400A1CD8C /* PrintOutputMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558521B28FB400A1CD8C /* PrintOutputMethod.swift */; };
+		B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558821B28FCF00A1CD8C /* SpyOutputMethod.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -206,6 +212,7 @@
 		526DC8022084761C001314A7 /* IndexPathFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathFixture.swift; sourceTree = "<group>"; };
 		52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Testing.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
+		5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
 		B1D05E602160B5170044D2AD /* UIView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextField.swift"; sourceTree = "<group>"; };
@@ -243,6 +250,11 @@
 		B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewConfiguration.swift; sourceTree = "<group>"; };
 		B8BC557521B26F4C00A1CD8C /* TestImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestImages.xcassets; sourceTree = "<group>"; };
 		B8BC557821B26F6200A1CD8C /* UIImage+TestAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+TestAssets.swift"; sourceTree = "<group>"; };
+		B8BC557B21B2816200A1CD8C /* SuccinctConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccinctConfig.swift; sourceTree = "<group>"; };
+		B8BC558121B28F8100A1CD8C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B8BC558321B28F9800A1CD8C /* Succinct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Succinct.swift; sourceTree = "<group>"; };
+		B8BC558521B28FB400A1CD8C /* PrintOutputMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOutputMethod.swift; sourceTree = "<group>"; };
+		B8BC558821B28FCF00A1CD8C /* SpyOutputMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyOutputMethod.swift; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
@@ -328,6 +340,7 @@
 		522D998B1FAD2A9C009BB1B9 /* Succinct */ = {
 			isa = PBXGroup;
 			children = (
+				B8BC557A21B2814B00A1CD8C /* Configuration */,
 				525FF7ED20331DBD007AE6C8 /* Optional */,
 				B88F5E7021A52A7C0074ADBE /* UIBarButtonItem */,
 				52C77EB62051591C00552CB4 /* UIButton */,
@@ -347,6 +360,8 @@
 			isa = PBXGroup;
 			children = (
 				522D99AD1FAD2CEE009BB1B9 /* Builders */,
+				B8BC558721B28FC900A1CD8C /* Configuration */,
+				B8BC558021B28F3900A1CD8C /* DebugLogging */,
 				525FF7EE20331DD7007AE6C8 /* Optional */,
 				524FF43820B6688600CA71D4 /* Resources */,
 				B8B80B6021B0C38300EA315D /* UICollectionView */,
@@ -630,6 +645,33 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		B8BC557A21B2814B00A1CD8C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC558121B28F8100A1CD8C /* Logger.swift */,
+				B8BC558521B28FB400A1CD8C /* PrintOutputMethod.swift */,
+				B8BC558321B28F9800A1CD8C /* Succinct.swift */,
+				B8BC557B21B2816200A1CD8C /* SuccinctConfig.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B8BC558021B28F3900A1CD8C /* DebugLogging */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
+			);
+			path = DebugLogging;
+			sourceTree = "<group>";
+		};
+		B8BC558721B28FC900A1CD8C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B8BC558821B28FCF00A1CD8C /* SpyOutputMethod.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -812,7 +854,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
 				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
+				B8BC558621B28FB400A1CD8C /* PrintOutputMethod.swift in Sources */,
+				B8BC558421B28F9800A1CD8C /* Succinct.swift in Sources */,
+				B8BC557C21B2816200A1CD8C /* SuccinctConfig.swift in Sources */,
 				B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */,
 				3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */,
 				52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */,
@@ -849,8 +895,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */,
 				526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
+				B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */,
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
 				B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */,
 				B8B80B6421B0C42100EA315D /* UICollectionViewCellConfiguration.swift in Sources */,

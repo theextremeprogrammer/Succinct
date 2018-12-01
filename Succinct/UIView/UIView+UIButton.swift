@@ -7,7 +7,12 @@ extension UIView {
                 if button.title(for: .normal) == searchText {
                     return button
                 } else {
-                    print("**** Succinct: findButton(withExactText: '\(searchText)') failed for button with title: '\(String(describing: button.title(for: .normal)!))'")
+                    if let buttonTitle = button.title(for: .normal) {
+                        Succinct.log.debug("**** Succinct: findButton(withExactText: '\(searchText)') failed to match for button with title: '\(buttonTitle)'")
+                    } else {
+                        let noTitleMessage = "nil (no title text set for this button)"
+                        Succinct.log.debug("**** Succinct: findButton(withExactText: '\(searchText)') failed to match for button with title: \(noTitleMessage)")
+                    }
                 }
             }
             
