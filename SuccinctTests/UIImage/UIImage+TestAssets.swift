@@ -1,6 +1,8 @@
 import UIKit
 
 extension UIImage {
+    private final class SomeClassDefinedWithinTheUnitTestingBundle {}
+
     enum AssetIdentifier: String {
         case obligatoryCatImage
     }
@@ -14,7 +16,4 @@ extension UIImage {
             compatibleWith: nil
         )
     }
-}
-
-final class SomeClassDefinedWithinTheUnitTestingBundle {
 }
