@@ -2,10 +2,18 @@ import UIKit
 
 extension UIView {
     public func findButton(withExactText searchText: String) -> UIButton? {
-        return subviews
-            .compactMap { $0 as? UIButton ?? $0.findButton(withExactText: searchText) }
-            .filter { $0.titleLabel?.text == searchText }
-            .first
+        for subview in subviews {
+            if let button = subview as? UIButton,
+                button.title(for: .normal) == searchText {
+                return button
+            }
+            
+            if let button = subview.findButton(withExactText: searchText) {
+                return button
+            }
+        }
+
+        return nil
     }
 
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
