@@ -4,7 +4,7 @@ import Succinct
 
 final class UIViewController_UIButtonSpec: QuickSpec {
     override func spec() {
-        describe("finding a single button using text") {
+        describe("finding a single button using exact text") {
             context("when a button exists in the first subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
@@ -42,6 +42,38 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("if a view controller has a single button using exact text") {
+            context("when a button exists in the first subview") {
+                it("can find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIButtonBuilder().withTitleText("Login").build())
+                        .build()
+                    
+                    
+                    expect(viewController.hasButton(withExactText: "Login")).to(beTrue())
+                }
+            }
+            
+            context("when a button exists in the second subview") {
+                it("can find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UIButtonBuilder().withTitleText("Login").build()
+                                )
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    expect(viewController.hasButton(withExactText: "Login")).to(beTrue())
+                }
+            }
+        }
+
         
         describe("finding multiple buttons by button state") {
             context("when a button exists in the first subview") {
