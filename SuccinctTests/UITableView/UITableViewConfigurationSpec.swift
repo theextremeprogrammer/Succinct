@@ -7,25 +7,29 @@ final class UITableViewConfigurationSpec: QuickSpec {
         let firstSectionFirstCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section0.Cell0,
             titleLabelText: "S1: First cell",
-            selected: false
+            selected: false,
+            subviews: []
         )
 
         let firstSectionSecondCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section0.Cell1,
             titleLabelText: "S1: Second cell",
-            selected: false
+            selected: false,
+            subviews: []
         )
 
         let secondSectionFirstCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section1.Cell0,
             titleLabelText: "S2: First cell",
-            selected: false
+            selected: false,
+            subviews: []
         )
 
         let secondSectionSecondCell = UITableViewCellConfiguration(
             indexPath: IndexPathFixture.Section1.Cell0,
             titleLabelText: "S2: Second cell",
-            selected: false
+            selected: false,
+            subviews: []
         )
 
         describe("determining the number of rows for a section") {
