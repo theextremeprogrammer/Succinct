@@ -5,6 +5,27 @@ import Succinct
 final class UIViewController_UIButtonSpec: QuickSpec {
     override func spec() {
         describe("finding a single button using exact text") {
+            context("when no buttons exist") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder().build()
+                    
+                    
+                    expect(viewController.findButton(withExactText: "Login")).to(beNil())
+                }
+            }
+            
+            context("when button text does not match") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIButtonBuilder().withTitleText("Login").build())
+                        .build()
+                    
+                    
+                    expect(viewController.findButton(withExactText: "ABC")).to(beNil())
+                }
+            }
+            
             context("when a button exists in the first subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
@@ -44,6 +65,27 @@ final class UIViewController_UIButtonSpec: QuickSpec {
         }
         
         describe("if a view controller has a single button using exact text") {
+            context("when no buttons exist") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder().build()
+                    
+                    
+                    expect(viewController.hasButton(withExactText: "Login")).to(beFalse())
+                }
+            }
+            
+            context("when button text does not match") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIButtonBuilder().withTitleText("Login").build())
+                        .build()
+                    
+                    
+                    expect(viewController.hasButton(withExactText: "ABC")).to(beFalse())
+                }
+            }
+            
             context("when a button exists in the first subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
