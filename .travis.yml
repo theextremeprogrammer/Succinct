@@ -22,3 +22,6 @@ matrix:
     xcode_destination: platform=iOS Simulator,OS=12.0,name=iPhone 7
     install:
       - carthage bootstrap --platform iOS --cache-builds
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
