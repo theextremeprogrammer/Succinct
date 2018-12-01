@@ -16,7 +16,8 @@ final class UIViewController_UITableViewSpec: QuickSpec {
                                 UITableViewCellConfiguration(
                                     indexPath: IndexPath(row: 0, section: 0),
                                     titleLabelText: "Alexsandra",
-                                    selected: false
+                                    selected: false,
+                                    subviews: []
                                 )
                             )
                             .build()
@@ -35,14 +36,16 @@ final class UIViewController_UITableViewSpec: QuickSpec {
                                 UITableViewCellConfiguration(
                                     indexPath: IndexPath(row: 0, section: 0),
                                     titleLabelText: "Alexsandra",
-                                    selected: false
+                                    selected: false,
+                                    subviews: []
                                 )
                             )
                             .withCellConfiguration(
                                 UITableViewCellConfiguration(
                                     indexPath: IndexPath(row: 1, section: 0),
                                     titleLabelText: "Beatrice",
-                                    selected: true
+                                    selected: true,
+                                    subviews: []
                                 )
                             )
                             .build()
@@ -71,7 +74,8 @@ final class UIViewController_UITableViewSpec: QuickSpec {
                                 UITableViewCellConfiguration(
                                     indexPath: IndexPath(row: 0, section: 0),
                                     titleLabelText: "Bob",
-                                    selected: false
+                                    selected: false,
+                                    subviews: []
                                 )
                             )
                             .build())
@@ -90,7 +94,8 @@ final class UIViewController_UITableViewSpec: QuickSpec {
                                 UITableViewCellConfiguration(
                                     indexPath: IndexPath(row: 0, section: 0),
                                     titleLabelText: "Alexsandra",
-                                    selected: false
+                                    selected: false,
+                                    subviews: []
                                 )
                             )
                             .build()
@@ -114,14 +119,16 @@ final class UIViewController_UITableViewSpec: QuickSpec {
                                 UITableViewCellConfiguration(
                                     indexPath: IndexPath(row: 0, section: 0),
                                     titleLabelText: "Alexsandra",
-                                    selected: false
+                                    selected: false,
+                                    subviews: []
                                 )
                             )
                             .withCellConfiguration(
                                 UITableViewCellConfiguration(
                                     indexPath: IndexPath(row: 1, section: 0),
                                     titleLabelText: "Beatrice",
-                                    selected: false
+                                    selected: false,
+                                    subviews: []
                                 )
                             )
                             .build()

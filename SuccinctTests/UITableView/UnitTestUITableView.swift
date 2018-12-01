@@ -48,6 +48,12 @@ extension UnitTestUITableView: UITableViewDataSource {
             cell?.isSelected = isSelected
         }
 
+        if let subviews = configuration.cellDefinitions[indexPath]?.subviews {
+            for subview in subviews {
+                cell?.addSubview(subview)
+            }
+        }
+
         return cell ?? UITableViewCell()
     }
 }
