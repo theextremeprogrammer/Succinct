@@ -25,7 +25,7 @@ class DebugLogging_UIButtonSpec: QuickSpec {
                     .build()
                 
                 
-                let _ = viewController.findButton(withExactText: "ABC")
+                _ = viewController.findButton(withExactText: "ABC")
                 
                 
                 let expectedLogMessage = "**** Succinct: findButton(withExactText: 'ABC') failed to match for button with title: 'Login'"
@@ -39,7 +39,7 @@ class DebugLogging_UIButtonSpec: QuickSpec {
                     .build()
                 
                 
-                let _ = viewController.findButton(withExactText: "ABC")
+                _ = viewController.findButton(withExactText: "ABC")
                 
                 
                 let expectedLogMessage = "**** Succinct: findButton(withExactText: 'ABC') failed to match for button with title: nil (no title text set for this button)"

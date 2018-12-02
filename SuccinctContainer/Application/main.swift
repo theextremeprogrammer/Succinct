@@ -1,7 +1,7 @@
 import UIKit
 
 func startApplication(delegateClassName: String) {
-    let _ = UIApplicationMain(
+    _ = UIApplicationMain(
         CommandLine.argc,
         CommandLine.unsafeArgv,
         NSStringFromClass(UIApplication.self),

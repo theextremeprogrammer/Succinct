@@ -10,7 +10,7 @@ extension UIBarButtonItem {
     func tap() {
         if let action = action,
             let target = target {
-            let _ = UIApplication.shared.sendAction(
+            _ = UIApplication.shared.sendAction(
                 action,
                 to: target,
                 from: nil,
