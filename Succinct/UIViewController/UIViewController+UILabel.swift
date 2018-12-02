@@ -10,7 +10,7 @@ extension UIViewController {
             return true
         }
 
-        return (self.navigationController?.hasLabelInNavigationBar(containingText: searchText)).isNotNil()
+        return self.navigationController?.hasLabelInNavigationBar(withExactText: searchText) ?? false
     }
 
     public func hasLabel(containingText searchText: String) -> Bool {
@@ -22,7 +22,7 @@ extension UIViewController {
             return true
         }
 
-        return (self.navigationController?.hasLabelInNavigationBar(containingText: searchText)).isNotNil()
+        return self.navigationController?.hasLabelInNavigationBar(containingText: searchText) ?? false
     }
 
     public func findLabel(withExactText searchText: String) -> UILabel? {

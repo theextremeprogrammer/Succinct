@@ -27,7 +27,7 @@ final class UINavigationController_UILabelSpec: QuickSpec {
                     expect(viewController.findLabel(withExactText: "Login")).toNot(beNil())
                 }
 
-                it("can find a label inside of the navigation controllers view hierarchy") {
+                it("can find a label inside of the navigation controller's view hierarchy whose text matches exactly") {
                     let viewController = UIViewControllerBuilder()
                         .withNavigationController(
                             UINavigationControllerBuilder()
@@ -42,6 +42,37 @@ final class UINavigationController_UILabelSpec: QuickSpec {
 
 
                     expect(viewController.findLabel(withExactText: "Login")).toNot(beNil())
+                }
+
+                it("can't find a label inside the navigation controller whose text doesnt match exactly") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(
+                            UINavigationControllerBuilder()
+                                .withSubview(
+                                    UILabelBuilder()
+                                        .withTitleText("Logi")
+                                        .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(withExactText: "Login")).to(beNil())
+                }
+            }
+
+            context("when no label exists") {
+                it("cannot find the label") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(
+                            UINavigationControllerBuilder()
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(withExactText: "Login")).to(beNil())
                 }
             }
         }
@@ -94,6 +125,37 @@ final class UINavigationController_UILabelSpec: QuickSpec {
 
                     expect(viewController.hasLabel(withExactText: "Login")).to(beTrue())
                 }
+
+                it("can't find a label inside the navigation controller whose text doesnt match exactly") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(
+                            UINavigationControllerBuilder()
+                                .withSubview(
+                                    UILabelBuilder()
+                                        .withTitleText("Logi")
+                                        .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.hasLabel(withExactText: "Login")).to(beFalse())
+                }
+            }
+
+            context("when no label exists") {
+                it("cannot find the label") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(
+                            UINavigationControllerBuilder()
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.hasLabel(withExactText: "Login")).to(beFalse())
+                }
             }
         }
 
@@ -135,6 +197,37 @@ final class UINavigationController_UILabelSpec: QuickSpec {
 
 
                     expect(viewController.findLabel(containingText: "Login")).toNot(beNil())
+                }
+
+                it("can't find a label inside the navigation controller which doesnt contain the search text") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(
+                            UINavigationControllerBuilder()
+                                .withSubview(
+                                    UILabelBuilder()
+                                        .withTitleText("Logout")
+                                        .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(containingText: "Login")).to(beNil())
+                }
+            }
+
+            context("when no label exists") {
+                it("cannot find the label") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(
+                            UINavigationControllerBuilder()
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(containingText: "Login")).to(beNil())
                 }
             }
         }
@@ -186,6 +279,37 @@ final class UINavigationController_UILabelSpec: QuickSpec {
 
 
                     expect(viewController.hasLabel(containingText: "Login")).to(beTrue())
+                }
+
+                it("can't find a label inside the navigation controller whose text doesnt contain search text") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(
+                            UINavigationControllerBuilder()
+                                .withSubview(
+                                    UILabelBuilder()
+                                        .withTitleText("Logout")
+                                        .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.hasLabel(containingText: "Login")).to(beFalse())
+                }
+            }
+
+            context("when no label exists") {
+                it("cannot find the label") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(
+                            UINavigationControllerBuilder()
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.hasLabel(containingText: "Login")).to(beFalse())
                 }
             }
         }
