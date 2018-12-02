@@ -1,9 +1,9 @@
 @testable import Succinct
 
 final class TargetAction: NSObject {
-    let callback: () -> ()
+    let callback: () -> Void
 
-    init(_ callback: @escaping () -> ()) {
+    init(_ callback: @escaping () -> Void) {
         self.callback = callback
     }
 

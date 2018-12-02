@@ -1,9 +1,9 @@
 @testable import Succinct
 
 final class TargetActionWithArg: NSObject {
-    let callback: (Any) -> ()
+    let callback: (Any) -> Void
     
-    init(_ callback: @escaping (Any) -> ()) {
+    init(_ callback: @escaping (Any) -> Void) {
         self.callback = callback
     }
     
