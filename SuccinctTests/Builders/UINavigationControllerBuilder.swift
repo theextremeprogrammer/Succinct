@@ -11,13 +11,6 @@ struct UINavigationControllerBuilder {
         return self
     }
 
-    func withSubviews(_ subviews: UIView...) -> UINavigationControllerBuilder {
-        subviews.forEach { subview in
-            navigationController.view.addSubview(subview)
-        }
-        return self
-    }
-
     func withNavigationItemTitleView(_ titleView: UIView) -> UINavigationControllerBuilder {
         navigationController.navigationItem.titleView = titleView
         return self
