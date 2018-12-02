@@ -1,0 +1,38 @@
+# rule identifiers to exclude from running
+disabled_rules:
+- trailing_whitespace
+- weak_delegate # seems like a good one to turn on
+- type_name # Adjust values since I have a name that is longer than 40chars
+- force_cast # These are OK in tests
+- vertical_whitespace # 2 is required for test expectations
+- unused_optional_binding # Not sure what to do about this one
+- function_body_length # This has to be OK for tests because of Quick
+- control_statement # Don't understand this one yet
+- shorthand_operator # These should be fixed
+- identifier_name # underscore is OK in test classes
+- implicit_getter # this violation is not a violation...
+- redundant_optional_initialization # I like that this is explicit though...
+- colon # I think this is OK for variabkle declarations but I disagree with dictionaries
+# - colon
+# - comma
+
+# some rules are only opt-in
+opt_in_rules:
+# - empty_count
+# Find all the available rules by running:
+# swiftlint rules
+
+# paths to include during linting. `--path` is ignored if present.
+# included:
+# - Source
+
+# paths to ignore during linting. Takes precedence over `included`.
+excluded:
+- Carthage
+# - Source/ExcludedFolder
+# - Source/ExcludedFile.swift
+# - Source/*/ExcludedFile.swift # Exclude files with a wildcard
+
+# Rules run by `swiftlint analyze` (experimental)
+# analyzer_rules:
+# - explicit_self
