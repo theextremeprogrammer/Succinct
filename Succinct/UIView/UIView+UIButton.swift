@@ -8,10 +8,16 @@ extension UIView {
                     return button
                 } else {
                     if let buttonTitle = button.title(for: .normal) {
-                        Succinct.log.debug("**** Succinct: findButton(withExactText: '\(searchText)') failed to match for button with title: '\(buttonTitle)'")
+                        let message = "**** Succinct: " +
+                            "findButton(withExactText: '\(searchText)')" +
+                            " failed to match for button with title: '\(buttonTitle)'"
+                        Succinct.log.debug(message)
                     } else {
-                        let noTitleMessage = "nil (no title text set for this button)"
-                        Succinct.log.debug("**** Succinct: findButton(withExactText: '\(searchText)') failed to match for button with title: \(noTitleMessage)")
+                        let message = "**** Succinct: " +
+                            "findButton(withExactText: '\(searchText)')" +
+                            " failed to match for button with title:" +
+                            " nil (no title text set for this button)"
+                        Succinct.log.debug(message)
                     }
                 }
             }

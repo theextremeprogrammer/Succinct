@@ -182,7 +182,8 @@ final class UINavigationController_UILabelSpec: QuickSpec {
                     expect(viewController.findLabel(containingText: "Login")).toNot(beNil())
                 }
 
-                it("can find a label inside of the navigation controllers view hierarchy whose text contains the search text") {
+                it("can find a label inside of the navigation controllers view hierarchy" +
+                    "whose text contains the search text") {
                     let viewController = UIViewControllerBuilder()
                         .withNavigationController(
                             UINavigationControllerBuilder()
@@ -264,7 +265,8 @@ final class UINavigationController_UILabelSpec: QuickSpec {
                     expect(viewController.hasLabel(containingText: "Login")).to(beTrue())
                 }
 
-                it("can find a label inside of the navigation controllers view hierarchy whose text contains the search text") {
+                it("can find a label inside of the navigation controllers view hierarchy" +
+                    "whose text contains the search text") {
                     let viewController = UIViewControllerBuilder()
                         .withNavigationController(
                             UINavigationControllerBuilder()

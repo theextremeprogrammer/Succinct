@@ -68,7 +68,8 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         expect(self.switch_wasTapped).to(beTrue())
                     }
                     
-                    it("updates the isOn property of the switch because Apple won't do this for us from a unit test even though they do it as a part of UIKit") {
+                    it("updates the isOn property of the switch because Apple won't do this " +
+                        "for us from a unit test even though they do it as a part of UIKit") {
                         let currentSwitch = viewController.view.findSwitch(containedInView: UIView.self)
                         expect(currentSwitch?.isOn).to(beTrue())
                     }

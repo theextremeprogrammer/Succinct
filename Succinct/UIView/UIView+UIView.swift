@@ -43,7 +43,8 @@ extension UIView {
                     let numberOfItems = collectionView.numberOfItems(inSection: section)
                     for item in 0..<numberOfItems {
                         let indexPath = IndexPath(item: item, section: section)
-                        if let cell = collectionView.dataSource?.collectionView(collectionView, cellForItemAt: indexPath) {
+                        if let cell = collectionView.dataSource?
+                            .collectionView(collectionView, cellForItemAt: indexPath) {
                             if cell.backgroundColor == searchColor {
                                 viewsCounted += 1
                             }
@@ -75,7 +76,8 @@ extension UIView {
                     let numberOfItems = collectionView.numberOfItems(inSection: section)
                     for item in 0..<numberOfItems {
                         let indexPath = IndexPath(item: item, section: section)
-                        if let cell = collectionView.dataSource?.collectionView(collectionView, cellForItemAt: indexPath) {
+                        if let cell = collectionView.dataSource?
+                            .collectionView(collectionView, cellForItemAt: indexPath) {
                             imagesCounted += cell.countOfImages(searchImage)
                         }
                     }

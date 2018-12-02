@@ -24,7 +24,11 @@ extension UIPickerView {
         for componentIndex in 0...self.numberOfComponents - 1 {
             let selectedRow = self.selectedRow(inComponent: componentIndex)
 
-            let selectedRowTitle = self.delegate?.pickerView?(self, titleForRow: selectedRow, forComponent: componentIndex)
+            let selectedRowTitle = self.delegate?.pickerView?(
+                self,
+                titleForRow: selectedRow,
+                forComponent: componentIndex
+            )
 
             if selectedRowTitle == searchText {
                 return true
