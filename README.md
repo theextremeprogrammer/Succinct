@@ -1,7 +1,9 @@
 # Succinct
 [![Build Status](https://travis-ci.org/derekleerock/Succinct.svg?branch=master)](https://travis-ci.org/derekleerock/Succinct)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![GitHub tag](https://img.shields.io/github/tag/derekleerock/Succinct.svg)](https://GitHub.com/derekleerock/Succinct/tags/)
 [![codecov](https://codecov.io/gh/derekleerock/Succinct/branch/master/graph/badge.svg)](https://codecov.io/gh/derekleerock/Succinct)
+[![GitHub license](https://img.shields.io/github/license/derekleerock/Succinct.svg)](https://github.com/derekleerock/Succinct/blob/master/LICENSE)
 
 I started to build out this framework so I could have a de-coupled approach to unit testing my iOS apps using a BDD-style approach - without the time it takes to run UI tests. After re-creating the same style of tests several times I thought it'd be best to pull them together into a framework to help myself and possibly others.
 
