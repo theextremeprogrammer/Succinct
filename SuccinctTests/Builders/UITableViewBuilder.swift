@@ -2,7 +2,7 @@ import UIKit
 
 final class UITableViewBuilder {
     private var delegate: UITableViewDelegate? = nil
-    private var cellConfigurations: [IndexPath: UITableViewCellConfiguration] = [:]
+    private var cellConfigurations: [IndexPath : UITableViewCellConfiguration] = [:]
 
     func withDelegate(_ delegate: UITableViewDelegate?) -> UITableViewBuilder {
         self.delegate = delegate
