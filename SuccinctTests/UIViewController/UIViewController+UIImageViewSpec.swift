@@ -7,9 +7,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
         describe("finding a view that contains an image") {
             it("knows when the search image cannot be found in the view hierarchy") {
                 let viewController = UIViewControllerBuilder()
-                    .withSubview(
-                        UIViewBuilder().build()
-                    )
+                    .withSubview(UIViewBuilder().build())
                     .build()
 
 
@@ -17,7 +15,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                 expect(viewController.containsImage(searchImage)).to(beFalse())
             }
 
-            it("can find a view whose child view contain the specified image") {
+            it("can find the image when the specified image is in the first view hierarchy") {
                 let viewController = UIViewControllerBuilder()
                     .withSubview(
                         UIViewBuilder()
@@ -29,7 +27,9 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
 
                 expect(viewController.containsImage(UIImage(assetIdentifier: .obligatoryCatImage))).to(beTrue())
             }
+        }
 
+        describe("retrieving an imageview for the specified image") {
             it("can retrieve the imageview containing the specified image found within the view hierarchy") {
                 let viewController = UIViewControllerBuilder()
                     .withSubview(
