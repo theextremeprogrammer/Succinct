@@ -4,6 +4,8 @@ import Succinct
 
 final class UIViewController_UIImageViewSpec: QuickSpec {
     override func spec() {
+        let searchImage = UIImage(assetIdentifier: .obligatoryCatImage)!
+
         describe("finding a view that contains an image") {
             it("knows when the search image cannot be found in the view hierarchy") {
                 let viewController = UIViewControllerBuilder()
@@ -11,7 +13,6 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     .build()
 
 
-                let searchImage = UIImage(assetIdentifier: .obligatoryCatImage)!
                 expect(viewController.containsImage(searchImage)).to(beFalse())
             }
 
@@ -19,13 +20,13 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                 let viewController = UIViewControllerBuilder()
                     .withSubview(
                         UIViewBuilder()
-                            .withImageView(UIImage(assetIdentifier: .obligatoryCatImage)!)
+                            .withImageView(searchImage)
                             .build()
                     )
                     .build()
 
 
-                expect(viewController.containsImage(UIImage(assetIdentifier: .obligatoryCatImage))).to(beTrue())
+                expect(viewController.containsImage(searchImage)).to(beTrue())
             }
         }
 
@@ -34,13 +35,13 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                 let viewController = UIViewControllerBuilder()
                     .withSubview(
                         UIViewBuilder()
-                            .withImageView(UIImage(assetIdentifier: .obligatoryCatImage)!)
+                            .withImageView(searchImage)
                             .build()
                     )
                     .build()
                 
                 
-                let maybeImageView = viewController.getImageView(for: UIImage(assetIdentifier: .obligatoryCatImage))
+                let maybeImageView = viewController.getImageView(for: searchImage)
                 expect(maybeImageView).to(beAKindOf(UIImageView.self))
                 expect(maybeImageView?.isHidden).to(beFalse())
             }
