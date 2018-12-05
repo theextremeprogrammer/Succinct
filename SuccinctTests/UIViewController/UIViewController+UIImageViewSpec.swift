@@ -59,8 +59,85 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     expect(maybeImageView).to(beAKindOf(UIImageView.self))
                     expect(maybeImageView?.isHidden).to(beFalse())
                 }
+            }
+        }
+        
+        describe("getting the count of images in the view hierarchy") {
+            it("knows when there are no images in the hierarchy") {
+                let viewController = UIViewControllerBuilder().build()
                 
                 
+                expect(viewController.countOfImages(searchImage)).to(equal(0))
+            }
+            
+            context("when the image is contained in a subview in the first view hierarchy") {
+                it("counts the images") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIViewBuilder().withImageView(searchImage).build())
+                        .build()
+                    
+                    
+                    expect(viewController.countOfImages(searchImage)).to(equal(1))
+                }
+            }
+            
+            context("when the image is contained in a subview in the second view hierarchy") {
+                it("counts the images") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(UIViewBuilder().withImageView(searchImage).build())
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    expect(viewController.countOfImages(searchImage)).to(equal(1))
+                }
+            }
+            
+            context("when the image is NOT contained in a collection view cell in the view hierarchy") {
+                it("counts the images") {
+                    let cellConfiguration = UICollectionViewCellConfiguration(
+                        indexPath: IndexPath(row: 0, section: 0),
+                        subviews: [
+                            UIViewBuilder().build()
+                        ]
+                    )
+                    
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UICollectionViewBuilder()
+                                .withCellConfiguration(cellConfiguration)
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    expect(viewController.countOfImages(searchImage)).to(equal(0))
+                }
+            }
+
+            context("when the image is contained in a collection view cell in the view hierarchy") {
+                it("counts the images") {
+                    let cellConfiguration = UICollectionViewCellConfiguration(
+                        indexPath: IndexPath(row: 0, section: 0),
+                        subviews: [
+                            UIViewBuilder().withImageView(searchImage).build()
+                        ]
+                    )
+                    
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UICollectionViewBuilder()
+                                .withCellConfiguration(cellConfiguration)
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    expect(viewController.countOfImages(searchImage)).to(equal(1))
+                }
             }
         }
     }

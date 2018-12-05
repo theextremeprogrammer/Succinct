@@ -107,6 +107,7 @@
 		B8BC558621B28FB400A1CD8C /* PrintOutputMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558521B28FB400A1CD8C /* PrintOutputMethod.swift */; };
 		B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558821B28FCF00A1CD8C /* SpyOutputMethod.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
+		B8F2DAA021B761AB00C703DA /* UnitTestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +263,7 @@
 		B8BC558521B28FB400A1CD8C /* PrintOutputMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOutputMethod.swift; sourceTree = "<group>"; };
 		B8BC558821B28FCF00A1CD8C /* SpyOutputMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyOutputMethod.swift; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
+		B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCollectionView.swift; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		B8FE917E2120F5F30097274D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -650,6 +652,7 @@
 				B8B80B6321B0C42100EA315D /* UICollectionViewCellConfiguration.swift */,
 				B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */,
 				B8B80B6121B0C39600EA315D /* UICollectionViewConfigurationSpec.swift */,
+				B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -955,6 +958,7 @@
 				B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */,
 				B8B56E7821B0B3EC0008514A /* UIViewController+UIViewSpec.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
+				B8F2DAA021B761AB00C703DA /* UnitTestCollectionView.swift in Sources */,
 				5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */,
 				3B14E9258548F0334E0DF82E /* UnitTestUITableView.swift in Sources */,
 			);

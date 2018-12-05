@@ -5,23 +5,19 @@ import Succinct
 class UICollectionViewConfigurationSpec: QuickSpec {
     override func spec() {
         let firstSectionFirstCell = UICollectionViewCellConfiguration(
-            indexPath: IndexPathFixture.Section0.Cell0,
-            titleLabelText: "S1: First cell"
+            indexPath: IndexPathFixture.Section0.Cell0
         )
         
         let firstSectionSecondCell = UICollectionViewCellConfiguration(
-            indexPath: IndexPathFixture.Section0.Cell1,
-            titleLabelText: "S1: Second cell"
+            indexPath: IndexPathFixture.Section0.Cell1
         )
 
         let secondSectionFirstCell = UICollectionViewCellConfiguration(
-            indexPath: IndexPathFixture.Section1.Cell0,
-            titleLabelText: "S2: Second cell"
+            indexPath: IndexPathFixture.Section1.Cell0
         )
 
         let secondSectionSecondCell = UICollectionViewCellConfiguration(
-            indexPath: IndexPathFixture.Section1.Cell0,
-            titleLabelText: "S2: Second cell"
+            indexPath: IndexPathFixture.Section1.Cell0
         )
         
         describe("determining the number of rows for a section") {
