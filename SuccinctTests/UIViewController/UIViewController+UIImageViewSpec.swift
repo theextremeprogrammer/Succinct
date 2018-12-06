@@ -29,6 +29,23 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                 
                 expect(viewController.containsImage(searchImage)).to(beTrue())
             }
+
+            it("can find the image when the specified image is in the second view hierarchy") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UIViewBuilder()
+                            .withSubview(
+                                UIViewBuilder()
+                                    .withImageView(searchImage)
+                                    .build()
+                            )
+                            .build()
+                    )
+                    .build()
+                
+                
+                expect(viewController.containsImage(searchImage)).to(beTrue())
+            }
         }
         
         describe("retrieving an imageview for the specified image") {
