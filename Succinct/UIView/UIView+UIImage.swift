@@ -2,11 +2,11 @@ import UIKit
 
 extension UIView {
     public func isImageView(withImage searchImage: UIImage) -> Bool {
-        if let imageView = self as? UIImageView {
-            return imageView.image == searchImage
+        guard let imageView = self as? UIImageView else {
+            return false
         }
         
-        return false
+        return imageView.image == searchImage
     }
 
     public func countOfImages(_ searchImage: UIImage) -> Int {
