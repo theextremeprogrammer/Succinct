@@ -9,25 +9,6 @@ extension UIView {
         return false
     }
 
-    public func getImageView(for searchImage: UIImage) -> UIImageView? {
-        for subview in subviews {
-            if let imageView = subview as? UIImageView,
-                let compareImage = imageView.image {
-                if compareImage == searchImage {
-                    return imageView
-                }
-            }
-            
-            if subview.subviews.count > 0 {
-                if let imageView = subview.getImageView(for: searchImage) {
-                    return imageView
-                }
-            }
-        }
-
-        return nil
-    }
-    
     public func countOfImages(_ searchImage: UIImage) -> Int {
         var imagesCounted = 0
         
