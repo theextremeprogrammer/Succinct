@@ -76,18 +76,29 @@ final class UINavigationController_UILabelSpec: QuickSpec {
                 }
             }
         }
-
+        
         describe("has label by exact text") {
             context("when a UILabel exists in the navigation controller") {
-                it("can find the navigation bar title whose text matches exactly") {
-                    let viewController = UIViewControllerBuilder()
-                        .withNavigationBarTitle("Login")
-                        .build()
+                context("when the view controller's title is set") {
+                    it("can find the navigation bar title whose text matches exactly") {
+                        let viewController = UIViewControllerBuilder()
+                            .withTitle("Login")
+                            .build()
+                        
+                        
+                        expect(viewController.hasLabel(withExactText: "This does not exist in the view")).to(beFalse())
+                    }
 
-
-                    expect(viewController.hasLabel(withExactText: "Login")).to(beTrue())
+                    it("can find the navigation bar title whose text matches exactly") {
+                        let viewController = UIViewControllerBuilder()
+                            .withTitle("Login")
+                            .build()
+                        
+                        
+                        expect(viewController.hasLabel(withExactText: "Login")).to(beTrue())
+                    }
                 }
-
+                
                 it("can find a label inside of the navigationItems titleView whose text matches exactly") {
                     let viewController = UIViewControllerBuilder()
                         .withNavigationController(
@@ -235,15 +246,26 @@ final class UINavigationController_UILabelSpec: QuickSpec {
 
         describe("has label by containing text") {
             context("when a UILabel exists in the navigation controller") {
-                it("can find the navigation bar title whose text contains the search text") {
-                    let viewController = UIViewControllerBuilder()
-                        .withNavigationBarTitle("Login")
-                        .build()
+                context("when the view controller's title is set") {
+                    it("cannot find the text the title or view hierarchy") {
+                        let viewController = UIViewControllerBuilder()
+                            .withTitle("Login")
+                            .build()
+                        
+                        
+                        expect(viewController.hasLabel(containingText: "This does not exist in the view")).to(beFalse())
+                    }
 
-
-                    expect(viewController.hasLabel(containingText: "Login")).to(beTrue())
+                    it("can find the navigation bar title whose text contains the search text") {
+                        let viewController = UIViewControllerBuilder()
+                            .withTitle("Login")
+                            .build()
+                        
+                        
+                        expect(viewController.hasLabel(containingText: "Login")).to(beTrue())
+                    }
                 }
-
+                
                 it("can find a label inside of the navigationItems titleView whose text contains the search text") {
                     let viewController = UIViewControllerBuilder()
                         .withNavigationController(
