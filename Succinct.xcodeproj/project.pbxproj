@@ -377,7 +377,6 @@
 				524FF43E20B689A000CA71D4 /* UIImage */,
 				B15A4C7D21B2C52000398963 /* UINavigationController */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
-				B8B56E6821B0115B0008514A /* UISlider */,
 				526DC7F920846AA1001314A7 /* UITableView */,
 				52AAB3852072F1BF0021BA62 /* UIViewController */,
 				522D99991FAD2A9D009BB1B9 /* Info.plist */,
@@ -637,13 +636,6 @@
 				B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */,
 			);
 			path = UIBarButtonItem;
-			sourceTree = "<group>";
-		};
-		B8B56E6821B0115B0008514A /* UISlider */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UISlider;
 			sourceTree = "<group>";
 		};
 		B8B80B6021B0C38300EA315D /* UICollectionView */ = {
