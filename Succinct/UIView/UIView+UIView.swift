@@ -1,6 +1,22 @@
 import UIKit
 
 extension UIView {
+    public func findInSubviews(satisfyingCondition satisfiesCondition: (UIView) -> Bool) -> UIView? {
+        for subview in subviews {
+            if satisfiesCondition(subview) {
+                return subview
+            }
+
+            if subview.subviews.count > 0 {
+                if let result = subview.findInSubviews(satisfyingCondition: satisfiesCondition) {
+                    return result
+                }
+            }
+        }
+
+        return nil
+    }
+    
     public func containsView(withBackgroundColor searchColor: UIColor) -> Bool {
         if backgroundColor == searchColor {
             return true

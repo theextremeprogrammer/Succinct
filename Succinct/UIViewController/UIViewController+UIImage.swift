@@ -2,7 +2,9 @@ import UIKit
 
 extension UIViewController {
     public func containsImage(_ searchImage: UIImage) -> Bool {
-        return view.containsImage(searchImage)
+        return view
+            .findInSubviews(satisfyingCondition: { $0.isImageView(withImage: searchImage) })
+            .isNotNil()
     }
     
     public func getImageView(for searchImage: UIImage) -> UIImageView? {
