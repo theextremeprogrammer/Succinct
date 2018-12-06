@@ -128,6 +128,7 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(result?.titleLabel?.text).to(equal("Login"))
                 }
             }
+<<<<<<< HEAD
 
             context("when a table view has no sections") {
                 it("can not find a button") {
@@ -145,6 +146,8 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(result).to(beNil())
                 }
             }
+=======
+>>>>>>> 6b89491374291a7e28358b70cf2016e0288f137c
         }
         
         describe("if a view controller has a single button using exact text") {
@@ -255,6 +258,7 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(viewController.hasButton(withExactText: "Login")).to(beTrue())
                 }
             }
+<<<<<<< HEAD
 
             context("when a table view has no sections") {
                 it("can not find a button") {
@@ -269,6 +273,8 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(viewController.hasButton(withExactText: "Login")).to(beFalse())
                 }
             }
+=======
+>>>>>>> 6b89491374291a7e28358b70cf2016e0288f137c
         }
 
         describe("finding a single button using an image") {
@@ -399,7 +405,7 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(result?.image(for: .normal)).to(equal(catImage))
                 }
             }
-
+            
             context("when a table view has no sections") {
                 it("can not find a button") {
                     let viewController = UIViewControllerBuilder()

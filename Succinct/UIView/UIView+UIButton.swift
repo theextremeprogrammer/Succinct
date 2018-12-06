@@ -41,6 +41,26 @@ extension UIView {
                     }
                 }
             }
+
+            if let tableView = subview as? UITableView {
+                for section in 0..<tableView.numberOfSections {
+                    if let headerView = tableView.delegate?.tableView?(tableView, viewForHeaderInSection: section) {
+                        if let button = headerView.findButton(withExactText: searchText) {
+                            return button
+                        }
+                    }
+
+                    let numberOfItems = tableView.numberOfRows(inSection: section)
+                    for item in 0..<numberOfItems {
+                        let indexPath = IndexPath(item: item, section: section)
+                        if let cell = tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) {
+                            if let button = cell.findButton(withExactText: searchText) {
+                                return button
+                            }
+                        }
+                    }
+                }
+            }
             
             if let button = subview.findButton(withExactText: searchText) {
                 return button
