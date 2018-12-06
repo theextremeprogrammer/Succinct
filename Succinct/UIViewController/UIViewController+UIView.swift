@@ -1,8 +1,8 @@
 import UIKit
 
 extension UIViewController {
-    public func containsView(withBackgroundColor searchColor: UIColor) -> Bool {
-        return view.containsView(withBackgroundColor: searchColor)
+    public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
+        return view.hasView(withBackgroundColor: searchColor)
     }
     
     public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {

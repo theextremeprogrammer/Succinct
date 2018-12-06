@@ -1,5 +1,5 @@
 extension UICollectionView {
-    func containsCell(satisfyingCondition: (UICollectionViewCell) -> Bool) -> Bool {
+    func hasCell(satisfyingCondition: (UICollectionViewCell) -> Bool) -> Bool {
         for section in 0..<numberOfSections {
             let numberOfItems = self.numberOfItems(inSection: section)
             for item in 0..<numberOfItems {

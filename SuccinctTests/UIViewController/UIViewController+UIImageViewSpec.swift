@@ -14,7 +14,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     .build()
 
 
-                expect(viewController.containsImage(searchImage)).to(beFalse())
+                expect(viewController.hasImage(searchImage)).to(beFalse())
             }
 
             it("can find the image when the specified image is in the first view hierarchy") {
@@ -27,7 +27,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     .build()
                 
                 
-                expect(viewController.containsImage(searchImage)).to(beTrue())
+                expect(viewController.hasImage(searchImage)).to(beTrue())
             }
 
             it("can find the image when the specified image is in the second view hierarchy") {
@@ -44,7 +44,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     .build()
                 
                 
-                expect(viewController.containsImage(searchImage)).to(beTrue())
+                expect(viewController.hasImage(searchImage)).to(beTrue())
             }
         }
         

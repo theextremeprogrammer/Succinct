@@ -12,7 +12,7 @@ final class UIViewController_UIViewSpec: QuickSpec {
                         .build()
                     
                     
-                    expect(viewController.containsView(withBackgroundColor: .purple)).to(beFalse())
+                    expect(viewController.hasView(withBackgroundColor: .purple)).to(beFalse())
                 }
             }
             
@@ -23,10 +23,9 @@ final class UIViewController_UIViewSpec: QuickSpec {
                         .build()
                     
                     
-                    expect(viewController.containsView(withBackgroundColor: .purple)).to(beTrue())
+                    expect(viewController.hasView(withBackgroundColor: .purple)).to(beTrue())
                 }
             }
-            
 
             context("when the view with the desired color is in the first subview") {
                 it("can be found") {
@@ -36,7 +35,7 @@ final class UIViewController_UIViewSpec: QuickSpec {
                         .build()
                     
                     
-                    expect(viewController.containsView(withBackgroundColor: .purple)).to(beTrue())
+                    expect(viewController.hasView(withBackgroundColor: .purple)).to(beTrue())
                 }
             }
             
@@ -51,7 +50,7 @@ final class UIViewController_UIViewSpec: QuickSpec {
                         .build()
                     
                     
-                    expect(viewController.containsView(withBackgroundColor: .purple)).to(beTrue())
+                    expect(viewController.hasView(withBackgroundColor: .purple)).to(beTrue())
                 }
             }
             
@@ -63,7 +62,7 @@ final class UIViewController_UIViewSpec: QuickSpec {
                             .build()
                         
                         
-                        expect(viewController.containsView(withBackgroundColor: .purple)).to(beFalse())
+                        expect(viewController.hasView(withBackgroundColor: .purple)).to(beFalse())
                     }
                 }
 
@@ -74,7 +73,7 @@ final class UIViewController_UIViewSpec: QuickSpec {
                             .build()
                         
                         
-                        expect(viewController.containsView(withBackgroundColor: .purple)).to(beFalse())
+                        expect(viewController.hasView(withBackgroundColor: .purple)).to(beFalse())
                     }
                 }
             }

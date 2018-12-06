@@ -17,7 +17,7 @@ extension UIView {
         return nil
     }
     
-    public func containsView(withBackgroundColor searchColor: UIColor) -> Bool {
+    public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
         if backgroundColor == searchColor {
             return true
         }
@@ -28,8 +28,8 @@ extension UIView {
             }
 
             if let collectionView = subview as? UICollectionView {
-                if collectionView.containsCell(satisfyingCondition: { cell in
-                    if cell.containsView(withBackgroundColor: searchColor) {
+                if collectionView.hasCell(satisfyingCondition: { cell in
+                    if cell.hasView(withBackgroundColor: searchColor) {
                         return true
                     }
 
@@ -39,7 +39,7 @@ extension UIView {
                 }
             }
 
-            if subview.containsView(withBackgroundColor: searchColor) {
+            if subview.hasView(withBackgroundColor: searchColor) {
                 return true
             }
         }
