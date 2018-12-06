@@ -65,6 +65,10 @@
 		B129324121B2A866009AE9D1 /* UINavigationController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324021B2A866009AE9D1 /* UINavigationController+UILabel.swift */; };
 		B129324421B2AB1D009AE9D1 /* UINavigationControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */; };
 		B15A4C7F21B2C53700398963 /* UINavigationController+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15A4C7E21B2C53700398963 /* UINavigationController+UILabelSpec.swift */; };
+		B15A4C8021B40FAF00398963 /* UITableViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FC208475C1001314A7 /* UITableViewBuilder.swift */; };
+		B15A4C8121B40FD400398963 /* UITableViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FE208475DC001314A7 /* UITableViewConfiguration.swift */; };
+		B15A4C8221B40FDE00398963 /* UnitTestUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E2A27FD3DE04785E0276 /* UnitTestUITableView.swift */; };
+		B15A4C8321B40FEA00398963 /* UITableViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC800208475E4001314A7 /* UITableViewCellConfiguration.swift */; };
 		B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */; };
 		B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */; };
 		B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E602160B5170044D2AD /* UIView+UITextField.swift */; };
@@ -979,15 +983,19 @@
 			files = (
 				3B14EDF8CA0D6DBA450F762B /* TargetAction.swift in Sources */,
 				B8B56E7221B01A320008514A /* TargetActionWithArg.swift in Sources */,
+				B15A4C8121B40FD400398963 /* UITableViewConfiguration.swift in Sources */,
 				3B14EB5EFAD20644873A38E5 /* UIButtonBuilder.swift in Sources */,
 				B8BC557921B26F6200A1CD8C /* UIImage+TestAssets.swift in Sources */,
 				B8B56E7021B016250008514A /* UISliderBuilder.swift in Sources */,
 				B83F5CD121ACD1330061494E /* UISwitchBuilder.swift in Sources */,
 				5230D83720ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift in Sources */,
 				3B14E087392B38610209029F /* UIViewController+UIButtonSpec.swift in Sources */,
+				B15A4C8021B40FAF00398963 /* UITableViewBuilder.swift in Sources */,
 				B8B56E6E21B015B00008514A /* UIViewController+UISliderSpec.swift in Sources */,
+				B15A4C8221B40FDE00398963 /* UnitTestUITableView.swift in Sources */,
 				B83F5CCF21ACD0710061494E /* UIViewController+UISwitchSpec.swift in Sources */,
 				3B14E10AEDBDC2B73D3FFB86 /* UIViewControllerBuilder.swift in Sources */,
+				B15A4C8321B40FEA00398963 /* UITableViewCellConfiguration.swift in Sources */,
 				B83F5CD321ACD65E0061494E /* ViewBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
