@@ -381,7 +381,6 @@
 				524FF43E20B689A000CA71D4 /* UIImage */,
 				B15A4C7D21B2C52000398963 /* UINavigationController */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
-				B8B56E6821B0115B0008514A /* UISlider */,
 				526DC7F920846AA1001314A7 /* UITableView */,
 				52AAB3852072F1BF0021BA62 /* UIViewController */,
 				522D99991FAD2A9D009BB1B9 /* Info.plist */,
@@ -641,13 +640,6 @@
 				B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */,
 			);
 			path = UIBarButtonItem;
-			sourceTree = "<group>";
-		};
-		B8B56E6821B0115B0008514A /* UISlider */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UISlider;
 			sourceTree = "<group>";
 		};
 		B8B80B6021B0C38300EA315D /* UICollectionView */ = {
@@ -983,19 +975,19 @@
 			files = (
 				3B14EDF8CA0D6DBA450F762B /* TargetAction.swift in Sources */,
 				B8B56E7221B01A320008514A /* TargetActionWithArg.swift in Sources */,
-				B15A4C8121B40FD400398963 /* UITableViewConfiguration.swift in Sources */,
 				3B14EB5EFAD20644873A38E5 /* UIButtonBuilder.swift in Sources */,
 				B8BC557921B26F6200A1CD8C /* UIImage+TestAssets.swift in Sources */,
 				B8B56E7021B016250008514A /* UISliderBuilder.swift in Sources */,
 				B83F5CD121ACD1330061494E /* UISwitchBuilder.swift in Sources */,
+				B15A4C8021B40FAF00398963 /* UITableViewBuilder.swift in Sources */,
+				B15A4C8321B40FEA00398963 /* UITableViewCellConfiguration.swift in Sources */,
+				B15A4C8121B40FD400398963 /* UITableViewConfiguration.swift in Sources */,
 				5230D83720ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift in Sources */,
 				3B14E087392B38610209029F /* UIViewController+UIButtonSpec.swift in Sources */,
-				B15A4C8021B40FAF00398963 /* UITableViewBuilder.swift in Sources */,
 				B8B56E6E21B015B00008514A /* UIViewController+UISliderSpec.swift in Sources */,
-				B15A4C8221B40FDE00398963 /* UnitTestUITableView.swift in Sources */,
 				B83F5CCF21ACD0710061494E /* UIViewController+UISwitchSpec.swift in Sources */,
 				3B14E10AEDBDC2B73D3FFB86 /* UIViewControllerBuilder.swift in Sources */,
-				B15A4C8321B40FEA00398963 /* UITableViewCellConfiguration.swift in Sources */,
+				B15A4C8221B40FDE00398963 /* UnitTestUITableView.swift in Sources */,
 				B83F5CD321ACD65E0061494E /* ViewBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
