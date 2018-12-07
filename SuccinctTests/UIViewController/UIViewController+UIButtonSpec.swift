@@ -71,8 +71,10 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
-                                                .withSubview(UIButtonBuilder().withTitleText("Login")
-                                                    .build()
+                                                .withSubview(
+                                                    UIButtonBuilder()
+                                                        .withTitleText("Login")
+                                                        .build()
                                                 )
                                                 .build()
                                         ]
@@ -109,8 +111,10 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
-                                                .withSubview(UIButtonBuilder().withTitleText("Login")
-                                                    .build()
+                                                .withSubview(
+                                                    UIButtonBuilder()
+                                                        .withTitleText("Login")
+                                                        .build()
                                                 )
                                                 .build()
                                         ]
@@ -128,10 +132,9 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(result?.titleLabel?.text).to(equal("Login"))
                 }
             }
-<<<<<<< HEAD
 
             context("when a table view has no sections") {
-                it("can not find a button") {
+                it("cannot find a button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
                             UITableViewBuilder()
@@ -146,8 +149,74 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(result).to(beNil())
                 }
             }
-=======
->>>>>>> 6b89491374291a7e28358b70cf2016e0288f137c
+
+            context("when a button exists in a table view's header view") {
+                it("can find a button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .withSubview(
+                                                UIButtonBuilder()
+                                                    .withTitleText("Login")
+                                                    .build()
+                                            )
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                            .build()
+                        ).build()
+
+
+                    let result = viewController.findButton(withExactText: "Login")
+
+
+                    expect(result).toNot(beNil())
+                    expect(result?.titleLabel?.text).to(equal("Login"))
+                }
+            }
+
+            context("when a button doesnt exist in a table view's header view") {
+                it("cannot find a button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                                .build()
+                        ).build()
+
+
+                    let result = viewController.findButton(withExactText: "Login")
+
+
+                    expect(result).to(beNil())
+                }
+            }
         }
         
         describe("if a view controller has a single button using exact text") {
@@ -258,10 +327,9 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(viewController.hasButton(withExactText: "Login")).to(beTrue())
                 }
             }
-<<<<<<< HEAD
 
             context("when a table view has no sections") {
-                it("can not find a button") {
+                it("cannot find a button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
                             UITableViewBuilder()
@@ -273,8 +341,67 @@ final class UIViewController_UIButtonSpec: QuickSpec {
                     expect(viewController.hasButton(withExactText: "Login")).to(beFalse())
                 }
             }
-=======
->>>>>>> 6b89491374291a7e28358b70cf2016e0288f137c
+
+            context("when a button exists in a table view's header view") {
+                it("can find a button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .withSubview(
+                                                UIButtonBuilder()
+                                                    .withTitleText("Login")
+                                                    .build()
+                                            )
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                                .build()
+                        ).build()
+
+
+                    expect(viewController.hasButton(withExactText: "Login")).to(beTrue())
+                }
+            }
+
+            context("when a button doesnt exist in a table view's header view") {
+                it("cannot find a button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                                .build()
+                        ).build()
+
+
+                    expect(viewController.hasButton(withExactText: "Login")).to(beFalse())
+                }
+            }
         }
 
         describe("finding a single button using an image") {
@@ -407,13 +534,80 @@ final class UIViewController_UIButtonSpec: QuickSpec {
             }
             
             context("when a table view has no sections") {
-                it("can not find a button") {
+                it("cannot find a button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
                             UITableViewBuilder()
                                 .build()
                         )
                         .build()
+
+
+                    let result = viewController.findButton(withImage: catImage)
+
+
+                    expect(result).to(beNil())
+                }
+            }
+
+            context("when a button exists in a table view's header view") {
+                it("can find a button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .withSubview(
+                                                UIButtonBuilder()
+                                                    .withImage(catImage)
+                                                    .build()
+                                            )
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                                .build()
+                        ).build()
+
+
+                    let result = viewController.findButton(withImage: catImage)
+
+
+                    expect(result).toNot(beNil())
+                }
+            }
+
+            context("when a button doesnt exist in a table view's header view") {
+                it("cannot find a button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                                .build()
+                        ).build()
 
 
                     let result = viewController.findButton(withImage: catImage)
@@ -475,7 +669,7 @@ final class UIViewController_UIButtonSpec: QuickSpec {
             }
 
             context("when a table view has no sections") {
-                it("can not find a button") {
+                it("cannot find a button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
                             UITableViewBuilder()
@@ -485,6 +679,39 @@ final class UIViewController_UIButtonSpec: QuickSpec {
 
 
                     expect(viewController.hasButton(withImage: catImage)).to(beFalse())
+                }
+            }
+
+            context("when a button exists in a table view's header view") {
+                it("can find a button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .withSubview(
+                                                UIButtonBuilder()
+                                                    .withImage(catImage)
+                                                    .build()
+                                            )
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                                .build()
+                        ).build()
+
+
+                    expect(viewController.hasButton(withImage: catImage)).to(beTrue())
                 }
             }
         }
@@ -692,6 +919,112 @@ final class UIViewController_UIButtonSpec: QuickSpec {
 
                 it("returns an empty array when no buttons found for state") {
                     let normalButtons = viewController.findButtons(withState: .application)
+                    expect(normalButtons.count).to(equal(0))
+                }
+            }
+
+            context("when a button exists with the expected text in the tableview header view") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .withSubviews(
+                                                UIButtonBuilder().withTitleText("1").withState(.normal).build(),
+                                                UIButtonBuilder().withTitleText("2").withState(.normal).build(),
+                                                UIButtonBuilder().withTitleText("3").withState(.selected).build(),
+                                                UIButtonBuilder().withTitleText("4").withState(.highlighted).build(),
+                                                UIButtonBuilder().withTitleText("5").withState(.disabled).build()
+                                            )
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                                .build()
+                        ).build()
+                }
+
+                it("can find buttons with a normal state") {
+                    let normalButtons = viewController.findButtons(withState: .normal)
+                    expect(normalButtons.count).to(equal(2))
+                }
+
+                it("can find buttons with a selected state") {
+                    let normalButtons = viewController.findButtons(withState: .selected)
+                    expect(normalButtons.count).to(equal(1))
+                }
+
+                it("can find buttons with a highlighted state") {
+                    let normalButtons = viewController.findButtons(withState: .highlighted)
+                    expect(normalButtons.count).to(equal(1))
+                }
+
+                it("can find buttons with a disabled state") {
+                    let normalButtons = viewController.findButtons(withState: .disabled)
+                    expect(normalButtons.count).to(equal(1))
+                }
+
+                it("returns an empty array when no buttons found for state") {
+                    let normalButtons = viewController.findButtons(withState: .application)
+                    expect(normalButtons.count).to(equal(0))
+                }
+            }
+
+            context("when a button doesnt exist with the expected text in the tableview header view") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(
+                                    UITableViewHeaderConfiguration(
+                                        section: 0,
+                                        view: UIViewBuilder()
+                                            .build()
+                                    )
+                                )
+                                .withCellConfiguration(
+                                    UITableViewCellConfiguration(
+                                        indexPath: IndexPath(row: 0, section: 0),
+                                        titleLabelText: "Cell Name",
+                                        selected: false,
+                                        subviews: []
+                                    )
+                                )
+                                .build()
+                        ).build()
+                }
+
+                it("cannot find buttons with a normal state") {
+                    let normalButtons = viewController.findButtons(withState: .normal)
+                    expect(normalButtons.count).to(equal(0))
+                }
+
+                it("cannot find buttons with a selected state") {
+                    let normalButtons = viewController.findButtons(withState: .selected)
+                    expect(normalButtons.count).to(equal(0))
+                }
+
+                it("cannot find buttons with a highlighted state") {
+                    let normalButtons = viewController.findButtons(withState: .highlighted)
+                    expect(normalButtons.count).to(equal(0))
+                }
+
+                it("cannot find buttons with a disabled state") {
+                    let normalButtons = viewController.findButtons(withState: .disabled)
                     expect(normalButtons.count).to(equal(0))
                 }
             }

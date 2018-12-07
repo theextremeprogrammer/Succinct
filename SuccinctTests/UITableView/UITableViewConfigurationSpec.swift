@@ -36,7 +36,8 @@ final class UITableViewConfigurationSpec: QuickSpec {
             it("returns one by default") {
                 let config = UITableViewConfiguration(
                     tableViewStyle: UITableView.Style.plain,
-                    cellDefinitions: [:]
+                    cellDefinitions: [:],
+                    headerDefinitions: [:]
                 )
 
 
@@ -49,7 +50,8 @@ final class UITableViewConfigurationSpec: QuickSpec {
                     cellDefinitions: [
                         IndexPathFixture.Section0.Cell0 : firstSectionFirstCell,
                         IndexPathFixture.Section0.Cell1 : firstSectionSecondCell
-                    ]
+                    ],
+                    headerDefinitions: [:]
                 )
 
 
@@ -62,7 +64,8 @@ final class UITableViewConfigurationSpec: QuickSpec {
                     cellDefinitions: [
                         IndexPathFixture.Section0.Cell0 : firstSectionFirstCell,
                         IndexPathFixture.Section1.Cell0 : secondSectionFirstCell
-                    ]
+                    ],
+                    headerDefinitions: [:]
                 )
 
 
@@ -74,7 +77,8 @@ final class UITableViewConfigurationSpec: QuickSpec {
             it("returns zero when there are no cells in a section") {
                 let config = UITableViewConfiguration(
                     tableViewStyle: UITableView.Style.plain,
-                    cellDefinitions: [:]
+                    cellDefinitions: [:],
+                    headerDefinitions: [:]
                 )
 
 
@@ -87,7 +91,8 @@ final class UITableViewConfigurationSpec: QuickSpec {
                     tableViewStyle: UITableView.Style.plain,
                     cellDefinitions: [
                         IndexPathFixture.Section0.Cell0 : firstSectionFirstCell
-                    ]
+                    ],
+                    headerDefinitions: [:]
                 )
 
 
@@ -100,7 +105,8 @@ final class UITableViewConfigurationSpec: QuickSpec {
                     cellDefinitions: [
                         IndexPathFixture.Section0.Cell0 : firstSectionFirstCell,
                         IndexPathFixture.Section0.Cell1 : firstSectionSecondCell
-                    ]
+                    ],
+                    headerDefinitions: [:]
                 )
 
 
@@ -113,7 +119,8 @@ final class UITableViewConfigurationSpec: QuickSpec {
                     cellDefinitions: [
                         IndexPathFixture.Section1.Cell0 : secondSectionFirstCell,
                         IndexPathFixture.Section1.Cell1 : secondSectionSecondCell
-                    ]
+                    ],
+                    headerDefinitions: [:]
                 )
 
 

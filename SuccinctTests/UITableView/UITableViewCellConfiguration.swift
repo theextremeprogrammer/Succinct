@@ -6,3 +6,8 @@ struct UITableViewCellConfiguration {
     let selected: Bool
     let subviews: [UIView]
 }
+
+struct UITableViewHeaderConfiguration {
+    let section: Int
+    let view: UIView?
+}

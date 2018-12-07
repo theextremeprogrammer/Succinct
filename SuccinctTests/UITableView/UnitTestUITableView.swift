@@ -17,6 +17,7 @@ final class UnitTestUITableView: UITableView {
         )
 
         dataSource = self
+        delegate = self
 
         if let newDelegate = maybeDelegate {
             delegate = newDelegate
@@ -55,5 +56,11 @@ extension UnitTestUITableView: UITableViewDataSource {
         }
 
         return cell ?? UITableViewCell()
+    }
+}
+
+extension UnitTestUITableView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return configuration.headerDefinitions[section]?.view
     }
 }
