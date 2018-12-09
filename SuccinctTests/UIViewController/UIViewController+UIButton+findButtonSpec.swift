@@ -99,7 +99,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Settings",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -107,7 +107,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 1, section: 0),
-                                        titleLabelText: "Account Details",
+                                        titleLabelText: "Cell Two",
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
@@ -170,7 +170,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -202,7 +202,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -285,7 +285,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Account Details",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
@@ -316,7 +316,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Settings",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -324,7 +324,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 1, section: 0),
-                                        titleLabelText: "Account Details",
+                                        titleLabelText: "Cell Two",
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
@@ -385,7 +385,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -416,7 +416,7 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )

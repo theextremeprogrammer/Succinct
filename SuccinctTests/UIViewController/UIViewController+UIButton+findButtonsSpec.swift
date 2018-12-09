@@ -91,7 +91,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                 }
             }
 
-            context("when a button exists with the expected text in the first tableview cell") {
+            context("when a button exists in the first tableview cell") {
                 var viewController: UIViewController!
 
                 beforeEach {
@@ -101,7 +101,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Account Details",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
@@ -147,7 +147,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                 }
             }
 
-            context("when a button exists with the expected text in the second tableview cell") {
+            context("when a button exists in the second tableview cell") {
                 var viewController: UIViewController!
 
                 beforeEach {
@@ -157,7 +157,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Settings",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -165,7 +165,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 1, section: 0),
-                                        titleLabelText: "Account Details",
+                                        titleLabelText: "Cell Two",
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
@@ -211,7 +211,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                 }
             }
 
-            context("when a button exists with the expected text in the tableview header view") {
+            context("when a button exists in the tableview header view") {
                 var viewController: UIViewController!
 
                 beforeEach {
@@ -235,7 +235,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -270,7 +270,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                 }
             }
 
-            context("when a button doesnt exist with the expected text in the tableview header view") {
+            context("when a button does not exist in the tableview header view") {
                 var viewController: UIViewController!
 
                 beforeEach {
@@ -287,7 +287,7 @@ final class UIViewController_UIButton_findButtonsSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )

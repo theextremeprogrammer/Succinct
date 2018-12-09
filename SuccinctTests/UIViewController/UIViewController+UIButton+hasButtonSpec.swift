@@ -14,7 +14,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                 }
             }
             
-            context("when button text does not match") {
+            context("when button's text does not match") {
                 it("cannot find the button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(UIButtonBuilder().withTitleText("Login").build())
@@ -59,7 +59,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Account Details",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
@@ -85,7 +85,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Settings",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -93,7 +93,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 1, section: 0),
-                                        titleLabelText: "Account Details",
+                                        titleLabelText: "Cell Two",
                                         selected: false,
                                         subviews: [
                                             UIViewBuilder()
@@ -147,7 +147,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -160,7 +160,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                 }
             }
 
-            context("when a button doesnt exist in a table view's header view") {
+            context("when a button does not exist in a table view's header view") {
                 it("cannot find a button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(
@@ -175,7 +175,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
@@ -193,7 +193,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
             let catImage = UIImage(assetIdentifier: .obligatoryCatImage)!
             let foliageImage = UIImage(assetIdentifier: .obligatoryFoliageImage)!
 
-            context("when no buttons exist") {
+            context("when no button exist") {
                 it("cannot find the button") {
                     let viewController = UIViewControllerBuilder().build()
                     
@@ -273,7 +273,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                                 .withCellConfiguration(
                                     UITableViewCellConfiguration(
                                         indexPath: IndexPath(row: 0, section: 0),
-                                        titleLabelText: "Cell Name",
+                                        titleLabelText: "Cell One",
                                         selected: false,
                                         subviews: []
                                     )
