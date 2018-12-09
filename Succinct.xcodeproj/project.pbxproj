@@ -64,6 +64,8 @@
 		5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */; };
 		B129324121B2A866009AE9D1 /* UINavigationController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324021B2A866009AE9D1 /* UINavigationController+UILabel.swift */; };
 		B129324421B2AB1D009AE9D1 /* UINavigationControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */; };
+		B134F10221BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134F10121BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift */; };
+		B134F10421BD076800509278 /* UIViewController+UIButton+findButtonsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134F10321BD076800509278 /* UIViewController+UIButton+findButtonsSpec.swift */; };
 		B15A4C7F21B2C53700398963 /* UINavigationController+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15A4C7E21B2C53700398963 /* UINavigationController+UILabelSpec.swift */; };
 		B15A4C8021B40FAF00398963 /* UITableViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FC208475C1001314A7 /* UITableViewBuilder.swift */; };
 		B15A4C8121B40FD400398963 /* UITableViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FE208475DC001314A7 /* UITableViewConfiguration.swift */; };
@@ -80,7 +82,7 @@
 		B83F5CD121ACD1330061494E /* UISwitchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD021ACD1320061494E /* UISwitchBuilder.swift */; };
 		B83F5CD321ACD65E0061494E /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD221ACD65E0061494E /* ViewBuilder.swift */; };
 		B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */; };
-		B85D4DF1219A48DF00B9828E /* UIViewController+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButtonSpec.swift */; };
+		B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */; };
 		B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */; };
 		B89E2D0C218BF422004FE2A6 /* UIViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */; };
 		B89E2D0E218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0D218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift */; };
@@ -223,6 +225,8 @@
 		5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		B129324021B2A866009AE9D1 /* UINavigationController+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+UILabel.swift"; sourceTree = "<group>"; };
 		B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerBuilder.swift; sourceTree = "<group>"; };
+		B134F10121BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+findButtonSpec.swift"; sourceTree = "<group>"; };
+		B134F10321BD076800509278 /* UIViewController+UIButton+findButtonsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+findButtonsSpec.swift"; sourceTree = "<group>"; };
 		B15A4C7E21B2C53700398963 /* UINavigationController+UILabelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+UILabelSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
@@ -235,7 +239,7 @@
 		B83F5CD021ACD1320061494E /* UISwitchBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchBuilder.swift; sourceTree = "<group>"; };
 		B83F5CD221ACD65E0061494E /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Tap.swift"; sourceTree = "<group>"; };
-		B85D4DF0219A48DF00B9828E /* UIViewController+UIButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButtonSpec.swift"; sourceTree = "<group>"; };
+		B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+hasButtonSpec.swift"; sourceTree = "<group>"; };
 		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		B89A3EB521A2AFD2008B15C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton.swift"; sourceTree = "<group>"; };
@@ -553,7 +557,9 @@
 		52AAB3852072F1BF0021BA62 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B85D4DF0219A48DF00B9828E /* UIViewController+UIButtonSpec.swift */,
+				B134F10121BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift */,
+				B134F10321BD076800509278 /* UIViewController+UIButton+findButtonsSpec.swift */,
+				B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */,
 				B8B56E7521B0B3960008514A /* UIViewController+UIImageViewSpec.swift */,
 				3B14EB825E002B1E92154DB9 /* UIViewController+UILabelSpec.swift */,
 				3B14E0531A59BD80586AFF4E /* UIViewController+UISegmentedControlSpec.swift */,
@@ -937,6 +943,7 @@
 				5235C2A3208F511700C0CEEA /* UIPickerViewBuilder.swift in Sources */,
 				524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */,
 				B8B56E6C21B012B10008514A /* UISliderBuilder.swift in Sources */,
+				B134F10421BD076800509278 /* UIViewController+UIButton+findButtonsSpec.swift in Sources */,
 				B836272D21AC1D27008264C5 /* UISwitchBuilder.swift in Sources */,
 				526DC7FD208475C1001314A7 /* UITableViewBuilder.swift in Sources */,
 				526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */,
@@ -944,7 +951,8 @@
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
 				B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
-				B85D4DF1219A48DF00B9828E /* UIViewController+UIButtonSpec.swift in Sources */,
+				B134F10221BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift in Sources */,
+				B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */,
 				B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */,
 				3B14EA0AECFD06E28FB32A18 /* UIViewController+UILabelSpec.swift in Sources */,
 				3B14EA49DD1ED5FF46963757 /* UIViewController+UISegmentedControlSpec.swift in Sources */,
