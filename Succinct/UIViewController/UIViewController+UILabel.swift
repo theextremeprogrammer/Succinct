@@ -6,11 +6,11 @@ extension UIViewController {
             return true
         }
 
-        if self.title == searchText {
+        if title == searchText {
             return true
         }
 
-        return self.navigationController?.hasLabelInNavigationBar(withExactText: searchText) ?? false
+        return navigationController?.hasLabelInNavigationBar(withExactText: searchText) ?? false
     }
 
     public func hasLabel(containingText searchText: String) -> Bool {
@@ -18,11 +18,11 @@ extension UIViewController {
             return true
         }
 
-        if (self.title?.contains(searchText)).isNotNil() {
+        if self.title?.contains(searchText) ?? false {
             return true
         }
 
-        return self.navigationController?.hasLabelInNavigationBar(containingText: searchText) ?? false
+        return navigationController?.hasLabelInNavigationBar(containingText: searchText) ?? false
     }
 
     public func findLabel(withExactText searchText: String) -> UILabel? {
@@ -31,7 +31,7 @@ extension UIViewController {
             return labelInRootView
         }
 
-        return self.navigationController?.findLabelInNavigationBar(withExactText: searchText)
+        return navigationController?.findLabelInNavigationBar(withExactText: searchText)
     }
 
     public func findLabel(containingText searchText: String) -> UILabel? {
@@ -40,6 +40,6 @@ extension UIViewController {
             return labelInRootView
         }
 
-        return self.navigationController?.findLabelInNavigationBar(containingText: searchText)
+        return navigationController?.findLabelInNavigationBar(containingText: searchText)
     }
 }

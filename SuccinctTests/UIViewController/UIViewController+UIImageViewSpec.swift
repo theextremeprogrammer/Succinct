@@ -14,7 +14,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     .build()
 
 
-                expect(viewController.hasImage(searchImage)).to(beFalse())
+                expect(viewController.hasImageView(withImage: searchImage)).to(beFalse())
             }
 
             it("can find the image when the specified image is in the first view hierarchy") {
@@ -27,7 +27,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     .build()
                 
                 
-                expect(viewController.hasImage(searchImage)).to(beTrue())
+                expect(viewController.hasImageView(withImage: searchImage)).to(beTrue())
             }
 
             it("can find the image when the specified image is in the second view hierarchy") {
@@ -44,7 +44,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     .build()
                 
                 
-                expect(viewController.hasImage(searchImage)).to(beTrue())
+                expect(viewController.hasImageView(withImage: searchImage)).to(beTrue())
             }
         }
         
@@ -56,7 +56,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                         .build()
                     
                     
-                    let maybeImageView = viewController.getImageView(for: searchImage)
+                    let maybeImageView = viewController.getImageView(forImage: searchImage)
                     expect(maybeImageView).to(beNil())
                 }
             }
@@ -72,7 +72,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                         .build()
                     
                     
-                    let maybeImageView = viewController.getImageView(for: searchImage)
+                    let maybeImageView = viewController.getImageView(forImage: searchImage)
                     expect(maybeImageView).to(beAKindOf(UIImageView.self))
                     expect(maybeImageView?.isHidden).to(beFalse())
                 }

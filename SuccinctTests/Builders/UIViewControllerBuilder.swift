@@ -30,7 +30,7 @@ struct UIViewControllerBuilder {
         return self
     }
 
-    func withNavigationBarTitle(_ title: String) -> UIViewControllerBuilder {
+    func withTitle(_ title: String) -> UIViewControllerBuilder {
         viewController.title = title
         return self
     }

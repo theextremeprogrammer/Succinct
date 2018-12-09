@@ -8,6 +8,15 @@ extension UIView {
         
         return imageView.image == searchImage
     }
+    
+    public func hasImageView(withImage searchImage: UIImage) -> Bool {
+        return findInSubviews(satisfyingCondition: { $0.isImageView(withImage: searchImage) })
+            .isNotNil()
+    }
+    
+    public func getImageView(forImage searchImage: UIImage) -> UIImageView? {
+        return findInSubviews(satisfyingCondition: { $0.isImageView(withImage: searchImage) }) as? UIImageView
+    }
 
     public func countOfImages(_ searchImage: UIImage) -> Int {
         var imagesCounted = 0
