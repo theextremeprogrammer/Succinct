@@ -14,24 +14,7 @@ extension UIView {
 // MARK: - Finding UILabels
 extension UIView {
     public func findLabel(withExactText searchText: String) -> UILabel? {
-        for subview in subviews {
-            if let label = subview as? UILabel,
-                label.text == searchText {
-                return label
-            }
-
-            if let tableView = subview as? UITableView {
-                if let view = tableView.findView(satisfyingCondition: { $0.findLabel(withExactText: searchText) }) {
-                    return view as? UILabel
-                }
-            }
-
-            if let label = subview.findLabel(withExactText: searchText) {
-                return label
-            }
-        }
-
-        return nil
+        return findInSubviews(satisfyingCondition: { $0.isLabel(withExactText: searchText) }) as? UILabel
     }
 
     public func findLabel(containingText searchText: String) -> UILabel? {
@@ -40,6 +23,18 @@ extension UIView {
 }
 
 fileprivate extension UIView {
+    private func isLabel(withExactText searchText: String) -> Bool {
+        guard let label = self as? UILabel else {
+            return false
+        }
+        
+        guard let labelText = label.text else {
+            return false
+        }
+        
+        return labelText == searchText
+    }
+
     private func isLabel(containingText searchText: String) -> Bool {
         guard let label = self as? UILabel else {
             return false

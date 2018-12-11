@@ -6,6 +6,12 @@ extension UIView {
             if satisfiesCondition(subview) {
                 return subview
             }
+            
+            if let tableView = subview as? UITableView {
+                if let view = tableView.findView(satisfyingCondition: { $0.findInSubviews(satisfyingCondition: satisfiesCondition) }) {
+                    return view
+                }
+            }
 
             if subview.subviews.count > 0 {
                 if let result = subview.findInSubviews(satisfyingCondition: satisfiesCondition) {
