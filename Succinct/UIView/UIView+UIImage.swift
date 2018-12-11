@@ -1,14 +1,6 @@
 import UIKit
 
 extension UIView {
-    public func isImageView(withImage searchImage: UIImage) -> Bool {
-        guard let imageView = self as? UIImageView else {
-            return false
-        }
-        
-        return imageView.image == searchImage
-    }
-    
     public func hasImageView(withImage searchImage: UIImage) -> Bool {
         return findInSubviews(satisfyingCondition: { $0.isImageView(withImage: searchImage) })
             .isNotNil()
@@ -43,5 +35,15 @@ extension UIView {
         }
         
         return imagesCounted
+    }
+}
+
+fileprivate extension UIView {
+    func isImageView(withImage searchImage: UIImage) -> Bool {
+        guard let imageView = self as? UIImageView else {
+            return false
+        }
+        
+        return imageView.image == searchImage
     }
 }
