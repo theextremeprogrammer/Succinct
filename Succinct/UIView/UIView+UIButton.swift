@@ -23,22 +23,8 @@ extension UIView {
             }
 
             if let tableView = subview as? UITableView {
-                for section in 0..<tableView.numberOfSections {
-                    if let headerView = tableView.delegate?.tableView?(tableView, viewForHeaderInSection: section) {
-                        if let button = headerView.findButton(withExactText: searchText) {
-                            return button
-                        }
-                    }
-
-                    let numberOfItems = tableView.numberOfRows(inSection: section)
-                    for item in 0..<numberOfItems {
-                        let indexPath = IndexPath(item: item, section: section)
-                        if let cell = tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) {
-                            if let button = cell.findButton(withExactText: searchText) {
-                                return button
-                            }
-                        }
-                    }
+                if let view = tableView.findView(satisfyingCondition: { $0.findButton(withExactText: searchText) }) {
+                    return view as? UIButton
                 }
             }
             
@@ -56,22 +42,8 @@ extension UIView {
                 if let button = $0 as? UIButton {
                     return button
                 } else if let tableView = $0 as? UITableView {
-                    for section in 0..<tableView.numberOfSections {
-                        if let headerView = tableView.delegate?.tableView?(tableView, viewForHeaderInSection: section) {
-                            if let button = headerView.findButton(withImage: searchImage) {
-                                return button
-                            }
-                        }
-
-                        let numberOfItems = tableView.numberOfRows(inSection: section)
-                        for item in 0..<numberOfItems {
-                            let indexPath = IndexPath(item: item, section: section)
-                            if let cell = tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) {
-                                if let button = cell.findButton(withImage: searchImage) {
-                                    return button
-                                }
-                            }
-                        }
+                    if let view = tableView.findView(satisfyingCondition: { $0.findButton(withImage: searchImage) }) {
+                        return view as? UIButton
                     }
                 }
 
@@ -90,7 +62,8 @@ extension UIView {
                     buttons.append(button)
                 }
             }
-
+            
+            
             if let tableView = subview as? UITableView {
                 for section in 0..<tableView.numberOfSections {
                     if let headerView = tableView.delegate?.tableView?(tableView, viewForHeaderInSection: section) {

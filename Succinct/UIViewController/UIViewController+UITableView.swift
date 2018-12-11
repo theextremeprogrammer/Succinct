@@ -27,6 +27,7 @@ extension UIViewController {
                 
                 for section in 0..<tableView.numberOfSections {
                     let numberOfItems = tableView.numberOfRows(inSection: section)
+                    
                     for item in 0..<numberOfItems {
                         let indexPath = IndexPath(item: item, section: section)
                         if let cell = tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) {
@@ -37,6 +38,7 @@ extension UIViewController {
                         }
                     }
                 }
+                
             }
         }
     }

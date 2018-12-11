@@ -21,22 +21,8 @@ extension UIView {
             }
 
             if let tableView = subview as? UITableView {
-                for section in 0..<tableView.numberOfSections {
-                    if let headerView = tableView.delegate?.tableView?(tableView, viewForHeaderInSection: section) {
-                        if let label = headerView.findLabel(withExactText: searchText) {
-                            return label
-                        }
-                    }
-
-                    let numberOfItems = tableView.numberOfRows(inSection: section)
-                    for item in 0..<numberOfItems {
-                        let indexPath = IndexPath(item: item, section: section)
-                        if let cell = tableView.dataSource?.tableView(tableView, cellForRowAt: indexPath) {
-                            if let label = cell.findLabel(withExactText: searchText) {
-                                return label
-                            }
-                        }
-                    }
+                if let view = tableView.findView(satisfyingCondition: { $0.findLabel(withExactText: searchText) }) {
+                    return view as? UILabel
                 }
             }
 
