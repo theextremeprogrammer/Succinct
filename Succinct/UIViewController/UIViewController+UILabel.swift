@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - Has UILabel
 extension UIViewController {
     public func hasLabel(withExactText searchText: String) -> Bool {
         if view.hasLabel(withExactText: searchText) {
@@ -24,7 +25,10 @@ extension UIViewController {
 
         return navigationController?.hasLabelInNavigationBar(containingText: searchText) ?? false
     }
+}
 
+// MARK: - Finding UILabel
+extension UIViewController {
     public func findLabel(withExactText searchText: String) -> UILabel? {
         let labelInRootView = view.findLabel(withExactText: searchText)
         if labelInRootView.isNotNil() {
