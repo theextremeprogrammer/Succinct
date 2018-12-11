@@ -37,20 +37,7 @@ extension UIView {
     }
 
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
-        return subviews
-            .compactMap {
-                if let button = $0 as? UIButton {
-                    return button
-                } else if let tableView = $0 as? UITableView {
-                    if let view = tableView.findView(satisfyingCondition: { $0.findButton(withImage: searchImage) }) {
-                        return view as? UIButton
-                    }
-                }
-
-                return $0.findButton(withImage: searchImage)
-            }
-            .filter { $0.image(for: .normal) == searchImage }
-            .first
+        return findInSubviews(satisfyingCondition: { $0.isButton(withImage: searchImage) }) as? UIButton
     }
 
     public func findButtons(withState searchState: UIControl.State) -> [UIButton] {
@@ -84,5 +71,19 @@ extension UIView {
         }
 
         return buttons
+    }
+}
+
+fileprivate extension UIView {
+    func isButton(withImage searchImage: UIImage) -> Bool {
+        guard let button = self as? UIButton else {
+            return false
+        }
+        
+        guard let image = button.image(for: .normal) else {
+            return false
+        }
+        
+        return image == searchImage
     }
 }
