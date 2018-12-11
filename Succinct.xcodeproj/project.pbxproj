@@ -59,7 +59,7 @@
 		526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FE208475DC001314A7 /* UITableViewConfiguration.swift */; };
 		526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC800208475E4001314A7 /* UITableViewCellConfiguration.swift */; };
 		526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC8022084761C001314A7 /* IndexPathFixture.swift */; };
-		52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */; };
+		52970E5E20833AE200297EF9 /* UICollectionView+Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52970E5D20833AE200297EF9 /* UICollectionView+Evaluations.swift */; };
 		52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */; };
 		5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */; };
 		B129324121B2A866009AE9D1 /* UINavigationController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324021B2A866009AE9D1 /* UINavigationController+UILabel.swift */; };
@@ -221,7 +221,7 @@
 		526DC7FE208475DC001314A7 /* UITableViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewConfiguration.swift; sourceTree = "<group>"; };
 		526DC800208475E4001314A7 /* UITableViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellConfiguration.swift; sourceTree = "<group>"; };
 		526DC8022084761C001314A7 /* IndexPathFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathFixture.swift; sourceTree = "<group>"; };
-		52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Testing.swift"; sourceTree = "<group>"; };
+		52970E5D20833AE200297EF9 /* UICollectionView+Evaluations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Evaluations.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
 		5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		B129324021B2A866009AE9D1 /* UINavigationController+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+UILabel.swift"; sourceTree = "<group>"; };
@@ -552,7 +552,7 @@
 		52970E5C20833AC800297EF9 /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				52970E5D20833AE200297EF9 /* UICollectionView+Testing.swift */,
+				52970E5D20833AE200297EF9 /* UICollectionView+Evaluations.swift */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -902,7 +902,7 @@
 				B8BC557C21B2816200A1CD8C /* SuccinctConfig.swift in Sources */,
 				B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */,
 				3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */,
-				52970E5E20833AE200297EF9 /* UICollectionView+Testing.swift in Sources */,
+				52970E5E20833AE200297EF9 /* UICollectionView+Evaluations.swift in Sources */,
 				B129324121B2A866009AE9D1 /* UINavigationController+UILabel.swift in Sources */,
 				3B14E52C804E819D50011851 /* UIPickerView+SelectComponent.swift in Sources */,
 				3B14E6207FE400CF70CE5A1F /* UISlider+SetValue.swift in Sources */,
