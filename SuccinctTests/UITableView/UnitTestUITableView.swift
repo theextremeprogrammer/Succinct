@@ -17,6 +17,7 @@ final class UnitTestUITableView: UITableView {
         )
 
         dataSource = self
+        delegate = self
 
         if let newDelegate = maybeDelegate {
             delegate = newDelegate
@@ -48,6 +49,18 @@ extension UnitTestUITableView: UITableViewDataSource {
             cell?.isSelected = isSelected
         }
 
+        if let subviews = configuration.cellDefinitions[indexPath]?.subviews {
+            for subview in subviews {
+                cell?.addSubview(subview)
+            }
+        }
+
         return cell ?? UITableViewCell()
+    }
+}
+
+extension UnitTestUITableView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return configuration.headerDefinitions[section]?.view
     }
 }
