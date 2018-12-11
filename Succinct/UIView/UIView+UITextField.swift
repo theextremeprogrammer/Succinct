@@ -7,7 +7,7 @@ extension UIView {
     }
 
     public func hasTextField(containingPlaceholderText searchText: String) -> Bool {
-        return findTextField(withExactPlaceholderText: searchText).isNotNil()
+        return findTextField(containingPlaceholderText: searchText).isNotNil()
     }
 
     public func hasTextField(withExactText searchText: String) -> Bool {
@@ -15,7 +15,7 @@ extension UIView {
     }
 
     public func hasTextField(containingText searchText: String) -> Bool {
-        return findTextField(withExactText: searchText).isNotNil()
+        return findTextField(containingText: searchText).isNotNil()
     }
 }
 

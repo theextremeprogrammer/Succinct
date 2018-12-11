@@ -4,7 +4,7 @@ import Succinct
 
 final class UIViewController_UITextFieldSpec: QuickSpec {
     override func spec() {
-        describe("finding text fields by exact placeholder text") {
+        describe("finding text fields using placeholder text") {
             context("when a UITextField exists in the first subview") {
                 var viewController: UIViewController!
 
@@ -22,6 +22,14 @@ final class UIViewController_UITextFieldSpec: QuickSpec {
 
                 it("cannot find a label whose placeholder text does not match exactly") {
                     expect(viewController.findTextField(withExactPlaceholderText: "Search..")).to(beNil())
+                }
+                
+                it("can find a text field whose placeholder text matches partially") {
+                    expect(viewController.findTextField(containingPlaceholderText: "Sea")).toNot(beNil())
+                }
+                
+                it("cannot find a label whose placeholder text does not match partially") {
+                    expect(viewController.findTextField(containingPlaceholderText: "ABCD")).to(beNil())
                 }
             }
 
@@ -43,7 +51,7 @@ final class UIViewController_UITextFieldSpec: QuickSpec {
             }
         }
 
-        describe("has textfield with exact placeholder text") {
+        describe("has textfield with placeholder text") {
             context("when a UITextField exists in the first subview") {
                 var viewController: UIViewController!
 
@@ -61,6 +69,14 @@ final class UIViewController_UITextFieldSpec: QuickSpec {
 
                 it("cannot find a label whose placeholder text does not match exactly") {
                     expect(viewController.hasTextField(withExactPlaceholderText: "Search..")).to(beFalse())
+                }
+                
+                it("can find a text field whose placeholder text matches partially") {
+                    expect(viewController.hasTextField(containingPlaceholderText: "Sea")).to(beTrue())
+                }
+                
+                it("cannot find a label whose placeholder text does not match partially") {
+                    expect(viewController.hasTextField(containingPlaceholderText: "ABCD")).to(beFalse())
                 }
             }
 
@@ -82,7 +98,7 @@ final class UIViewController_UITextFieldSpec: QuickSpec {
             }
         }
 
-        describe("finding text fields by exact text") {
+        describe("finding text fields with text") {
             context("when a UITextField exists in the first subview") {
                 var viewController: UIViewController!
 
@@ -100,6 +116,14 @@ final class UIViewController_UITextFieldSpec: QuickSpec {
 
                 it("cannot find a label whose text does not match exactly") {
                     expect(viewController.findTextField(withExactText: "Usernam")).to(beNil())
+                }
+
+                it("can find a text field whose text matches partially") {
+                    expect(viewController.findTextField(containingText: "name")).toNot(beNil())
+                }
+                
+                it("cannot find a label whose text does not match partially") {
+                    expect(viewController.findTextField(containingText: "ABCD")).to(beNil())
                 }
             }
 
@@ -121,7 +145,7 @@ final class UIViewController_UITextFieldSpec: QuickSpec {
             }
         }
 
-        describe("has textfield with exact text") {
+        describe("has textfield with text") {
             context("when a UITextField exists in the first subview") {
                 var viewController: UIViewController!
 
@@ -139,6 +163,14 @@ final class UIViewController_UITextFieldSpec: QuickSpec {
 
                 it("cannot find a label whose text does not match exactly") {
                     expect(viewController.hasTextField(withExactText: "Usernam")).to(beFalse())
+                }
+
+                it("can find a text field whose text matches partially") {
+                    expect(viewController.hasTextField(containingText: "name")).to(beTrue())
+                }
+                
+                it("cannot find a label whose text does not match partially") {
+                    expect(viewController.hasTextField(containingText: "ABCD")).to(beFalse())
                 }
             }
 
