@@ -6,7 +6,7 @@ extension UIView {
             .isNotNil()
     }
     
-    public func getImageView(forImage searchImage: UIImage) -> UIImageView? {
+    public func findImageView(withImage searchImage: UIImage) -> UIImageView? {
         return findInSubviews(satisfyingCondition: { $0.isImageView(withImage: searchImage) }) as? UIImageView
     }
 

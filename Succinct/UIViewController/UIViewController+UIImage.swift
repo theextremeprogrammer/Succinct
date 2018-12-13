@@ -5,8 +5,8 @@ extension UIViewController {
         return view.hasImageView(withImage: searchImage)
     }
     
-    public func getImageView(forImage searchImage: UIImage) -> UIImageView? {
-        return view.getImageView(forImage: searchImage)
+    public func findImageView(withImage searchImage: UIImage) -> UIImageView? {
+        return view.findImageView(withImage: searchImage)
     }
     
     public func countOfImages(_ searchImage: UIImage) -> Int {

@@ -56,7 +56,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                         .build()
                     
                     
-                    let maybeImageView = viewController.getImageView(forImage: searchImage)
+                    let maybeImageView = viewController.findImageView(withImage: searchImage)
                     expect(maybeImageView).to(beNil())
                 }
             }
@@ -72,7 +72,7 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                         .build()
                     
                     
-                    let maybeImageView = viewController.getImageView(forImage: searchImage)
+                    let maybeImageView = viewController.findImageView(withImage: searchImage)
                     expect(maybeImageView).to(beAKindOf(UIImageView.self))
                     expect(maybeImageView?.isHidden).to(beFalse())
                 }
