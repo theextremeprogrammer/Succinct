@@ -156,6 +156,74 @@ final class UIViewController_UIImageViewSpec: QuickSpec {
                     expect(viewController.countOfImages(searchImage)).to(equal(1))
                 }
             }
+            
+            context("when the image is NOT contained in a table view cell in the view hierarchy") {
+                it("counts the images") {
+                    let cellConfiguration = UITableViewCellConfiguration(
+                        indexPath: IndexPath(row: 0, section: 0),
+                        titleLabelText: "",
+                        selected: false,
+                        subviews: []
+                    )
+                    
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withCellConfiguration(cellConfiguration)
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    expect(viewController.countOfImages(searchImage)).to(equal(0))
+                }
+            }
+            
+            context("when the image is contained in a table view header in the view hierarchy") {
+                it("counts the images") {
+                    let catImage = UIImage(assetIdentifier: UIImage.AssetIdentifier.obligatoryCatImage)!
+                    
+                    let headerConfiguration = UITableViewHeaderConfiguration(
+                        section: 0,
+                        view: UIViewBuilder().withImageView(catImage).build()
+                    )
+                    
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withHeaderConfiguration(headerConfiguration)
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    expect(viewController.countOfImages(searchImage)).to(equal(1))
+                }
+            }
+
+            context("when the image is contained in a table view cell in the view hierarchy") {
+                it("counts the images") {
+                    let catImage = UIImage(assetIdentifier: UIImage.AssetIdentifier.obligatoryCatImage)!
+                    
+                    let cellConfiguration = UITableViewCellConfiguration(
+                        indexPath: IndexPath(row: 0, section: 0),
+                        titleLabelText: "",
+                        selected: false,
+                        subviews: [UIViewBuilder().withImageView(catImage).build()]
+                    )
+                    
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UITableViewBuilder()
+                                .withCellConfiguration(cellConfiguration)
+                                .build()
+                        )
+                        .build()
+                    
+                    
+                    expect(viewController.countOfImages(searchImage)).to(equal(1))
+                }
+            }
         }
     }
 }
