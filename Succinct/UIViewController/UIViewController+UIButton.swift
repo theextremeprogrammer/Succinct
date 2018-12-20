@@ -21,14 +21,13 @@ extension UIViewController {
 // MARK: - Searching by image
 extension UIViewController {
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
-        Succinct.log.debug("<\(String(describing: type(of: self)))>")
-
-        if let button = view.findButton(withImage: searchImage) {
-            return button
-        }
-        
-        Succinct.log.debug("</\(String(describing: type(of: self)))>")
-        return nil
+        return executeWithEnterAndExitDebugLog {
+            if let button = view.findButton(withImage: searchImage) {
+                return button
+            }
+            
+            return nil
+        } as? UIButton
     }
 
     public func hasButton(withImage searchImage: UIImage) -> Bool {
@@ -47,5 +46,19 @@ extension UIViewController {
 extension UIViewController {
     public func findButtons(withState state: UIControl.State) -> [UIButton] {
         return view.findButtons(withState: state)
+    }
+}
+
+// MARK: - Debugging
+fileprivate extension UIViewController {
+    private func executeWithEnterAndExitDebugLog(closure: () -> UIView?) -> UIView? {
+        Succinct.log.debug("<\(String(describing: type(of: self)))>")
+        
+        if let result = closure() {
+            return result
+        }
+        
+        Succinct.log.debug("</\(String(describing: type(of: self)))>")
+        return nil
     }
 }
