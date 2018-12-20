@@ -18,38 +18,40 @@ class DebugLogging_UIButtonSpec: QuickSpec {
                 Succinct.config.disableDebugLog()
                 Succinct.log.useDefaultOutputMethod()
             }
-            
-            it("outputs a message when a button is found but the text does not match") {
-                let viewController = UIViewControllerBuilder()
-                    .withSubview(UIButtonBuilder().withTitleText("Login").build())
-                    .build()
-                
-                
-                _ = viewController.findButton(withExactText: "ABC")
-                
-                
-                let expectedLogMessage =
-                    "**** Succinct: " +
-                    "findButton(withExactText: 'ABC')" +
+
+            describe("displaying the results of searching for buttons") {
+                it("outputs a message when a button is found but the text does not match") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIButtonBuilder().withTitleText("Login").build())
+                        .build()
+                    
+                    
+                    _ = viewController.findButton(withExactText: "ABC")
+                    
+                    
+                    let expectedLogMessage =
+                        "**** Succinct: " +
+                            "findButton(withExactText: 'ABC')" +
                     " failed to match for button with title: 'Login'"
-                expect(spyOutputMethod.standardPrint_argument_message).to(equal(expectedLogMessage))
-            }
-            
-            it("outputs a message when a button is found but the no title is set") {
-                let image = UIImage(assetIdentifier: .obligatoryCatImage)!
-                let viewController = UIViewControllerBuilder()
-                    .withSubview(UIButtonBuilder().withImage(image).build())
-                    .build()
+                    expect(spyOutputMethod.standardPrint_argument_message).to(equal(expectedLogMessage))
+                }
                 
-                
-                _ = viewController.findButton(withExactText: "ABC")
-                
-                
-                let expectedLogMessage =
-                    "**** Succinct: " +
-                    "findButton(withExactText: 'ABC')" +
+                it("outputs a message when a button is found but the no title is set") {
+                    let image = UIImage(assetIdentifier: .obligatoryCatImage)!
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIButtonBuilder().withImage(image).build())
+                        .build()
+                    
+                    
+                    _ = viewController.findButton(withExactText: "ABC")
+                    
+                    
+                    let expectedLogMessage =
+                        "**** Succinct: " +
+                            "findButton(withExactText: 'ABC')" +
                     " failed to match for button with title: nil (no title text set for this button)"
-                expect(spyOutputMethod.standardPrint_argument_message).to(equal(expectedLogMessage))
+                    expect(spyOutputMethod.standardPrint_argument_message).to(equal(expectedLogMessage))
+                }
             }
         }
     }
