@@ -223,6 +223,54 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
             let catImage = UIImage(assetIdentifier: .obligatoryCatImage)!
             let foliageImage = UIImage(assetIdentifier: .obligatoryFoliageImage)!
 
+            describe("view hierarchy debug logging") {
+                var spyOutputMethod: SpyOutputMethod!
+
+                beforeEach {
+                    spyOutputMethod = SpyOutputMethod()
+                    
+                    Succinct.config.enableDebugLog()
+                    Succinct.log.useOutputMethod(spyOutputMethod)
+                }
+                
+                afterEach {
+                    Succinct.config.disableDebugLog()
+                    Succinct.log.useDefaultOutputMethod()
+                }
+
+                it("outputs the view controller open tag") {
+                    let viewController = UIViewControllerBuilder().build()
+                    
+                    
+                    _ = viewController.findButton(withImage: catImage)
+                    
+                    
+                    expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UIViewController:"))
+                }
+
+                it("outputs the view controller close tag when the button is NOT found") {
+                    let viewController = UIViewControllerBuilder().build()
+                    
+                    
+                    _ = viewController.findButton(withImage: catImage)
+                    
+                    
+                    expect(spyOutputMethod.standardPrint_argument_messages.last).to(equal("</UIViewController>"))
+                }
+                
+                it("does not output the view controller close tag when the button is found") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIButtonBuilder().withImage(catImage).build())
+                        .build()
+                    
+                    
+                    _ = viewController.findButton(withImage: catImage)
+                    
+                    
+                    expect(spyOutputMethod.standardPrint_argument_messages.last).toNot(equal("</UIViewController>"))
+                }
+            }
+
             context("when no buttons exist") {
                 it("cannot find the button") {
                     let viewController = UIViewControllerBuilder().build()

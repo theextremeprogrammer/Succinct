@@ -21,7 +21,14 @@ extension UIViewController {
 // MARK: - Searching by image
 extension UIViewController {
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
-        return view.findButton(withImage: searchImage)
+        Succinct.log.debug("\(self)")
+        
+        if let button = view.findButton(withImage: searchImage) {
+            return button
+        }
+        
+        Succinct.log.debug("</UIViewController>")
+        return nil
     }
 
     public func hasButton(withImage searchImage: UIImage) -> Bool {
