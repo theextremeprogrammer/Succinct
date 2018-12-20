@@ -2,38 +2,7 @@ import UIKit
 
 extension UIView {
     public func findButton(withExactText searchText: String) -> UIButton? {
-        for subview in subviews {
-            if let button = subview as? UIButton {
-                if button.title(for: .normal) == searchText {
-                    return button
-                } else {
-                    if let buttonTitle = button.title(for: .normal) {
-                        let message = "**** Succinct: " +
-                            "findButton(withExactText: '\(searchText)')" +
-                            " failed to match for button with title: '\(buttonTitle)'"
-                        Succinct.log.debug(message)
-                    } else {
-                        let message = "**** Succinct: " +
-                            "findButton(withExactText: '\(searchText)')" +
-                            " failed to match for button with title:" +
-                            " nil (no title text set for this button)"
-                        Succinct.log.debug(message)
-                    }
-                }
-            }
-
-            if let tableView = subview as? UITableView {
-                if let view = tableView.findView(satisfyingCondition: { $0.findButton(withExactText: searchText) }) {
-                    return view as? UIButton
-                }
-            }
-            
-            if let button = subview.findButton(withExactText: searchText) {
-                return button
-            }
-        }
-
-        return nil
+        return findInSubviews(satisfyingCondition: { $0.isButton(withExactText: searchText) } ) as? UIButton
     }
 
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
@@ -75,6 +44,33 @@ extension UIView {
 }
 
 fileprivate extension UIView {
+    func isButton(withExactText searchText: String) -> Bool {
+        guard let button = self as? UIButton else {
+            return false
+        }
+        
+        guard let buttonText = button.title(for: .normal) else {
+            let message = "**** Succinct: " +
+                "findButton(withExactText: '\(searchText)')" +
+                " failed to match for button with title:" +
+            " nil (no title text set for this button)"
+            Succinct.log.debug(message)
+
+            return false
+        }
+
+        guard buttonText == searchText else {
+            let message = "**** Succinct: " +
+                "findButton(withExactText: '\(searchText)')" +
+            " failed to match for button with title: '\(buttonText)'"
+            Succinct.log.debug(message)
+            
+            return false
+        }
+        
+        return true
+    }
+    
     func isButton(withImage searchImage: UIImage) -> Bool {
         guard let button = self as? UIButton else {
             return false
