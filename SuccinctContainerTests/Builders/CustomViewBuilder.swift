@@ -1,13 +1,13 @@
 import UIKit
 
-struct ViewBuilder<T: UIView> {
+struct CustomViewBuilder<T: UIView> {
     private var view: T
     
     init() {
         view = T()
     }
     
-    func withSubview(_ subView: UIView) -> ViewBuilder {
+    func withSubview(_ subView: UIView) -> CustomViewBuilder {
         view.addSubview(subView)
         return self
     }

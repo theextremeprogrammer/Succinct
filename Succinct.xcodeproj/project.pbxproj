@@ -81,7 +81,7 @@
 		B8396FFD21BF59A1006FCBD1 /* UITableView+Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8396FFC21BF59A1006FCBD1 /* UITableView+Evaluations.swift */; };
 		B83F5CCF21ACD0710061494E /* UIViewController+UISwitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CCE21ACD0710061494E /* UIViewController+UISwitchSpec.swift */; };
 		B83F5CD121ACD1330061494E /* UISwitchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD021ACD1320061494E /* UISwitchBuilder.swift */; };
-		B83F5CD321ACD65E0061494E /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD221ACD65E0061494E /* ViewBuilder.swift */; };
+		B83F5CD321ACD65E0061494E /* CustomViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD221ACD65E0061494E /* CustomViewBuilder.swift */; };
 		B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */; };
 		B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */; };
 		B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */; };
@@ -239,7 +239,7 @@
 		B8396FFC21BF59A1006FCBD1 /* UITableView+Evaluations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Evaluations.swift"; sourceTree = "<group>"; };
 		B83F5CCE21ACD0710061494E /* UIViewController+UISwitchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISwitchSpec.swift"; sourceTree = "<group>"; };
 		B83F5CD021ACD1320061494E /* UISwitchBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchBuilder.swift; sourceTree = "<group>"; };
-		B83F5CD221ACD65E0061494E /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+		B83F5CD221ACD65E0061494E /* CustomViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBuilder.swift; sourceTree = "<group>"; };
 		B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Tap.swift"; sourceTree = "<group>"; };
 		B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+hasButtonSpec.swift"; sourceTree = "<group>"; };
 		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
@@ -472,7 +472,7 @@
 				B8B56E6F21B016250008514A /* UISliderBuilder.swift */,
 				B83F5CD021ACD1320061494E /* UISwitchBuilder.swift */,
 				3B14EBFDF82B70EE812384B5 /* UIViewControllerBuilder.swift */,
-				B83F5CD221ACD65E0061494E /* ViewBuilder.swift */,
+				B83F5CD221ACD65E0061494E /* CustomViewBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -1008,7 +1008,7 @@
 				B83F5CCF21ACD0710061494E /* UIViewController+UISwitchSpec.swift in Sources */,
 				3B14E10AEDBDC2B73D3FFB86 /* UIViewControllerBuilder.swift in Sources */,
 				B15A4C8221B40FDE00398963 /* UnitTestUITableView.swift in Sources */,
-				B83F5CD321ACD65E0061494E /* ViewBuilder.swift in Sources */,
+				B83F5CD321ACD65E0061494E /* CustomViewBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

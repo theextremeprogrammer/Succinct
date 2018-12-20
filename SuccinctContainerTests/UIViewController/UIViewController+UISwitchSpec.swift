@@ -53,7 +53,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         
                         viewController = UIViewControllerBuilder()
                             .withSubview(
-                                ViewBuilder<SomeUniqueUIView>()
+                                CustomViewBuilder<SomeUniqueUIView>()
                                     .withSubview(uiSwitch)
                                     .build()
                             )
@@ -87,7 +87,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         
                         let viewController = UIViewControllerBuilder()
                             .withSubview(
-                                ViewBuilder<UIView>()
+                                CustomViewBuilder<UIView>()
                                     .withSubview(uiSwitch)
                                     .build()
                             )
@@ -112,9 +112,9 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         
                         let viewController = UIViewControllerBuilder()
                             .withSubview(
-                                ViewBuilder<UIView>()
+                                CustomViewBuilder<UIView>()
                                     .withSubview(
-                                        ViewBuilder<SomeUniqueUIView>()
+                                        CustomViewBuilder<SomeUniqueUIView>()
                                             .withSubview(uiSwitch)
                                             .build()
                                     )
