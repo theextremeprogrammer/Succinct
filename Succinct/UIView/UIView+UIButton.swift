@@ -18,8 +18,7 @@ extension UIView {
                     buttons.append(button)
                 }
             }
-            
-            
+
             if let tableView = subview as? UITableView {
                 for section in 0..<tableView.numberOfSections {
                     if let headerView = tableView.delegate?.tableView?(tableView, viewForHeaderInSection: section) {
