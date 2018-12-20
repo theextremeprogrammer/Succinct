@@ -238,24 +238,26 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                     Succinct.log.useDefaultOutputMethod()
                 }
 
+                final class SomeUniqueViewController: UIViewController {}
+                
                 it("outputs the view controller open tag") {
-                    let viewController = UIViewControllerBuilder().build()
+                    let viewController = CustomUIViewControllerBuilder<SomeUniqueViewController>().build()
                     
                     
                     _ = viewController.findButton(withImage: catImage)
                     
                     
-                    expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UIViewController:"))
+                    expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<SomeUniqueViewController"))
                 }
 
                 it("outputs the view controller close tag when the button is NOT found") {
-                    let viewController = UIViewControllerBuilder().build()
-                    
+                    let viewController = CustomUIViewControllerBuilder<SomeUniqueViewController>().build()
+
                     
                     _ = viewController.findButton(withImage: catImage)
                     
                     
-                    expect(spyOutputMethod.standardPrint_argument_messages.last).to(equal("</UIViewController>"))
+                    expect(spyOutputMethod.standardPrint_argument_messages.last).to(equal("</SomeUniqueViewController>"))
                 }
                 
                 it("does not output the view controller close tag when the button is found") {

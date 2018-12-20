@@ -116,6 +116,7 @@
 		B8BC558421B28F9800A1CD8C /* Succinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558321B28F9800A1CD8C /* Succinct.swift */; };
 		B8BC558621B28FB400A1CD8C /* PrintOutputMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558521B28FB400A1CD8C /* PrintOutputMethod.swift */; };
 		B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC558821B28FCF00A1CD8C /* SpyOutputMethod.swift */; };
+		B8C02ED621CB7303005234C9 /* CustomUIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C02ED521CB7303005234C9 /* CustomUIViewControllerBuilder.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 		B8F2DAA021B761AB00C703DA /* UnitTestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */; };
 /* End PBXBuildFile section */
@@ -278,6 +279,7 @@
 		B8BC558321B28F9800A1CD8C /* Succinct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Succinct.swift; sourceTree = "<group>"; };
 		B8BC558521B28FB400A1CD8C /* PrintOutputMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOutputMethod.swift; sourceTree = "<group>"; };
 		B8BC558821B28FCF00A1CD8C /* SpyOutputMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyOutputMethod.swift; sourceTree = "<group>"; };
+		B8C02ED521CB7303005234C9 /* CustomUIViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIViewControllerBuilder.swift; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCollectionView.swift; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */,
+				B8C02ED521CB7303005234C9 /* CustomUIViewControllerBuilder.swift */,
 				522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */,
 				B8B56E7921B0C0CC0008514A /* UICollectionViewBuilder.swift */,
 				525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */,
@@ -992,6 +995,7 @@
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				B134F10221BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift in Sources */,
 				B134F10421BD076800509278 /* UIViewController+UIButton+findButtonsSpec.swift in Sources */,
+				B8C02ED621CB7303005234C9 /* CustomUIViewControllerBuilder.swift in Sources */,
 				B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */,
 				B8B56E7621B0B3960008514A /* UIViewController+UIImageViewSpec.swift in Sources */,
 				3B14EA0AECFD06E28FB32A18 /* UIViewController+UILabelSpec.swift in Sources */,
