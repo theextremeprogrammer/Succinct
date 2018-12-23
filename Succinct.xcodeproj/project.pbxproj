@@ -74,6 +74,10 @@
 		B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */; };
 		B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */; };
 		B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E602160B5170044D2AD /* UIView+UITextField.swift */; };
+		B1FFB51621CEB81A007AE34B /* UIViewController+UITextViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFB51521CEB81A007AE34B /* UIViewController+UITextViewSpec.swift */; };
+		B1FFB51821CF518D007AE34B /* UITextViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFB51721CF518D007AE34B /* UITextViewBuilder.swift */; };
+		B1FFB51A21CF5269007AE34B /* UIViewController+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFB51921CF5269007AE34B /* UIViewController+UITextView.swift */; };
+		B1FFB51C21CF52BE007AE34B /* UIView+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFB51B21CF52BE007AE34B /* UIView+UITextView.swift */; };
 		B812408021CB65FD00ADBDCC /* UIView+UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812407F21CB65FD00ADBDCC /* UIView+UIViewSpec.swift */; };
 		B812408321CB6D6B00ADBDCC /* ArrayAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408221CB6D6B00ADBDCC /* ArrayAccessors.swift */; };
 		B812408721CB6EB100ADBDCC /* CustomUIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */; };
@@ -237,6 +241,10 @@
 		B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
 		B1D05E602160B5170044D2AD /* UIView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextField.swift"; sourceTree = "<group>"; };
+		B1FFB51521CEB81A007AE34B /* UIViewController+UITextViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextViewSpec.swift"; sourceTree = "<group>"; };
+		B1FFB51721CF518D007AE34B /* UITextViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewBuilder.swift; sourceTree = "<group>"; };
+		B1FFB51921CF5269007AE34B /* UIViewController+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextView.swift"; sourceTree = "<group>"; };
+		B1FFB51B21CF52BE007AE34B /* UIView+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextView.swift"; sourceTree = "<group>"; };
 		B812407F21CB65FD00ADBDCC /* UIView+UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIViewSpec.swift"; sourceTree = "<group>"; };
 		B812408221CB6D6B00ADBDCC /* ArrayAccessors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAccessors.swift; sourceTree = "<group>"; };
 		B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIViewBuilder.swift; sourceTree = "<group>"; };
@@ -419,6 +427,7 @@
 				3B14E883AEE14B5712B4379A /* UIView+UIStepper.swift */,
 				B8D21E4321AC22200059333E /* UIView+UISwitch.swift */,
 				B1D05E602160B5170044D2AD /* UIView+UITextField.swift */,
+				B1FFB51B21CF52BE007AE34B /* UIView+UITextView.swift */,
 				3B14E6688347C8F6D067590C /* UIView+UIView.swift */,
 			);
 			path = UIView;
@@ -439,6 +448,7 @@
 				B836272C21AC1D27008264C5 /* UISwitchBuilder.swift */,
 				526DC7FC208475C1001314A7 /* UITableViewBuilder.swift */,
 				B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */,
+				B1FFB51721CF518D007AE34B /* UITextViewBuilder.swift */,
 				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
 				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
 			);
@@ -584,6 +594,7 @@
 				B836272A21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift */,
 				3B14ED2A55D7B067E5D43B41 /* UIViewController+UITableViewSpec.swift */,
 				B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */,
+				B1FFB51521CEB81A007AE34B /* UIViewController+UITextViewSpec.swift */,
 				B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */,
 			);
 			path = UIViewController;
@@ -613,6 +624,7 @@
 				B836272E21AC1DBB008264C5 /* UIViewController+UISwitch.swift */,
 				B89E2D13218BFA50004FE2A6 /* UIViewController+UITableView.swift */,
 				B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */,
+				B1FFB51921CF5269007AE34B /* UIViewController+UITextView.swift */,
 				B89E2D11218BFA48004FE2A6 /* UIViewController+UIView.swift */,
 			);
 			path = UIViewController;
@@ -948,6 +960,7 @@
 				3B14EE3C4841A6BA7F54906A /* UIView+UIStepper.swift in Sources */,
 				B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */,
 				B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */,
+				B1FFB51C21CF52BE007AE34B /* UIView+UITextView.swift in Sources */,
 				3B14E5701AAF98B39C2E6791 /* UIView+UIView.swift in Sources */,
 				B84DB1C521CB7E570041E9D2 /* UIViewController+Debugging.swift in Sources */,
 				3B14EDC64BD0D4315A13C89C /* UIViewController+Testing.swift in Sources */,
@@ -962,6 +975,7 @@
 				B836272F21AC1DBB008264C5 /* UIViewController+UISwitch.swift in Sources */,
 				B89E2D14218BFA50004FE2A6 /* UIViewController+UITableView.swift in Sources */,
 				B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */,
+				B1FFB51A21CF5269007AE34B /* UIViewController+UITextView.swift in Sources */,
 				B89E2D12218BFA48004FE2A6 /* UIViewController+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -996,6 +1010,7 @@
 				526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */,
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
 				B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */,
+				B1FFB51821CF518D007AE34B /* UITextViewBuilder.swift in Sources */,
 				B812408021CB65FD00ADBDCC /* UIView+UIViewSpec.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				B134F10221BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift in Sources */,
@@ -1008,6 +1023,7 @@
 				B836272B21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift in Sources */,
 				3B14E8FE4FD978528E9CEFE7 /* UIViewController+UITableViewSpec.swift in Sources */,
 				B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */,
+				B1FFB51621CEB81A007AE34B /* UIViewController+UITextViewSpec.swift in Sources */,
 				B8B56E7821B0B3EC0008514A /* UIViewController+UIViewSpec.swift in Sources */,
 				522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */,
 				B8F2DAA021B761AB00C703DA /* UnitTestCollectionView.swift in Sources */,
