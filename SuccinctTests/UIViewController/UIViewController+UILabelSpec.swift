@@ -91,6 +91,24 @@ final class UIViewController_UILabelSpec: QuickSpec {
                     expect(viewController.findLabel(withExactText: "Username:")).toNot(beNil())
                 }
             }
+
+            context("when a UILabel exists in the navigationItem's titleView") {
+                it("can be found") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationItemTitleView(
+                            UIViewBuilder().withSubview(
+                                UILabelBuilder()
+                                    .withTitleText("Navigation Title")
+                                    .build()
+                            )
+                            .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(withExactText: "Navigation Title")).toNot(beNil())
+                }
+            }
         }
 
         describe("has label by exact text") {
@@ -128,6 +146,24 @@ final class UIViewController_UILabelSpec: QuickSpec {
 
 
                     expect(viewController.hasLabel(withExactText: "Username:")).to(beTrue())
+                }
+            }
+
+            context("when a UILabel exists in the navigationItem's titleView") {
+                it("can be found") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationItemTitleView(
+                            UIViewBuilder().withSubview(
+                                UILabelBuilder()
+                                    .withTitleText("Navigation Title")
+                                    .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.hasLabel(withExactText: "Navigation Title")).to(beTrue())
                 }
             }
         }
@@ -177,6 +213,24 @@ final class UIViewController_UILabelSpec: QuickSpec {
                     expect(result?.text).to(equal("Username:"))
                 }
             }
+
+            context("when a UILabel exists in the navigationItem's titleView") {
+                it("can be found") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationItemTitleView(
+                            UIViewBuilder().withSubview(
+                                UILabelBuilder()
+                                    .withTitleText("Navigation Title")
+                                    .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(containingText: "Navigation Title")).toNot(beNil())
+                }
+            }
         }
 
         describe("has label by containing text") {
@@ -217,6 +271,24 @@ final class UIViewController_UILabelSpec: QuickSpec {
 
 
                     expect(result).to(beTrue())
+                }
+            }
+
+            context("when a UILabel exists in the navigationItem's titleView") {
+                it("can be found") {
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationItemTitleView(
+                            UIViewBuilder().withSubview(
+                                UILabelBuilder()
+                                    .withTitleText("Navigation Title")
+                                    .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.hasLabel(containingText: "Navigation Title")).to(beTrue())
                 }
             }
         }

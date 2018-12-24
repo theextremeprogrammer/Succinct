@@ -30,6 +30,11 @@ struct UIViewControllerBuilder {
         return self
     }
 
+    func withNavigationItemTitleView(_ titleView: UIView) -> UIViewControllerBuilder {
+        viewController.navigationItem.titleView = titleView
+        return self
+    }
+
     func withTitle(_ title: String) -> UIViewControllerBuilder {
         viewController.title = title
         return self

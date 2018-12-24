@@ -11,6 +11,10 @@ extension UIViewController {
             return true
         }
 
+        if let titleView = navigationItem.titleView {
+            return titleView.hasLabel(withExactText: searchText)
+        }
+
         return navigationController?.hasLabelInNavigationBar(withExactText: searchText) ?? false
     }
 
@@ -21,6 +25,10 @@ extension UIViewController {
 
         if self.title?.contains(searchText) ?? false {
             return true
+        }
+
+        if let titleView = navigationItem.titleView {
+            return titleView.hasLabel(containingText: searchText)
         }
 
         return navigationController?.hasLabelInNavigationBar(containingText: searchText) ?? false
@@ -35,6 +43,10 @@ extension UIViewController {
             return labelInRootView
         }
 
+        if let titleView = navigationItem.titleView, let label = titleView.findLabel(withExactText: searchText) {
+            return label
+        }
+
         return navigationController?.findLabelInNavigationBar(withExactText: searchText)
     }
 
@@ -42,6 +54,10 @@ extension UIViewController {
         let labelInRootView = view.findLabel(containingText: searchText)
         if labelInRootView.isNotNil() {
             return labelInRootView
+        }
+
+        if let titleView = navigationItem.titleView, let label = titleView.findLabel(containingText: searchText) {
+            return label
         }
 
         return navigationController?.findLabelInNavigationBar(containingText: searchText)
