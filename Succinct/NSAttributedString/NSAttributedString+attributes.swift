@@ -5,24 +5,39 @@ extension NSAttributedString {
             for attribute in attributes {
                 switch attribute.key {
                 case .font:
-                    guard attribute.value is UIFont else { break }
-                    foundAttributeKeys.append([attribute.key: range])
+                    guard let value = attribute.value as? UIFont else { break }
+                    guard let searchValue = searchAttributes[attribute.key] as? UIFont else { break }
+                    if searchValue == value {
+                        foundAttributeKeys.append([attribute.key: range])
+                    }
 
                 case .backgroundColor:
-                    guard attribute.value is UIColor else { break }
-                    foundAttributeKeys.append([attribute.key: range])
+                    guard let value = attribute.value as? UIColor else { break }
+                    guard let searchValue = searchAttributes[attribute.key] as? UIColor else { break }
+                    if searchValue == value {
+                        foundAttributeKeys.append([attribute.key: range])
+                    }
 
                 case .foregroundColor:
-                    guard attribute.value is UIColor else { break }
-                    foundAttributeKeys.append([attribute.key: range])
+                    guard let value = attribute.value as? UIColor else { break }
+                    guard let searchValue = searchAttributes[attribute.key] as? UIColor else { break }
+                    if searchValue == value {
+                        foundAttributeKeys.append([attribute.key: range])
+                    }
 
                 case .underlineStyle:
-                    guard attribute.value is NSUnderlineStyle else { break }
-                    foundAttributeKeys.append([attribute.key: range])
+                    guard let value = attribute.value as? NSUnderlineStyle else { break }
+                    guard let searchValue = searchAttributes[attribute.key] as? NSUnderlineStyle else { break }
+                    if searchValue == value {
+                        foundAttributeKeys.append([attribute.key: range])
+                    }
 
                 case .underlineColor:
-                    guard attribute.value is UIColor else { break }
-                    foundAttributeKeys.append([attribute.key: range])
+                    guard let value = attribute.value as? UIColor else { break }
+                    guard let searchValue = searchAttributes[attribute.key] as? UIColor else { break }
+                    if searchValue == value {
+                        foundAttributeKeys.append([attribute.key: range])
+                    }
 
                 default:
                     break
