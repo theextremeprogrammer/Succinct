@@ -70,21 +70,23 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
             context("when there are multiple attributes") {
                 it("can find both attributes") {
-                    let smallFontAndRedBackground = [
-                        NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10),
-                        NSAttributedString.Key.foregroundColor : UIColor.red
-                    ]
+                    let tappableText = [
+                        NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .bold),
+                        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                        NSAttributedString.Key.underlineColor: UIColor.lightGray
+                    ] as [NSAttributedString.Key : Any]
 
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Small and Red")
+                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Tappable Text")
                         .withAttributes(
-                            smallFontAndRedBackground,
-                            range: NSRange(location: 0, length: 13)
+                            tappableText,
+                            range: NSRange(location: 0, length: 8)
                         )
                         .build()
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(smallFontAndRedBackground, atSubString: "Small and Red")).to(beTrue())
+                    expect(attributedString.hasAttributes(tappableText, atSubString: "Tappable")).to(beTrue())
                 }
             }
 

@@ -250,7 +250,9 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                                     .withAttributes(
                                         [
                                             NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                                            NSAttributedString.Key.backgroundColor: UIColor.red
+                                            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .bold),
+                                            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                                            NSAttributedString.Key.underlineColor: UIColor.lightGray
                                         ],
                                         range: NSRange(location: 0, length: 10)
                                 )
@@ -263,8 +265,10 @@ final class UIViewController_UITextViewSpec: QuickSpec {
 
                 let expectedAttributes = [
                     NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                    NSAttributedString.Key.backgroundColor: UIColor.red
-                    ]
+                    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .bold),
+                    NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                    NSAttributedString.Key.underlineColor: UIColor.lightGray
+                    ] as [NSAttributedString.Key : Any]
 
                 expect(viewController.findTextView(withExactText: "Attributed", matchingAttributes: expectedAttributes)).toNot(beNil())
             }

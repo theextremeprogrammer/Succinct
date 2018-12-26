@@ -52,11 +52,11 @@ fileprivate extension UIView {
         withExactText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> Bool {
-        guard let textfield = self as? UITextView else {
+        guard let textView = self as? UITextView else {
             return false
         }
 
-        guard let attributedText = textfield.attributedText else {
+        guard let attributedText = textView.attributedText else {
             return false
         }
 
