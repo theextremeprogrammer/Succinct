@@ -1,24 +1,29 @@
 extension NSAttributedString {
     public func hasAttributes(_ searchAttributes: [NSAttributedString.Key: Any], atSubString substring: String) -> Bool {
-        var allAttributesFound = [NSAttributedString.Key: NSRange]()
+        var foundAttributeKeys = [[NSAttributedString.Key: NSRange]]()
         enumerateAttributes(in: NSRange(location: 0, length: length)) { (attributes, range, stop) in
             for attribute in attributes {
                 switch attribute.key {
-                case NSAttributedString.Key.font:
+                case .font:
                     guard attribute.value is UIFont else { break }
-                    allAttributesFound[attribute.key] = range
-                case NSAttributedString.Key.backgroundColor:
+                    foundAttributeKeys.append([attribute.key: range])
+
+                case .backgroundColor:
                     guard attribute.value is UIColor else { break }
-                    allAttributesFound[attribute.key] = range
-                case NSAttributedString.Key.foregroundColor:
+                    foundAttributeKeys.append([attribute.key: range])
+
+                case .foregroundColor:
                     guard attribute.value is UIColor else { break }
-                    allAttributesFound[attribute.key] = range
-                case NSAttributedString.Key.underlineStyle:
+                    foundAttributeKeys.append([attribute.key: range])
+
+                case .underlineStyle:
                     guard attribute.value is NSUnderlineStyle else { break }
-                    allAttributesFound[attribute.key] = range
-                case NSAttributedString.Key.underlineColor:
+                    foundAttributeKeys.append([attribute.key: range])
+
+                case .underlineColor:
                     guard attribute.value is UIColor else { break }
-                    allAttributesFound[attribute.key] = range
+                    foundAttributeKeys.append([attribute.key: range])
+
                 default:
                     break
                 }
@@ -29,9 +34,11 @@ extension NSAttributedString {
         let rangeOfSearchText = NSRange(range, in: substring)
 
         var matchingAttributes = [NSAttributedString.Key]()
-        for attribute in allAttributesFound {
-            if rangeOfSearchText == attribute.value {
-                matchingAttributes.append(attribute.key)
+        for attributes in foundAttributeKeys {
+            for attribute in attributes {
+                if rangeOfSearchText == attribute.value {
+                    matchingAttributes.append(attribute.key)
+                }
             }
         }
 
