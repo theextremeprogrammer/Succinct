@@ -1,3 +1,4 @@
+import Foundation
 import UIKit
 
 extension UIView {
@@ -19,6 +20,10 @@ extension UIView {
         return findInSubviews(
             satisfyingCondition: { $0.isTextView(containingText: searchText) }
         ) as? UITextView
+    }
+
+    public func findTextView(withExactText searchText: String, matchingAttributes searchAttributes: [NSAttributedString.Key : Any]) -> UITextView? {
+        return findInSubviews(satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }) as? UITextView
     }
 }
 
@@ -45,5 +50,20 @@ fileprivate extension UIView {
         }
 
         return text.contains(searchText)
+    }
+
+    func isTextView(
+        withExactText searchText: String,
+        matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
+    ) -> Bool {
+        guard let textfield = self as? UITextView else {
+            return false
+        }
+
+        guard let attributedText = textfield.attributedText else {
+            return false
+        }
+
+        return attributedText.hasAttributes(searchAttributes, atSubString: searchText)
     }
 }

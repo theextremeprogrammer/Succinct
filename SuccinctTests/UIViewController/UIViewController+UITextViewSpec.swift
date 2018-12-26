@@ -239,5 +239,35 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                 }
             }
         }
+
+        describe("finding text views containing attributed text") {
+            it("can find a textview containing text with multiple attributes") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UITextViewBuilder()
+                            .withAttributedText(
+                                NSMutableAttributedStringBuilder(withText: "Attributed Text")
+                                    .withAttributes(
+                                        [
+                                            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                                            NSAttributedString.Key.backgroundColor: UIColor.red
+                                        ],
+                                        range: NSRange(location: 0, length: 10)
+                                )
+                                .build()
+                            )
+                            .build()
+                    )
+                    .build()
+
+
+                let expectedAttributes = [
+                    NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                    NSAttributedString.Key.backgroundColor: UIColor.red
+                    ]
+
+                expect(viewController.findTextView(withExactText: "Attributed", matchingAttributes: expectedAttributes)).toNot(beNil())
+            }
+        }
     }
 }

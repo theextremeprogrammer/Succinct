@@ -12,6 +12,11 @@ struct UITextViewBuilder {
         return self
     }
 
+    func withAttributedText(_ attributedText: NSMutableAttributedString) -> UITextViewBuilder {
+        textView.attributedText = attributedText
+        return self
+    }
+
     func build() -> UITextView {
         return textView
     }
