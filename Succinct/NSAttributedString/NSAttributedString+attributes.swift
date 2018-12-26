@@ -13,6 +13,12 @@ extension NSAttributedString {
                 case NSAttributedString.Key.foregroundColor:
                     guard attribute.value is UIColor else { break }
                     allAttributesFound[attribute.key] = range
+                case NSAttributedString.Key.underlineStyle:
+                    guard attribute.value is NSUnderlineStyle else { break }
+                    allAttributesFound[attribute.key] = range
+                case NSAttributedString.Key.underlineColor:
+                    guard attribute.value is UIColor else { break }
+                    allAttributesFound[attribute.key] = range
                 default:
                     break
                 }

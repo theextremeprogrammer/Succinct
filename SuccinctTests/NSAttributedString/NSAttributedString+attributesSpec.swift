@@ -7,7 +7,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
         describe("finding attributes for an exact substring") {
 
             context("when there is a single attribute") {
-                it("can find foregroundColor") {
+                it("can find text with a foregroundColor") {
                     let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
                         .withAttributes(
@@ -21,7 +21,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
                     expect(attributedString.hasAttributes(redForegroundColor, atSubString: "Foreground")).to(beTrue())
                 }
 
-                it("can find backgroundColor") {
+                it("can find text with a backgroundColor") {
                     let redBackgroundColor = [NSAttributedString.Key.backgroundColor : UIColor.red]
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
                         .withAttributes(
@@ -35,7 +35,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
                     expect(attributedString.hasAttributes(redBackgroundColor, atSubString: "Background")).to(beTrue())
                 }
 
-                it("can find font") {
+                it("can find text with a specific font") {
                     let smallFont = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)]
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Small and Large")
                         .withAttributes(
@@ -47,6 +47,24 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.hasAttributes(smallFont, atSubString: "Small")).to(beTrue())
+                }
+
+                it("can find text that is underlined") {
+                    let smallFontAndRedBackground = [
+                        NSAttributedString.Key.underlineStyle : NSUnderlineStyle.patternDash,
+                        NSAttributedString.Key.underlineColor : UIColor.red
+                        ] as [NSAttributedString.Key : Any]
+
+                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
+                        .withAttributes(
+                            smallFontAndRedBackground,
+                            range: NSRange(location: 0, length: 10)
+                        )
+                        .build()
+
+
+                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
+                    expect(attributedString.hasAttributes(smallFontAndRedBackground, atSubString: "Underlined")).to(beTrue())
                 }
             }
 
