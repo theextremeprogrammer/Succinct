@@ -66,6 +66,25 @@ final class NSAttributedString_attributeSpec: QuickSpec {
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.hasAttributes(smallFontAndRedBackground, atSubString: "Underlined")).to(beTrue())
                 }
+
+                it("can find text that is underlined with a custom underline") {
+                    let CustomUnderlineStyle = 0x11
+                    let smallFontAndRedBackground = [
+                        NSAttributedString.Key.underlineStyle : CustomUnderlineStyle,
+                        NSAttributedString.Key.underlineColor : UIColor.red
+                        ] as [NSAttributedString.Key : Any]
+
+                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
+                        .withAttributes(
+                            smallFontAndRedBackground,
+                            range: NSRange(location: 0, length: 10)
+                        )
+                        .build()
+
+
+                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
+                    expect(attributedString.hasAttributes(smallFontAndRedBackground, atSubString: "Underlined")).to(beTrue())
+                }
             }
 
             context("when there are multiple attributes") {

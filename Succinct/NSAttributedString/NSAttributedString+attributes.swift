@@ -26,9 +26,16 @@ extension NSAttributedString {
                     }
 
                 case .underlineStyle:
-                    guard let value = attribute.value as? NSUnderlineStyle else { break }
-                    guard let searchValue = searchAttributes[attribute.key] as? NSUnderlineStyle else { break }
-                    if searchValue == value {
+                    if  let value = attribute.value as? NSUnderlineStyle,
+                        let searchValue = searchAttributes[attribute.key] as? NSUnderlineStyle {
+                        if searchValue == value {
+                            foundAttributeKeys.append([attribute.key: range])
+                        }
+                    }
+
+                    guard let customValue = attribute.value as? Int else { break }
+                    guard let customSearchValue = searchAttributes[attribute.key] as? Int else { break }
+                    if customSearchValue == customValue {
                         foundAttributeKeys.append([attribute.key: range])
                     }
 
