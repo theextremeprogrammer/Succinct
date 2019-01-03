@@ -9,4 +9,9 @@ extension UIViewController {
         view.findSwitch(containedInView: viewClass)?
             .tapAndFireTargetEvent()
     }
+
+    public func tapSwitch(colocatedWithUILabelWithExactText searchText: String) {
+        view.findSwitch(colocatedWithUILabelWithExactText: searchText)?
+            .tapAndFireTargetEvent()
+    }
 }

@@ -12,6 +12,14 @@ struct UIViewControllerBuilder {
         return self
     }
 
+    func withSubviews(_ subviews: UIView...) -> UIViewControllerBuilder {
+        subviews.forEach { subview in
+            viewController.view.addSubview(subview)
+        }
+        
+        return self
+    }
+
     func withLeftBarButtonItem(
             barButtonSystemItem: UIBarButtonItem.SystemItem,
             targetAction: TargetAction

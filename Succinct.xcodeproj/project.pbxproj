@@ -92,6 +92,7 @@
 		B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */; };
 		B84DB1C521CB7E570041E9D2 /* UIViewController+Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DB1C421CB7E570041E9D2 /* UIViewController+Debugging.swift */; };
 		B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */; };
+		B88E39D121DDF8AB00A3B82B /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */; };
 		B89E2D0C218BF422004FE2A6 /* UIViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */; };
 		B89E2D0E218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D0D218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift */; };
@@ -1050,6 +1051,7 @@
 				B8B56E7221B01A320008514A /* TargetActionWithArg.swift in Sources */,
 				3B14EB5EFAD20644873A38E5 /* UIButtonBuilder.swift in Sources */,
 				B8BC557921B26F6200A1CD8C /* UIImage+TestAssets.swift in Sources */,
+				B88E39D121DDF8AB00A3B82B /* UILabelBuilder.swift in Sources */,
 				B8B56E7021B016250008514A /* UISliderBuilder.swift in Sources */,
 				B83F5CD121ACD1330061494E /* UISwitchBuilder.swift in Sources */,
 				B15A4C8021B40FAF00398963 /* UITableViewBuilder.swift in Sources */,
