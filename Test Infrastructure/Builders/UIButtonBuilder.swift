@@ -11,7 +11,7 @@ struct UIButtonBuilder {
         button.setTitle(titleText, for: .normal)
         return self
     }
-    
+
     func withImage(_ image: UIImage) -> UIButtonBuilder {
         button.setImage(image, for: .normal)
         return self
@@ -23,10 +23,30 @@ struct UIButtonBuilder {
             action: #selector(TargetAction.action(sender:)),
             for: .touchUpInside
         )
-
+        
         return self
     }
+    
+    func withState(_ state: UIControl.State) -> UIButtonBuilder {
+        switch state {
+        case .selected:
+            button.isSelected = true
+            
+        case .highlighted:
+            button.isHighlighted = true
 
+        case .disabled:
+            button.isEnabled = false
+            
+        default:
+            button.isSelected = false
+            button.isHighlighted = false
+            button.isEnabled = true
+        }
+        
+        return self
+    }
+    
     func build() -> UIButton {
         return button
     }

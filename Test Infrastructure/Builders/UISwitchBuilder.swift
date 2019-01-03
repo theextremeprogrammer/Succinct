@@ -21,7 +21,7 @@ struct UISwitchBuilder {
         
         return self
     }
-
+    
     func build() -> UISwitch {
         return uiSwitch
     }
