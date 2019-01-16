@@ -59,6 +59,7 @@
 		52970E5E20833AE200297EF9 /* UICollectionView+Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52970E5D20833AE200297EF9 /* UICollectionView+Evaluations.swift */; };
 		52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */; };
 		5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */; };
+		8F6F2D5E21EEF40A0004BFA3 /* UIView+UIDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */; };
 		B129324121B2A866009AE9D1 /* UINavigationController+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324021B2A866009AE9D1 /* UINavigationController+UILabel.swift */; };
 		B129324421B2AB1D009AE9D1 /* UINavigationControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */; };
 		B134F10221BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B134F10121BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift */; };
@@ -248,6 +249,7 @@
 		52970E5D20833AE200297EF9 /* UICollectionView+Evaluations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Evaluations.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
 		5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIButtonSpec.swift"; sourceTree = "<group>"; };
+		8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIDatePickerView.swift"; sourceTree = "<group>"; };
 		B129324021B2A866009AE9D1 /* UINavigationController+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+UILabel.swift"; sourceTree = "<group>"; };
 		B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerBuilder.swift; sourceTree = "<group>"; };
 		B134F10121BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+findButtonSpec.swift"; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */,
+				8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */,
 				3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */,
 				3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */,
 				3B14E4A77852DD11B2A8ABFA /* UIView+UIPickerView.swift */,
@@ -993,6 +996,7 @@
 				B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */,
 				B8396FFD21BF59A1006FCBD1 /* UITableView+Evaluations.swift in Sources */,
 				522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */,
+				8F6F2D5E21EEF40A0004BFA3 /* UIView+UIDatePickerView.swift in Sources */,
 				3B14E75697B50E744EBCCDA5 /* UIView+UIImage.swift in Sources */,
 				3B14EEB6848544CF2CD93037 /* UIView+UILabel.swift in Sources */,
 				3B14EFF3D19AAA54581718B8 /* UIView+UIPickerView.swift in Sources */,

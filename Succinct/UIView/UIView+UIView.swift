@@ -15,6 +15,10 @@ extension UIView {
         }
 
         for subview in subviews {
+            if subview.isDatePicker {
+                continue
+            }
+
             let spaces = String(repeating: " ", count: depthLevel * 4)
             Succinct.log.debug("\(spaces)<\(String(describing: type(of: subview)))>")
 

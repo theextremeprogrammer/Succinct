@@ -64,6 +64,34 @@ class UIView_UIViewSpec: QuickSpec {
                     }
                 }
 
+                context("when there are date pickers") {
+                    beforeEach {
+                        let view = UIViewBuilder()
+                            .withSubviews(
+                                UIDatePicker(),
+                                UIViewBuilder().build())
+                            .build()
+
+                        _ = view.findInSubviews(satisfyingCondition: { _ in return false})
+                    }
+
+                    it("outputs the open tag of the containing view") {
+                        expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("    <UIView"))
+                    }
+
+                    it("outputs the open tag of the inside view") {
+                        expect(spyOutputMethod.standardPrint_argument_messages.second).to(contain("        <UIView"))
+                    }
+
+                    it("outputs the close tag of the inside view") {
+                        expect(spyOutputMethod.standardPrint_argument_messages.third).to(equal("        </UIView>"))
+                    }
+
+                    it("outputs the close tag of the containing view") {
+                        expect(spyOutputMethod.standardPrint_argument_messages.fourth).to(equal("    </UIView>"))
+                    }
+                }
+
                 context("when there are two levels of subviews") {
                     beforeEach {
                         let view = UIViewBuilder()
