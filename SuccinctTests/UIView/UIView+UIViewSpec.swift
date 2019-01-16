@@ -67,9 +67,7 @@ class UIView_UIViewSpec: QuickSpec {
                 context("when there are date pickers") {
                     beforeEach {
                         let view = UIViewBuilder()
-                            .withSubviews(
-                                UIDatePicker(),
-                                UIViewBuilder().build())
+                            .withSubview(UIDatePicker())
                             .build()
 
                         _ = view.findInSubviews(satisfyingCondition: { _ in return false})
@@ -79,12 +77,12 @@ class UIView_UIViewSpec: QuickSpec {
                         expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("    <UIView"))
                     }
 
-                    it("outputs the open tag of the inside view") {
-                        expect(spyOutputMethod.standardPrint_argument_messages.second).to(contain("        <UIView"))
+                    it("outputs the open tag of the inside DatePicker view") {
+                        expect(spyOutputMethod.standardPrint_argument_messages.second).to(contain("        <UIDatePicker"))
                     }
 
-                    it("outputs the close tag of the inside view") {
-                        expect(spyOutputMethod.standardPrint_argument_messages.third).to(equal("        </UIView>"))
+                    it("outputs the close tag of the inside DatePicker view") {
+                        expect(spyOutputMethod.standardPrint_argument_messages.third).to(equal("        </UIDatePicker>"))
                     }
 
                     it("outputs the close tag of the containing view") {

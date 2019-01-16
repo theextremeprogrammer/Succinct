@@ -15,27 +15,25 @@ extension UIView {
         }
 
         for subview in subviews {
-            if subview.isDatePicker {
-                continue
-            }
-
             let spaces = String(repeating: " ", count: depthLevel * 4)
             Succinct.log.debug("\(spaces)<\(String(describing: type(of: subview)))>")
-
-            if satisfiesCondition(subview) {
-                return subview
-            }
             
-            if let tableView = subview as? UITableView {
-                if let view = tableView.findView(satisfyingCondition: { $0.findInSubviews(satisfyingCondition: satisfiesCondition) }) {
-                    return view
+            if subview.isNotATypeThatContainsAnInfiniteNumberOfSubviews {
+                if satisfiesCondition(subview) {
+                    return subview
                 }
-            }
-
-            if subview.subviews.count > 0 {
-                let subviewDepthLevel = depthLevel + 1
-                if let result = subview.findInSubviews(satisfyingCondition: satisfiesCondition, initialDepthLevel: subviewDepthLevel) {
-                    return result
+                
+                if let tableView = subview as? UITableView {
+                    if let view = tableView.findView(satisfyingCondition: { $0.findInSubviews(satisfyingCondition: satisfiesCondition) }) {
+                        return view
+                    }
+                }
+                
+                if subview.subviews.count > 0 {
+                    let subviewDepthLevel = depthLevel + 1
+                    if let result = subview.findInSubviews(satisfyingCondition: satisfiesCondition, initialDepthLevel: subviewDepthLevel) {
+                        return result
+                    }
                 }
             }
             

@@ -1,9 +1,9 @@
 import UIKit
 
 extension UIView {
-    public var isDatePicker: Bool {
+    public var isNotATypeThatContainsAnInfiniteNumberOfSubviews: Bool {
         get {
-            return type(of: self) == UIDatePicker.self
+            return type(of: self) != UIDatePicker.self
         }
     }
 }
