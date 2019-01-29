@@ -18,6 +18,10 @@ extension UIView {
         return findInSubviews(satisfyingCondition: { $0.isTextView(containingText: searchText) }) as? UITextView
     }
 
+    public func hasTextView(withExactText searchText: String, matchingAttributes searchAttributes: [NSAttributedString.Key : Any]) -> Bool {
+           return findInSubviews(satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }).isNotNil()
+    }
+
     public func findTextView(withExactText searchText: String, matchingAttributes searchAttributes: [NSAttributedString.Key : Any]) -> UITextView? {
         return findInSubviews(satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }) as? UITextView
     }

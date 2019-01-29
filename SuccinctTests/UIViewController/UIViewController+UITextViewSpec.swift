@@ -246,15 +246,16 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                     .withSubview(
                         UITextViewBuilder()
                             .withAttributedText(
-                                NSMutableAttributedStringBuilder(withText: "Attributed Text")
+                                NSMutableAttributedStringBuilder(withText: "経費が結構かかりそう")
                                     .withAttributes(
                                         [
+                                            NSAttributedString.Key.link: "url",
                                             NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                                            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .bold),
+                                            NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
                                             NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
                                             NSAttributedString.Key.underlineColor: UIColor.lightGray
                                         ],
-                                        range: NSRange(location: 0, length: 10)
+                                        range: NSRange(location: 5, length: 3)
                                 )
                                 .build()
                             )
@@ -264,13 +265,50 @@ final class UIViewController_UITextViewSpec: QuickSpec {
 
 
                 let expectedAttributes = [
+                    NSAttributedString.Key.link: "url",
                     NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .bold),
+                    NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
                     NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
                     NSAttributedString.Key.underlineColor: UIColor.lightGray
                     ] as [NSAttributedString.Key : Any]
 
-                expect(viewController.findTextView(withExactText: "Attributed", matchingAttributes: expectedAttributes)).toNot(beNil())
+                expect(viewController.findTextView(withExactText: "かかり", matchingAttributes: expectedAttributes)).toNot(beNil())
+            }
+        }
+
+        describe("has text views containing attributed text") {
+            it("when a textview contains text with multiple attributes") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UITextViewBuilder()
+                            .withAttributedText(
+                                NSMutableAttributedStringBuilder(withText: "経費が結構かかりそう")
+                                    .withAttributes(
+                                        [
+                                            NSAttributedString.Key.link: "url",
+                                            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                                            NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
+                                            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                                            NSAttributedString.Key.underlineColor: UIColor.lightGray
+                                        ],
+                                        range: NSRange(location: 5, length: 3)
+                                    )
+                                    .build()
+                            )
+                            .build()
+                    )
+                    .build()
+
+
+                let expectedAttributes = [
+                    NSAttributedString.Key.link: "url",
+                    NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                    NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
+                    NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                    NSAttributedString.Key.underlineColor: UIColor.lightGray
+                    ] as [NSAttributedString.Key : Any]
+
+                expect(viewController.hasTextView(withExactText: "かかり", matchingAttributes: expectedAttributes)).to(beTrue())
             }
         }
     }

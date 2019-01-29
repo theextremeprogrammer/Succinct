@@ -46,6 +46,13 @@ extension NSAttributedString {
                         foundAttributeKeys.append([attribute.key: range])
                     }
 
+                case .link:
+                    guard let value = attribute.value as? String else { break }
+                    guard let searchValue = searchAttributes[attribute.key] as? String else { break }
+                    if searchValue == value {
+                        foundAttributeKeys.append([attribute.key: range])
+                    }
+
                 default:
                     break
                 }
