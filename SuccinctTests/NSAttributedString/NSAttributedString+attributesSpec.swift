@@ -85,6 +85,23 @@ final class NSAttributedString_attributeSpec: QuickSpec {
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.hasAttributes(smallFontAndRedBackground, atSubString: "Underlined")).to(beTrue())
                 }
+
+                it("can find text that is is a link") {
+                    let linkAttributes = [
+                        NSAttributedString.Key.link : "url"
+                        ] as [NSAttributedString.Key : Any]
+
+                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Link Text")
+                        .withAttributes(
+                            linkAttributes,
+                            range: NSRange(location: 0, length: 4)
+                        )
+                        .build()
+
+
+                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
+                    expect(attributedString.hasAttributes(linkAttributes, atSubString: "Link")).to(beTrue())
+                }
             }
 
             context("when there are multiple attributes") {
