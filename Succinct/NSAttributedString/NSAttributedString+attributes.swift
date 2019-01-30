@@ -1,57 +1,40 @@
+struct AttributedStringSearchPair<T> {
+    let value: T
+    let searchValue: T
+}
+
 extension NSAttributedString {
     public func hasAttributes(_ searchAttributes: [NSAttributedString.Key: Any], atSubString substring: String) -> Bool {
         var foundAttributeKeys = [[NSAttributedString.Key: NSRange]]()
         enumerateAttributes(in: NSRange(location: 0, length: length)) { (attributes, range, stop) in
             for attribute in attributes {
+                let SearchValue = searchAttributes[attribute.key]
+                let value = attribute.value
                 switch attribute.key {
                 case .font:
-                    guard let value = attribute.value as? UIFont else { break }
-                    guard let searchValue = searchAttributes[attribute.key] as? UIFont else { break }
-                    if searchValue == value {
-                        foundAttributeKeys.append([attribute.key: range])
-                    }
+                    guard valuesAreEqual(asType: UIFont.self, a: SearchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key: range])
 
                 case .backgroundColor:
-                    guard let value = attribute.value as? UIColor else { break }
-                    guard let searchValue = searchAttributes[attribute.key] as? UIColor else { break }
-                    if searchValue == value {
-                        foundAttributeKeys.append([attribute.key: range])
-                    }
+                    guard valuesAreEqual(asType: UIColor.self, a: SearchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key: range])
 
                 case .foregroundColor:
-                    guard let value = attribute.value as? UIColor else { break }
-                    guard let searchValue = searchAttributes[attribute.key] as? UIColor else { break }
-                    if searchValue == value {
-                        foundAttributeKeys.append([attribute.key: range])
-                    }
+                    guard valuesAreEqual(asType: UIColor.self, a: SearchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key: range])
 
                 case .underlineStyle:
-                    if  let value = attribute.value as? NSUnderlineStyle,
-                        let searchValue = searchAttributes[attribute.key] as? NSUnderlineStyle {
-                        if searchValue == value {
-                            foundAttributeKeys.append([attribute.key: range])
-                        }
-                    }
-
-                    guard let customValue = attribute.value as? Int else { break }
-                    guard let customSearchValue = searchAttributes[attribute.key] as? Int else { break }
-                    if customSearchValue == customValue {
-                        foundAttributeKeys.append([attribute.key: range])
-                    }
+                    guard   valuesAreEqual(asType: NSUnderlineStyle.self, a: SearchValue, b: value) ||
+                            valuesAreEqual(asType: Int.self, a: SearchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key: range])
 
                 case .underlineColor:
-                    guard let value = attribute.value as? UIColor else { break }
-                    guard let searchValue = searchAttributes[attribute.key] as? UIColor else { break }
-                    if searchValue == value {
-                        foundAttributeKeys.append([attribute.key: range])
-                    }
+                    guard valuesAreEqual(asType: UIColor.self, a: SearchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key: range])
 
                 case .link:
-                    guard let value = attribute.value as? String else { break }
-                    guard let searchValue = searchAttributes[attribute.key] as? String else { break }
-                    if searchValue == value {
-                        foundAttributeKeys.append([attribute.key: range])
-                    }
+                    guard valuesAreEqual(asType: String.self, a: SearchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key: range])
 
                 default:
                     break
@@ -76,5 +59,11 @@ extension NSAttributedString {
         }
 
         return false
+    }
+
+    func valuesAreEqual<T: Equatable>(asType type: T.Type, a: Any?, b: Any?) -> Bool {
+        guard let a = a as? T, let b = b as? T else { return false }
+
+        return a == b
     }
 }
