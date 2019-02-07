@@ -33,4 +33,31 @@ extension UIView {
 
         return nil
     }
+
+    public func findSwitch(colocatedWithUILabelWithExactText searchText: String) -> UISwitch? {
+        var matchingLabelWasFoundAtThisLevel = false
+
+        for subview in subviews {
+            if let label = subview as? UILabel,
+               label.text == searchText {
+                matchingLabelWasFoundAtThisLevel = true
+            }
+        }
+
+        if matchingLabelWasFoundAtThisLevel {
+            for subview in subviews {
+                if let uiSwitch = subview as? UISwitch {
+                    return uiSwitch
+                }
+            }
+        }
+
+        for subview in subviews {
+            if let uiSwitch = subview.findSwitch(colocatedWithUILabelWithExactText: searchText) {
+                return uiSwitch
+            }
+        }
+
+        return nil
+    }
 }

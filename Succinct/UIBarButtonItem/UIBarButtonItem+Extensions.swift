@@ -1,13 +1,17 @@
 import UIKit
 
 extension UIBarButtonItem {
-    var systemItem: Int? {
+    public var systemItem: SystemItem? {
         get {
-            return value(forKey: "systemItem") as? Int
+            if let systemItemRawValue = value(forKey: "systemItem") as? Int {
+                return SystemItem(rawValue: systemItemRawValue)
+            }
+            
+            return nil
         }
     }
     
-    func tap() {
+    public func tap() {
         if let action = action,
             let target = target {
             _ = UIApplication.shared.sendAction(

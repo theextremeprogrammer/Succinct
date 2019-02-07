@@ -19,27 +19,12 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                 let viewController = UIViewControllerBuilder().build()
 
 
-                viewController.tapLeftBarButtonItem()
+                viewController.tapBarButtonItem(withSystemItem: .add)
 
 
                 expect(self.buttonWasTapped).to(beFalse())
             }
 
-            it("can tap the left bar button item") {
-                let targetAction = TargetAction(self.didTapBarButtonItem)
-
-                let viewController = UIViewControllerBuilder()
-                    .withLeftBarButtonItem(barButtonSystemItem: .cancel, targetAction: targetAction)
-                    .build()
-                viewController.loadViewControllerForUnitTest()
-
-
-                viewController.tapLeftBarButtonItem()
-
-
-                expect(self.buttonWasTapped).to(beTrue())
-            }
-            
             it("can tap the *left* bar button item matching the specified system item") {
                 let targetAction = TargetAction(self.didTapBarButtonItem)
                 

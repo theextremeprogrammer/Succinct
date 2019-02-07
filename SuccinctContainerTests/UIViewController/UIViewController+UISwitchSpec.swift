@@ -132,5 +132,37 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                 }
             }
         }
+
+        describe("tapping switches based on the label text they are co-located with") {
+            beforeEach {
+                self.switch_wasTapped = false
+            }
+
+            describe("when the switch and label are in view hierarchy") {
+                it("taps the switch") {
+                    let targetAction = TargetAction(self.unitTestSwitchWasTapped)
+
+                    let uiSwitch = UISwitchBuilder()
+                        .withTargetAction(targetAction)
+                        .build()
+
+                    let viewController = UIViewControllerBuilder()
+                        .withSubviews(
+                            UILabelBuilder().withTitleText("Option").build(),
+                            uiSwitch
+                        )
+                        .build()
+                    viewController.loadViewControllerForUnitTest()
+
+
+                    viewController.tapSwitch(
+                        colocatedWithUILabelWithExactText: "Option"
+                    )
+
+
+                    expect(self.switch_wasTapped).to(beTrue())
+                }
+            }
+        }
     }
 }
