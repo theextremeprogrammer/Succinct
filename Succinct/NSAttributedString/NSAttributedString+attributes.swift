@@ -1,8 +1,3 @@
-struct AttributedStringSearchPair<T> {
-    let value: T
-    let searchValue: T
-}
-
 extension NSAttributedString {
     public func hasAttributes(_ searchAttributes: [NSAttributedString.Key: Any], atSubString substring: String) -> Bool {
         var foundAttributeKeys = [[NSAttributedString.Key: NSRange]]()
@@ -61,7 +56,7 @@ extension NSAttributedString {
         return false
     }
 
-    func valuesAreEqual<T: Equatable>(asType type: T.Type, a: Any?, b: Any?) -> Bool {
+    fileprivate func valuesAreEqual<T: Equatable>(asType type: T.Type, a: Any?, b: Any?) -> Bool {
         guard let a = a as? T, let b = b as? T else { return false }
 
         return a == b
