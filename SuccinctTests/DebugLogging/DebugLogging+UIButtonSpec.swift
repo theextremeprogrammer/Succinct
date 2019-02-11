@@ -29,10 +29,9 @@ class DebugLogging_UIButtonSpec: QuickSpec {
                     _ = viewController.findButton(withExactText: "ABC")
                     
                     
-                    let expectedLogMessage =
-                        "**** Succinct: " +
-                            "findButton(withExactText: 'ABC')" +
-                    " failed to match for button with title: 'Login'"
+                    let expectedLogMessage = """
+                        **** Succinct: findButton(withExactText: 'ABC') failed to match for button with title: 'Login'
+                        """
                     expect(spyOutputMethod.standardPrint_argument_messages).to(contain(expectedLogMessage))
                 }
                 
@@ -46,10 +45,9 @@ class DebugLogging_UIButtonSpec: QuickSpec {
                     _ = viewController.findButton(withExactText: "ABC")
                     
                     
-                    let expectedLogMessage =
-                        "**** Succinct: " +
-                            "findButton(withExactText: 'ABC')" +
-                    " failed to match for button with title: nil (no title text set for this button)"
+                    let expectedLogMessage = """
+                        **** Succinct: findButton(withExactText: 'ABC') failed to match for button with title: nil (no title text set for this button)
+                        """
                     expect(spyOutputMethod.standardPrint_argument_messages).to(contain(expectedLogMessage))
                 }
             }
