@@ -1,12 +1,15 @@
 extension UIViewController {
     func executeWithEnterAndExitDebugLog(closure: () -> UIView?) -> UIView? {
-        Succinct.log.debug("<\(String(describing: type(of: self)))>")
+        let objectType = String(describing: type(of: self))
+        
+        Succinct.log.debug("<\(objectType)>")
         
         if let result = closure() {
             return result
         }
         
-        Succinct.log.debug("</\(String(describing: type(of: self)))>")
+        Succinct.log.debug("</\(objectType)>")
+        
         return nil
     }
 }

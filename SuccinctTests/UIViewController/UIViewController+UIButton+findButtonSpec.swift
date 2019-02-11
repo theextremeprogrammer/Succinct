@@ -250,26 +250,30 @@ final class UIViewController_UIButton_findButtonSpec: QuickSpec {
                     expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<SomeUniqueViewController"))
                 }
 
-                it("outputs the view controller close tag when the button is NOT found") {
-                    let viewController = CustomUIViewControllerBuilder<SomeUniqueViewController>().build()
-
-                    
-                    _ = viewController.findButton(withImage: catImage)
-                    
-                    
-                    expect(spyOutputMethod.standardPrint_argument_messages.last).to(equal("</SomeUniqueViewController>"))
+                context("when the button is NOT found") {
+                    it("outputs the view controller close tag") {
+                        let viewController = CustomUIViewControllerBuilder<SomeUniqueViewController>().build()
+                        
+                        
+                        _ = viewController.findButton(withImage: catImage)
+                        
+                        
+                        expect(spyOutputMethod.standardPrint_argument_messages.last).to(equal("</SomeUniqueViewController>"))
+                    }
                 }
                 
-                it("does not output the view controller close tag when the button is found") {
-                    let viewController = UIViewControllerBuilder()
-                        .withSubview(UIButtonBuilder().withImage(catImage).build())
-                        .build()
-                    
-                    
-                    _ = viewController.findButton(withImage: catImage)
-                    
-                    
-                    expect(spyOutputMethod.standardPrint_argument_messages.last).toNot(equal("</UIViewController>"))
+                context("when the button is found") {
+                    it("does not output the view controller close tag") {
+                        let viewController = UIViewControllerBuilder()
+                            .withSubview(UIButtonBuilder().withImage(catImage).build())
+                            .build()
+                        
+                        
+                        _ = viewController.findButton(withImage: catImage)
+                        
+                        
+                        expect(spyOutputMethod.standardPrint_argument_messages.last).toNot(equal("</UIViewController>"))
+                    }
                 }
             }
 
