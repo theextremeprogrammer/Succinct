@@ -110,8 +110,6 @@
 		B88E39E121DDFE9500A3B82B /* UIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */; };
 		B88E39E221DDFEDF00A3B82B /* TargetActionWithArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7121B01A320008514A /* TargetActionWithArg.swift */; };
 		B88E39E321DDFEDF00A3B82B /* TargetActionWithArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E7121B01A320008514A /* TargetActionWithArg.swift */; };
-		B88E39E421DDFEDF00A3B82B /* TargetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14ED4617DB63D547BE549B /* TargetAction.swift */; };
-		B88E39E521DDFEDF00A3B82B /* TargetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14ED4617DB63D547BE549B /* TargetAction.swift */; };
 		B88E39E621DDFF6F00A3B82B /* UnitTestUIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235C2A4208F51AD00C0CEEA /* UnitTestUIPickerView.swift */; };
 		B88E39E721DDFF8000A3B82B /* UICollectionViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6321B0C42100EA315D /* UICollectionViewCellConfiguration.swift */; };
 		B88E39E821DDFFA700A3B82B /* UICollectionViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B80B6521B0C4E600EA315D /* UICollectionViewConfiguration.swift */; };
@@ -224,7 +222,6 @@
 		3B14EB825E002B1E92154DB9 /* UIViewController+UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UILabelSpec.swift"; sourceTree = "<group>"; };
 		3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControlBuilder.swift; sourceTree = "<group>"; };
 		3B14ED2A55D7B067E5D43B41 /* UIViewController+UITableViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITableViewSpec.swift"; sourceTree = "<group>"; };
-		3B14ED4617DB63D547BE549B /* TargetAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetAction.swift; sourceTree = "<group>"; };
 		3B14ED72118715E71C68E909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B14EF2A64AD0830F2034E38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		521E6950208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPickerView+SelectComponentSpec.swift"; sourceTree = "<group>"; };
@@ -733,7 +730,6 @@
 		B88E39EC21DDFFFF00A3B82B /* TargetAction */ = {
 			isa = PBXGroup;
 			children = (
-				3B14ED4617DB63D547BE549B /* TargetAction.swift */,
 				B8B56E7121B01A320008514A /* TargetActionWithArg.swift */,
 			);
 			path = TargetAction;
@@ -1065,7 +1061,6 @@
 				AE3CCDD321F58FCC00A3638D /* MKMapViewBuilder.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
 				B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */,
-				B88E39E421DDFEDF00A3B82B /* TargetAction.swift in Sources */,
 				B88E39E221DDFEDF00A3B82B /* TargetActionWithArg.swift in Sources */,
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
 				B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */,
@@ -1126,7 +1121,6 @@
 				B88E39D621DDFE9500A3B82B /* CustomUIViewControllerBuilder.swift in Sources */,
 				B88E39EB21DDFFC700A3B82B /* CustomViewBuilder.swift in Sources */,
 				AE3CCDD421F58FCD00A3638D /* MKMapViewBuilder.swift in Sources */,
-				B88E39E521DDFEDF00A3B82B /* TargetAction.swift in Sources */,
 				B88E39E321DDFEDF00A3B82B /* TargetActionWithArg.swift in Sources */,
 				B88E39D721DDFE9500A3B82B /* UIButtonBuilder.swift in Sources */,
 				B88E39D821DDFE9500A3B82B /* UICollectionViewBuilder.swift in Sources */,

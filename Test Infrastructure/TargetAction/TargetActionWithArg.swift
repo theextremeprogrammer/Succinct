@@ -1,6 +1,6 @@
 @testable import Succinct
 
-final class TargetActionWithArg: NSObject {
+final class TargetAction: NSObject {
     let callback: (Any) -> Void
     
     init(_ callback: @escaping (Any) -> Void) {

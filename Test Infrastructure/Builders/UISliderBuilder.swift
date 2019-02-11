@@ -12,7 +12,7 @@ struct UISliderBuilder {
         return self
     }
     
-    func withTargetActionWithArg(_ targetAction: TargetActionWithArg) -> UISliderBuilder {
+    func withTargetAction(_ targetAction: TargetAction) -> UISliderBuilder {
         slider.addTarget(
             targetAction,
             action: #selector(TargetAction.action(sender:)),

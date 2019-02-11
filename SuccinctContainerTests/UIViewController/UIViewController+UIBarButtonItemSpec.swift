@@ -5,7 +5,7 @@ import Nimble
 final class UIViewController_UIBarButtonItemSpec: QuickSpec {
     private var buttonWasTapped: Bool = false
 
-    private func didTapBarButtonItem() {
+    private func didTapBarButtonItem(_ sender: Any) {
         buttonWasTapped = true
     }
 

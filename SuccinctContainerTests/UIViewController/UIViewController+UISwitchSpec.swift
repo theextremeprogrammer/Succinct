@@ -6,7 +6,7 @@ import Nimble
 
 final class UIViewController_UISwitchSpec: QuickSpec {
     private var switch_wasTapped: Bool = false
-    private func unitTestSwitchWasTapped() {
+    private func unitTestSwitchWasTapped(_ sender: Any) {
         switch_wasTapped = true
     }
     

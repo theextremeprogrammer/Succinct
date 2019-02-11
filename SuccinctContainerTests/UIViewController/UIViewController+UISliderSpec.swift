@@ -5,7 +5,7 @@ import Succinct
 final class UIViewController_UISliderSpec: QuickSpec {
     private var sliderValueWasSet = false
     private var newValue: Float = -1.0
-    private func unitTestSliderValueChangedWithArg(_ sender: Any) {
+    private func unitTestSliderValueChanged(_ sender: Any) {
         sliderValueWasSet = true
         
         let slider = sender as! UISlider
@@ -15,11 +15,11 @@ final class UIViewController_UISliderSpec: QuickSpec {
     override func spec() {
         describe("setting the value of a slider") {
             it("can set the value of a slider in the first subview") {
-                let targetActionWithArg = TargetActionWithArg(self.unitTestSliderValueChangedWithArg)
+                let targetAction = TargetAction(self.unitTestSliderValueChanged)
                 
                 let slider = UISliderBuilder()
                     .withValue(0.1)
-                    .withTargetActionWithArg(targetActionWithArg)
+                    .withTargetAction(targetAction)
                     .build()
                 
                 let viewController = UIViewControllerBuilder()

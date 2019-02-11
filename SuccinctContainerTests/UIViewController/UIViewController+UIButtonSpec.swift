@@ -4,7 +4,7 @@ import Nimble
 
 final class UIViewController_UIButtonSpec: QuickSpec {
     private var buttonWasTapped = false
-    private func unitTestButtonWasTapped() {
+    private func unitTestButtonWasTapped(_ sender: Any) {
         buttonWasTapped = true
     }
     
