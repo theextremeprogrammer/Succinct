@@ -4,6 +4,9 @@ extension UIViewController {
     public func hasPickerView() -> Bool {
         return view.findPickerView().isNotNil()
     }
+    
+    public func findPickerView() -> UIPickerView? {
+        return view.findPickerView()
     }
     
     public func choosePickerComponent(component: Int, withText searchText: String) {
