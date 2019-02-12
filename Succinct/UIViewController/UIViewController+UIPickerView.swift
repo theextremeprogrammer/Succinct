@@ -1,31 +1,32 @@
 import UIKit
 
 extension UIViewController {
-    public func hasPicker() -> Bool {
-        return view.findPicker().isNotNil()
+    public func hasPickerView() -> Bool {
+        return view.findPickerView().isNotNil()
+    }
     }
     
     public func choosePickerComponent(component: Int, withText searchText: String) {
         view
-            .findPicker()?
+            .findPickerView()?
             .selectSpecific(component: component, withText: searchText)
     }
     
     public func choosePickerComponent(withText searchText: String) {
         view
-            .findPicker()?
+            .findPickerView()?
             .selectComponent(withText: searchText)
     }
     
     public func hasSelectedPickerOption(withText searchText: String) -> Bool {
         return view
-            .findPicker()?
+            .findPickerView()?
             .hasSelectedOption(withText: searchText) ?? false
     }
     
     public func hasPickerOption(withText searchText: String) -> Bool {
         return view
-            .findPicker()?
+            .findPickerView()?
             .hasOption(withText: searchText) ?? false
     }
 }
