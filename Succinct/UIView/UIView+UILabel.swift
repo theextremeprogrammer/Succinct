@@ -23,7 +23,7 @@ extension UIView {
 }
 
 fileprivate extension UIView {
-    private func isLabel(withExactText searchText: String) -> Bool {
+    func isLabel(withExactText searchText: String) -> Bool {
         guard let label = self as? UILabel else {
             return false
         }
@@ -35,7 +35,7 @@ fileprivate extension UIView {
         return labelText == searchText
     }
 
-    private func isLabel(containingText searchText: String) -> Bool {
+    func isLabel(containingText searchText: String) -> Bool {
         guard let label = self as? UILabel else {
             return false
         }
