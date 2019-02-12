@@ -82,7 +82,7 @@
 		B1FFB51821CF518D007AE34B /* UITextViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFB51721CF518D007AE34B /* UITextViewBuilder.swift */; };
 		B1FFB51A21CF5269007AE34B /* UIViewController+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFB51921CF5269007AE34B /* UIViewController+UITextView.swift */; };
 		B1FFB51C21CF52BE007AE34B /* UIView+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFB51B21CF52BE007AE34B /* UIView+UITextView.swift */; };
-		B812408021CB65FD00ADBDCC /* UIView+UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812407F21CB65FD00ADBDCC /* UIView+UIViewSpec.swift */; };
+		B812408021CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812407F21CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift */; };
 		B812408321CB6D6B00ADBDCC /* ArrayAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408221CB6D6B00ADBDCC /* ArrayAccessors.swift */; };
 		B812408721CB6EB100ADBDCC /* CustomUIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */; };
 		B836272B21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B836272A21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift */; };
@@ -271,7 +271,7 @@
 		B1FFB51721CF518D007AE34B /* UITextViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewBuilder.swift; sourceTree = "<group>"; };
 		B1FFB51921CF5269007AE34B /* UIViewController+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextView.swift"; sourceTree = "<group>"; };
 		B1FFB51B21CF52BE007AE34B /* UIView+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextView.swift"; sourceTree = "<group>"; };
-		B812407F21CB65FD00ADBDCC /* UIView+UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIViewSpec.swift"; sourceTree = "<group>"; };
+		B812407F21CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIViewSpec.swift"; sourceTree = "<group>"; };
 		B812408221CB6D6B00ADBDCC /* ArrayAccessors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayAccessors.swift; sourceTree = "<group>"; };
 		B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIViewBuilder.swift; sourceTree = "<group>"; };
 		B836272A21AC1C8C008264C5 /* UIViewController+UISwitchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISwitchSpec.swift"; sourceTree = "<group>"; };
@@ -434,7 +434,6 @@
 				B15A4C7D21B2C52000398963 /* UINavigationController */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
 				526DC7F920846AA1001314A7 /* UITableView */,
-				B812407E21CB65E700ADBDCC /* UIView */,
 				52AAB3852072F1BF0021BA62 /* UIViewController */,
 				522D99991FAD2A9D009BB1B9 /* Info.plist */,
 			);
@@ -663,14 +662,6 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
-		B812407E21CB65E700ADBDCC /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				B812407F21CB65FD00ADBDCC /* UIView+UIViewSpec.swift */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
 		B812408121CB6D5B00ADBDCC /* Array */ = {
 			isa = PBXGroup;
 			children = (
@@ -780,6 +771,14 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		B8AC7A24221244FF00D76A69 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				B812407F21CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		B8B80B6021B0C38300EA315D /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +817,7 @@
 		B8BC558021B28F3900A1CD8C /* DebugLogging */ = {
 			isa = PBXGroup;
 			children = (
+				B8AC7A24221244FF00D76A69 /* UIView */,
 				B8AC7A212212433000D76A69 /* UIViewController */,
 				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
 			);
@@ -1069,6 +1069,7 @@
 				B88E39EA21DDFFC600A3B82B /* CustomViewBuilder.swift in Sources */,
 				5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */,
 				B8AC7A232212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift in Sources */,
+				B812408021CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift in Sources */,
 				526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */,
 				AE3CCDD321F58FCC00A3638D /* MKMapViewBuilder.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
@@ -1094,7 +1095,6 @@
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
 				B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */,
 				B1FFB51821CF518D007AE34B /* UITextViewBuilder.swift in Sources */,
-				B812408021CB65FD00ADBDCC /* UIView+UIViewSpec.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				AE3CCDCB21F5742F00A3638D /* UIViewController+MKMapViewSpec.swift in Sources */,
 				B134F10221BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift in Sources */,

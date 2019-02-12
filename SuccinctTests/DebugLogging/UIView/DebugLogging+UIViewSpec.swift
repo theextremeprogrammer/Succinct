@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UIView_UIViewSpec: QuickSpec {
+class DebugLogging_UIViewSpec: QuickSpec {
     override func spec() {
         describe("finding objects within subviews") {
             describe("debug logging the view hierarchy") {
