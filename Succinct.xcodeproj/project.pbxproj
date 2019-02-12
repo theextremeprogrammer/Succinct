@@ -129,6 +129,7 @@
 		B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */; };
 		B8AC7A232212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC7A222212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift */; };
 		B8AC7A262212470300D76A69 /* DebugLogging+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC7A252212470300D76A69 /* DebugLogging+UILabelSpec.swift */; };
+		B8AC7A282212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC7A272212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift */; };
 		B8B56E6A21B0118D0008514A /* UIViewController+UISliderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6921B0118D0008514A /* UIViewController+UISliderSpec.swift */; };
 		B8B56E6C21B012B10008514A /* UISliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6B21B012B10008514A /* UISliderBuilder.swift */; };
 		B8B56E6E21B015B00008514A /* UIViewController+UISliderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6D21B015B00008514A /* UIViewController+UISliderSpec.swift */; };
@@ -299,6 +300,7 @@
 		B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextField.swift"; sourceTree = "<group>"; };
 		B8AC7A222212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIViewController+UIButton.swift"; sourceTree = "<group>"; };
 		B8AC7A252212470300D76A69 /* DebugLogging+UILabelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UILabelSpec.swift"; sourceTree = "<group>"; };
+		B8AC7A272212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DebugLogging+MKMapViewSpec.swift"; sourceTree = "<group>"; };
 		B8B56E6921B0118D0008514A /* UIViewController+UISliderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISliderSpec.swift"; sourceTree = "<group>"; };
 		B8B56E6B21B012B10008514A /* UISliderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderBuilder.swift; sourceTree = "<group>"; };
 		B8B56E6D21B015B00008514A /* UIViewController+UISliderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISliderSpec.swift"; sourceTree = "<group>"; };
@@ -776,6 +778,7 @@
 		B8AC7A24221244FF00D76A69 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				B8AC7A272212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift */,
 				B8AC7A252212470300D76A69 /* DebugLogging+UILabelSpec.swift */,
 				B812407F21CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift */,
 			);
@@ -1070,6 +1073,7 @@
 				B812408721CB6EB100ADBDCC /* CustomUIViewBuilder.swift in Sources */,
 				B8C02ED621CB7303005234C9 /* CustomUIViewControllerBuilder.swift in Sources */,
 				B88E39EA21DDFFC600A3B82B /* CustomViewBuilder.swift in Sources */,
+				B8AC7A282212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift in Sources */,
 				5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */,
 				B8AC7A262212470300D76A69 /* DebugLogging+UILabelSpec.swift in Sources */,
 				B8AC7A232212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift in Sources */,

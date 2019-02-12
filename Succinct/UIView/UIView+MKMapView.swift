@@ -1,18 +1,21 @@
 import UIKit
 import MapKit
 
+// MARK: - Find MKMapView
 extension UIView {
     public func findMapView() -> MKMapView? {
-        for subview in subviews {
-            if let mapView = subview as? MKMapView {
-                return mapView
-            }
+        return findInSubviews(
+            satisfyingCondition: { $0.isMapView() }
+        ) as? MKMapView
+    }
+}
 
-            if let mapView = subview.findMapView() {
-                return mapView
-            }
+fileprivate extension UIView {
+    func isMapView() -> Bool {
+        guard let _ = self as? MKMapView else {
+            return false
         }
-
-        return nil
+        
+        return true
     }
 }
