@@ -2,16 +2,14 @@ import UIKit
 
 extension UIView {
     public func findPickerView() -> UIPickerView? {
-        for subview in subviews {
-            if let pickerView = subview as? UIPickerView {
-                return pickerView
-            }
+        return findInSubviews(
+            satisfyingCondition: { $0.isPickerView() }
+        ) as? UIPickerView
+    }
+}
 
-            if let pickerView = subview.findPickerView() {
-                return pickerView
-            }
-        }
-
-        return nil
+fileprivate extension UIView {
+    func isPickerView() -> Bool {
+        return self is UIPickerView
     }
 }
