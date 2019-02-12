@@ -4,7 +4,7 @@ import Succinct
 
 final class UIViewController_UILabelSpec: QuickSpec {
     override func spec() {
-        describe("finding labels by exact text") {
+        describe("finding labels with exact text") {
             context("when a UILabel exists in the first subview") {
                 var viewController: UIViewController!
 
@@ -111,7 +111,7 @@ final class UIViewController_UILabelSpec: QuickSpec {
             }
         }
 
-        describe("has label by exact text") {
+        describe("has label with exact text") {
             context("when a label exists in the first subview") {
                 var viewController: UIViewController!
 
@@ -168,7 +168,7 @@ final class UIViewController_UILabelSpec: QuickSpec {
             }
         }
 
-        describe("finding labels by containing text") {
+        describe("finding labels containing text") {
             context("when a label exists in the first subview") {
                 var viewController: UIViewController!
 
@@ -233,7 +233,7 @@ final class UIViewController_UILabelSpec: QuickSpec {
             }
         }
 
-        describe("has label by containing text") {
+        describe("has label containing text") {
             context("when a label exists in the first subview") {
                 var viewController: UIViewController!
 
