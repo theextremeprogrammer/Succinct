@@ -2,11 +2,15 @@ import UIKit
 
 extension UIView {
     public func findButton(withExactText searchText: String) -> UIButton? {
-        return findInSubviews(satisfyingCondition: { $0.isButton(withExactText: searchText) } ) as? UIButton
+        return findInSubviews(
+            satisfyingCondition: { $0.isButton(withExactText: searchText) }
+        ) as? UIButton
     }
 
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
-        return findInSubviews(satisfyingCondition: { $0.isButton(withImage: searchImage) }) as? UIButton
+        return findInSubviews(
+            satisfyingCondition: { $0.isButton(withImage: searchImage) }
+        ) as? UIButton
     }
 
     public func findButtons(withState searchState: UIControl.State) -> [UIButton] {

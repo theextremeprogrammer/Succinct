@@ -2,12 +2,16 @@ import UIKit
 
 extension UIView {
     public func hasImageView(withImage searchImage: UIImage) -> Bool {
-        return findInSubviews(satisfyingCondition: { $0.isImageView(withImage: searchImage) })
+        return findInSubviews(
+            satisfyingCondition: { $0.isImageView(withImage: searchImage) }
+        )
             .isNotNil()
     }
     
     public func findImageView(withImage searchImage: UIImage) -> UIImageView? {
-        return findInSubviews(satisfyingCondition: { $0.isImageView(withImage: searchImage) }) as? UIImageView
+        return findInSubviews(
+            satisfyingCondition: { $0.isImageView(withImage: searchImage) }
+        ) as? UIImageView
     }
 
     public func countOfImages(_ searchImage: UIImage) -> Int {

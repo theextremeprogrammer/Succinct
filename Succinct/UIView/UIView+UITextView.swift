@@ -10,11 +10,15 @@ extension UIView {
     }
 
     public func findTextView(withExactText searchText: String) -> UITextView? {
-        return findInSubviews(satisfyingCondition: { $0.isTextView(withExactText: searchText) }) as? UITextView
+        return findInSubviews(
+            satisfyingCondition: { $0.isTextView(withExactText: searchText) }
+        ) as? UITextView
     }
 
     public func findTextView(containingText searchText: String) -> UITextView? {
-        return findInSubviews(satisfyingCondition: { $0.isTextView(containingText: searchText) }) as? UITextView
+        return findInSubviews(
+            satisfyingCondition: { $0.isTextView(containingText: searchText) }
+        ) as? UITextView
     }
 }
 

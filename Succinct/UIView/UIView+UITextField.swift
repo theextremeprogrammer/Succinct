@@ -22,19 +22,27 @@ extension UIView {
 // MARK: - Finding UITextFields
 extension UIView {
     public func findTextField(withExactPlaceholderText searchText: String) -> UITextField? {
-        return findInSubviews(satisfyingCondition: { $0.isTextField(withExactPlaceholderText: searchText) }) as? UITextField
+        return findInSubviews(
+            satisfyingCondition: { $0.isTextField(withExactPlaceholderText: searchText) }
+        ) as? UITextField
     }
 
     public func findTextField(containingPlaceholderText searchText: String) -> UITextField? {
-        return findInSubviews(satisfyingCondition: { $0.isTextField(containingPlaceholderText: searchText) }) as? UITextField
+        return findInSubviews(
+            satisfyingCondition: { $0.isTextField(containingPlaceholderText: searchText) }
+        ) as? UITextField
     }
 
     public func findTextField(withExactText searchText: String) -> UITextField? {
-        return findInSubviews(satisfyingCondition: { $0.isTextField(withExactText: searchText) }) as? UITextField
+        return findInSubviews(
+            satisfyingCondition: { $0.isTextField(withExactText: searchText) }
+        ) as? UITextField
     }
 
     public func findTextField(containingText searchText: String) -> UITextField? {
-        return findInSubviews(satisfyingCondition: { $0.isTextField(containingText: searchText) }) as? UITextField
+        return findInSubviews(
+            satisfyingCondition: { $0.isTextField(containingText: searchText) }
+        ) as? UITextField
     }
 }
 

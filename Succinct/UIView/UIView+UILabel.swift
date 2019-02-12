@@ -14,11 +14,15 @@ extension UIView {
 // MARK: - Finding UILabels
 extension UIView {
     public func findLabel(withExactText searchText: String) -> UILabel? {
-        return findInSubviews(satisfyingCondition: { $0.isLabel(withExactText: searchText) }) as? UILabel
+        return findInSubviews(
+            satisfyingCondition: { $0.isLabel(withExactText: searchText) }
+        ) as? UILabel
     }
 
     public func findLabel(containingText searchText: String) -> UILabel? {
-        return findInSubviews(satisfyingCondition: { $0.isLabel(containingText: searchText) }) as? UILabel
+        return findInSubviews(
+            satisfyingCondition: { $0.isLabel(containingText: searchText) }
+        ) as? UILabel
     }
 }
 
