@@ -127,6 +127,7 @@
 		B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */; };
 		B89E2D1C218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */; };
 		B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */; };
+		B8AC7A232212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AC7A222212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift */; };
 		B8B56E6A21B0118D0008514A /* UIViewController+UISliderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6921B0118D0008514A /* UIViewController+UISliderSpec.swift */; };
 		B8B56E6C21B012B10008514A /* UISliderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6B21B012B10008514A /* UISliderBuilder.swift */; };
 		B8B56E6E21B015B00008514A /* UIViewController+UISliderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B56E6D21B015B00008514A /* UIViewController+UISliderSpec.swift */; };
@@ -295,6 +296,7 @@
 		B89E2D19218BFA71004FE2A6 /* UIViewController+UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIStepper.swift"; sourceTree = "<group>"; };
 		B89E2D1B218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIPickerView.swift"; sourceTree = "<group>"; };
 		B89E2D1D218C38BE004FE2A6 /* UIViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextField.swift"; sourceTree = "<group>"; };
+		B8AC7A222212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIViewController+UIButton.swift"; sourceTree = "<group>"; };
 		B8B56E6921B0118D0008514A /* UIViewController+UISliderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISliderSpec.swift"; sourceTree = "<group>"; };
 		B8B56E6B21B012B10008514A /* UISliderBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderBuilder.swift; sourceTree = "<group>"; };
 		B8B56E6D21B015B00008514A /* UIViewController+UISliderSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UISliderSpec.swift"; sourceTree = "<group>"; };
@@ -770,6 +772,14 @@
 			path = UIBarButtonItem;
 			sourceTree = "<group>";
 		};
+		B8AC7A212212433000D76A69 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B8AC7A222212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		B8B80B6021B0C38300EA315D /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,6 +818,7 @@
 		B8BC558021B28F3900A1CD8C /* DebugLogging */ = {
 			isa = PBXGroup;
 			children = (
+				B8AC7A212212433000D76A69 /* UIViewController */,
 				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
 			);
 			path = DebugLogging;
@@ -1057,6 +1068,7 @@
 				B8C02ED621CB7303005234C9 /* CustomUIViewControllerBuilder.swift in Sources */,
 				B88E39EA21DDFFC600A3B82B /* CustomViewBuilder.swift in Sources */,
 				5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */,
+				B8AC7A232212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift in Sources */,
 				526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */,
 				AE3CCDD321F58FCC00A3638D /* MKMapViewBuilder.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
