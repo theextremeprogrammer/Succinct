@@ -51,7 +51,7 @@ fileprivate extension UIView {
         guard let button = self as? UIButton else {
             return false
         }
-        
+
         guard let buttonText = button.title(for: .normal) else {
             let message = "**** Succinct: " +
                 "findButton(withExactText: '\(searchText)')" +
@@ -67,22 +67,22 @@ fileprivate extension UIView {
                 "findButton(withExactText: '\(searchText)')" +
             " failed to match for button with title: '\(buttonText)'"
             Succinct.log.debug(message)
-            
+
             return false
         }
-        
+
         return true
     }
-    
+
     func isButton(withImage searchImage: UIImage) -> Bool {
         guard let button = self as? UIButton else {
             return false
         }
-        
+
         guard let image = button.image(for: .normal) else {
             return false
         }
-        
+
         return image == searchImage
     }
 }
