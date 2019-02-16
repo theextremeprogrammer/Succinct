@@ -794,6 +794,7 @@
 		B8AC7A24221244FF00D76A69 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
 				B8AC7A272212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift */,
 				B8AC7A3222144EF100D76A69 /* DebugLogging+UIDatePickerViewSpec.swift */,
 				B8AC7A252212470300D76A69 /* DebugLogging+UILabelSpec.swift */,
@@ -843,7 +844,6 @@
 			children = (
 				B8AC7A24221244FF00D76A69 /* UIView */,
 				B8AC7A212212433000D76A69 /* UIViewController */,
-				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
 			);
 			path = DebugLogging;
 			sourceTree = "<group>";

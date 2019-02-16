@@ -4,7 +4,7 @@ import Succinct
 
 class DebugLogging_MKMapViewSpec: QuickSpec {
     override func spec() {
-        describe("debug logging for MKMapView") {
+        describe("view heirarchy debug logging") {
             var view: UIView!
             
             var spyOutputMethod: SpyOutputMethod!
@@ -23,7 +23,7 @@ class DebugLogging_MKMapViewSpec: QuickSpec {
                 Succinct.log.useDefaultOutputMethod()
             }
             
-            it("outputs debugging when finding a label with exact text") {
+            it("outputs the view hierarchy when finding a map view") {
                 let _ = view.findMapView()
                 
                 

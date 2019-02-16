@@ -4,7 +4,7 @@ import Succinct
 
 class DebugLogging_UIButtonSpec: QuickSpec {
     override func spec() {
-        describe("debugging messages") {
+        describe("success and failure messages") {
             var spyOutputMethod: SpyOutputMethod!
             
             beforeEach {
