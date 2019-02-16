@@ -94,6 +94,7 @@
 		B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */; };
 		B84DB1C521CB7E570041E9D2 /* UIViewController+Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DB1C421CB7E570041E9D2 /* UIViewController+Debugging.swift */; };
 		B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */; };
+		B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */; };
 		B88E39D121DDF8AB00A3B82B /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		B88E39D521DDFE9200A3B82B /* CustomUIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */; };
 		B88E39D621DDFE9500A3B82B /* CustomUIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C02ED521CB7303005234C9 /* CustomUIViewControllerBuilder.swift */; };
@@ -293,6 +294,7 @@
 		B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Tap.swift"; sourceTree = "<group>"; };
 		B84DB1C421CB7E570041E9D2 /* UIViewController+Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Debugging.swift"; sourceTree = "<group>"; };
 		B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+hasButtonSpec.swift"; sourceTree = "<group>"; };
+		B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+MemoryAddress.swift"; sourceTree = "<group>"; };
 		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		B89A3EB521A2AFD2008B15C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton.swift"; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				B8BC557A21B2814B00A1CD8C /* Configuration */,
+				B86F2AEC2218D5B900C72FEC /* Memory */,
 				AE3CCDCC21F589F600A3638D /* MKMapView */,
 				525FF7ED20331DBD007AE6C8 /* Optional */,
 				B88F5E7021A52A7C0074ADBE /* UIBarButtonItem */,
@@ -705,6 +708,14 @@
 			path = UISwitch;
 			sourceTree = "<group>";
 		};
+		B86F2AEC2218D5B900C72FEC /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
 		B88E39D321DDFE6C00A3B82B /* Test Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,8 +805,8 @@
 		B8AC7A24221244FF00D76A69 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
 				B8AC7A272212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift */,
+				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
 				B8AC7A3222144EF100D76A69 /* DebugLogging+UIDatePickerViewSpec.swift */,
 				B8AC7A252212470300D76A69 /* DebugLogging+UILabelSpec.swift */,
 				5B6AD15A4AC038FBB05E01FC /* DebugLogging+UIPickerViewSpec.swift */,
@@ -1040,6 +1051,7 @@
 			files = (
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
+				B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */,
 				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
 				B8BC558621B28FB400A1CD8C /* PrintOutputMethod.swift in Sources */,
 				B8BC558421B28F9800A1CD8C /* Succinct.swift in Sources */,
