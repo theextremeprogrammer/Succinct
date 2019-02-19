@@ -35,6 +35,13 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
 
                     expect(self.buttonWasTapped).to(beFalse())
                 }
+
+                it("cannot tap the right bar button item") {
+                    viewController.tapRightBarButtonItem()
+
+
+                    expect(self.buttonWasTapped).to(beFalse())
+                }
             }
 
             describe("tapping system bar button items") {
@@ -77,6 +84,22 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
 
 
                     viewController.tapLeftBarButtonItem()
+
+
+                    expect(self.buttonWasTapped).to(beTrue())
+                }
+            }
+
+            describe("explicitly tapping the right bar button item that is not a system item") {
+                it("can tap the right bar button item") {
+                    let targetAction = TargetAction(self.didTapBarButtonItem)
+
+                    let viewController = UIViewControllerBuilder()
+                        .withRightBarButtonItem(title: "Add", targetAction: targetAction)
+                        .build()
+
+
+                    viewController.tapRightBarButtonItem()
 
 
                     expect(self.buttonWasTapped).to(beTrue())

@@ -20,4 +20,10 @@ extension UIViewController {
             leftBarButtonItem.tap()
         }
     }
+
+    public func tapRightBarButtonItem() {
+        if let rightBarButtonItem = navigationItem.rightBarButtonItem {
+            rightBarButtonItem.tap()
+        }
+    }
 }
