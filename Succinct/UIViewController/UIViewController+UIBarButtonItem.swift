@@ -14,4 +14,10 @@ extension UIViewController {
             }
         }
     }
+
+    public func tapLeftBarButtonItem() {
+        if let leftBarButtonItem = navigationItem.leftBarButtonItem {
+            leftBarButtonItem.tap()
+        }
+    }
 }

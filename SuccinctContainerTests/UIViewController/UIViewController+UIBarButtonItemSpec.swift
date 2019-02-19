@@ -10,47 +10,77 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
     }
 
     override func spec() {
-        describe("interacting with bar button items") {
+        describe("tapping bar button items") {
+            var viewController: UIViewController!
+
             beforeEach {
                 self.buttonWasTapped = false
             }
 
-            it("cannot tap the left bar button item when the system item is not on the view controller") {
-                let viewController = UIViewControllerBuilder().build()
+            context("when there are no bar button items") {
+                beforeEach {
+                    viewController = UIViewControllerBuilder().build()
+                }
+
+                it("cannot tap any bar button item") {
+                    viewController.tapBarButtonItem(withSystemItem: .add)
 
 
-                viewController.tapBarButtonItem(withSystemItem: .add)
+                    expect(self.buttonWasTapped).to(beFalse())
+                }
+
+                it("cannot tap the left bar button item") {
+                    viewController.tapLeftBarButtonItem()
 
 
-                expect(self.buttonWasTapped).to(beFalse())
+                    expect(self.buttonWasTapped).to(beFalse())
+                }
             }
 
-            it("can tap the *left* bar button item matching the specified system item") {
-                let targetAction = TargetAction(self.didTapBarButtonItem)
-                
-                let viewController = UIViewControllerBuilder()
-                    .withLeftBarButtonItem(barButtonSystemItem: .add, targetAction: targetAction)
-                    .build()
+            describe("tapping system bar button items") {
+                it("can tap the *left* bar button item matching the specified system item") {
+                    let targetAction = TargetAction(self.didTapBarButtonItem)
 
-                
-                viewController.tapBarButtonItem(withSystemItem: .add)
-                
-                
-                expect(self.buttonWasTapped).to(beTrue())
+                    let viewController = UIViewControllerBuilder()
+                        .withLeftBarButtonItem(barButtonSystemItem: .add, targetAction: targetAction)
+                        .build()
+
+
+                    viewController.tapBarButtonItem(withSystemItem: .add)
+
+
+                    expect(self.buttonWasTapped).to(beTrue())
+                }
+
+                it("can tap the *right* bar button item matching the specified system item") {
+                    let targetAction = TargetAction(self.didTapBarButtonItem)
+
+                    let viewController = UIViewControllerBuilder()
+                        .withRightBarButtonItem(barButtonSystemItem: .camera, targetAction: targetAction)
+                        .build()
+
+
+                    viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                    expect(self.buttonWasTapped).to(beTrue())
+                }
             }
-            
-            it("can tap the *right* bar button item matching the specified system item") {
-                let targetAction = TargetAction(self.didTapBarButtonItem)
-                
-                let viewController = UIViewControllerBuilder()
-                    .withRightBarButtonItem(barButtonSystemItem: .camera, targetAction: targetAction)
-                    .build()
-                
-                
-                viewController.tapBarButtonItem(withSystemItem: .camera)
-                
-                
-                expect(self.buttonWasTapped).to(beTrue())
+
+            describe("explicitly tapping the left bar button item that is not a system item") {
+                it("can tap the left bar button item") {
+                    let targetAction = TargetAction(self.didTapBarButtonItem)
+
+                    let viewController = UIViewControllerBuilder()
+                        .withLeftBarButtonItem(title: "Add", targetAction: targetAction)
+                        .build()
+
+
+                    viewController.tapLeftBarButtonItem()
+
+
+                    expect(self.buttonWasTapped).to(beTrue())
+                }
             }
         }
     }
