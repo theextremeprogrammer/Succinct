@@ -72,7 +72,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                     let viewController = UIViewControllerBuilder().build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -90,7 +90,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -109,7 +109,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -128,7 +128,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -147,7 +147,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -168,7 +168,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -191,7 +191,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -214,7 +214,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 

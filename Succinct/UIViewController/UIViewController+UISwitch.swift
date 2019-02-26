@@ -4,7 +4,11 @@ extension UIViewController {
     public func countOfSwitches(switchIsOn: Bool) -> Int {
         return view.countOfSwitches(switchIsOn: switchIsOn)
     }
-    
+
+    public func findSwitch(colocatedWithUILabelWithExactText searchText: String) -> UISwitch? {
+        return view.findSwitch(colocatedWithUILabelWithExactText: searchText)
+    }
+
     public func tapSwitch(containedInView viewClass: AnyClass) {
         view.findSwitch(containedInView: viewClass)?
             .tapAndFireTargetEvent()
