@@ -72,7 +72,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                     let viewController = UIViewControllerBuilder().build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -90,7 +90,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -109,7 +109,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -128,7 +128,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -147,7 +147,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -168,7 +168,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -191,7 +191,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -214,7 +214,7 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                         .build()
 
 
-                    let maybeSwitch = viewController.view.findSwitch(
+                    let maybeSwitch = viewController.findSwitch(
                         colocatedWithUILabelWithExactText: "Option"
                     )
 
@@ -222,6 +222,42 @@ final class UIViewController_UISwitchSpec: QuickSpec {
                     expect(maybeSwitch).toNot(beNil())
                     expect(maybeSwitch?.isOn).to(beTrue())
                 }
+            }
+        }
+
+        describe("accessing properties on switches to make tests more readable") {
+            it("can identify when a switch is off") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubviews(
+                        UILabelBuilder().withTitleText("Option").build(),
+                        UISwitchBuilder().withIsOn(false).build()
+                    )
+                    .build()
+
+
+                let maybeSwitch = viewController.findSwitch(colocatedWithUILabelWithExactText: "Option")
+
+
+                expect(maybeSwitch).toNot(beNil())
+                expect(maybeSwitch?.isOn).to(beFalse())
+                expect(maybeSwitch?.isOff).to(beTrue())
+            }
+
+            it("can identify when a switch is disabled") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubviews(
+                        UILabelBuilder().withTitleText("Option").build(),
+                        UISwitchBuilder().withIsEnabled(false).build()
+                    )
+                    .build()
+
+
+                let maybeSwitch = viewController.findSwitch(colocatedWithUILabelWithExactText: "Option")
+
+
+                expect(maybeSwitch).toNot(beNil())
+                expect(maybeSwitch?.isEnabled).to(beFalse())
+                expect(maybeSwitch?.isDisabled).to(beTrue())
             }
         }
     }

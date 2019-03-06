@@ -11,6 +11,11 @@ struct UISwitchBuilder {
         uiSwitch.isOn = isOn
         return self
     }
+
+    func withIsEnabled(_ isEnabled: Bool) -> UISwitchBuilder {
+        uiSwitch.isEnabled = isEnabled
+        return self
+    }
     
     func withTargetAction(_ targetAction: TargetAction) -> UISwitchBuilder {
         uiSwitch.addTarget(
