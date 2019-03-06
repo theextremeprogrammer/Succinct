@@ -51,15 +51,6 @@ extension NSAttributedString {
         return foundAttributeKeys
     }
 
-    fileprivate func filterAttributesMatching(
-        attributeKeys: [NSAttributedString.Key : NSRange],
-        inRange range: NSRange?
-    ) -> [NSAttributedString.Key : NSRange] {
-        return attributeKeys.filter {
-            $0.value == range
-        }
-    }
-
     fileprivate func valuesAreEqual<T: Equatable>(asType type: T.Type, a: Any?, b: Any?) -> Bool {
         guard
             let a = a as? T,
