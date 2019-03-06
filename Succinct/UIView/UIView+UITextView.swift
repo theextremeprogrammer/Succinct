@@ -25,13 +25,16 @@ extension UIView {
     public func hasTextView(
         withExactText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
-        ) -> Bool {
+    ) -> Bool {
         return findInSubviews(
             satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
         ).isNotNil()
     }
 
-    public func findTextView(withExactText searchText: String, matchingAttributes searchAttributes: [NSAttributedString.Key : Any]) -> UITextView? {
+    public func findTextView(
+        withExactText searchText: String,
+        matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
+    ) -> UITextView? {
         return findInSubviews(
             satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
         ) as? UITextView
@@ -66,7 +69,7 @@ fileprivate extension UIView {
     func isTextView(
         withExactText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
-        ) -> Bool {
+    ) -> Bool {
         guard let textView = self as? UITextView else {
             return false
         }
@@ -75,6 +78,6 @@ fileprivate extension UIView {
             return false
         }
 
-        return attributedText.hasAttributes(searchAttributes, atSubString: searchText)
+        return attributedText.containsExactString(searchText, withAttributes: searchAttributes)
     }
 }

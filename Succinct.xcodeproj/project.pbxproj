@@ -1090,8 +1090,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
-				B17464AF22218008004C587B /* NSAttributedString+attributes.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
+				B17464AF22218008004C587B /* NSAttributedString+attributes.swift in Sources */,
 				B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */,
 				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
 				B8BC558621B28FB400A1CD8C /* PrintOutputMethod.swift in Sources */,
@@ -1153,8 +1153,8 @@
 				B8AC7A232212434E00D76A69 /* DebugLogging+UIViewController+UIButton.swift in Sources */,
 				B812408021CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift in Sources */,
 				526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */,
-				B17464B022218008004C587B /* NSAttributedString+attributesSpec.swift in Sources */,
 				AE3CCDD321F58FCC00A3638D /* MKMapViewBuilder.swift in Sources */,
+				B17464B022218008004C587B /* NSAttributedString+attributesSpec.swift in Sources */,
 				B17464A622217D33004C587B /* NSMuteableAttributedStringBuilder.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
 				B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */,

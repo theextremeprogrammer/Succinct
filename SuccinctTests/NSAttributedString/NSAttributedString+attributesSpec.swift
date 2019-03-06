@@ -18,7 +18,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(redForegroundColor, atSubString: "Foreground")).to(beTrue())
+                    expect(attributedString.containsExactString("Foreground", withAttributes: redForegroundColor)).to(beTrue())
                 }
 
                 it("can find text with a backgroundColor") {
@@ -32,7 +32,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(redBackgroundColor, atSubString: "Background")).to(beTrue())
+                    expect(attributedString.containsExactString("Background", withAttributes: redBackgroundColor)).to(beTrue())
                 }
 
                 it("can find text with a specific font") {
@@ -46,7 +46,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(smallFont, atSubString: "Small")).to(beTrue())
+                    expect(attributedString.containsExactString("Small", withAttributes: smallFont)).to(beTrue())
                 }
 
                 it("can find text that is underlined") {
@@ -64,7 +64,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(smallFontAndRedBackground, atSubString: "Underlined")).to(beTrue())
+                    expect(attributedString.containsExactString("Underlined", withAttributes: smallFontAndRedBackground)).to(beTrue())
                 }
 
                 it("can find text that is underlined with a custom underline") {
@@ -83,7 +83,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(smallFontAndRedBackground, atSubString: "Underlined")).to(beTrue())
+                    expect(attributedString.containsExactString("Underlined", withAttributes: smallFontAndRedBackground)).to(beTrue())
                 }
 
                 it("can find text that is is a link") {
@@ -100,7 +100,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(linkAttributes, atSubString: "Link")).to(beTrue())
+                    expect(attributedString.containsExactString("Link", withAttributes: linkAttributes)).to(beTrue())
                 }
             }
 
@@ -122,7 +122,7 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(tappableText, atSubString: "Tappable")).to(beTrue())
+                    expect(attributedString.containsExactString("Tappable", withAttributes: tappableText)).to(beTrue())
                 }
             }
 
@@ -133,7 +133,35 @@ final class NSAttributedString_attributeSpec: QuickSpec {
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
-                    expect(attributedString.hasAttributes(redBackgroundColor, atSubString: "Nothing")).to(beFalse())
+                    expect(attributedString.containsExactString("Nothing", withAttributes: redBackgroundColor)).to(beFalse())
+                }
+            }
+
+            context("when there are multiple instances of the search string") {
+                it("finds only the first instance") {
+                    let redForegroundColor = [
+                        NSAttributedString.Key.foregroundColor: UIColor.red,
+                        ] as [NSAttributedString.Key : Any]
+
+                    let greenForegroundColor = [
+                        NSAttributedString.Key.foregroundColor: UIColor.green,
+                        ] as [NSAttributedString.Key : Any]
+
+                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "A sentance with the word sentance twice")
+                        .withAttributes(
+                            redForegroundColor,
+                            range: NSRange(location: 1, length: 9)
+                        )
+                        .withAttributes(
+                            greenForegroundColor,
+                            range: NSRange(location: 24, length: 9)
+                        )
+                        .build()
+
+
+                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
+                    expect(attributedString.containsExactString("sentance", withAttributes: redForegroundColor)).to(beTrue())
+                    expect(attributedString.containsExactString("sentance", withAttributes: greenForegroundColor)).to(beFalse())
                 }
             }
         }
