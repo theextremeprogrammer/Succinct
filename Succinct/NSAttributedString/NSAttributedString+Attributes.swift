@@ -55,10 +55,10 @@ extension NSAttributedString {
         return foundAttributeKeys
     }
 
-    fileprivate func valuesAreEqual<T: Equatable>(asType type: T.Type, a: Any?, b: Any?) -> Bool {
+    fileprivate func valuesAreEqual<T: Equatable>(asType type: T.Type, a maybeA: Any?, b maybeB: Any?) -> Bool {
         guard
-            let a = a as? T,
-            let b = b as? T else { return false }
+            let a = maybeA as? T,
+            let b = maybeB as? T else { return false }
 
         return a == b
     }
