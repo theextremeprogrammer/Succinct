@@ -10,7 +10,7 @@ extension NSAttributedString {
         atSubString substring: String
     ) -> [[NSAttributedString.Key : NSRange]] {
         var foundAttributeKeys = [[NSAttributedString.Key : NSRange]]()
-        let subStringRange = NSRange(self.string.range(of: substring)!, in: self.string)
+        let subStringRange = NSRange(string.range(of: substring)!, in: string)
 
         enumerateAttributes(in: subStringRange) { (attributes, range, stop) in
             for attribute in attributes {
