@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-final class NSAttributedString_attributeSpec: QuickSpec {
+final class NSAttributedString_AttributeSpec: QuickSpec {
     override func spec() {
         describe("finding attributes for an exact substring") {
 

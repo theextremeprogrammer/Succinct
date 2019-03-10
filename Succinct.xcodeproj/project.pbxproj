@@ -78,8 +78,8 @@
 		B17464A722217D33004C587B /* NSMuteableAttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17464A522217D33004C587B /* NSMuteableAttributedStringBuilder.swift */; };
 		B17464AD22217DCB004C587B /* UINavigationController+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17464AC22217DCB004C587B /* UINavigationController+UILabelSpec.swift */; };
 		B17464AE22217DCB004C587B /* UINavigationController+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17464AC22217DCB004C587B /* UINavigationController+UILabelSpec.swift */; };
-		B17464AF22218008004C587B /* NSAttributedString+attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183708921D328010031F5AA /* NSAttributedString+attributes.swift */; };
-		B17464B022218008004C587B /* NSAttributedString+attributesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183708C21D328C40031F5AA /* NSAttributedString+attributesSpec.swift */; };
+		B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183708921D328010031F5AA /* NSAttributedString+Attributes.swift */; };
+		B17464B022218008004C587B /* NSAttributedString+AttributesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B183708C21D328C40031F5AA /* NSAttributedString+AttributesSpec.swift */; };
 		B1D05E5D2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */; };
 		B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */; };
 		B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D05E602160B5170044D2AD /* UIView+UITextField.swift */; };
@@ -282,8 +282,8 @@
 		B134F10321BD076800509278 /* UIViewController+UIButton+findButtonsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+findButtonsSpec.swift"; sourceTree = "<group>"; };
 		B17464A522217D33004C587B /* NSMuteableAttributedStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMuteableAttributedStringBuilder.swift; sourceTree = "<group>"; };
 		B17464AC22217DCB004C587B /* UINavigationController+UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+UILabelSpec.swift"; sourceTree = "<group>"; };
-		B183708921D328010031F5AA /* NSAttributedString+attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+attributes.swift"; sourceTree = "<group>"; };
-		B183708C21D328C40031F5AA /* NSAttributedString+attributesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+attributesSpec.swift"; sourceTree = "<group>"; };
+		B183708921D328010031F5AA /* NSAttributedString+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Attributes.swift"; sourceTree = "<group>"; };
+		B183708C21D328C40031F5AA /* NSAttributedString+AttributesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+AttributesSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
 		B1D05E602160B5170044D2AD /* UIView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextField.swift"; sourceTree = "<group>"; };
@@ -703,7 +703,7 @@
 		B183708821D327AC0031F5AA /* NSAttributedString */ = {
 			isa = PBXGroup;
 			children = (
-				B183708921D328010031F5AA /* NSAttributedString+attributes.swift */,
+				B183708921D328010031F5AA /* NSAttributedString+Attributes.swift */,
 			);
 			path = NSAttributedString;
 			sourceTree = "<group>";
@@ -711,7 +711,7 @@
 		B183708B21D328A60031F5AA /* NSAttributedString */ = {
 			isa = PBXGroup;
 			children = (
-				B183708C21D328C40031F5AA /* NSAttributedString+attributesSpec.swift */,
+				B183708C21D328C40031F5AA /* NSAttributedString+AttributesSpec.swift */,
 			);
 			path = NSAttributedString;
 			sourceTree = "<group>";
@@ -1093,7 +1093,7 @@
 			files = (
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
-				B17464AF22218008004C587B /* NSAttributedString+attributes.swift in Sources */,
+				B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */,
 				B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */,
 				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
 				B8BC558621B28FB400A1CD8C /* PrintOutputMethod.swift in Sources */,
@@ -1158,7 +1158,7 @@
 				B812408021CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift in Sources */,
 				526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */,
 				AE3CCDD321F58FCC00A3638D /* MKMapViewBuilder.swift in Sources */,
-				B17464B022218008004C587B /* NSAttributedString+attributesSpec.swift in Sources */,
+				B17464B022218008004C587B /* NSAttributedString+AttributesSpec.swift in Sources */,
 				B17464A622217D33004C587B /* NSMuteableAttributedStringBuilder.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
 				B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */,
