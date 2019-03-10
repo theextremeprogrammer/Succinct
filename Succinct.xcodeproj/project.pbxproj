@@ -280,12 +280,10 @@
 		B129324221B2A88D009AE9D1 /* UINavigationControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerBuilder.swift; sourceTree = "<group>"; };
 		B134F10121BD066200509278 /* UIViewController+UIButton+findButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+findButtonSpec.swift"; sourceTree = "<group>"; };
 		B134F10321BD076800509278 /* UIViewController+UIButton+findButtonsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+findButtonsSpec.swift"; sourceTree = "<group>"; };
-		B15A4C7E21B2C53700398963 /* UINavigationController+UILabelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+UILabelSpec.swift"; sourceTree = "<group>"; };
 		B17464A522217D33004C587B /* NSMuteableAttributedStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMuteableAttributedStringBuilder.swift; sourceTree = "<group>"; };
 		B17464AC22217DCB004C587B /* UINavigationController+UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+UILabelSpec.swift"; sourceTree = "<group>"; };
 		B183708921D328010031F5AA /* NSAttributedString+attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+attributes.swift"; sourceTree = "<group>"; };
 		B183708C21D328C40031F5AA /* NSAttributedString+attributesSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+attributesSpec.swift"; sourceTree = "<group>"; };
-		B183708E21D3379B0031F5AA /* NSMuteableAttributedStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMuteableAttributedStringBuilder.swift; sourceTree = "<group>"; };
 		B1D05E5C2160B1560044D2AD /* UIViewController+UITextFieldSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITextFieldSpec.swift"; sourceTree = "<group>"; };
 		B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldBuilder.swift; sourceTree = "<group>"; };
 		B1D05E602160B5170044D2AD /* UIView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UITextField.swift"; sourceTree = "<group>"; };
@@ -409,7 +407,6 @@
 				B89A3EB521A2AFD2008B15C0 /* LICENSE */,
 				B8FE917D2120F5F30097274D /* Makefile */,
 				522D998A1FAD2A9C009BB1B9 /* Products */,
-				B17464A022217CA3004C587B /* Recovered References */,
 				522D998B1FAD2A9C009BB1B9 /* Succinct */,
 				5230D7FD20EC89FD00E9459B /* SuccinctContainer */,
 				5230D81220EC89FE00E9459B /* SuccinctContainerTests */,
@@ -692,15 +689,6 @@
 				B129324021B2A866009AE9D1 /* UINavigationController+UILabel.swift */,
 			);
 			path = UINavigationController;
-			sourceTree = "<group>";
-		};
-		B17464A022217CA3004C587B /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				B183708E21D3379B0031F5AA /* NSMuteableAttributedStringBuilder.swift */,
-				B15A4C7E21B2C53700398963 /* UINavigationController+UILabelSpec.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		B17464AB22217DB9004C587B /* UINavigationController */ = {
