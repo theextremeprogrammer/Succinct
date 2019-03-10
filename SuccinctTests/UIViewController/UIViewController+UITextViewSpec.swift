@@ -239,5 +239,77 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                 }
             }
         }
+
+        describe("finding text views containing attributed text") {
+            it("can find a textview containing text with multiple attributes") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UITextViewBuilder()
+                            .withAttributedText(
+                                NSMutableAttributedStringBuilder(withText: "経費が結構かかりそう")
+                                    .withAttributes(
+                                        [
+                                            NSAttributedString.Key.link: "url",
+                                            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                                            NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
+                                            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                                            NSAttributedString.Key.underlineColor: UIColor.lightGray
+                                        ],
+                                        range: NSRange(location: 5, length: 3)
+                                )
+                                .build()
+                            )
+                            .build()
+                    )
+                    .build()
+
+
+                let expectedAttributes = [
+                    NSAttributedString.Key.link: "url",
+                    NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                    NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
+                    NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                    NSAttributedString.Key.underlineColor: UIColor.lightGray
+                    ] as [NSAttributedString.Key : Any]
+
+                expect(viewController.findTextView(withExactText: "かかり", matchingAttributes: expectedAttributes)).toNot(beNil())
+            }
+        }
+
+        describe("has text views containing attributed text") {
+            it("when a textview contains text with multiple attributes") {
+                let viewController = UIViewControllerBuilder()
+                    .withSubview(
+                        UITextViewBuilder()
+                            .withAttributedText(
+                                NSMutableAttributedStringBuilder(withText: "経費が結構かかりそう")
+                                    .withAttributes(
+                                        [
+                                            NSAttributedString.Key.link: "url",
+                                            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                                            NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
+                                            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                                            NSAttributedString.Key.underlineColor: UIColor.lightGray
+                                        ],
+                                        range: NSRange(location: 5, length: 3)
+                                    )
+                                    .build()
+                            )
+                            .build()
+                    )
+                    .build()
+
+
+                let expectedAttributes = [
+                    NSAttributedString.Key.link: "url",
+                    NSAttributedString.Key.foregroundColor: UIColor.lightGray,
+                    NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
+                    NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
+                    NSAttributedString.Key.underlineColor: UIColor.lightGray
+                    ] as [NSAttributedString.Key : Any]
+
+                expect(viewController.hasTextView(withExactText: "かかり", matchingAttributes: expectedAttributes)).to(beTrue())
+            }
+        }
     }
 }

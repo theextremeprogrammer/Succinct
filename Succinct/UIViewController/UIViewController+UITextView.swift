@@ -20,4 +20,12 @@ extension UIViewController {
     public func findTextView(containingText searchText: String) -> UITextView? {
         return view.findTextView(containingText: searchText)
     }
+
+    public func hasTextView(withExactText searchText: String, matchingAttributes searchAttributes: [NSAttributedString.Key : Any]) -> Bool {
+        return view.hasTextView(withExactText: searchText, matchingAttributes: searchAttributes)
+    }
+
+    public func findTextView(withExactText searchText: String, matchingAttributes searchAttributes: [NSAttributedString.Key : Any]) -> UITextView? {
+        return view.findTextView(withExactText: searchText, matchingAttributes: searchAttributes)
+    }
 }
