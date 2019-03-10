@@ -10,10 +10,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                 it("can find text with a foregroundColor") {
                     let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
-                        .withAttributes(
-                            redForegroundColor,
-                            range: NSRange(location: 0, length: 10)
-                        )
+                        .withAttributes(redForegroundColor, forString: "Foreground")
                         .build()
 
 
