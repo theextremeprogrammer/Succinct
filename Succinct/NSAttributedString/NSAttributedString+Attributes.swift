@@ -16,34 +16,38 @@ extension NSAttributedString {
             for attribute in attributes {
                 let searchValue = searchAttributes[attribute.key]
                 let value = attribute.value
+
                 switch attribute.key {
-                case .font:
-                    guard valuesAreEqual(asType: UIFont.self, a: searchValue, b: value) else { break }
-                    foundAttributeKeys.append([attribute.key: range])
 
                 case .backgroundColor:
                     guard valuesAreEqual(asType: UIColor.self, a: searchValue, b: value) else { break }
-                    foundAttributeKeys.append([attribute.key: range])
+                    foundAttributeKeys.append([attribute.key : range])
+
+                case .font:
+                    guard valuesAreEqual(asType: UIFont.self, a: searchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key : range])
 
                 case .foregroundColor:
                     guard valuesAreEqual(asType: UIColor.self, a: searchValue, b: value) else { break }
-                    foundAttributeKeys.append([attribute.key: range])
-
-                case .underlineStyle:
-                    guard   valuesAreEqual(asType: NSUnderlineStyle.self, a: searchValue, b: value) ||
-                        valuesAreEqual(asType: Int.self, a: searchValue, b: value) else { break }
-                    foundAttributeKeys.append([attribute.key: range])
-
-                case .underlineColor:
-                    guard valuesAreEqual(asType: UIColor.self, a: searchValue, b: value) else { break }
-                    foundAttributeKeys.append([attribute.key: range])
+                    foundAttributeKeys.append([attribute.key : range])
 
                 case .link:
                     guard valuesAreEqual(asType: String.self, a: searchValue, b: value) else { break }
-                    foundAttributeKeys.append([attribute.key: range])
+                    foundAttributeKeys.append([attribute.key : range])
+
+                case .underlineColor:
+                    guard valuesAreEqual(asType: UIColor.self, a: searchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key : range])
+
+                case .underlineStyle:
+                    guard
+                        valuesAreEqual(asType: NSUnderlineStyle.self, a: searchValue, b: value) ||
+                        valuesAreEqual(asType: Int.self, a: searchValue, b: value) else { break }
+                    foundAttributeKeys.append([attribute.key : range])
 
                 default:
                     break
+
                 }
             }
         }
