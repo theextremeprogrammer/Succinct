@@ -4,8 +4,11 @@ extension NSAttributedString {
 
         return matchingAttributes.count == searchAttributes.count
     }
+}
 
-    fileprivate func findAttributeKeysMatching(
+// MARK: - Private Methods
+fileprivate extension NSAttributedString {
+    func findAttributeKeysMatching(
         _ searchAttributes: [NSAttributedString.Key : Any],
         atSubString substring: String
     ) -> [[NSAttributedString.Key : NSRange]] {
@@ -42,7 +45,7 @@ extension NSAttributedString {
                 case .underlineStyle:
                     guard
                         valuesAreEqual(asType: NSUnderlineStyle.self, a: searchValue, b: value) ||
-                        valuesAreEqual(asType: Int.self, a: searchValue, b: value) else { break }
+                            valuesAreEqual(asType: Int.self, a: searchValue, b: value) else { break }
                     foundAttributeKeys.append([attribute.key : range])
 
                 default:
@@ -55,7 +58,7 @@ extension NSAttributedString {
         return foundAttributeKeys
     }
 
-    fileprivate func valuesAreEqual<T: Equatable>(asType type: T.Type, a maybeA: Any?, b maybeB: Any?) -> Bool {
+    func valuesAreEqual<T: Equatable>(asType type: T.Type, a maybeA: Any?, b maybeB: Any?) -> Bool {
         guard
             let a = maybeA as? T,
             let b = maybeB as? T else { return false }
