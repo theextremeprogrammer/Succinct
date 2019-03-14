@@ -17,9 +17,9 @@ fileprivate extension NSAttributedString {
         _ searchAttributes: [NSAttributedString.Key : Any],
         atSubstring substring: String
     ) -> [[NSAttributedString.Key : NSRange]]? {
-        var foundAttributeKeys = [[NSAttributedString.Key : NSRange]]()
         guard let rangeOfSubstring = range(ofSubstring: substring) else { return nil }
 
+        var foundAttributeKeys = [[NSAttributedString.Key : NSRange]]()
         enumerateAttributes(in: rangeOfSubstring) { (attributes, range, stop) in
             for attribute in attributes {
                 let searchValue = searchAttributes[attribute.key]
