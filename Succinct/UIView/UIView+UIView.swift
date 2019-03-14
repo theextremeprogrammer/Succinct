@@ -1,5 +1,19 @@
 import UIKit
 
+public struct SuccinctCondition {
+    private let condition: (UIView) -> EvaluationResult
+
+    init(_ condition: @escaping (UIView) -> EvaluationResult) {
+        self.condition = condition
+    }
+
+    func evaluate(_ view: UIView) -> Bool {
+        return condition(view)
+            .debug()
+            .booleanResult()
+    }
+}
+
 extension UIView {
     public func findInSubviews(
         satisfyingCondition satisfiesCondition: (UIView) -> Bool,
@@ -23,7 +37,11 @@ extension UIView {
             }
 
             if let tableView = subview as? UITableView {
-                if let view = tableView.findView(satisfyingCondition: { $0.findInSubviews(satisfyingCondition: satisfiesCondition) }) {
+                if let view = tableView.findView(
+                    satisfyingCondition: {
+                        $0.findInSubviews(satisfyingCondition: satisfiesCondition)
+                    }
+                ) {
                     return view
                 }
             }
@@ -31,7 +49,10 @@ extension UIView {
             if subview.isNotATypeThatContainsAnInfiniteNumberOfSubviews {
                 if subview.subviews.count > 0 {
                     let subviewDepthLevel = depthLevel + 1
-                    if let result = subview.findInSubviews(satisfyingCondition: satisfiesCondition, initialDepthLevel: subviewDepthLevel) {
+                    if let result = subview.findInSubviews(
+                        satisfyingCondition: satisfiesCondition,
+                        initialDepthLevel: subviewDepthLevel
+                    ) {
                         return result
                     }
                 }
@@ -46,7 +67,60 @@ extension UIView {
 
         return nil
     }
-    
+
+    public func findInSubviews(
+        satisfyingCondition satisfiesCondition: SuccinctCondition,
+        initialDepthLevel: Int = 1
+    ) -> UIView? {
+        var depthLevel = initialDepthLevel
+        let shouldLogOutsideCloseTag = depthLevel == 1
+        let spaces = String(repeating: " ", count: depthLevel * 4)
+
+        if (depthLevel == 1) {
+            Succinct.log.debug("\(spaces)<\(String(describing: type(of: self)))>")
+            depthLevel += 1
+        }
+
+        for subview in subviews {
+            let spaces = String(repeating: " ", count: depthLevel * 4)
+            Succinct.log.debug("\(spaces)<\(String(describing: type(of: subview)))>")
+
+            if satisfiesCondition.evaluate(subview) {
+                return subview
+            }
+
+            if let tableView = subview as? UITableView {
+                if let view = tableView.findView(
+                    satisfyingCondition: {
+                        $0.findInSubviews(satisfyingCondition: satisfiesCondition)
+                }
+                    ) {
+                    return view
+                }
+            }
+
+            if subview.isNotATypeThatContainsAnInfiniteNumberOfSubviews {
+                if subview.subviews.count > 0 {
+                    let subviewDepthLevel = depthLevel + 1
+                    if let result = subview.findInSubviews(
+                        satisfyingCondition: satisfiesCondition,
+                        initialDepthLevel: subviewDepthLevel
+                        ) {
+                        return result
+                    }
+                }
+            }
+
+            Succinct.log.debug("\(spaces)</\(String(describing: type(of: subview)))>")
+        }
+
+        if (shouldLogOutsideCloseTag) {
+            Succinct.log.debug("\(spaces)</\(String(describing: type(of: self)))>")
+        }
+
+        return nil
+    }
+
     public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
         if backgroundColor == searchColor {
             return true

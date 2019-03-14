@@ -2,14 +2,18 @@ import UIKit
 
 extension UIView {
     public func findButton(withExactText searchText: String) -> UIButton? {
-        return findInSubviews(
-            satisfyingCondition: { $0.isButton(withExactText: searchText) }
-        ) as? UIButton
+        let condition = SuccinctCondition({
+            $0.isButton(withExactText: searchText)
+        })
+
+        return findInSubviews(satisfyingCondition: condition) as? UIButton
     }
 
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
         return findInSubviews(
-            satisfyingCondition: { $0.isButton(withImage: searchImage) }
+            satisfyingCondition: {
+                $0.isButton(withImage: searchImage)
+            }
         ) as? UIButton
     }
 
@@ -46,32 +50,74 @@ extension UIView {
     }
 }
 
-fileprivate extension UIView {
-    func isButton(withExactText searchText: String) -> Bool {
-        guard let button = self as? UIButton else {
+enum UIButtonEvaluationFailure {
+    case wrongType
+    case noTitleText(searchText: String)
+    case matchFailed(searchText: String, actualText: String)
+}
+
+enum EvaluationResult {
+    case success
+    case failure(_ type: UIButtonEvaluationFailure)
+
+    func debug() -> EvaluationResult {
+        let header = "**** Succinct: "
+
+        var detail = ""
+
+        switch self {
+        case .failure(let evaluationFailure):
+            switch evaluationFailure {
+
+            case .wrongType:
+                detail = "Wrong type found"
+
+            case .noTitleText(let searchText):
+                detail = "findButton(withExactText: '\(searchText)')" +
+                    " failed to match for button with title:" +
+                    " nil (no title text set for this button)"
+
+            case .matchFailed(let searchText, let actualText):
+                detail = "findButton(withExactText: '\(searchText)')" +
+                    " failed to match for button with title: '\(actualText)'"
+
+            }
+
+        default:
+            detail = ""
+        }
+
+        let message = header + detail
+        Succinct.log.debug(message)
+
+        return self
+    }
+
+    func booleanResult() -> Bool {
+        switch self {
+        case .success:
+            return true
+        default:
             return false
+        }
+    }
+}
+
+fileprivate extension UIView {
+    func isButton(withExactText searchText: String) -> EvaluationResult {
+        guard let button = self as? UIButton else {
+            return .failure(.wrongType)
         }
 
         guard let buttonText = button.title(for: .normal) else {
-            let message = "**** Succinct: " +
-                "findButton(withExactText: '\(searchText)')" +
-                " failed to match for button with title:" +
-            " nil (no title text set for this button)"
-            Succinct.log.debug(message)
-
-            return false
+            return .failure(.noTitleText(searchText: searchText))
         }
 
         guard buttonText == searchText else {
-            let message = "**** Succinct: " +
-                "findButton(withExactText: '\(searchText)')" +
-            " failed to match for button with title: '\(buttonText)'"
-            Succinct.log.debug(message)
-
-            return false
+            return .failure(.matchFailed(searchText: searchText, actualText: buttonText))
         }
 
-        return true
+        return .success
     }
 
     func isButton(withImage searchImage: UIImage) -> Bool {
