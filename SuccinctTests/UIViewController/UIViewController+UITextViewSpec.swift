@@ -248,13 +248,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                             .withAttributedText(
                                 NSMutableAttributedStringBuilder(withText: "経費が結構かかりそう")
                                     .withAttributes(
-                                        [
-                                            NSAttributedString.Key.link: "url",
-                                            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                                            NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
-                                            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
-                                            NSAttributedString.Key.underlineColor: UIColor.lightGray
-                                        ],
+                                        AttributedStringKeyValueFixture.tappableJapaneseText,
                                         forString: "かかり"
                                 )
                                 .build()
@@ -264,14 +258,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                     .build()
 
 
-                let expectedAttributes = [
-                    NSAttributedString.Key.link: "url",
-                    NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                    NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
-                    NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
-                    NSAttributedString.Key.underlineColor: UIColor.lightGray
-                    ] as [NSAttributedString.Key : Any]
-
+                let expectedAttributes = AttributedStringKeyValueFixture.tappableJapaneseText
                 expect(viewController.findTextView(withExactText: "かかり", matchingAttributes: expectedAttributes)).toNot(beNil())
             }
         }
@@ -284,13 +271,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                             .withAttributedText(
                                 NSMutableAttributedStringBuilder(withText: "経費が結構かかりそう")
                                     .withAttributes(
-                                        [
-                                            NSAttributedString.Key.link: "url",
-                                            NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                                            NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
-                                            NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
-                                            NSAttributedString.Key.underlineColor: UIColor.lightGray
-                                        ],
+                                        AttributedStringKeyValueFixture.tappableJapaneseText,
                                         forString: "かかり"
                                     )
                                     .build()
@@ -300,14 +281,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                     .build()
 
 
-                let expectedAttributes = [
-                    NSAttributedString.Key.link: "url",
-                    NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                    NSAttributedString.Key.font: UIFont(name: "HiraginoSans-W6", size: 16)!,
-                    NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
-                    NSAttributedString.Key.underlineColor: UIColor.lightGray
-                    ] as [NSAttributedString.Key : Any]
-
+                let expectedAttributes = AttributedStringKeyValueFixture.tappableJapaneseText
                 expect(viewController.hasTextView(withExactText: "かかり", matchingAttributes: expectedAttributes)).to(beTrue())
             }
         }

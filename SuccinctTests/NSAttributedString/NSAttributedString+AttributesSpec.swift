@@ -7,7 +7,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
         describe("finding attributes for an exact substring") {
             context("when there is a single attribute") {
                 it("can find text with a foregroundColor") {
-                    let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
+                    let redForegroundColor = AttributedStringKeyValueFixture.redForegroundColorAttributes
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
                         .withAttributes(redForegroundColor, forString: "Foreground")
                         .build()
@@ -17,7 +17,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                 }
 
                 it("can find text with a backgroundColor") {
-                    let redBackgroundColor = [NSAttributedString.Key.backgroundColor : UIColor.red]
+                    let redBackgroundColor = AttributedStringKeyValueFixture.redBackgroundColorAttributes
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
                         .withAttributes(redBackgroundColor, forString: "Background")
                         .build()
@@ -27,7 +27,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                 }
 
                 it("can find text with a specific font") {
-                    let smallFont = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)]
+                    let smallFont = AttributedStringKeyValueFixture.smallFontAttributes
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Small and Large")
                         .withAttributes(smallFont, forString: "Small")
                         .build()
@@ -37,10 +37,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                 }
 
                 it("can find text that is underlined") {
-                    let smallFontAndRedBackground = [
-                        NSAttributedString.Key.underlineStyle : NSUnderlineStyle.patternDash,
-                        NSAttributedString.Key.underlineColor : UIColor.red
-                        ] as [NSAttributedString.Key : Any]
+                    let smallFontAndRedBackground = AttributedStringKeyValueFixture.smallFontAndRedBackground
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
                         .withAttributes(smallFontAndRedBackground, forString: "Underlined")
                         .build()
@@ -50,24 +47,18 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                 }
 
                 it("can find text that is underlined with a custom underline") {
-                    let CustomUnderlineStyle = 0x11
-                    let smallFontAndRedBackground = [
-                        NSAttributedString.Key.underlineStyle : CustomUnderlineStyle,
-                        NSAttributedString.Key.underlineColor : UIColor.red
-                        ] as [NSAttributedString.Key : Any]
+                    let smallFontAndCustomUnderline = AttributedStringKeyValueFixture.smallFontAndCustomUnderline
 
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
-                        .withAttributes(smallFontAndRedBackground, forString: "Underlined")
+                        .withAttributes(smallFontAndCustomUnderline, forString: "Underlined")
                         .build()
 
 
-                    expect(attributedString.containsExactString("Underlined", withAttributes: smallFontAndRedBackground)).to(beTrue())
+                    expect(attributedString.containsExactString("Underlined", withAttributes: smallFontAndCustomUnderline)).to(beTrue())
                 }
 
                 it("can find text that is is a link") {
-                    let linkAttributes = [
-                        NSAttributedString.Key.link : "url"
-                        ] as [NSAttributedString.Key : Any]
+                    let linkAttributes = AttributedStringKeyValueFixture.linkAttributes
 
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Link Text")
                         .withAttributes(linkAttributes, forString: "Link")
@@ -80,12 +71,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
 
             context("when there are multiple attributes") {
                 it("can find both attributes") {
-                    let tappableText = [
-                        NSAttributedString.Key.foregroundColor: UIColor.lightGray,
-                        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .bold),
-                        NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
-                        NSAttributedString.Key.underlineColor: UIColor.lightGray
-                    ] as [NSAttributedString.Key : Any]
+                    let tappableText = AttributedStringKeyValueFixture.tappableTextAttributes
 
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Tappable Text")
                         .withAttributes(tappableText, forString: "Tappable")
@@ -98,7 +84,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
 
             context("when there are no attributes") {
                 it("finds nothing") {
-                    let redBackgroundColor = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)]
+                    let redBackgroundColor = AttributedStringKeyValueFixture.redBackgroundColorAttributes
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Nothing")
                         .build()
 
@@ -109,13 +95,8 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
 
             context("when there are multiple instances of the search string") {
                 it("finds only the first instance") {
-                    let redForegroundColor = [
-                        NSAttributedString.Key.foregroundColor: UIColor.red,
-                        ] as [NSAttributedString.Key : Any]
-
-                    let greenForegroundColor = [
-                        NSAttributedString.Key.foregroundColor: UIColor.green,
-                        ] as [NSAttributedString.Key : Any]
+                    let redForegroundColor = AttributedStringKeyValueFixture.redForegroundColorAttributes
+                    let greenForegroundColor = AttributedStringKeyValueFixture.greenForegroundColorAttributes
 
                     let firstSentanceRange = NSRange(location: 1, length: 9)
                     let secondSentanceRange = NSRange(location: 24, length: 9)
@@ -139,7 +120,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
 
             context("when the search string does not exist in the attributed string") {
                 it("cannot find the string") {
-                    let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
+                    let redForegroundColor = AttributedStringKeyValueFixture.redForegroundColorAttributes
                     let attributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
                         .withAttributes(redForegroundColor, forString: "Foreground")
                         .build()
