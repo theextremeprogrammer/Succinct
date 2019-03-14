@@ -5,7 +5,6 @@ import Succinct
 final class NSAttributedString_AttributeSpec: QuickSpec {
     override func spec() {
         describe("finding attributes for an exact substring") {
-
             context("when there is a single attribute") {
                 it("can find text with a foregroundColor") {
                     let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
@@ -21,10 +20,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                 it("can find text with a backgroundColor") {
                     let redBackgroundColor = [NSAttributedString.Key.backgroundColor : UIColor.red]
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
-                        .withAttributes(
-                            redBackgroundColor,
-                            range: NSRange(location: 15, length: 10)
-                        )
+                        .withAttributes(redBackgroundColor, forString: "Background")
                         .build()
 
 
@@ -35,10 +31,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                 it("can find text with a specific font") {
                     let smallFont = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)]
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Small and Large")
-                        .withAttributes(
-                            smallFont,
-                            range: NSRange(location: 0, length: 5)
-                        )
+                        .withAttributes(smallFont, forString: "Small")
                         .build()
 
 
@@ -51,12 +44,8 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         NSAttributedString.Key.underlineStyle : NSUnderlineStyle.patternDash,
                         NSAttributedString.Key.underlineColor : UIColor.red
                         ] as [NSAttributedString.Key : Any]
-
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
-                        .withAttributes(
-                            smallFontAndRedBackground,
-                            range: NSRange(location: 0, length: 10)
-                        )
+                        .withAttributes(smallFontAndRedBackground, forString: "Underlined")
                         .build()
 
 
@@ -72,10 +61,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         ] as [NSAttributedString.Key : Any]
 
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
-                        .withAttributes(
-                            smallFontAndRedBackground,
-                            range: NSRange(location: 0, length: 10)
-                        )
+                        .withAttributes(smallFontAndRedBackground, forString: "Underlined")
                         .build()
 
 
@@ -89,10 +75,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         ] as [NSAttributedString.Key : Any]
 
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Link Text")
-                        .withAttributes(
-                            linkAttributes,
-                            range: NSRange(location: 0, length: 4)
-                        )
+                        .withAttributes(linkAttributes, forString: "Link")
                         .build()
 
 
@@ -111,10 +94,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                     ] as [NSAttributedString.Key : Any]
 
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Tappable Text")
-                        .withAttributes(
-                            tappableText,
-                            range: NSRange(location: 0, length: 8)
-                        )
+                        .withAttributes(tappableText, forString: "Tappable")
                         .build()
 
 
@@ -126,7 +106,8 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
             context("when there are no attributes") {
                 it("finds nothing") {
                     let redBackgroundColor = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)]
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Nothing").build()
+                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Nothing")
+                        .build()
 
 
                     let attributedString = mutableAttributedString.copy() as! NSAttributedString
@@ -144,14 +125,17 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         NSAttributedString.Key.foregroundColor: UIColor.green,
                         ] as [NSAttributedString.Key : Any]
 
+                    let firstSentanceRange = NSRange(location: 1, length: 9)
+                    let secondSentanceRange = NSRange(location: 24, length: 9)
+
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "A sentance with the word sentance twice")
                         .withAttributes(
                             redForegroundColor,
-                            range: NSRange(location: 1, length: 9)
+                            range: firstSentanceRange
                         )
                         .withAttributes(
                             greenForegroundColor,
-                            range: NSRange(location: 24, length: 9)
+                            range: secondSentanceRange
                         )
                         .build()
 
@@ -166,10 +150,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                 it("cannot find the string") {
                     let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
                     let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
-                        .withAttributes(
-                            redForegroundColor,
-                            range: NSRange(location: 0, length: 10)
-                        )
+                        .withAttributes(redForegroundColor, forString: "Foreground")
                         .build()
 
 
