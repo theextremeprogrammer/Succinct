@@ -1,6 +1,6 @@
 import Foundation
 
-struct NSMutableAttributedStringBuilder {
+struct NSAttributedStringBuilder {
     private var attributedString: NSMutableAttributedString
 
     init(withText text: String) {
@@ -10,7 +10,7 @@ struct NSMutableAttributedStringBuilder {
     func withAttributes(
         _ attributes: [NSAttributedString.Key : Any],
         range: NSRange
-    ) -> NSMutableAttributedStringBuilder {
+    ) -> NSAttributedStringBuilder {
         attributedString.addAttributes(attributes, range: range)
         return self
     }
@@ -18,7 +18,7 @@ struct NSMutableAttributedStringBuilder {
     func withAttributes(
         _ attributes: [NSAttributedString.Key : Any],
         forString rangeSearchString: String
-    ) -> NSMutableAttributedStringBuilder {
+    ) -> NSAttributedStringBuilder {
         if let range = attributedString.string.range(of: rangeSearchString) {
             let nsRange = NSRange(range, in: attributedString.string)
             attributedString.addAttributes(attributes, range: nsRange)

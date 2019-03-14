@@ -246,7 +246,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                     .withSubview(
                         UITextViewBuilder()
                             .withAttributedText(
-                                NSMutableAttributedStringBuilder(withText: "経費が結構かかりそう")
+                                NSAttributedStringBuilder(withText: "経費が結構かかりそう")
                                     .withAttributes(
                                         AttributedStringKeyValueFixture.tappableJapaneseText,
                                         forString: "かかり"
@@ -269,7 +269,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                     .withSubview(
                         UITextViewBuilder()
                             .withAttributedText(
-                                NSMutableAttributedStringBuilder(withText: "経費が結構かかりそう")
+                                NSAttributedStringBuilder(withText: "経費が結構かかりそう")
                                     .withAttributes(
                                         AttributedStringKeyValueFixture.tappableJapaneseText,
                                         forString: "かかり"
