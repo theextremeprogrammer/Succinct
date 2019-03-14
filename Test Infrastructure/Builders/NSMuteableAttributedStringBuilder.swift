@@ -27,7 +27,7 @@ struct NSMutableAttributedStringBuilder {
         return self
     }
 
-    func build() -> NSMutableAttributedString {
-        return attributedString
+    func build() -> NSAttributedString {
+        return attributedString.copy() as! NSAttributedString
     }
 }

@@ -255,7 +255,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                                             NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
                                             NSAttributedString.Key.underlineColor: UIColor.lightGray
                                         ],
-                                        range: NSRange(location: 5, length: 3)
+                                        forString: "かかり"
                                 )
                                 .build()
                             )
@@ -291,7 +291,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
                                             NSAttributedString.Key.underlineStyle: NSUnderlineStyle.patternDash,
                                             NSAttributedString.Key.underlineColor: UIColor.lightGray
                                         ],
-                                        range: NSRange(location: 5, length: 3)
+                                        forString: "かかり"
                                     )
                                     .build()
                             )

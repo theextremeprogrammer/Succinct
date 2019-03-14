@@ -8,34 +8,31 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
             context("when there is a single attribute") {
                 it("can find text with a foregroundColor") {
                     let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
                         .withAttributes(redForegroundColor, forString: "Foreground")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Foreground", withAttributes: redForegroundColor)).to(beTrue())
                 }
 
                 it("can find text with a backgroundColor") {
                     let redBackgroundColor = [NSAttributedString.Key.backgroundColor : UIColor.red]
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
                         .withAttributes(redBackgroundColor, forString: "Background")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Background", withAttributes: redBackgroundColor)).to(beTrue())
                 }
 
                 it("can find text with a specific font") {
                     let smallFont = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)]
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Small and Large")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Small and Large")
                         .withAttributes(smallFont, forString: "Small")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Small", withAttributes: smallFont)).to(beTrue())
                 }
 
@@ -44,12 +41,11 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         NSAttributedString.Key.underlineStyle : NSUnderlineStyle.patternDash,
                         NSAttributedString.Key.underlineColor : UIColor.red
                         ] as [NSAttributedString.Key : Any]
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
                         .withAttributes(smallFontAndRedBackground, forString: "Underlined")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Underlined", withAttributes: smallFontAndRedBackground)).to(beTrue())
                 }
 
@@ -60,12 +56,11 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         NSAttributedString.Key.underlineColor : UIColor.red
                         ] as [NSAttributedString.Key : Any]
 
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Underlined Text")
                         .withAttributes(smallFontAndRedBackground, forString: "Underlined")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Underlined", withAttributes: smallFontAndRedBackground)).to(beTrue())
                 }
 
@@ -74,12 +69,11 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         NSAttributedString.Key.link : "url"
                         ] as [NSAttributedString.Key : Any]
 
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Link Text")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Link Text")
                         .withAttributes(linkAttributes, forString: "Link")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Link", withAttributes: linkAttributes)).to(beTrue())
                 }
             }
@@ -93,12 +87,11 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         NSAttributedString.Key.underlineColor: UIColor.lightGray
                     ] as [NSAttributedString.Key : Any]
 
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Tappable Text")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Tappable Text")
                         .withAttributes(tappableText, forString: "Tappable")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Tappable", withAttributes: tappableText)).to(beTrue())
                 }
             }
@@ -106,11 +99,10 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
             context("when there are no attributes") {
                 it("finds nothing") {
                     let redBackgroundColor = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 10)]
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Nothing")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Nothing")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Nothing", withAttributes: redBackgroundColor)).to(beFalse())
                 }
             }
@@ -128,7 +120,7 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                     let firstSentanceRange = NSRange(location: 1, length: 9)
                     let secondSentanceRange = NSRange(location: 24, length: 9)
 
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "A sentance with the word sentance twice")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "A sentance with the word sentance twice")
                         .withAttributes(
                             redForegroundColor,
                             range: firstSentanceRange
@@ -140,7 +132,6 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("sentance", withAttributes: redForegroundColor)).to(beTrue())
                     expect(attributedString.containsExactString("sentance", withAttributes: greenForegroundColor)).to(beFalse())
                 }
@@ -149,12 +140,11 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
             context("when the search string does not exist in the attributed string") {
                 it("cannot find the string") {
                     let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
-                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
+                    let attributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
                         .withAttributes(redForegroundColor, forString: "Foreground")
                         .build()
 
 
-                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
                     expect(attributedString.containsExactString("Invalid", withAttributes: redForegroundColor)).to(beFalse())
                 }
             }
