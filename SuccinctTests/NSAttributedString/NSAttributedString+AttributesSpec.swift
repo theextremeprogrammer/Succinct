@@ -161,6 +161,22 @@ final class NSAttributedString_AttributeSpec: QuickSpec {
                     expect(attributedString.containsExactString("sentance", withAttributes: greenForegroundColor)).to(beFalse())
                 }
             }
+
+            context("when the search string does not exist in the attributed string") {
+                it("cannot find the string") {
+                    let redForegroundColor = [NSAttributedString.Key.foregroundColor : UIColor.red]
+                    let mutableAttributedString = NSMutableAttributedStringBuilder(withText: "Foreground and Background")
+                        .withAttributes(
+                            redForegroundColor,
+                            range: NSRange(location: 0, length: 10)
+                        )
+                        .build()
+
+
+                    let attributedString = mutableAttributedString.copy() as! NSAttributedString
+                    expect(attributedString.containsExactString("Invalid", withAttributes: redForegroundColor)).to(beFalse())
+                }
+            }
         }
     }
 }
