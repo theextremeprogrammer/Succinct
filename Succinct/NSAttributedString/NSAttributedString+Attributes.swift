@@ -1,8 +1,13 @@
 extension NSAttributedString {
     public func containsExactString(_ searchString: String, withAttributes searchAttributes: [NSAttributedString.Key : Any]) -> Bool {
-        let matchingAttributes = findAttributeKeysMatching(searchAttributes, atSubString: searchString)
+        guard let matchingAttributes = findAttributeKeysMatching(searchAttributes, atSubstring: searchString) else { return false }
 
         return matchingAttributes.count == searchAttributes.count
+    }
+
+    fileprivate func range(ofSubstring substring: String) -> NSRange? {
+        guard let range = string.range(of: substring) else { return nil }
+        return NSRange(range, in: string)
     }
 }
 
@@ -10,12 +15,12 @@ extension NSAttributedString {
 fileprivate extension NSAttributedString {
     func findAttributeKeysMatching(
         _ searchAttributes: [NSAttributedString.Key : Any],
-        atSubString substring: String
-    ) -> [[NSAttributedString.Key : NSRange]] {
+        atSubstring substring: String
+    ) -> [[NSAttributedString.Key : NSRange]]? {
         var foundAttributeKeys = [[NSAttributedString.Key : NSRange]]()
-        let subStringRange = NSRange(string.range(of: substring)!, in: string)
+        guard let rangeOfSubstring = range(ofSubstring: substring) else { return nil }
 
-        enumerateAttributes(in: subStringRange) { (attributes, range, stop) in
+        enumerateAttributes(in: rangeOfSubstring) { (attributes, range, stop) in
             for attribute in attributes {
                 let searchValue = searchAttributes[attribute.key]
                 let value = attribute.value
