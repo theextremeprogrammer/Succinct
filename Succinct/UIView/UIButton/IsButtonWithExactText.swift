@@ -14,7 +14,23 @@ internal extension UIView {
             return .failure(IsButtonWithExactTextFailure.matchFailed(searchText: searchText, actualText: buttonText))
         }
 
-        return .success
+        return .success(UIViewSuccess.found)
+    }
+}
+
+internal enum UIViewSuccess: SuccessResult {
+    case found
+
+    var evaluatedMethod: String {
+        get {
+            return ""
+        }
+    }
+
+    var successMessage: String {
+        get {
+            return ""
+        }
     }
 }
 
@@ -39,11 +55,11 @@ internal enum IsButtonWithExactTextFailure: FailureResult {
             case .noTitleText(let searchText):
                 return "\(evaluatedMethod) '\(searchText)')" +
                     " failed to match for button with title:" +
-                " nil (no title text set for this button)"
+                    " nil (no title text set for this button)"
 
             case .matchFailed(let searchText, let actualText):
                 return "\(evaluatedMethod) '\(searchText)')" +
-                " failed to match for button with title: '\(actualText)'"
+                    " failed to match for button with title: '\(actualText)'"
             }
         }
     }

@@ -765,9 +765,9 @@
 		B867A2F1223BE66A009724BE /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */,
 				B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */,
 				B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */,
+				522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1124,6 +1124,8 @@
 			files = (
 				B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */,
 				B867A2EE223BE5B5009724BE /* FailureResult.swift in Sources */,
+				B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */,
+				B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */,
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
 				B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */,
@@ -1168,8 +1170,6 @@
 				B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */,
 				B836272F21AC1DBB008264C5 /* UIViewController+UISwitch.swift in Sources */,
 				B89E2D14218BFA50004FE2A6 /* UIViewController+UITableView.swift in Sources */,
-				B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */,
-				B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */,
 				B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */,
 				B1FFB51A21CF5269007AE34B /* UIViewController+UITextView.swift in Sources */,
 				B89E2D12218BFA48004FE2A6 /* UIViewController+UIView.swift in Sources */,

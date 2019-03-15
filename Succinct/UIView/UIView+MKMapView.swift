@@ -16,10 +16,26 @@ fileprivate extension UIView {
             return .failure(FindMapViewFailure.wrongType)
         }
 
-        let message = "**** Succinct: findMapView() Found MKMapView: \(self.memoryAddress)"
-        Succinct.log.debug(message)
+        return .success(FindMapViewSuccess.found(memoryAddress: "\(self.memoryAddress)"))
+    }
+}
 
-        return .success
+internal enum FindMapViewSuccess: SuccessResult {
+    case found(memoryAddress: String)
+
+    var evaluatedMethod: String {
+        get {
+            return "findMapView()"
+        }
+    }
+
+    var successMessage: String {
+        get {
+            switch self {
+            case .found(let memoryAddress):
+                return "\(evaluatedMethod) Found MKMapView: \(memoryAddress)"
+            }
+        }
     }
 }
 
