@@ -102,6 +102,8 @@
 		B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */; };
 		B867A2EE223BE5B5009724BE /* FailureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2ED223BE5B5009724BE /* FailureResult.swift */; };
 		B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2EF223BE5CF009724BE /* EvaluationResult.swift */; };
+		B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */; };
+		B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */; };
 		B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */; };
 		B88E39D121DDF8AB00A3B82B /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		B88E39D521DDFE9200A3B82B /* CustomUIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */; };
@@ -310,6 +312,8 @@
 		B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+hasButtonSpec.swift"; sourceTree = "<group>"; };
 		B867A2ED223BE5B5009724BE /* FailureResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureResult.swift; sourceTree = "<group>"; };
 		B867A2EF223BE5CF009724BE /* EvaluationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResult.swift; sourceTree = "<group>"; };
+		B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithExactText.swift; sourceTree = "<group>"; };
+		B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithImage.swift; sourceTree = "<group>"; };
 		B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+MemoryAddress.swift"; sourceTree = "<group>"; };
 		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		B89A3EB521A2AFD2008B15C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -762,6 +766,8 @@
 			isa = PBXGroup;
 			children = (
 				522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */,
+				B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */,
+				B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1162,6 +1168,8 @@
 				B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */,
 				B836272F21AC1DBB008264C5 /* UIViewController+UISwitch.swift in Sources */,
 				B89E2D14218BFA50004FE2A6 /* UIViewController+UITableView.swift in Sources */,
+				B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */,
+				B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */,
 				B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */,
 				B1FFB51A21CF5269007AE34B /* UIViewController+UITextView.swift in Sources */,
 				B89E2D12218BFA48004FE2A6 /* UIViewController+UIView.swift in Sources */,
