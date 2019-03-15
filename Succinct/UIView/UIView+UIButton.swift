@@ -50,44 +50,48 @@ extension UIView {
     }
 }
 
-enum UIButtonEvaluationFailure {
+protocol FailureResult {
+    var evaluatedMethod: String { get }
+    var failureMessage: String { get }
+}
+
+enum IsButtonWithExactTextFailure: FailureResult {
     case wrongType
     case noTitleText(searchText: String)
     case matchFailed(searchText: String, actualText: String)
-}
 
-enum EvaluationResult {
-    case success
-    case failure(_ type: UIButtonEvaluationFailure)
+    var evaluatedMethod: String {
+        get {
+            return "findButton(withExactText:"
+        }
+    }
 
-    func debug() -> EvaluationResult {
-        let header = "**** Succinct: "
-
-        var detail = ""
-
-        switch self {
-        case .failure(let evaluationFailure):
-            switch evaluationFailure {
+    var failureMessage: String {
+        get {
+            switch self {
 
             case .wrongType:
-                detail = "Wrong type found"
+                return "Wrong type found"
 
             case .noTitleText(let searchText):
-                detail = "findButton(withExactText: '\(searchText)')" +
+                return "\(evaluatedMethod) '\(searchText)')" +
                     " failed to match for button with title:" +
                     " nil (no title text set for this button)"
 
             case .matchFailed(let searchText, let actualText):
-                detail = "findButton(withExactText: '\(searchText)')" +
+                return "\(evaluatedMethod) '\(searchText)')" +
                     " failed to match for button with title: '\(actualText)'"
-
             }
-
-        default:
-            detail = ""
         }
+    }
+}
 
-        let message = header + detail
+enum EvaluationResult {
+    case success
+    case failure(_ result: FailureResult)
+
+    func debug() -> EvaluationResult {
+        let message = "**** Succinct: " + messageDetail
         Succinct.log.debug(message)
 
         return self
@@ -101,20 +105,32 @@ enum EvaluationResult {
             return false
         }
     }
+
+    private var messageDetail: String {
+        get {
+            switch self {
+            case .success:
+                return "Successful"
+
+            case .failure(let evaluationFailure):
+                return evaluationFailure.failureMessage
+            }
+        }
+    }
 }
 
 fileprivate extension UIView {
     func isButton(withExactText searchText: String) -> EvaluationResult {
         guard let button = self as? UIButton else {
-            return .failure(.wrongType)
+            return .failure(IsButtonWithExactTextFailure.wrongType)
         }
 
         guard let buttonText = button.title(for: .normal) else {
-            return .failure(.noTitleText(searchText: searchText))
+            return .failure(IsButtonWithExactTextFailure.noTitleText(searchText: searchText))
         }
 
         guard buttonText == searchText else {
-            return .failure(.matchFailed(searchText: searchText, actualText: buttonText))
+            return .failure(IsButtonWithExactTextFailure.matchFailed(searchText: searchText, actualText: buttonText))
         }
 
         return .success
