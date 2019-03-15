@@ -104,6 +104,7 @@
 		B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2EF223BE5CF009724BE /* EvaluationResult.swift */; };
 		B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */; };
 		B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */; };
+		B867A2F8223BED62009724BE /* SuccinctCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F7223BED62009724BE /* SuccinctCondition.swift */; };
 		B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */; };
 		B88E39D121DDF8AB00A3B82B /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		B88E39D521DDFE9200A3B82B /* CustomUIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */; };
@@ -314,6 +315,7 @@
 		B867A2EF223BE5CF009724BE /* EvaluationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResult.swift; sourceTree = "<group>"; };
 		B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithExactText.swift; sourceTree = "<group>"; };
 		B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithImage.swift; sourceTree = "<group>"; };
+		B867A2F7223BED62009724BE /* SuccinctCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccinctCondition.swift; sourceTree = "<group>"; };
 		B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+MemoryAddress.swift"; sourceTree = "<group>"; };
 		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		B89A3EB521A2AFD2008B15C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 		522D998B1FAD2A9C009BB1B9 /* Succinct */ = {
 			isa = PBXGroup;
 			children = (
+				B867A2F6223BED44009724BE /* Condition */,
 				B8BC557A21B2814B00A1CD8C /* Configuration */,
 				B867A2EC223BE5A5009724BE /* DebugLog */,
 				B86F2AEC2218D5B900C72FEC /* Memory */,
@@ -770,6 +773,14 @@
 				522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */,
 			);
 			path = UIButton;
+			sourceTree = "<group>";
+		};
+		B867A2F6223BED44009724BE /* Condition */ = {
+			isa = PBXGroup;
+			children = (
+				B867A2F7223BED62009724BE /* SuccinctCondition.swift */,
+			);
+			path = Condition;
 			sourceTree = "<group>";
 		};
 		B86F2AEC2218D5B900C72FEC /* Memory */ = {
@@ -1127,6 +1138,7 @@
 				B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */,
 				B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */,
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
+				B867A2F8223BED62009724BE /* SuccinctCondition.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
 				B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */,
 				B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */,

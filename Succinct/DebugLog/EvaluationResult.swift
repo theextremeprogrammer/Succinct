@@ -2,7 +2,7 @@ enum EvaluationResult {
     case success(_ result: SuccessResult)
     case failure(_ result: FailureResult)
 
-    func debug() -> EvaluationResult {
+    func tryDebug() -> EvaluationResult {
         let message = "**** Succinct: " + messageDetail
         Succinct.log.debug(message)
 

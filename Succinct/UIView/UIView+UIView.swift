@@ -1,19 +1,5 @@
 import UIKit
 
-public struct SuccinctCondition {
-    private let condition: (UIView) -> EvaluationResult
-
-    init(_ condition: @escaping (UIView) -> EvaluationResult) {
-        self.condition = condition
-    }
-
-    func evaluate(_ view: UIView) -> Bool {
-        return condition(view)
-            .debug()
-            .booleanResult()
-    }
-}
-
 extension UIView {
     public func findInSubviews(
         satisfyingCondition satisfiesCondition: (UIView) -> Bool,
