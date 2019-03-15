@@ -50,9 +50,34 @@ extension UIView {
     }
 }
 
-protocol FailureResult {
-    var evaluatedMethod: String { get }
-    var failureMessage: String { get }
+fileprivate extension UIView {
+    func isButton(withExactText searchText: String) -> EvaluationResult {
+        guard let button = self as? UIButton else {
+            return .failure(IsButtonWithExactTextFailure.wrongType)
+        }
+
+        guard let buttonText = button.title(for: .normal) else {
+            return .failure(IsButtonWithExactTextFailure.noTitleText(searchText: searchText))
+        }
+
+        guard buttonText == searchText else {
+            return .failure(IsButtonWithExactTextFailure.matchFailed(searchText: searchText, actualText: buttonText))
+        }
+
+        return .success
+    }
+
+    func isButton(withImage searchImage: UIImage) -> Bool {
+        guard let button = self as? UIButton else {
+            return false
+        }
+
+        guard let image = button.image(for: .normal) else {
+            return false
+        }
+
+        return image == searchImage
+    }
 }
 
 enum IsButtonWithExactTextFailure: FailureResult {
@@ -83,68 +108,5 @@ enum IsButtonWithExactTextFailure: FailureResult {
                     " failed to match for button with title: '\(actualText)'"
             }
         }
-    }
-}
-
-enum EvaluationResult {
-    case success
-    case failure(_ result: FailureResult)
-
-    func debug() -> EvaluationResult {
-        let message = "**** Succinct: " + messageDetail
-        Succinct.log.debug(message)
-
-        return self
-    }
-
-    func booleanResult() -> Bool {
-        switch self {
-        case .success:
-            return true
-        default:
-            return false
-        }
-    }
-
-    private var messageDetail: String {
-        get {
-            switch self {
-            case .success:
-                return "Successful"
-
-            case .failure(let evaluationFailure):
-                return evaluationFailure.failureMessage
-            }
-        }
-    }
-}
-
-fileprivate extension UIView {
-    func isButton(withExactText searchText: String) -> EvaluationResult {
-        guard let button = self as? UIButton else {
-            return .failure(IsButtonWithExactTextFailure.wrongType)
-        }
-
-        guard let buttonText = button.title(for: .normal) else {
-            return .failure(IsButtonWithExactTextFailure.noTitleText(searchText: searchText))
-        }
-
-        guard buttonText == searchText else {
-            return .failure(IsButtonWithExactTextFailure.matchFailed(searchText: searchText, actualText: buttonText))
-        }
-
-        return .success
-    }
-
-    func isButton(withImage searchImage: UIImage) -> Bool {
-        guard let button = self as? UIButton else {
-            return false
-        }
-
-        guard let image = button.image(for: .normal) else {
-            return false
-        }
-
-        return image == searchImage
     }
 }

@@ -100,6 +100,8 @@
 		B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */; };
 		B84DB1C521CB7E570041E9D2 /* UIViewController+Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DB1C421CB7E570041E9D2 /* UIViewController+Debugging.swift */; };
 		B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */; };
+		B867A2EE223BE5B5009724BE /* FailureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2ED223BE5B5009724BE /* FailureResult.swift */; };
+		B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2EF223BE5CF009724BE /* EvaluationResult.swift */; };
 		B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */; };
 		B88E39D121DDF8AB00A3B82B /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		B88E39D521DDFE9200A3B82B /* CustomUIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */; };
@@ -306,6 +308,8 @@
 		B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Tap.swift"; sourceTree = "<group>"; };
 		B84DB1C421CB7E570041E9D2 /* UIViewController+Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Debugging.swift"; sourceTree = "<group>"; };
 		B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+hasButtonSpec.swift"; sourceTree = "<group>"; };
+		B867A2ED223BE5B5009724BE /* FailureResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureResult.swift; sourceTree = "<group>"; };
+		B867A2EF223BE5CF009724BE /* EvaluationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResult.swift; sourceTree = "<group>"; };
 		B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+MemoryAddress.swift"; sourceTree = "<group>"; };
 		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		B89A3EB521A2AFD2008B15C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -435,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				B8BC557A21B2814B00A1CD8C /* Configuration */,
+				B867A2EC223BE5A5009724BE /* DebugLog */,
 				B86F2AEC2218D5B900C72FEC /* Memory */,
 				AE3CCDCC21F589F600A3638D /* MKMapView */,
 				B183708821D327AC0031F5AA /* NSAttributedString */,
@@ -479,8 +484,8 @@
 		522D99A31FAD2ADA009BB1B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				B867A2F1223BE66A009724BE /* UIButton */,
 				AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */,
-				522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */,
 				8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */,
 				3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */,
 				3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */,
@@ -742,6 +747,23 @@
 				B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */,
 			);
 			path = UISwitch;
+			sourceTree = "<group>";
+		};
+		B867A2EC223BE5A5009724BE /* DebugLog */ = {
+			isa = PBXGroup;
+			children = (
+				B867A2EF223BE5CF009724BE /* EvaluationResult.swift */,
+				B867A2ED223BE5B5009724BE /* FailureResult.swift */,
+			);
+			path = DebugLog;
+			sourceTree = "<group>";
+		};
+		B867A2F1223BE66A009724BE /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		B86F2AEC2218D5B900C72FEC /* Memory */ = {
@@ -1094,6 +1116,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */,
+				B867A2EE223BE5B5009724BE /* FailureResult.swift in Sources */,
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
 				B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */,
