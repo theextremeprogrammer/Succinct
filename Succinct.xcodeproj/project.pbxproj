@@ -105,6 +105,8 @@
 		B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */; };
 		B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */; };
 		B867A2F8223BED62009724BE /* SuccinctCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F7223BED62009724BE /* SuccinctCondition.swift */; };
+		B867A2FB223C7DD7009724BE /* IsLabelWithExactText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2FA223C7DD7009724BE /* IsLabelWithExactText.swift */; };
+		B867A2FD223C7DE4009724BE /* IsLabelContainingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2FC223C7DE4009724BE /* IsLabelContainingText.swift */; };
 		B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */; };
 		B88E39D121DDF8AB00A3B82B /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		B88E39D521DDFE9200A3B82B /* CustomUIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B812408621CB6EB100ADBDCC /* CustomUIViewBuilder.swift */; };
@@ -316,6 +318,8 @@
 		B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithExactText.swift; sourceTree = "<group>"; };
 		B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithImage.swift; sourceTree = "<group>"; };
 		B867A2F7223BED62009724BE /* SuccinctCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccinctCondition.swift; sourceTree = "<group>"; };
+		B867A2FA223C7DD7009724BE /* IsLabelWithExactText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsLabelWithExactText.swift; sourceTree = "<group>"; };
+		B867A2FC223C7DE4009724BE /* IsLabelContainingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsLabelContainingText.swift; sourceTree = "<group>"; };
 		B86F2AED2218D5DB00C72FEC /* NSObject+MemoryAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+MemoryAddress.swift"; sourceTree = "<group>"; };
 		B88F5E7121A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		B89A3EB521A2AFD2008B15C0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -787,6 +791,8 @@
 			isa = PBXGroup;
 			children = (
 				3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */,
+				B867A2FA223C7DD7009724BE /* IsLabelWithExactText.swift */,
+				B867A2FC223C7DE4009724BE /* IsLabelContainingText.swift */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -1172,6 +1178,7 @@
 				3B14EFF3D19AAA54581718B8 /* UIView+UIPickerView.swift in Sources */,
 				52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */,
 				3B14EE0A47F5AE484EE47FA2 /* UIView+UISlider.swift in Sources */,
+				B867A2FB223C7DD7009724BE /* IsLabelWithExactText.swift in Sources */,
 				3B14EE3C4841A6BA7F54906A /* UIView+UIStepper.swift in Sources */,
 				B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */,
 				B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */,
@@ -1187,6 +1194,7 @@
 				B89E2D1C218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift in Sources */,
 				B89E2D16218BFA5C004FE2A6 /* UIViewController+UISegmentedControl.swift in Sources */,
 				B89E2D18218BFA66004FE2A6 /* UIViewController+UISlider.swift in Sources */,
+				B867A2FD223C7DE4009724BE /* IsLabelContainingText.swift in Sources */,
 				B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */,
 				B836272F21AC1DBB008264C5 /* UIViewController+UISwitch.swift in Sources */,
 				B89E2D14218BFA50004FE2A6 /* UIViewController+UITableView.swift in Sources */,
