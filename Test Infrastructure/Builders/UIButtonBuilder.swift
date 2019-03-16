@@ -12,8 +12,8 @@ struct UIButtonBuilder {
         return self
     }
 
-    func withImage(_ image: UIImage) -> UIButtonBuilder {
-        button.setImage(image, for: .normal)
+    func withImage(_ image: UIImage, for desiredState: UIControl.State = .normal) -> UIButtonBuilder {
+        button.setImage(image, for: desiredState)
         return self
     }
 

@@ -202,7 +202,7 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                 }
             }
             
-            context("when button image does not match") {
+            context("when 'normal' button image does not match") {
                 it("cannot find the button") {
                     let viewController = UIViewControllerBuilder()
                         .withSubview(UIButtonBuilder().withImage(catImage).build())
@@ -213,6 +213,19 @@ final class UIViewController_UIButton_hasButtonSpec: QuickSpec {
                 }
             }
             
+            context("when button does not have a 'normal' image") {
+                it("cannot find the button") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIButtonBuilder().withImage(catImage, for: .highlighted).build()
+                        )
+                        .build()
+
+
+                    expect(viewController.hasButton(withImage: foliageImage)).to(beFalse())
+                }
+            }
+
             context("when a button exists with the expected image in the first subview") {
                 it("can find the button") {
                     let viewController = UIViewControllerBuilder()
