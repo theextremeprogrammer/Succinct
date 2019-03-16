@@ -2,16 +2,16 @@ import UIKit
 
 extension UIView {
     public func findButton(withExactText searchText: String) -> UIButton? {
-        let condition = SuccinctCondition({
-            $0.isButton(withExactText: searchText)
-        })
-
-        return findInSubviews(satisfyingCondition: condition) as? UIButton
+        return findInSubviews(
+            satisfyingCondition: SuccinctCondition {
+                $0.isButton(withExactText: searchText)
+            }
+        ) as? UIButton
     }
 
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
         return findInSubviews(
-            satisfyingCondition: {
+            satisfyingCondition: SuccinctCondition {
                 $0.isButton(withImage: searchImage)
             }
         ) as? UIButton
