@@ -91,7 +91,7 @@ extension UIView {
                     if let result = subview.findInSubviews(
                         satisfyingCondition: satisfiesCondition,
                         initialDepthLevel: subviewDepthLevel
-                        ) {
+                    ) {
                         return result
                     }
                 }
