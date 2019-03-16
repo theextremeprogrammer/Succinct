@@ -1,6 +1,6 @@
 enum EvaluationResult {
-    case success(_ result: SuccessResult)
-    case failure(_ result: FailureResult)
+    case success(_ result: EvaluationResultType)
+    case failure(_ result: EvaluationResultType)
 
     func tryDebug() -> EvaluationResult {
         let message = "**** Succinct: " + messageDetail
@@ -22,10 +22,10 @@ enum EvaluationResult {
         get {
             switch self {
             case .success(let successfulResult):
-                return successfulResult.successMessage
+                return successfulResult.resultMessage
 
             case .failure(let evaluationFailure):
-                return evaluationFailure.failureMessage
+                return evaluationFailure.resultMessage
             }
         }
     }

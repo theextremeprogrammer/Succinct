@@ -100,7 +100,7 @@
 		B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */; };
 		B84DB1C521CB7E570041E9D2 /* UIViewController+Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84DB1C421CB7E570041E9D2 /* UIViewController+Debugging.swift */; };
 		B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */; };
-		B867A2EE223BE5B5009724BE /* FailureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2ED223BE5B5009724BE /* FailureResult.swift */; };
+		B867A2EE223BE5B5009724BE /* EvaluationResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2ED223BE5B5009724BE /* EvaluationResultType.swift */; };
 		B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2EF223BE5CF009724BE /* EvaluationResult.swift */; };
 		B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */; };
 		B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */; };
@@ -311,7 +311,7 @@
 		B83F5CD521ACDAF00061494E /* UISwitch+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+Tap.swift"; sourceTree = "<group>"; };
 		B84DB1C421CB7E570041E9D2 /* UIViewController+Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Debugging.swift"; sourceTree = "<group>"; };
 		B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+hasButtonSpec.swift"; sourceTree = "<group>"; };
-		B867A2ED223BE5B5009724BE /* FailureResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureResult.swift; sourceTree = "<group>"; };
+		B867A2ED223BE5B5009724BE /* EvaluationResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResultType.swift; sourceTree = "<group>"; };
 		B867A2EF223BE5CF009724BE /* EvaluationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResult.swift; sourceTree = "<group>"; };
 		B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithExactText.swift; sourceTree = "<group>"; };
 		B867A2F4223BE73F009724BE /* IsButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithImage.swift; sourceTree = "<group>"; };
@@ -760,7 +760,7 @@
 			isa = PBXGroup;
 			children = (
 				B867A2EF223BE5CF009724BE /* EvaluationResult.swift */,
-				B867A2ED223BE5B5009724BE /* FailureResult.swift */,
+				B867A2ED223BE5B5009724BE /* EvaluationResultType.swift */,
 			);
 			path = DebugLog;
 			sourceTree = "<group>";
@@ -1134,17 +1134,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */,
-				B867A2EE223BE5B5009724BE /* FailureResult.swift in Sources */,
+				B867A2EE223BE5B5009724BE /* EvaluationResultType.swift in Sources */,
 				B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */,
 				B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */,
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
-				B867A2F8223BED62009724BE /* SuccinctCondition.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
 				B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */,
 				B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */,
 				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
 				B8BC558621B28FB400A1CD8C /* PrintOutputMethod.swift in Sources */,
 				B8BC558421B28F9800A1CD8C /* Succinct.swift in Sources */,
+				B867A2F8223BED62009724BE /* SuccinctCondition.swift in Sources */,
 				B8BC557C21B2816200A1CD8C /* SuccinctConfig.swift in Sources */,
 				B88F5E7221A52A8D0074ADBE /* UIBarButtonItem+Extensions.swift in Sources */,
 				3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */,

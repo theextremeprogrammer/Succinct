@@ -3,22 +3,23 @@ import UIKit
 internal extension UIView {
     func isButton(withImage searchImage: UIImage) -> EvaluationResult {
         guard let button = self as? UIButton else {
-            return .failure(IsButtonWithImageFailure.wrongType)
+            return .failure(IsButtonWithImageResultType.wrongType)
         }
 
         guard let image = button.image(for: .normal) else {
-            return .failure(IsButtonWithImageFailure.noNormalButtonImage)
+            return .failure(IsButtonWithImageResultType.noNormalButtonImage)
         }
 
         guard image == searchImage else {
-            return .failure(IsButtonWithImageFailure.matchFailed)
+            return .failure(IsButtonWithImageResultType.matchFailed)
         }
 
-        return .success(UIViewSuccess.found)
+        return .success(IsButtonWithImageResultType.found)
     }
 }
 
-internal enum IsButtonWithImageFailure: FailureResult {
+internal enum IsButtonWithImageResultType: EvaluationResultType {
+    case found
     case wrongType
     case noNormalButtonImage
     case matchFailed
@@ -29,7 +30,7 @@ internal enum IsButtonWithImageFailure: FailureResult {
         }
     }
 
-    var failureMessage: String {
+    var resultMessage: String {
         get {
             return ""
         }

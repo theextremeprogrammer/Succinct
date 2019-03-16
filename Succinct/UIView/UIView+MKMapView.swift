@@ -13,33 +13,15 @@ extension UIView {
 fileprivate extension UIView {
     func isMapView() -> EvaluationResult {
         guard let _ = self as? MKMapView else {
-            return .failure(FindMapViewFailure.wrongType)
+            return .failure(FindMapViewResultType.wrongType)
         }
 
-        return .success(FindMapViewSuccess.found(memoryAddress: "\(self.memoryAddress)"))
+        return .success(FindMapViewResultType.found(memoryAddress: "\(self.memoryAddress)"))
     }
 }
 
-internal enum FindMapViewSuccess: SuccessResult {
+internal enum FindMapViewResultType: EvaluationResultType {
     case found(memoryAddress: String)
-
-    var evaluatedMethod: String {
-        get {
-            return "findMapView()"
-        }
-    }
-
-    var successMessage: String {
-        get {
-            switch self {
-            case .found(let memoryAddress):
-                return "\(evaluatedMethod) Found MKMapView: \(memoryAddress)"
-            }
-        }
-    }
-}
-
-internal enum FindMapViewFailure: FailureResult {
     case wrongType
 
     var evaluatedMethod: String {
@@ -48,12 +30,16 @@ internal enum FindMapViewFailure: FailureResult {
         }
     }
 
-    var failureMessage: String {
+    var resultMessage: String {
         get {
             switch self {
 
+            case .found(let memoryAddress):
+                return "\(evaluatedMethod) Found MKMapView: \(memoryAddress)"
+
             case .wrongType:
                 return "\(evaluatedMethod) Failed to find an MKMapView"
+
             }
         }
     }
