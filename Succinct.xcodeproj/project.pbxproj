@@ -491,11 +491,11 @@
 		522D99A31FAD2ADA009BB1B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				B867A2F9223C7DA1009724BE /* UILabel */,
 				B867A2F1223BE66A009724BE /* UIButton */,
 				AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */,
 				8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */,
 				3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */,
-				3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */,
 				3B14E4A77852DD11B2A8ABFA /* UIView+UIPickerView.swift */,
 				52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */,
 				3B14E053556933C8E8A707E6 /* UIView+UISlider.swift */,
@@ -781,6 +781,14 @@
 				B867A2F7223BED62009724BE /* SuccinctCondition.swift */,
 			);
 			path = Condition;
+			sourceTree = "<group>";
+		};
+		B867A2F9223C7DA1009724BE /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 		B86F2AEC2218D5B900C72FEC /* Memory */ = {
