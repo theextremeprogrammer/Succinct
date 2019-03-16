@@ -5,6 +5,34 @@ import Succinct
 final class UIViewController_UILabelSpec: QuickSpec {
     override func spec() {
         describe("finding labels with exact text") {
+            context("when a UILabel does not exist") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder().build()
+                }
+
+                it("cannot find the label") {
+                    expect(viewController.findLabel(withExactText: "Username")).to(beNil())
+                }
+            }
+
+            context("when a UILabel exists without any text") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().build()
+                        )
+                        .build()
+                }
+
+                it("cannot find the label") {
+                    expect(viewController.findLabel(withExactText: "Username")).to(beNil())
+                }
+            }
+
             context("when a UILabel exists in the first subview") {
                 var viewController: UIViewController!
 
@@ -169,6 +197,34 @@ final class UIViewController_UILabelSpec: QuickSpec {
         }
 
         describe("finding labels containing text") {
+            context("when a UILabel does not exist") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder().build()
+                }
+
+                it("cannot find the label") {
+                    expect(viewController.findLabel(containingText: "Username")).to(beNil())
+                }
+            }
+
+            context("when a UILabel exists without any text") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().build()
+                        )
+                        .build()
+                }
+
+                it("cannot find the label") {
+                    expect(viewController.findLabel(containingText: "Username")).to(beNil())
+                }
+            }
+
             context("when a label exists in the first subview") {
                 var viewController: UIViewController!
 
