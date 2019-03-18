@@ -15,7 +15,7 @@ extension UIView {
 extension UIView {
     public func findLabel(withExactText searchText: String) -> UILabel? {
         return findInSubviews(
-            satisfyingCondition: { $0.isLabel(withExactText: searchText) }
+            satisfyingCondition: SuccinctCondition { $0.isLabel(withExactText: searchText) }
         ) as? UILabel
     }
 
