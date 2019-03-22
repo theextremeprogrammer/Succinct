@@ -495,8 +495,8 @@
 		522D99A31FAD2ADA009BB1B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				B867A2F9223C7DA1009724BE /* UILabel */,
 				B867A2F1223BE66A009724BE /* UIButton */,
+				B867A2F9223C7DA1009724BE /* UILabel */,
 				AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */,
 				8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */,
 				3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */,
@@ -790,9 +790,9 @@
 		B867A2F9223C7DA1009724BE /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
-				3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */,
-				B867A2FA223C7DD7009724BE /* IsLabelWithExactText.swift */,
 				B867A2FC223C7DE4009724BE /* IsLabelContainingText.swift */,
+				B867A2FA223C7DD7009724BE /* IsLabelWithExactText.swift */,
+				3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -903,8 +903,9 @@
 		B8AC7A24221244FF00D76A69 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				B8EABB8F224485C1004ED07A /* UIButton */,
+				B8EABB8E224485B3004ED07A /* UILabel */,
 				B8AC7A272212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift */,
-				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
 				B8AC7A3222144EF100D76A69 /* DebugLogging+UIDatePickerViewSpec.swift */,
 				B8AC7A252212470300D76A69 /* DebugLogging+UILabelSpec.swift */,
 				5B6AD15A4AC038FBB05E01FC /* DebugLogging+UIPickerViewSpec.swift */,
@@ -963,6 +964,21 @@
 				B8BC558821B28FCF00A1CD8C /* SpyOutputMethod.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B8EABB8E224485B3004ED07A /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		B8EABB8F224485C1004ED07A /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1151,6 +1167,8 @@
 				B867A2EE223BE5B5009724BE /* EvaluationResultType.swift in Sources */,
 				B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */,
 				B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */,
+				B867A2FD223C7DE4009724BE /* IsLabelContainingText.swift in Sources */,
+				B867A2FB223C7DD7009724BE /* IsLabelWithExactText.swift in Sources */,
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
 				B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */,
@@ -1178,7 +1196,6 @@
 				3B14EFF3D19AAA54581718B8 /* UIView+UIPickerView.swift in Sources */,
 				52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */,
 				3B14EE0A47F5AE484EE47FA2 /* UIView+UISlider.swift in Sources */,
-				B867A2FB223C7DD7009724BE /* IsLabelWithExactText.swift in Sources */,
 				3B14EE3C4841A6BA7F54906A /* UIView+UIStepper.swift in Sources */,
 				B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */,
 				B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */,
@@ -1194,7 +1211,6 @@
 				B89E2D1C218BFA7C004FE2A6 /* UIViewController+UIPickerView.swift in Sources */,
 				B89E2D16218BFA5C004FE2A6 /* UIViewController+UISegmentedControl.swift in Sources */,
 				B89E2D18218BFA66004FE2A6 /* UIViewController+UISlider.swift in Sources */,
-				B867A2FD223C7DE4009724BE /* IsLabelContainingText.swift in Sources */,
 				B89E2D1A218BFA71004FE2A6 /* UIViewController+UIStepper.swift in Sources */,
 				B836272F21AC1DBB008264C5 /* UIViewController+UISwitch.swift in Sources */,
 				B89E2D14218BFA50004FE2A6 /* UIViewController+UITableView.swift in Sources */,
