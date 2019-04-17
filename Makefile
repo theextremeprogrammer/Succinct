@@ -16,3 +16,6 @@ simulator-tests:
 units tests: sort unit-tests
 
 alltests: sort unit-tests simulator-tests
+
+documentation:
+	@/usr/bin/time ./bin/generate_jazzy_docs.sh
