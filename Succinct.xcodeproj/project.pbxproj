@@ -907,7 +907,6 @@
 				B8EABB8E224485B3004ED07A /* UILabel */,
 				B8AC7A272212494A00D76A69 /* DebugLogging+MKMapViewSpec.swift */,
 				B8AC7A3222144EF100D76A69 /* DebugLogging+UIDatePickerViewSpec.swift */,
-				B8AC7A252212470300D76A69 /* DebugLogging+UILabelSpec.swift */,
 				5B6AD15A4AC038FBB05E01FC /* DebugLogging+UIPickerViewSpec.swift */,
 				B812407F21CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift */,
 			);
@@ -969,6 +968,7 @@
 		B8EABB8E224485B3004ED07A /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
+				B8AC7A252212470300D76A69 /* DebugLogging+UILabelSpec.swift */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
