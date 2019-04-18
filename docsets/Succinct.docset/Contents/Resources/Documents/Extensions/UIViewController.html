@@ -14,7 +14,7 @@
     <a title="UIViewController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Succinct Docs</a> (8% documented)</p>
+        <p><a href="../index.html">Succinct Docs</a> (11% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -838,7 +838,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UILabel whose text matches the searchText exactly.</p>
+
+<p>In addition to the view hierarchy, the following locations are also searched:</p>
+<li>The view controller&rsquo;s title property</li>
+<li>The navigation item&rsquo;s title view hierarchy</li>
+<li>The navigation controller&rsquo;s view hierarchy</li>
+<li><p>The navigation controller&rsquo;s navigation item&rsquo;s title view hierarchy</p></li>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -848,6 +859,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasLabel</span><span class="p">(</span><span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UILabel objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a label was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -865,7 +899,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UILabel whose text contains the searchText.</p>
+
+<p>In addition to the view hierarchy, the following locations are also searched:</p>
+<li>The view controller&rsquo;s title property</li>
+<li>The navigation item&rsquo;s title view hierarchy</li>
+<li>The navigation controller&rsquo;s view hierarchy</li>
+<li><p>The navigation controller&rsquo;s navigation item&rsquo;s title view hierarchy</p></li>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -875,6 +920,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasLabel</span><span class="p">(</span><span class="n">containingText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UILabel objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a label was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -896,7 +964,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UILabel whose text matches the searchText exactly.</p>
+
+<p>In addition to the view hierarchy, the following locations are also searched:</p>
+<li>The navigation item&rsquo;s title view hierarchy</li>
+<li>The navigation controller&rsquo;s view hierarchy</li>
+<li><p>The navigation controller&rsquo;s navigation item&rsquo;s title view hierarchy</p></li>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -906,6 +984,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findLabel</span><span class="p">(</span><span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UILabel</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UILabel objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UILabel, if one is found.</p>
                       </div>
                     </section>
                   </div>
@@ -923,7 +1024,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UILabel whose text contains the searchText.</p>
+
+<p>In addition to the view hierarchy, the following locations are also searched:</p>
+<li>The navigation item&rsquo;s title view hierarchy</li>
+<li>The navigation controller&rsquo;s view hierarchy</li>
+<li><p>The navigation controller&rsquo;s navigation item&rsquo;s title view hierarchy</p></li>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -933,6 +1044,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findLabel</span><span class="p">(</span><span class="n">containingText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UILabel</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UILabel objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UILabel, if one is found.</p>
                       </div>
                     </section>
                   </div>

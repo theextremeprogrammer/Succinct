@@ -568,34 +568,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UILabel.swift",
-      "line": 5,
-      "symbol": "UIViewController.hasLabel(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UILabel.swift",
-      "line": 21,
-      "symbol": "UIViewController.hasLabel(containingText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UILabel.swift",
-      "line": 40,
-      "symbol": "UIViewController.findLabel(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UILabel.swift",
-      "line": 53,
-      "symbol": "UIViewController.findLabel(containingText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
       "line": 4,
       "symbol": "UIViewController.hasPickerView()",
