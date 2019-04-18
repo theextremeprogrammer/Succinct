@@ -79,8 +79,7 @@ extension UIViewController {
     /// - Returns: An optional UILabel, if one is found.
     ///
     public func findLabel(withExactText searchText: String) -> UILabel? {
-        let labelInRootView = view.findLabel(withExactText: searchText)
-        if labelInRootView.isNotNil() {
+        if let labelInRootView = view.findLabel(withExactText: searchText) {
             return labelInRootView
         }
 
@@ -105,8 +104,7 @@ extension UIViewController {
     /// - Returns: An optional UILabel, if one is found.
     ///
     public func findLabel(containingText searchText: String) -> UILabel? {
-        let labelInRootView = view.findLabel(containingText: searchText)
-        if labelInRootView.isNotNil() {
+        if let labelInRootView = view.findLabel(containingText: searchText) {
             return labelInRootView
         }
 
