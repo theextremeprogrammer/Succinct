@@ -1,4 +1,4 @@
-# Succinct
+# Succinct (サシンクト)
 [![Build Status](https://travis-ci.org/derekleerock/Succinct.svg?branch=master)](https://travis-ci.org/derekleerock/Succinct)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub tag](https://img.shields.io/github/tag/derekleerock/Succinct.svg)](https://GitHub.com/derekleerock/Succinct/tags/)
