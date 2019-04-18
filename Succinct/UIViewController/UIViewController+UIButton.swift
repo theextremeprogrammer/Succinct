@@ -43,12 +43,28 @@ extension UIViewController {
 
 // MARK: - Searching by image
 extension UIViewController {
+    ///
+    /// Searches the entire view hierarchy of a view controller's primary view for a UIButton whose image for `UIControl.State.normal` matches the searchImage.
+    ///
+    /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
+    ///
+    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButtons that are found.
+    /// - Returns: A boolean value indicating if a button was found or not.
+    ///
     public func hasButton(withImage searchImage: UIImage) -> Bool {
         return view
             .findButton(withImage: searchImage)
             .isNotNil()
     }
 
+    ///
+    /// Searches the entire view hierarchy of a view controller's primary view for a UIButton whose image for `UIControl.State.normal` matches the searchImage.
+    ///
+    /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
+    ///
+    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButtons that are found.
+    /// - Returns: An optional UIButton, if one is found.
+    ///
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
         return executeWithEnterAndExitDebugLog {
             if let button = view.findButton(withImage: searchImage) {
@@ -59,6 +75,13 @@ extension UIViewController {
         } as? UIButton
     }
 
+    ///
+    /// Searches the entire view hierarchy of a view controller's primary view for a UIButton whose image for `UIControl.State.normal` matches the searchImage and then attempts to tap the button by sending a `.touchUpInside` event to it.
+    ///
+    /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
+    ///
+    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButtons that are found.
+    ///
     public func tapButton(withImage searchImage: UIImage) {
         view.findButton(withImage: searchImage)?
             .tapAndFireTargetEvent()
