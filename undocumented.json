@@ -225,27 +225,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIButton/UIView+UIButton.swift",
-      "line": 4,
-      "symbol": "UIView.findButton(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIButton/UIView+UIButton.swift",
-      "line": 12,
-      "symbol": "UIView.findButton(withImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIButton/UIView+UIButton.swift",
-      "line": 20,
-      "symbol": "UIView.findButtons(withState:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
       "line": 5,
       "symbol": "UIView.hasLabel(withExactText:)",
@@ -550,13 +529,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
       "line": 24,
       "symbol": "UIViewController.tapRightBarButtonItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
-      "line": 93,
-      "symbol": "UIViewController.findButtons(withState:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
