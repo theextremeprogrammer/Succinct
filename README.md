@@ -13,7 +13,7 @@ I started to build out this framework so I could have a de-coupled approach to u
 ## Documentation
 [ 📄 (Soon to be fully) Complete Documentation via GitHubPages](https://derekleerock.github.io/Succinct/)
 
-Automatic documentation generated thanks to [Jazzy](https://github.com/realm/jazzy), [GitHubPages](https://pages.github.com/) and [Travis-CI integration](https://docs.travis-ci.com/user/deployment/pages/) and some great guidance from @jgsamudio [in this blog post](https://medium.com/@jonathan2457/generate-host-your-ios-documentation-39e21b382ce8). Keep an eye on the documentation badge above as I'm targeting
+Automatic documentation generated thanks to [Jazzy](https://github.com/realm/jazzy), [GitHubPages](https://pages.github.com/) and [Travis-CI integration](https://docs.travis-ci.com/user/deployment/pages/) and some great guidance from @jgsamudio [in this blog post](https://medium.com/@jonathan2457/generate-host-your-ios-documentation-39e21b382ce8). Keep an eye on the documentation badge above.
 
 ## Getting Setup
 Succinct supports installation via Carthage. Simple include Succinct in your Cartfile.private (`github "derekleerock/Succinct"`) and [include it in your test target](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework).
