@@ -15,3 +15,4 @@ xcuserdata
 *.xcuserstate
 .DS_Store
 .idea/
+/docs/
