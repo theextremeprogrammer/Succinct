@@ -7,7 +7,7 @@ extension UIViewController {
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
-    /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButtons that are found.
+    /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: A boolean value indicating if a button was found or not.
     ///
     public func hasButton(withExactText searchText: String) -> Bool {
@@ -21,7 +21,7 @@ extension UIViewController {
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
-    /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButtons that are found.
+    /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: An optional UIButton, if one is found.
     ///
     public func findButton(withExactText searchText: String) -> UIButton? {
@@ -33,7 +33,7 @@ extension UIViewController {
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
-    /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButtons that are found.
+    /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButton objects that are found.
     ///
     public func tapButton(withExactText searchText: String) {
         view.findButton(withExactText: searchText)?
@@ -48,7 +48,7 @@ extension UIViewController {
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
-    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButtons that are found.
+    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: A boolean value indicating if a button was found or not.
     ///
     public func hasButton(withImage searchImage: UIImage) -> Bool {
@@ -62,7 +62,7 @@ extension UIViewController {
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
-    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButtons that are found.
+    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: An optional UIButton, if one is found.
     ///
     public func findButton(withImage searchImage: UIImage) -> UIButton? {
@@ -80,7 +80,7 @@ extension UIViewController {
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
-    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButtons that are found.
+    /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButton objects that are found.
     ///
     public func tapButton(withImage searchImage: UIImage) {
         view.findButton(withImage: searchImage)?
@@ -93,7 +93,7 @@ extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for all UIButton objects whose state matches the indicated state.
     ///
-    /// - Parameter state: The `UIControl.State` to compare to any UIButton instances that are found.
+    /// - Parameter state: The `UIControl.State` to compare to any UIButton objects that are found.
     /// - Returns: An array of UIButton objects.
     ///
     public func findButtons(withState state: UIControl.State) -> [UIButton] {
