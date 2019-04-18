@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>README  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="README  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Succinct Docs</a> (0% documented)</p>
+        <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Succinct Reference</a>
+        <img id="carat" src="img/carat.png" />
+        README  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Logger.html">Logger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PrintOutputMethod.html">PrintOutputMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Succinct.html">Succinct</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SuccinctConfig.html">SuccinctConfig</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIBarButtonItem.html">UIBarButtonItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIControl.html">UIControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPickerView.html">UIPickerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISlider.html">UISlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISwitch.html">UISwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/OutputMethod.html">OutputMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:8Succinct0A9ConditionV">SuccinctCondition</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='succinct' class='heading'>Succinct</h1>
+
+<p><a href="https://travis-ci.org/derekleerock/Succinct"><img src="https://travis-ci.org/derekleerock/Succinct.svg?branch=master" alt="Build Status"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>
+<a href="https://GitHub.com/derekleerock/Succinct/tags/"><img src="https://img.shields.io/github/tag/derekleerock/Succinct.svg" alt="GitHub tag"></a>
+<a href="https://codecov.io/gh/derekleerock/Succinct"><img src="https://codecov.io/gh/derekleerock/Succinct/branch/master/graph/badge.svg" alt="codecov"></a>
+<a href="https://github.com/derekleerock/Succinct/blob/master/LICENSE"><img src="https://img.shields.io/github/license/derekleerock/Succinct.svg" alt="GitHub license"></a></p>
+
+<p>I started to build out this framework so I could have a de-coupled approach to unit testing my iOS apps using a BDD-style approach - without the time it takes to run UI tests. After re-creating the same style of tests several times I thought it&rsquo;d be best to pull them together into a framework to help myself and possibly others.</p>
+
+<p><strong><em>Caveat:</em></strong> <em>Succinct doesn&rsquo;t support every single aspect of testing iOS view hierarchies just yet. I&rsquo;m slowly adding functionality in as it is needed. If there&rsquo;s something you&rsquo;d like to see included please feel free to make a PR.</em> 👍🏻</p>
+
+<p>Some of the functionality currently includes:</p>
+<h2 id='uiviewcontroller' class='heading'>UIViewController</h2>
+
+<p>UIViewController methods give a convenient way of interacting with the objects located within that view controller&rsquo;s hierarchy without coupling to the private details that the view controller contains. Keep your UIViews private within your view controller and simply utilize the following methods to discover what is contained within.</p>
+<h3 id='uibutton' class='heading'>UIButton</h3>
+
+<p>Simply specify the text or image that is displayed on the button to tap it, de-coupling you from the button instance and target action. Your button instance property and target action method can both be private in the implementation.    </p>
+<h4 id='commands' class='heading'>Commands</h4>
+<pre class="highlight plaintext"><code>tapButton(withExactText searchText: String)
+tapButton(withImage searchImage: UIImage)
+</code></pre>
+<h4 id='queries' class='heading'>Queries</h4>
+<pre class="highlight plaintext"><code>hasButton(withExactText searchText: String) -&gt; Bool
+hasButton(withImage searchImage: UIImage) -&gt; Bool
+</code></pre>
+<h3 id='uibarbuttonitem' class='heading'>UIBarButtonItem</h3>
+<h4 id='commands' class='heading'>Commands</h4>
+<pre class="highlight plaintext"><code>tapLeftBarButtonItem()
+</code></pre>
+<h3 id='uilabel' class='heading'>UILabel</h3>
+<h4 id='commands' class='heading'>Commands</h4>
+<pre class="highlight plaintext"><code>findLabel(withExactText searchText: String) -&gt; UILabel?
+findLabel(containingText searchText: String) -&gt; UILabel?
+</code></pre>
+<h4 id='queries' class='heading'>Queries</h4>
+<pre class="highlight plaintext"><code>hasLabel(withExactText searchText: String) -&gt; Bool
+hasLabel(containingText searchText: String) -&gt; Bool
+</code></pre>
+<h3 id='uiswitch' class='heading'>UISwitch</h3>
+<h4 id='commands' class='heading'>Commands</h4>
+<pre class="highlight plaintext"><code>countOfSwitches(switchIsOn: Bool) -&gt; Int
+</code></pre>
+<h4 id='queries' class='heading'>Queries</h4>
+<pre class="highlight plaintext"><code>tapSwitch(containedInView viewClass: AnyClass)
+</code></pre>
+
+<p>&hellip; and much more still to be documented.</p>
+<h2 id='getting-setup' class='heading'>Getting Setup</h2>
+
+<p>Succinct supports installation via Carthage. Simple include Succinct in your Cartfile.private (<code>github &quot;derekleerock/Succinct&quot;</code>) and <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework">include it in your test target</a>.</p>
+<h2 id='making-a-contribution' class='heading'>Making a Contribution</h2>
+
+<p>If there is functionality that you&rsquo;re looking for that is not included, please feel free to make a PR with your suggested feature and tests so we can discuss.</p>
+<h3 id='running-the-tests' class='heading'>Running the tests</h3>
+
+<p>All of Succinct&rsquo;s tests have been written using Quick and Nimble. Assuming you already have Carthage installed, you can easily fetch these dependencies by executing:</p>
+
+<p><code>$ make bootstrap</code></p>
+
+<p>There are two different test suites for Succinct: one which does not require the simulator to run, and one that does.</p>
+<h4 id='unit-tests' class='heading'>Unit Tests</h4>
+
+<p><code>$ make tests</code></p>
+<h4 id='simulator-tests' class='heading'>Simulator Tests</h4>
+
+<p><code>$ make simulator-tests</code></p>
+<h4 id='execute-all-tests' class='heading'>Execute All Tests</h4>
+
+<p><code>$ make alltests</code></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>Succinct is licensed under the MIT License. Please see the <a href="https://github.com/derekleerock/succinct/blob/master/LICENSE"><code>LICENSE</code></a> file.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2019-04-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

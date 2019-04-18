@@ -1,0 +1,929 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Condition/SuccinctCondition.swift",
+      "line": 1,
+      "symbol": "SuccinctCondition",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Logger.swift",
+      "line": 1,
+      "symbol": "Logger",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Logger.swift",
+      "line": 4,
+      "symbol": "Logger.useOutputMethod(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Logger.swift",
+      "line": 8,
+      "symbol": "Logger.useDefaultOutputMethod()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Logger.swift",
+      "line": 12,
+      "symbol": "Logger.debug(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/PrintOutputMethod.swift",
+      "line": 1,
+      "symbol": "OutputMethod",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/PrintOutputMethod.swift",
+      "line": 2,
+      "symbol": "OutputMethod.standardPrint(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/PrintOutputMethod.swift",
+      "line": 5,
+      "symbol": "PrintOutputMethod",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/PrintOutputMethod.swift",
+      "line": 6,
+      "symbol": "PrintOutputMethod.standardPrint(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Succinct.swift",
+      "line": 1,
+      "symbol": "Succinct",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Succinct.swift",
+      "line": 2,
+      "symbol": "Succinct.config",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Succinct.swift",
+      "line": 3,
+      "symbol": "Succinct.log",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/SuccinctConfig.swift",
+      "line": 1,
+      "symbol": "SuccinctConfig",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/SuccinctConfig.swift",
+      "line": 4,
+      "symbol": "SuccinctConfig.enableDebugLog()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/SuccinctConfig.swift",
+      "line": 8,
+      "symbol": "SuccinctConfig.disableDebugLog()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/MKMapView/MKMapView+Evaluations.swift",
+      "line": 4,
+      "symbol": "UIViewController.hasMapView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/MKMapView/MKMapView+Evaluations.swift",
+      "line": 8,
+      "symbol": "UIViewController.findMapView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/NSAttributedString/NSAttributedString+Attributes.swift",
+      "line": 2,
+      "symbol": "NSAttributedString.containsExactString(_:withAttributes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Optional/Optional+NilCheck.swift",
+      "line": 2,
+      "symbol": "Optional.isNil()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Optional/Optional+NilCheck.swift",
+      "line": 6,
+      "symbol": "Optional.isNotNil()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIBarButtonItem/UIBarButtonItem+Extensions.swift",
+      "line": 4,
+      "symbol": "UIBarButtonItem.systemItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIBarButtonItem/UIBarButtonItem+Extensions.swift",
+      "line": 14,
+      "symbol": "UIBarButtonItem.tap()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIButton/UIButton+Tap.swift",
+      "line": 4,
+      "symbol": "UIButton.tapAndFireTargetEvent()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIControl/UIControl+Readability.swift",
+      "line": 4,
+      "symbol": "UIControl.isDisabled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
+      "line": 4,
+      "symbol": "UIPickerView.selectSpecific(component:withText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
+      "line": 17,
+      "symbol": "UIPickerView.selectComponent(withText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
+      "line": 23,
+      "symbol": "UIPickerView.hasSelectedOption(withText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
+      "line": 41,
+      "symbol": "UIPickerView.hasOption(withText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISlider/UISlider+SetValue.swift",
+      "line": 4,
+      "symbol": "UISlider.setValueAndFireTargetEvent(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISwitch/UISwitch+Readability.swift",
+      "line": 4,
+      "symbol": "UISwitch.isOff",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISwitch/UISwitch+Tap.swift",
+      "line": 4,
+      "symbol": "UISwitch.tapAndFireTargetEvent()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UITableView/UITableView+Evaluations.swift",
+      "line": 4,
+      "symbol": "UITableView.findView(satisfyingCondition:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIButton/UIView+UIButton.swift",
+      "line": 4,
+      "symbol": "UIView.findButton(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIButton/UIView+UIButton.swift",
+      "line": 12,
+      "symbol": "UIView.findButton(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIButton/UIView+UIButton.swift",
+      "line": 20,
+      "symbol": "UIView.findButtons(withState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
+      "line": 5,
+      "symbol": "UIView.hasLabel(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
+      "line": 9,
+      "symbol": "UIView.hasLabel(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
+      "line": 16,
+      "symbol": "UIView.findLabel(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
+      "line": 22,
+      "symbol": "UIView.findLabel(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+MKMapView.swift",
+      "line": 6,
+      "symbol": "UIView.findMapView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIDatePickerView.swift",
+      "line": 4,
+      "symbol": "UIView.findDatePickerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIDatePickerView.swift",
+      "line": 12,
+      "symbol": "UIView.isNotATypeThatContainsAnInfiniteNumberOfSubviews",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIImage.swift",
+      "line": 4,
+      "symbol": "UIView.hasImageView(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIImage.swift",
+      "line": 11,
+      "symbol": "UIView.findImageView(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIImage.swift",
+      "line": 17,
+      "symbol": "UIView.countOfImages(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIPickerView.swift",
+      "line": 4,
+      "symbol": "UIView.findPickerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISegmentedControl.swift",
+      "line": 4,
+      "symbol": "UIView.hasSegmentedControlSegmentSelected(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISegmentedControl.swift",
+      "line": 24,
+      "symbol": "UIView.selectSegment(withTitleText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
+      "line": 5,
+      "symbol": "UIView.findSlider(withValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
+      "line": 24,
+      "symbol": "UIView.hasSlider(withValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
+      "line": 31,
+      "symbol": "UIView.sliderCount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
+      "line": 4,
+      "symbol": "UIView.hasStepper(currentCount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
+      "line": 20,
+      "symbol": "UIView.findStepper(withTag:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
+      "line": 35,
+      "symbol": "UIView.adjustStepper(withTag:byValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISwitch.swift",
+      "line": 4,
+      "symbol": "UIView.countOfSwitches(switchIsOn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISwitch.swift",
+      "line": 19,
+      "symbol": "UIView.findSwitch(containedInView:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISwitch.swift",
+      "line": 37,
+      "symbol": "UIView.findSwitch(colocatedWithUILabelWithExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextField.swift",
+      "line": 5,
+      "symbol": "UIView.hasTextField(withExactPlaceholderText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextField.swift",
+      "line": 9,
+      "symbol": "UIView.hasTextField(containingPlaceholderText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextField.swift",
+      "line": 13,
+      "symbol": "UIView.hasTextField(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextField.swift",
+      "line": 17,
+      "symbol": "UIView.hasTextField(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextField.swift",
+      "line": 24,
+      "symbol": "UIView.findTextField(withExactPlaceholderText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextField.swift",
+      "line": 30,
+      "symbol": "UIView.findTextField(containingPlaceholderText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextField.swift",
+      "line": 36,
+      "symbol": "UIView.findTextField(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextField.swift",
+      "line": 42,
+      "symbol": "UIView.findTextField(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
+      "line": 5,
+      "symbol": "UIView.hasTextView(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
+      "line": 9,
+      "symbol": "UIView.hasTextView(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
+      "line": 13,
+      "symbol": "UIView.findTextView(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
+      "line": 19,
+      "symbol": "UIView.findTextView(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
+      "line": 25,
+      "symbol": "UIView.hasTextView(withExactText:matchingAttributes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
+      "line": 34,
+      "symbol": "UIView.findTextView(withExactText:matchingAttributes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
+      "line": 4,
+      "symbol": "UIView.findInSubviews(satisfyingCondition:initialDepthLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
+      "line": 57,
+      "symbol": "UIView.findInSubviews(satisfyingCondition:initialDepthLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
+      "line": 110,
+      "symbol": "UIView.hasView(withBackgroundColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
+      "line": 140,
+      "symbol": "UIView.countOfViews(withBackgroundColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+Testing.swift",
+      "line": 4,
+      "symbol": "UIViewController.loadViewControllerForUnitTest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
+      "line": 4,
+      "symbol": "UIViewController.tapBarButtonItem(withSystemItem:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
+      "line": 18,
+      "symbol": "UIViewController.tapLeftBarButtonItem()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
+      "line": 24,
+      "symbol": "UIViewController.tapRightBarButtonItem()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
+      "line": 5,
+      "symbol": "UIViewController.findButton(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
+      "line": 9,
+      "symbol": "UIViewController.hasButton(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
+      "line": 15,
+      "symbol": "UIViewController.tapButton(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
+      "line": 23,
+      "symbol": "UIViewController.findButton(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
+      "line": 33,
+      "symbol": "UIViewController.hasButton(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
+      "line": 39,
+      "symbol": "UIViewController.tapButton(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
+      "line": 47,
+      "symbol": "UIViewController.findButtons(withState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIDatePickerView.swift",
+      "line": 4,
+      "symbol": "UIViewController.hasDatePickerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIDatePickerView.swift",
+      "line": 8,
+      "symbol": "UIViewController.findDatePickerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIImage.swift",
+      "line": 4,
+      "symbol": "UIViewController.hasImageView(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIImage.swift",
+      "line": 8,
+      "symbol": "UIViewController.findImageView(withImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIImage.swift",
+      "line": 12,
+      "symbol": "UIViewController.countOfImages(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UILabel.swift",
+      "line": 5,
+      "symbol": "UIViewController.hasLabel(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UILabel.swift",
+      "line": 21,
+      "symbol": "UIViewController.hasLabel(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UILabel.swift",
+      "line": 40,
+      "symbol": "UIViewController.findLabel(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UILabel.swift",
+      "line": 53,
+      "symbol": "UIViewController.findLabel(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
+      "line": 4,
+      "symbol": "UIViewController.hasPickerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
+      "line": 8,
+      "symbol": "UIViewController.findPickerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
+      "line": 12,
+      "symbol": "UIViewController.choosePickerComponent(component:withText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
+      "line": 18,
+      "symbol": "UIViewController.choosePickerComponent(withText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
+      "line": 24,
+      "symbol": "UIViewController.hasSelectedPickerOption(withText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
+      "line": 30,
+      "symbol": "UIViewController.hasPickerOption(withText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
+      "line": 4,
+      "symbol": "UIViewController.hasSegmentedControlSegmentSelected(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
+      "line": 8,
+      "symbol": "UIViewController.selectSegment(withTitleText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
+      "line": 4,
+      "symbol": "UIViewController.hasSlider(withValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
+      "line": 8,
+      "symbol": "UIViewController.sliderCount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
+      "line": 12,
+      "symbol": "UIViewController.setValueOf(sliderWithValue:toValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
+      "line": 4,
+      "symbol": "UIViewController.hasStepper(expectedCount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
+      "line": 9,
+      "symbol": "UIViewController.adjustStepper(withTag:byValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
+      "line": 13,
+      "symbol": "UIViewController.containStepper(withTag:toHaveValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
+      "line": 4,
+      "symbol": "UIViewController.countOfSwitches(switchIsOn:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
+      "line": 8,
+      "symbol": "UIViewController.findSwitch(containedInView:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
+      "line": 12,
+      "symbol": "UIViewController.findSwitch(colocatedWithUILabelWithExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
+      "line": 16,
+      "symbol": "UIViewController.tapSwitch(containedInView:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
+      "line": 21,
+      "symbol": "UIViewController.tapSwitch(colocatedWithUILabelWithExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITableView.swift",
+      "line": 4,
+      "symbol": "UIViewController.findSelectedTableViewCell()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITableView.swift",
+      "line": 24,
+      "symbol": "UIViewController.tapCell(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextField.swift",
+      "line": 5,
+      "symbol": "UIViewController.hasTextField(withExactPlaceholderText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextField.swift",
+      "line": 9,
+      "symbol": "UIViewController.hasTextField(containingPlaceholderText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextField.swift",
+      "line": 13,
+      "symbol": "UIViewController.hasTextField(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextField.swift",
+      "line": 17,
+      "symbol": "UIViewController.hasTextField(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextField.swift",
+      "line": 24,
+      "symbol": "UIViewController.findTextField(withExactPlaceholderText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextField.swift",
+      "line": 28,
+      "symbol": "UIViewController.findTextField(containingPlaceholderText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextField.swift",
+      "line": 32,
+      "symbol": "UIViewController.findTextField(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextField.swift",
+      "line": 36,
+      "symbol": "UIViewController.findTextField(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
+      "line": 5,
+      "symbol": "UIViewController.hasTextView(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
+      "line": 9,
+      "symbol": "UIViewController.hasTextView(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
+      "line": 16,
+      "symbol": "UIViewController.findTextView(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
+      "line": 20,
+      "symbol": "UIViewController.findTextView(containingText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
+      "line": 24,
+      "symbol": "UIViewController.hasTextView(withExactText:matchingAttributes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
+      "line": 28,
+      "symbol": "UIViewController.findTextView(withExactText:matchingAttributes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIView.swift",
+      "line": 4,
+      "symbol": "UIViewController.hasView(withBackgroundColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIView.swift",
+      "line": 8,
+      "symbol": "UIViewController.countOfViews(withBackgroundColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/travis/build/derekleerock/Succinct"
+}
