@@ -8,62 +8,12 @@
 
 I started to build out this framework so I could have a de-coupled approach to unit testing my iOS apps using a BDD-style approach - without the time it takes to run UI tests. After re-creating the same style of tests several times I thought it'd be best to pull them together into a framework to help myself and possibly others.
 
-**_Caveat:_** _Succinct doesn't support every single aspect of testing iOS view hierarchies just yet. I'm slowly adding functionality in as it is needed. If there's something you'd like to see included please feel free to make a PR._ 👍🏻
+**_Caveat:_** _Succinct doesn't support every single aspect of testing iOS view hierarchies just yet. I'm slowly adding functionality in as it is needed. If there's something you'd like to see included please feel free to open an issue or make a PR._ 👍🏻
 
-Some of the functionality currently includes:
+## Documentation
+[ 📄 (Soon to be fully) Complete Documentation via GitHubPages](https://derekleerock.github.io/Succinct/)
 
-## UIViewController
-UIViewController methods give a convenient way of interacting with the objects located within that view controller's hierarchy without coupling to the private details that the view controller contains. Keep your UIViews private within your view controller and simply utilize the following methods to discover what is contained within.
-
-### UIButton
-Simply specify the text or image that is displayed on the button to tap it, de-coupling you from the button instance and target action. Your button instance property and target action method can both be private in the implementation.    
-
-#### Commands
-```
-tapButton(withExactText searchText: String)
-tapButton(withImage searchImage: UIImage)
-```
-
-#### Queries
-```
-hasButton(withExactText searchText: String) -> Bool
-hasButton(withImage searchImage: UIImage) -> Bool
-```
-
-### UIBarButtonItem
-
-#### Commands
-```
-tapLeftBarButtonItem()
-```
-
-### UILabel
-
-#### Commands
-```
-findLabel(withExactText searchText: String) -> UILabel?
-findLabel(containingText searchText: String) -> UILabel?
-```
-
-#### Queries
-```
-hasLabel(withExactText searchText: String) -> Bool
-hasLabel(containingText searchText: String) -> Bool
-```
-
-### UISwitch
-
-#### Commands
-```
-countOfSwitches(switchIsOn: Bool) -> Int
-```
-
-#### Queries
-```
-tapSwitch(containedInView viewClass: AnyClass)
-```
-
-... and much more still to be documented.
+Automatic documentation generated thanks to [Jazzy](https://github.com/realm/jazzy), [GitHubPages](https://pages.github.com/) and [Travis-CI integration](https://docs.travis-ci.com/user/deployment/pages/) and some great guidance from @jgsamudio [in this blog post](https://medium.com/@jonathan2457/generate-host-your-ios-documentation-39e21b382ce8). Keep an eye on the documentation badge above as I'm targeting
 
 ## Getting Setup
 Succinct supports installation via Carthage. Simple include Succinct in your Cartfile.private (`github "derekleerock/Succinct"`) and [include it in your test target](https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework).
