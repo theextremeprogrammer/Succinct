@@ -13,6 +13,9 @@ matrix:
     xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone 7
     install:
       - carthage bootstrap --platform iOS --cache-builds
+    after_success:
+      - gem install jazzy
+      - make documentation
 
   - name: "Succinct Simulator Tests"
     language: swift
@@ -22,6 +25,16 @@ matrix:
     xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone 7
     install:
       - carthage bootstrap --platform iOS --cache-builds
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_ACCESS_TOKEN
+  local_dir: docs
+  keep_history: true
+  target_branch: gh-pages
+  on:
+    branch: master
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
