@@ -14,7 +14,7 @@
     <a title="UIViewController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Succinct Docs</a> (3% documented)</p>
+        <p><a href="../index.html">Succinct Docs</a> (5% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -311,10 +311,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose title matches the searchText exactly.</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose title for <code>UIControl.State.normal</code> matches the searchText exactly.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>Once a UIButton is found with the provided searchText the remainder of the view hierarchy <strong>is not searched</strong>.</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
 
 </div>
 
@@ -339,7 +339,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Text to compare to the title of any UIButtons that are found.</p>
+                                  <p>Text to compare to the title for <code>UIControl.State.normal</code> of any UIButtons that are found.</p>
                                 </div>
                               </td>
                             </tr>
@@ -366,10 +366,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose title matches the searchText exactly.</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose title for <code>UIControl.State.normal</code> matches the searchText exactly.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>Once a UIButton is found with the provided searchText the remainder of the view hierarchy <strong>is not searched</strong>.</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
 
 </div>
 
@@ -394,7 +394,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Text to compare to the title of any UIButtons that are found.</p>
+                                  <p>Text to compare to the title for <code>UIControl.State.normal</code> of any UIButtons that are found.</p>
                                 </div>
                               </td>
                             </tr>
@@ -421,10 +421,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose title matches the searchText exactly and then attempts to tap the button by sending a <code>.touchUpInside</code> event to it.</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose title for <code>UIControl.State.normal</code> matches the searchText exactly and then attempts to tap the button by sending a <code>.touchUpInside</code> event to it.</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>Once a UIButton is found with the provided searchText the remainder of the view hierarchy <strong>is not searched</strong>.</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
 
 </div>
 
@@ -449,7 +449,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Text to compare to the title of any UIButtons that are found.</p>
+                                  <p>Text to compare to the title for <code>UIControl.State.normal</code> of any UIButtons that are found.</p>
                                 </div>
                               </td>
                             </tr>
@@ -476,7 +476,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose image for <code>UIControl.State.normal</code> matches the searchImage.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -486,6 +491,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasButton</span><span class="p">(</span><span class="n">withImage</span> <span class="nv">searchImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchImage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Image to compare to the image for <code>UIControl.State.normal</code> of any UIButtons that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a button was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -503,7 +531,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose image for <code>UIControl.State.normal</code> matches the searchImage.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -513,6 +546,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findButton</span><span class="p">(</span><span class="n">withImage</span> <span class="nv">searchImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIButton</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchImage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Image to compare to the image for <code>UIControl.State.normal</code> of any UIButtons that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UIButton, if one is found.</p>
                       </div>
                     </section>
                   </div>
@@ -530,7 +586,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIButton whose image for <code>UIControl.State.normal</code> matches the searchImage and then attempts to tap the button by sending a <code>.touchUpInside</code> event to it.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -540,6 +601,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tapButton</span><span class="p">(</span><span class="n">withImage</span> <span class="nv">searchImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchImage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Image to compare to the image for <code>UIControl.State.normal</code> of any UIButtons that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

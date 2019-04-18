@@ -555,28 +555,7 @@
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
-      "line": 40,
-      "symbol": "UIViewController.hasButton(withImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
-      "line": 46,
-      "symbol": "UIViewController.findButton(withImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
-      "line": 56,
-      "symbol": "UIViewController.tapButton(withImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIButton.swift",
-      "line": 64,
+      "line": 93,
       "symbol": "UIViewController.findButtons(withState:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
