@@ -90,6 +90,12 @@ extension UIViewController {
 
 // MARK: - Searching by state
 extension UIViewController {
+    ///
+    /// Searches the entire view hierarchy of a view controller's primary view for all UIButton objects whose state matches the indicated state.
+    ///
+    /// - Parameter state: The `UIControl.State` to compare to any UIButton instances that are found.
+    /// - Returns: An array of UIButton objects.
+    ///
     public func findButtons(withState state: UIControl.State) -> [UIButton] {
         return view.findButtons(withState: state)
     }
