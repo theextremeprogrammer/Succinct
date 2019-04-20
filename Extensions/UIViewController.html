@@ -14,7 +14,7 @@
     <a title="UIViewController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Succinct Docs</a> (24% documented)</p>
+        <p><a href="../index.html">Succinct Docs</a> (38% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -96,14 +96,6 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Protocols/OutputMethod.html">OutputMethod</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Structs.html#/s:8Succinct0A9ConditionV">SuccinctCondition</a>
               </li>
             </ul>
           </li>
@@ -1737,7 +1729,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextField whose placeholder text matches the searchText exactly.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1747,6 +1744,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasTextField</span><span class="p">(</span><span class="n">withExactPlaceholderText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the placeholder text of any UITextField objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UITextField object was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -1764,7 +1784,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextField whose placeholder text contains the searchText.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1774,6 +1799,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasTextField</span><span class="p">(</span><span class="n">containingPlaceholderText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the placeholder text of any UITextField objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UITextField object was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -1791,7 +1839,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextField whose text matches the searchText exactly.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1801,6 +1854,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasTextField</span><span class="p">(</span><span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextField objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UITextField object was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -1818,7 +1894,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextField whose text contains the searchText.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1828,6 +1909,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasTextField</span><span class="p">(</span><span class="n">containingText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextField objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UITextField object was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -1849,7 +1953,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextField whose placeholder text matches the searchText exactly.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1859,6 +1968,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findTextField</span><span class="p">(</span><span class="n">withExactPlaceholderText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITextField</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the placeholder text of any UITextField objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UITextField, if one is found.</p>
                       </div>
                     </section>
                   </div>
@@ -1876,7 +2008,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextField whose placeholder text contains the searchText.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1886,6 +2023,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findTextField</span><span class="p">(</span><span class="n">containingPlaceholderText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITextField</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the placeholder text of any UITextField objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UITextField, if one is found.</p>
                       </div>
                     </section>
                   </div>
@@ -1903,7 +2063,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextField whose text matches the searchText exactly.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1913,6 +2078,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findTextField</span><span class="p">(</span><span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITextField</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextField objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UITextField, if one is found.</p>
                       </div>
                     </section>
                   </div>
@@ -1930,7 +2118,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextField whose text contains the searchText.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1940,6 +2133,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findTextField</span><span class="p">(</span><span class="n">containingText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITextField</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextField objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UITextField, if one is found.</p>
                       </div>
                     </section>
                   </div>
