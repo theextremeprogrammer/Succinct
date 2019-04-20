@@ -54,7 +54,7 @@ extension UIView {
         return nil
     }
 
-    public func findInSubviews(
+    internal func findInSubviews(
         satisfyingCondition satisfiesCondition: SuccinctCondition,
         initialDepthLevel: Int = 1
     ) -> UIView? {

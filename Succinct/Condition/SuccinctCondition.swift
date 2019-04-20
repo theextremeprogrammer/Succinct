@@ -1,4 +1,4 @@
-public struct SuccinctCondition {
+internal struct SuccinctCondition {
     private let condition: (UIView) -> EvaluationResult
 
     init(_ condition: @escaping (UIView) -> EvaluationResult) {

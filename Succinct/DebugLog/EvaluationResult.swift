@@ -1,4 +1,4 @@
-enum EvaluationResult {
+internal enum EvaluationResult {
     case success(_ result: EvaluationResultType)
     case failure(_ result: EvaluationResultType)
 
