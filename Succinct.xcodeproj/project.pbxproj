@@ -61,7 +61,7 @@
 		5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */; };
 		8F6F2D5E21EEF40A0004BFA3 /* UIView+UIDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */; };
 		AE3CCDCB21F5742F00A3638D /* UIViewController+MKMapViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3CCDCA21F5742F00A3638D /* UIViewController+MKMapViewSpec.swift */; };
-		AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3CCDCD21F58A7400A3638D /* MKMapView+Evaluations.swift */; };
+		AE3CCDCE21F58A7400A3638D /* UIViewController+MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3CCDCD21F58A7400A3638D /* UIViewController+MKMapView.swift */; };
 		AE3CCDD021F58BE400A3638D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3CCDCF21F58BE400A3638D /* MapKit.framework */; };
 		AE3CCDD321F58FCC00A3638D /* MKMapViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3CCDD121F58FBA00A3638D /* MKMapViewBuilder.swift */; };
 		AE3CCDD421F58FCD00A3638D /* MKMapViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3CCDD121F58FBA00A3638D /* MKMapViewBuilder.swift */; };
@@ -280,7 +280,7 @@
 		5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIDatePickerView.swift"; sourceTree = "<group>"; };
 		AE3CCDCA21F5742F00A3638D /* UIViewController+MKMapViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MKMapViewSpec.swift"; sourceTree = "<group>"; };
-		AE3CCDCD21F58A7400A3638D /* MKMapView+Evaluations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+Evaluations.swift"; sourceTree = "<group>"; };
+		AE3CCDCD21F58A7400A3638D /* UIViewController+MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MKMapView.swift"; sourceTree = "<group>"; };
 		AE3CCDCF21F58BE400A3638D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AE3CCDD121F58FBA00A3638D /* MKMapViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewBuilder.swift; sourceTree = "<group>"; };
 		AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MKMapView.swift"; sourceTree = "<group>"; };
@@ -452,7 +452,6 @@
 				B8BC557A21B2814B00A1CD8C /* Configuration */,
 				B867A2EC223BE5A5009724BE /* DebugLog */,
 				B86F2AEC2218D5B900C72FEC /* Memory */,
-				AE3CCDCC21F589F600A3638D /* MKMapView */,
 				B183708821D327AC0031F5AA /* NSAttributedString */,
 				525FF7ED20331DBD007AE6C8 /* Optional */,
 				B88F5E7021A52A7C0074ADBE /* UIBarButtonItem */,
@@ -658,6 +657,7 @@
 			isa = PBXGroup;
 			children = (
 				B84DB1C421CB7E570041E9D2 /* UIViewController+Debugging.swift */,
+				AE3CCDCD21F58A7400A3638D /* UIViewController+MKMapView.swift */,
 				3B14E7673EACFC681FC9485B /* UIViewController+Testing.swift */,
 				B89E2D0D218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift */,
 				B89E2D0B218BF422004FE2A6 /* UIViewController+UIButton.swift */,
@@ -691,14 +691,6 @@
 				3B14EB571F0977180CC3EB04 /* UISlider+SetValue.swift */,
 			);
 			path = UISlider;
-			sourceTree = "<group>";
-		};
-		AE3CCDCC21F589F600A3638D /* MKMapView */ = {
-			isa = PBXGroup;
-			children = (
-				AE3CCDCD21F58A7400A3638D /* MKMapView+Evaluations.swift */,
-			);
-			path = MKMapView;
 			sourceTree = "<group>";
 		};
 		B15A4C7C21B2C48F00398963 /* UINavigationController */ = {
@@ -1170,7 +1162,6 @@
 				B867A2FD223C7DE4009724BE /* IsLabelContainingText.swift in Sources */,
 				B867A2FB223C7DD7009724BE /* IsLabelWithExactText.swift in Sources */,
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
-				AE3CCDCE21F58A7400A3638D /* MKMapView+Evaluations.swift in Sources */,
 				B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */,
 				B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */,
 				3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */,
@@ -1202,6 +1193,7 @@
 				B1FFB51C21CF52BE007AE34B /* UIView+UITextView.swift in Sources */,
 				3B14E5701AAF98B39C2E6791 /* UIView+UIView.swift in Sources */,
 				B84DB1C521CB7E570041E9D2 /* UIViewController+Debugging.swift in Sources */,
+				AE3CCDCE21F58A7400A3638D /* UIViewController+MKMapView.swift in Sources */,
 				3B14EDC64BD0D4315A13C89C /* UIViewController+Testing.swift in Sources */,
 				B89E2D0E218BFA1C004FE2A6 /* UIViewController+UIBarButtonItem.swift in Sources */,
 				B89E2D0C218BF422004FE2A6 /* UIViewController+UIButton.swift in Sources */,
