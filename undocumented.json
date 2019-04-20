@@ -211,27 +211,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIImage.swift",
-      "line": 4,
-      "symbol": "UIView.hasImageView(withImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIImage.swift",
-      "line": 11,
-      "symbol": "UIView.findImageView(withImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIImage.swift",
-      "line": 17,
-      "symbol": "UIView.countOfImages(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIPickerView.swift",
       "line": 4,
       "symbol": "UIView.findPickerView()",
@@ -466,27 +445,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
       "line": 24,
       "symbol": "UIViewController.tapRightBarButtonItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIImage.swift",
-      "line": 4,
-      "symbol": "UIViewController.hasImageView(withImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIImage.swift",
-      "line": 8,
-      "symbol": "UIViewController.findImageView(withImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIImage.swift",
-      "line": 12,
-      "symbol": "UIViewController.countOfImages(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

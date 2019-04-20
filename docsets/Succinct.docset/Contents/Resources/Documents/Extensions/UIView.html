@@ -14,7 +14,7 @@
     <a title="UIView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Succinct Docs</a> (19% documented)</p>
+        <p><a href="../index.html">Succinct Docs</a> (24% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -646,7 +646,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of the current view for a UIImageView object whose image matches the provided search image.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -656,6 +661,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasImageView</span><span class="p">(</span><span class="n">withImage</span> <span class="nv">searchImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UIImageView was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -673,7 +682,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of the current view for a UIImageView object whose image matches the provided search image.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -683,6 +697,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findImageView</span><span class="p">(</span><span class="n">withImage</span> <span class="nv">searchImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIImageView</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UIImageView, if one is found.</p>
                       </div>
                     </section>
                   </div>
@@ -700,7 +718,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of the current view for all UIImageView objects whose image matches the provided search image.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This method currently supports searching the following UIKit object types:
+
+</div>
+<li>UIView</li>
+<li>UITableView, UITableViewCell</li>
+<li><p>UICollectionView, UICollectionViewCell</p></li>
 
                       </div>
                       <div class="declaration">
@@ -710,6 +736,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">countOfImages</span><span class="p">(</span><span class="n">_</span> <span class="nv">searchImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The total number of matching UIImageView objects.</p>
                       </div>
                     </section>
                   </div>
