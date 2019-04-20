@@ -103,6 +103,7 @@
 		B865EEC6226B137400B80E3F /* UIView+Readability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B865EEC5226B137400B80E3F /* UIView+Readability.swift */; };
 		B865EEC9226B139700B80E3F /* UIView+ReadabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B865EEC8226B139700B80E3F /* UIView+ReadabilitySpec.swift */; };
 		B865EECC226B159700B80E3F /* UISwitch+ReadabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B865EECB226B159700B80E3F /* UISwitch+ReadabilitySpec.swift */; };
+		B865EECF226B17BB00B80E3F /* UIControl+ReadabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B865EECE226B17BB00B80E3F /* UIControl+ReadabilitySpec.swift */; };
 		B867A2EE223BE5B5009724BE /* EvaluationResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2ED223BE5B5009724BE /* EvaluationResultType.swift */; };
 		B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2EF223BE5CF009724BE /* EvaluationResult.swift */; };
 		B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */; };
@@ -319,6 +320,7 @@
 		B865EEC5226B137400B80E3F /* UIView+Readability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Readability.swift"; sourceTree = "<group>"; };
 		B865EEC8226B139700B80E3F /* UIView+ReadabilitySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReadabilitySpec.swift"; sourceTree = "<group>"; };
 		B865EECB226B159700B80E3F /* UISwitch+ReadabilitySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+ReadabilitySpec.swift"; sourceTree = "<group>"; };
+		B865EECE226B17BB00B80E3F /* UIControl+ReadabilitySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+ReadabilitySpec.swift"; sourceTree = "<group>"; };
 		B867A2ED223BE5B5009724BE /* EvaluationResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResultType.swift; sourceTree = "<group>"; };
 		B867A2EF223BE5CF009724BE /* EvaluationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResult.swift; sourceTree = "<group>"; };
 		B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithExactText.swift; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 				525FF7EE20331DD7007AE6C8 /* Optional */,
 				524FF43820B6688600CA71D4 /* Resources */,
 				B8B80B6021B0C38300EA315D /* UICollectionView */,
+				B865EECD226B17AC00B80E3F /* UIControl */,
 				524FF43E20B689A000CA71D4 /* UIImage */,
 				B17464AB22217DB9004C587B /* UINavigationController */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
@@ -775,6 +778,14 @@
 				B865EECB226B159700B80E3F /* UISwitch+ReadabilitySpec.swift */,
 			);
 			path = UISwitch;
+			sourceTree = "<group>";
+		};
+		B865EECD226B17AC00B80E3F /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				B865EECE226B17BB00B80E3F /* UIControl+ReadabilitySpec.swift */,
+			);
+			path = UIControl;
 			sourceTree = "<group>";
 		};
 		B867A2EC223BE5A5009724BE /* DebugLog */ = {
@@ -1266,6 +1277,7 @@
 				B8B80B6421B0C42100EA315D /* UICollectionViewCellConfiguration.swift in Sources */,
 				B8B80B6621B0C4E600EA315D /* UICollectionViewConfiguration.swift in Sources */,
 				B8B80B6221B0C39600EA315D /* UICollectionViewConfigurationSpec.swift in Sources */,
+				B865EECF226B17BB00B80E3F /* UIControl+ReadabilitySpec.swift in Sources */,
 				B8AC7A2F2213929200D76A69 /* UIDatePickerViewBuilder.swift in Sources */,
 				524FF44020B689B700CA71D4 /* UIImage+TestAssets.swift in Sources */,
 				525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */,
