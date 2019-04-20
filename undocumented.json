@@ -106,20 +106,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/MKMapView/MKMapView+Evaluations.swift",
-      "line": 4,
-      "symbol": "UIViewController.hasMapView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/MKMapView/MKMapView+Evaluations.swift",
-      "line": 8,
-      "symbol": "UIViewController.findMapView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/NSAttributedString/NSAttributedString+Attributes.swift",
       "line": 2,
       "symbol": "NSAttributedString.containsExactString(_:withAttributes:)",
@@ -222,55 +208,6 @@
       "line": 4,
       "symbol": "UITableView.findView(satisfyingCondition:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
-      "line": 5,
-      "symbol": "UIView.hasLabel(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
-      "line": 9,
-      "symbol": "UIView.hasLabel(containingText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
-      "line": 16,
-      "symbol": "UIView.findLabel(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UILabel/UIView+UILabel.swift",
-      "line": 22,
-      "symbol": "UIView.findLabel(containingText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+MKMapView.swift",
-      "line": 6,
-      "symbol": "UIView.findMapView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIDatePickerView.swift",
-      "line": 4,
-      "symbol": "UIView.findDatePickerView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIDatePickerView.swift",
-      "line": 12,
-      "symbol": "UIView.isNotATypeThatContainsAnInfiniteNumberOfSubviews",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -529,20 +466,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
       "line": 24,
       "symbol": "UIViewController.tapRightBarButtonItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIDatePickerView.swift",
-      "line": 4,
-      "symbol": "UIViewController.hasDatePickerView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIDatePickerView.swift",
-      "line": 8,
-      "symbol": "UIViewController.findDatePickerView()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
