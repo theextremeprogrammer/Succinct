@@ -106,20 +106,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIBarButtonItem/UIBarButtonItem+Extensions.swift",
-      "line": 4,
-      "symbol": "UIBarButtonItem.systemItem",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIBarButtonItem/UIBarButtonItem+Extensions.swift",
-      "line": 14,
-      "symbol": "UIBarButtonItem.tap()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIButton/UIButton+Tap.swift",
       "line": 4,
       "symbol": "UIButton.tapAndFireTargetEvent()",
@@ -326,27 +312,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+Testing.swift",
       "line": 4,
       "symbol": "UIViewController.loadViewControllerForUnitTest()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
-      "line": 4,
-      "symbol": "UIViewController.tapBarButtonItem(withSystemItem:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
-      "line": 18,
-      "symbol": "UIViewController.tapLeftBarButtonItem()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
-      "line": 24,
-      "symbol": "UIViewController.tapRightBarButtonItem()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
