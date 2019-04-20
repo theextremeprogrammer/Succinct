@@ -9,6 +9,13 @@ extension UIViewController {
     public func hasTextView(containingText searchText: String) -> Bool {
         return view.hasTextView(containingText: searchText)
     }
+
+    public func hasTextView(
+        withExactText searchText: String,
+        matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
+    ) -> Bool {
+        return view.hasTextView(withExactText: searchText, matchingAttributes: searchAttributes)
+    }
 }
 
 // MARK: - Finding UITextView
@@ -21,11 +28,10 @@ extension UIViewController {
         return view.findTextView(containingText: searchText)
     }
 
-    public func hasTextView(withExactText searchText: String, matchingAttributes searchAttributes: [NSAttributedString.Key : Any]) -> Bool {
-        return view.hasTextView(withExactText: searchText, matchingAttributes: searchAttributes)
-    }
-
-    public func findTextView(withExactText searchText: String, matchingAttributes searchAttributes: [NSAttributedString.Key : Any]) -> UITextView? {
+    public func findTextView(
+        withExactText searchText: String,
+        matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
+    ) -> UITextView? {
         return view.findTextView(withExactText: searchText, matchingAttributes: searchAttributes)
     }
 }

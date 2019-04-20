@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 
+// MARK: - Has UITextView
 extension UIView {
     public func hasTextView(withExactText searchText: String) -> Bool {
         return findTextView(withExactText: searchText).isNotNil()
@@ -10,6 +11,18 @@ extension UIView {
         return findTextView(containingText: searchText).isNotNil()
     }
 
+    public func hasTextView(
+        withExactText searchText: String,
+        matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
+    ) -> Bool {
+        return findInSubviews(
+            satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
+            ).isNotNil()
+    }
+}
+
+// MARK: - Finding UITextView
+extension UIView {
     public func findTextView(withExactText searchText: String) -> UITextView? {
         return findInSubviews(
             satisfyingCondition: { $0.isTextView(withExactText: searchText) }
@@ -20,15 +33,6 @@ extension UIView {
         return findInSubviews(
             satisfyingCondition: { $0.isTextView(containingText: searchText) }
         ) as? UITextView
-    }
-
-    public func hasTextView(
-        withExactText searchText: String,
-        matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
-    ) -> Bool {
-        return findInSubviews(
-            satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
-        ).isNotNil()
     }
 
     public func findTextView(
