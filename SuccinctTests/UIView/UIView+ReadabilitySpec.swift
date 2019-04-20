@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-final class UIView_PropertiesSpec: QuickSpec {
+final class UIView_ReadabilitySpec: QuickSpec {
     override func spec() {
         describe("additional UIView properties") {
             it("knows when a view is visible") {
