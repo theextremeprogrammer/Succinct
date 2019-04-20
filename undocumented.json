@@ -127,13 +127,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIControl/UIControl+Readability.swift",
-      "line": 4,
-      "symbol": "UIControl.isDisabled",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
       "line": 4,
       "symbol": "UIPickerView.selectSpecific(component:withText:)",
@@ -166,13 +159,6 @@
       "line": 4,
       "symbol": "UISlider.setValueAndFireTargetEvent(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISwitch/UISwitch+Readability.swift",
-      "line": 4,
-      "symbol": "UISwitch.isOff",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
