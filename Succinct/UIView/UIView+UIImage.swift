@@ -1,6 +1,13 @@
 import UIKit
 
 extension UIView {
+    ///
+    /// Searches the entire view hierarchy of the current view for a UIImageView object whose image matches the provided search image.
+    ///
+    /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
+    ///
+    /// - Returns: A boolean value indicating if a UIImageView was found or not.
+    ///
     public func hasImageView(withImage searchImage: UIImage) -> Bool {
         return findInSubviews(
             satisfyingCondition: { $0.isImageView(withImage: searchImage) }
@@ -8,12 +15,29 @@ extension UIView {
             .isNotNil()
     }
     
+    ///
+    /// Searches the entire view hierarchy of the current view for a UIImageView object whose image matches the provided search image.
+    ///
+    /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
+    ///
+    /// - Returns: An optional UIImageView, if one is found.
+    ///
     public func findImageView(withImage searchImage: UIImage) -> UIImageView? {
         return findInSubviews(
             satisfyingCondition: { $0.isImageView(withImage: searchImage) }
         ) as? UIImageView
     }
 
+    ///
+    /// Searches the entire view hierarchy of the current view for all UIImageView objects whose image matches the provided search image.
+    ///
+    /// - Note: This method currently supports searching the following UIKit object types:
+    /// * UIView
+    /// * UITableView, UITableViewCell
+    /// * UICollectionView, UICollectionViewCell
+    ///
+    /// - Returns: The total number of matching UIImageView objects.
+    ///
     public func countOfImages(_ searchImage: UIImage) -> Int {
         var imagesCounted = 0
         
