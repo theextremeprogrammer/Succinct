@@ -102,6 +102,7 @@
 		B85D4DF1219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */; };
 		B865EEC6226B137400B80E3F /* UIView+Readability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B865EEC5226B137400B80E3F /* UIView+Readability.swift */; };
 		B865EEC9226B139700B80E3F /* UIView+ReadabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B865EEC8226B139700B80E3F /* UIView+ReadabilitySpec.swift */; };
+		B865EECC226B159700B80E3F /* UISwitch+ReadabilitySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B865EECB226B159700B80E3F /* UISwitch+ReadabilitySpec.swift */; };
 		B867A2EE223BE5B5009724BE /* EvaluationResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2ED223BE5B5009724BE /* EvaluationResultType.swift */; };
 		B867A2F0223BE5CF009724BE /* EvaluationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2EF223BE5CF009724BE /* EvaluationResult.swift */; };
 		B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */; };
@@ -317,6 +318,7 @@
 		B85D4DF0219A48DF00B9828E /* UIViewController+UIButton+hasButtonSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButton+hasButtonSpec.swift"; sourceTree = "<group>"; };
 		B865EEC5226B137400B80E3F /* UIView+Readability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Readability.swift"; sourceTree = "<group>"; };
 		B865EEC8226B139700B80E3F /* UIView+ReadabilitySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReadabilitySpec.swift"; sourceTree = "<group>"; };
+		B865EECB226B159700B80E3F /* UISwitch+ReadabilitySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISwitch+ReadabilitySpec.swift"; sourceTree = "<group>"; };
 		B867A2ED223BE5B5009724BE /* EvaluationResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResultType.swift; sourceTree = "<group>"; };
 		B867A2EF223BE5CF009724BE /* EvaluationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationResult.swift; sourceTree = "<group>"; };
 		B867A2F2223BE6DC009724BE /* IsButtonWithExactText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsButtonWithExactText.swift; sourceTree = "<group>"; };
@@ -488,6 +490,7 @@
 				524FF43E20B689A000CA71D4 /* UIImage */,
 				B17464AB22217DB9004C587B /* UINavigationController */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
+				B865EECA226B158300B80E3F /* UISwitch */,
 				526DC7F920846AA1001314A7 /* UITableView */,
 				B865EEC7226B138B00B80E3F /* UIView */,
 				52AAB3852072F1BF0021BA62 /* UIViewController */,
@@ -764,6 +767,14 @@
 				B865EEC8226B139700B80E3F /* UIView+ReadabilitySpec.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		B865EECA226B158300B80E3F /* UISwitch */ = {
+			isa = PBXGroup;
+			children = (
+				B865EECB226B159700B80E3F /* UISwitch+ReadabilitySpec.swift */,
+			);
+			path = UISwitch;
 			sourceTree = "<group>";
 		};
 		B867A2EC223BE5A5009724BE /* DebugLog */ = {
@@ -1264,6 +1275,7 @@
 				5235C2A3208F511700C0CEEA /* UIPickerViewBuilder.swift in Sources */,
 				524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */,
 				B8B56E6C21B012B10008514A /* UISliderBuilder.swift in Sources */,
+				B865EECC226B159700B80E3F /* UISwitch+ReadabilitySpec.swift in Sources */,
 				B836272D21AC1D27008264C5 /* UISwitchBuilder.swift in Sources */,
 				526DC7FD208475C1001314A7 /* UITableViewBuilder.swift in Sources */,
 				526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */,
