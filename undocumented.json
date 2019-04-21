@@ -246,48 +246,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
-      "line": 6,
-      "symbol": "UIView.hasTextView(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
-      "line": 10,
-      "symbol": "UIView.hasTextView(containingText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
-      "line": 14,
-      "symbol": "UIView.hasTextView(withExactText:matchingAttributes:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
-      "line": 26,
-      "symbol": "UIView.findTextView(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
-      "line": 32,
-      "symbol": "UIView.findTextView(containingText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UITextView.swift",
-      "line": 38,
-      "symbol": "UIView.findTextView(withExactText:matchingAttributes:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
       "line": 4,
       "symbol": "UIView.findInSubviews(satisfyingCondition:initialDepthLevel:)",
@@ -459,48 +417,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITableView.swift",
       "line": 24,
       "symbol": "UIViewController.tapCell(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
-      "line": 5,
-      "symbol": "UIViewController.hasTextView(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
-      "line": 9,
-      "symbol": "UIViewController.hasTextView(containingText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
-      "line": 13,
-      "symbol": "UIViewController.hasTextView(withExactText:matchingAttributes:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
-      "line": 23,
-      "symbol": "UIViewController.findTextView(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
-      "line": 27,
-      "symbol": "UIViewController.findTextView(containingText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITextView.swift",
-      "line": 31,
-      "symbol": "UIViewController.findTextView(withExactText:matchingAttributes:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

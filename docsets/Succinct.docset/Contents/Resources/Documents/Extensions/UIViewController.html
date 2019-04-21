@@ -14,7 +14,7 @@
     <a title="UIViewController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Succinct Docs</a> (43% documented)</p>
+        <p><a href="../index.html">Succinct Docs</a> (53% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -2201,7 +2201,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextView whose text matches the searchText exactly.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2212,32 +2217,28 @@
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So16UIViewControllerC8SuccinctE11hasTextView010containingE0SbSS_tF"></a>
-                    <a name="//apple_ref/swift/Method/hasTextView(containingText:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UIViewControllerC8SuccinctE11hasTextView010containingE0SbSS_tF">hasTextView(containingText:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasTextView</span><span class="p">(</span><span class="n">containingText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UITextView object was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -2255,7 +2256,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextView whose text matches the searchText exactly and the provided searchAttributes.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2268,6 +2274,96 @@
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchAttributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Attributes to compare to the attributes of the text of any UITextView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UITextView object was found or not.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC8SuccinctE11hasTextView010containingE0SbSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/hasTextView(containingText:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC8SuccinctE11hasTextView010containingE0SbSS_tF">hasTextView(containingText:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextView whose text contains the searchText.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasTextView</span><span class="p">(</span><span class="n">containingText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UITextView object was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -2289,7 +2385,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextView whose text matches the searchText exactly.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2300,32 +2401,28 @@
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So16UIViewControllerC8SuccinctE12findTextView010containingE0So06UITextF0CSgSS_tF"></a>
-                    <a name="//apple_ref/swift/Method/findTextView(containingText:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UIViewControllerC8SuccinctE12findTextView010containingE0So06UITextF0CSgSS_tF">findTextView(containingText:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findTextView</span><span class="p">(</span><span class="n">containingText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITextView</span><span class="p">?</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UITextView, if one is found.</p>
                       </div>
                     </section>
                   </div>
@@ -2343,7 +2440,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextView whose text matches the searchText exactly and the provided searchAttributes.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2356,6 +2458,96 @@
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITextView</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchAttributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Attributes to compare to the attributes of the text of any UITextView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UITextView, if one is found.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UIViewControllerC8SuccinctE12findTextView010containingE0So06UITextF0CSgSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/findTextView(containingText:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UIViewControllerC8SuccinctE12findTextView010containingE0So06UITextF0CSgSS_tF">findTextView(containingText:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UITextView whose text contains the searchText.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findTextView</span><span class="p">(</span><span class="n">containingText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITextView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UITextView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UITextView, if one is found.</p>
                       </div>
                     </section>
                   </div>
@@ -2423,7 +2615,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2019-04-20)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2019-04-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
