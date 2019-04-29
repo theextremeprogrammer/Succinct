@@ -113,34 +113,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
-      "line": 4,
-      "symbol": "UIPickerView.selectSpecific(component:withText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
-      "line": 17,
-      "symbol": "UIPickerView.selectComponent(withText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
-      "line": 23,
-      "symbol": "UIPickerView.hasSelectedOption(withText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIPickerView/UIPickerView+SelectComponent.swift",
-      "line": 41,
-      "symbol": "UIPickerView.hasOption(withText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISlider/UISlider+SetValue.swift",
       "line": 4,
       "symbol": "UISlider.setValueAndFireTargetEvent(_:)",
@@ -158,13 +130,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UITableView/UITableView+Evaluations.swift",
       "line": 4,
       "symbol": "UITableView.findView(satisfyingCondition:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIPickerView.swift",
-      "line": 4,
-      "symbol": "UIView.findPickerView()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -270,48 +235,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+Testing.swift",
       "line": 4,
       "symbol": "UIViewController.loadViewControllerForUnitTest()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
-      "line": 4,
-      "symbol": "UIViewController.hasPickerView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
-      "line": 8,
-      "symbol": "UIViewController.findPickerView()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
-      "line": 12,
-      "symbol": "UIViewController.choosePickerComponent(component:withText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
-      "line": 18,
-      "symbol": "UIViewController.choosePickerComponent(withText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
-      "line": 24,
-      "symbol": "UIViewController.hasSelectedPickerOption(withText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIPickerView.swift",
-      "line": 30,
-      "symbol": "UIViewController.hasPickerOption(withText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

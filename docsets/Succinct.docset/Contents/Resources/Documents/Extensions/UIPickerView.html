@@ -14,7 +14,7 @@
     <a title="UIPickerView Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Succinct Docs</a> (53% documented)</p>
+        <p><a href="../index.html">Succinct Docs</a> (61% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -119,9 +119,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8SuccinctE14selectSpecific9component8withTextySi_SStF"></a>
-                    <a name="//apple_ref/swift/Method/selectSpecific(component:withText:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8SuccinctE14selectSpecific9component8withTextySi_SStF">selectSpecific(component:withText:)</a>
+                    <a name="/s:So12UIPickerViewC8SuccinctE9selectRow13withExactTextySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/selectRow(withExactText:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So12UIPickerViewC8SuccinctE9selectRow13withExactTextySS_tF">selectRow(withExactText:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -129,16 +129,42 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Loops through all components (columns) of a UIPickerView and searches the title text for each row of the current column for the specified search text. If a row title matching the search text is found, then that row will be selected.</p>
+
+<p>When a UIPickerView row is selected, the UIPickerViewDelegate <code>pickerView(pickerView:, didSelectRow:, inComponent:)</code> method will be invoked.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">selectSpecific</span><span class="p">(</span><span class="n">component</span> <span class="nv">componentIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">withText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">selectRow</span><span class="p">(</span><span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withExactText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text value of each row for the specified column.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -146,9 +172,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8SuccinctE15selectComponent8withTextySS_tF"></a>
-                    <a name="//apple_ref/swift/Method/selectComponent(withText:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8SuccinctE15selectComponent8withTextySS_tF">selectComponent(withText:)</a>
+                    <a name="/s:So12UIPickerViewC8SuccinctE9selectRow11columnIndex13withExactTextySi_SStF"></a>
+                    <a name="//apple_ref/swift/Method/selectRow(columnIndex:withExactText:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So12UIPickerViewC8SuccinctE9selectRow11columnIndex13withExactTextySi_SStF">selectRow(columnIndex:withExactText:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -156,16 +182,54 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Loops through only the specified component (column) of a UIPickerView and searches the title text for each row for the specified search text. If a row title matching the search text is found, then that row will be selected.</p>
+
+<p>When a UIPickerView row is selected, the UIPickerViewDelegate <code>pickerView(pickerView:, didSelectRow:, inComponent:)</code> method will be invoked.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">selectComponent</span><span class="p">(</span><span class="n">withText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">selectRow</span><span class="p">(</span><span class="nv">columnIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>columnIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the column to search.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withExactText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text value of each row for the specified column.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -173,9 +237,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8SuccinctE17hasSelectedOption8withTextSbSS_tF"></a>
-                    <a name="//apple_ref/swift/Method/hasSelectedOption(withText:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8SuccinctE17hasSelectedOption8withTextSbSS_tF">hasSelectedOption(withText:)</a>
+                    <a name="/s:So12UIPickerViewC8SuccinctE6hasRow13withExactTextSbSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/hasRow(withExactText:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So12UIPickerViewC8SuccinctE6hasRow13withExactTextSbSS_tF">hasRow(withExactText:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -183,16 +247,44 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Loops through all components (columns) of a UIPickerView and searches the title text for each row of each component (column) for the specified search text.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasSelectedOption</span><span class="p">(</span><span class="n">withText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasRow</span><span class="p">(</span><span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withExactText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text value of each row.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if the specified search text was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -200,9 +292,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8SuccinctE9hasOption8withTextSbSS_tF"></a>
-                    <a name="//apple_ref/swift/Method/hasOption(withText:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8SuccinctE9hasOption8withTextSbSS_tF">hasOption(withText:)</a>
+                    <a name="/s:So12UIPickerViewC8SuccinctE14hasSelectedRow13withExactTextSbSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/hasSelectedRow(withExactText:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So12UIPickerViewC8SuccinctE14hasSelectedRow13withExactTextSbSS_tF">hasSelectedRow(withExactText:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -210,16 +302,46 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Loops through all components (columns) of a UIPickerView and searches the title text only for the selected row of each component (column) for the specified search text.</p>
+
+<p>The selected row is checked using the UIPickerView <code>selectedRow(inComponent: componentIndex)</code> method.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasOption</span><span class="p">(</span><span class="n">withText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasSelectedRow</span><span class="p">(</span><span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>withExactText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text value of each row.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if the specified search text was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -229,7 +351,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2019-04-21)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2019-04-29)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
