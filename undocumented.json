@@ -1,62 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Logger.swift",
-      "line": 1,
-      "symbol": "Logger",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Logger.swift",
-      "line": 4,
-      "symbol": "Logger.useOutputMethod(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Logger.swift",
-      "line": 8,
-      "symbol": "Logger.useDefaultOutputMethod()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Logger.swift",
-      "line": 12,
-      "symbol": "Logger.debug(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/PrintOutputMethod.swift",
-      "line": 1,
-      "symbol": "OutputMethod",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/PrintOutputMethod.swift",
-      "line": 2,
-      "symbol": "OutputMethod.standardPrint(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/PrintOutputMethod.swift",
-      "line": 5,
-      "symbol": "PrintOutputMethod",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/PrintOutputMethod.swift",
-      "line": 6,
-      "symbol": "PrintOutputMethod.standardPrint(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Succinct.swift",
       "line": 1,
       "symbol": "Succinct",
@@ -67,13 +11,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Succinct.swift",
       "line": 2,
       "symbol": "Succinct.config",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Succinct.swift",
-      "line": 3,
-      "symbol": "Succinct.log",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
