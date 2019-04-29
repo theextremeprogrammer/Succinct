@@ -8,31 +8,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Succinct.swift",
-      "line": 2,
-      "symbol": "Succinct.config",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/SuccinctConfig.swift",
       "line": 1,
       "symbol": "SuccinctConfig",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/SuccinctConfig.swift",
-      "line": 4,
-      "symbol": "SuccinctConfig.enableDebugLog()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/SuccinctConfig.swift",
-      "line": 8,
-      "symbol": "SuccinctConfig.disableDebugLog()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
