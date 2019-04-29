@@ -20,29 +20,29 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
 
             context("for options within the first component") {
                 it("contains the option in the first component and is selected") {
-                    expect(viewController.hasSelectedPickerOption(withText: "One")).to(beTrue())
+                    expect(viewController.hasSelectedPickerRow(withExactText: "One")).to(beTrue())
                 }
 
                 it("contains the option in the first component but is not selected") {
-                    expect(viewController.hasSelectedPickerOption(withText: "Two")).to(beFalse())
+                    expect(viewController.hasSelectedPickerRow(withExactText: "Two")).to(beFalse())
                 }
 
                 it("does not contain the option in the first component at all") {
-                    expect(viewController.hasSelectedPickerOption(withText: "Three")).to(beFalse())
+                    expect(viewController.hasSelectedPickerRow(withExactText: "Three")).to(beFalse())
                 }
             }
 
             context("for options within the second component") {
                 it("contains the option in the second component and is selected") {
-                    expect(viewController.hasSelectedPickerOption(withText: "Sarah")).to(beTrue())
+                    expect(viewController.hasSelectedPickerRow(withExactText: "Sarah")).to(beTrue())
                 }
 
                 it("contains the option in the second component but is not selected") {
-                    expect(viewController.hasSelectedPickerOption(withText: "Michael")).to(beFalse())
+                    expect(viewController.hasSelectedPickerRow(withExactText: "Michael")).to(beFalse())
                 }
 
                 it("does not contain the option in the second component at all") {
-                    expect(viewController.hasSelectedPickerOption(withText: "Roger")).to(beFalse())
+                    expect(viewController.hasSelectedPickerRow(withExactText: "Roger")).to(beFalse())
                 }
             }
         }
@@ -63,25 +63,25 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
 
             context("when there is only one component") {
                 it("contains the option in the first component") {
-                    expect(viewController.hasPickerOption(withText: "One")).to(beTrue())
-                    expect(viewController.hasPickerOption(withText: "Two")).to(beTrue())
+                    expect(viewController.hasPickerRow(withExactText: "One")).to(beTrue())
+                    expect(viewController.hasPickerRow(withExactText: "Two")).to(beTrue())
                 }
 
                 it("does not contain the option in the first component at all") {
-                    expect(viewController.hasPickerOption(withText: "Three")).to(beFalse())
-                    expect(viewController.hasPickerOption(withText: "Four")).to(beFalse())
+                    expect(viewController.hasPickerRow(withExactText: "Three")).to(beFalse())
+                    expect(viewController.hasPickerRow(withExactText: "Four")).to(beFalse())
                 }
             }
 
             context("for options within the second component") {
                 it("contains the option in the second component") {
-                    expect(viewController.hasPickerOption(withText: "Sarah")).to(beTrue())
-                    expect(viewController.hasPickerOption(withText: "Michael")).to(beTrue())
+                    expect(viewController.hasPickerRow(withExactText: "Sarah")).to(beTrue())
+                    expect(viewController.hasPickerRow(withExactText: "Michael")).to(beTrue())
                 }
 
                 it("does not contain the option in the second component at all") {
-                    expect(viewController.hasPickerOption(withText: "Lacy")).to(beFalse())
-                    expect(viewController.hasPickerOption(withText: "Jay")).to(beFalse())
+                    expect(viewController.hasPickerRow(withExactText: "Lacy")).to(beFalse())
+                    expect(viewController.hasPickerRow(withExactText: "Jay")).to(beFalse())
                 }
             }
         }

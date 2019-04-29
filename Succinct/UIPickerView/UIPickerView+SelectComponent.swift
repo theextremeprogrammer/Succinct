@@ -1,26 +1,26 @@
 import UIKit
 
 extension UIPickerView {
-    public func selectSpecific(component componentIndex: Int, withText searchText: String) {
-        let numberOfRows = self.numberOfRows(inComponent: componentIndex)
+    public func selectRow(columnIndex: Int, withExactText searchText: String) {
+        let numberOfRows = self.numberOfRows(inComponent: columnIndex)
 
         for rowIndex in 0...numberOfRows - 1 {
-            let rowTitle = self.delegate?.pickerView?(self, titleForRow: rowIndex, forComponent: componentIndex)
+            let rowTitle = self.delegate?.pickerView?(self, titleForRow: rowIndex, forComponent: columnIndex)
 
             if rowTitle == searchText {
-                self.delegate?.pickerView?(self, didSelectRow: rowIndex, inComponent: componentIndex)
+                self.delegate?.pickerView?(self, didSelectRow: rowIndex, inComponent: columnIndex)
                 return
             }
         }
     }
 
-    public func selectComponent(withText searchText: String) {
+    public func selectRow(withExactText searchText: String) {
         for componentIndex in 0...self.numberOfComponents - 1 {
-            selectSpecific(component: componentIndex, withText: searchText)
+            selectRow(columnIndex: componentIndex, withExactText: searchText)
         }
     }
 
-    public func hasSelectedOption(withText searchText: String) -> Bool {
+    public func hasSelectedRow(withExactText searchText: String) -> Bool {
         for componentIndex in 0...self.numberOfComponents - 1 {
             let selectedRow = self.selectedRow(inComponent: componentIndex)
 
@@ -38,7 +38,7 @@ extension UIPickerView {
         return false
     }
 
-    public func hasOption(withText searchText: String) -> Bool {
+    public func hasRow(withExactText searchText: String) -> Bool {
         for componentIndex in 0...self.numberOfComponents - 1 {
             let numberOfRows = self.numberOfRows(inComponent: componentIndex)
 
