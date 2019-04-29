@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 
 class DebugLogging_UIViewSpec: QuickSpec {
     override func spec() {

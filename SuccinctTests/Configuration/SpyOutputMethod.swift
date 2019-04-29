@@ -1,4 +1,4 @@
-import Succinct
+@testable import Succinct
 
 public final class SpyOutputMethod: OutputMethod {
     public init() {}
