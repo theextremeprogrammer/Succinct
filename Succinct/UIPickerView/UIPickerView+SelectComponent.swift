@@ -1,10 +1,16 @@
 import UIKit
 
 extension UIPickerView {
+    public func selectRow(withExactText searchText: String) {
+        for componentIndex in 0..<numberOfComponents {
+            selectRow(columnIndex: componentIndex, withExactText: searchText)
+        }
+    }
+
     public func selectRow(columnIndex: Int, withExactText searchText: String) {
         let numberOfRowsForColumn = numberOfRows(inComponent: columnIndex)
 
-        for rowIndex in 0...numberOfRowsForColumn - 1 {
+        for rowIndex in 0..<numberOfRowsForColumn {
             let rowTitle = delegate?.pickerView?(self, titleForRow: rowIndex, forComponent: columnIndex)
 
             if rowTitle == searchText {
@@ -14,14 +20,8 @@ extension UIPickerView {
         }
     }
 
-    public func selectRow(withExactText searchText: String) {
-        for componentIndex in 0...numberOfComponents - 1 {
-            selectRow(columnIndex: componentIndex, withExactText: searchText)
-        }
-    }
-
     public func hasSelectedRow(withExactText searchText: String) -> Bool {
-        for columnIndex in 0...numberOfComponents - 1 {
+        for columnIndex in 0..<numberOfComponents {
             let selectedRowForColumn = selectedRow(inComponent: columnIndex)
 
             let selectedRowTitle = delegate?.pickerView?(
@@ -39,10 +39,10 @@ extension UIPickerView {
     }
 
     public func hasRow(withExactText searchText: String) -> Bool {
-        for columnIndex in 0...numberOfComponents - 1 {
+        for columnIndex in 0..<numberOfComponents {
             let numberOfRowsForColumn = numberOfRows(inComponent: columnIndex)
 
-            for rowIndex in 0...numberOfRowsForColumn - 1 {
+            for rowIndex in 0..<numberOfRowsForColumn {
                 let rowTitle = delegate?.pickerView?(self, titleForRow: rowIndex, forComponent: columnIndex)
 
                 if rowTitle == searchText {
