@@ -1,7 +1,10 @@
 public class Succinct {
+    internal static let log = Logger()
+
+    ///
+    /// Object which allows access to cofigurable options within Succinct.
+    ///
     public static let config = SuccinctConfig()
 
-    internal static let log = Logger()
-    
     private init() {}
 }
