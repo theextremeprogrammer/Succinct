@@ -4,6 +4,24 @@ import Succinct
 
 final class UIPickerView_SelectComponentSpec: QuickSpec {
     override func spec() {
+        describe("when a picker view does not exist in the view hierarchy") {
+            var viewController: UIViewController!
+
+            beforeEach {
+                viewController = UIViewControllerBuilder()
+                    .withSubview(UIViewBuilder().build())
+                    .build()
+            }
+
+            it("does not have the desired picker row") {
+                expect(viewController.hasPickerRow(withExactText: "One")).to(beFalse())
+            }
+
+            it("does not have the desired picker row selected") {
+                expect(viewController.hasSelectedPickerRow(withExactText: "One")).to(beFalse())
+            }
+        }
+
         describe("confirming if a picker view contains a selected option in any component") {
             var viewController: UIViewController!
 
@@ -19,7 +37,7 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
             }
 
             context("for options within the first component") {
-                it("contains the option in the first component and is selected") {
+                it("contains the option in the first component and is selected by default") {
                     expect(viewController.hasSelectedPickerRow(withExactText: "One")).to(beTrue())
                 }
 
@@ -33,7 +51,7 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
             }
 
             context("for options within the second component") {
-                it("contains the option in the second component and is selected") {
+                it("contains the option in the second component and is selected by default") {
                     expect(viewController.hasSelectedPickerRow(withExactText: "Sarah")).to(beTrue())
                 }
 
