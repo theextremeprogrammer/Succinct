@@ -26,7 +26,7 @@ extension UIViewController {
     }
 
     ///
-    /// Searches the entire view hierarchy of a view controller's primary view for any UIPickerView. If a UIPickerView is found, then it will attempt to search the title text for all rows of all columns for the search text. If a row title matching the search text is found, then that row will be selected.
+    /// Searches the entire view hierarchy of a view controller's primary view for any UIPickerView. If a UIPickerView is found, then it will attempt to search the title text for all rows of all columns for the specified search text. If a row title matching the search text is found, then that row will be selected.
     ///
     /// When a UIPickerView row is selected, the UIPickerViewDelegate `pickerView(pickerView:, didSelectRow:, inComponent:)` method will be invoked.
     ///
@@ -41,7 +41,7 @@ extension UIViewController {
     }
 
     ///
-    /// Searches the entire view hierarchy of a view controller's primary view for any UIPickerView. If a UIPickerView is found, then it will attempt to search the title text for each row of the indicated column index for the search text. If a row title matching the search text is found, then that row will be selected.
+    /// Searches the entire view hierarchy of a view controller's primary view for any UIPickerView. If a UIPickerView is found, then it will attempt to search the title text for each row of the indicated column index for the specified search text. If a row title matching the search text is found, then that row will be selected.
     ///
     /// When a UIPickerView row is selected, the UIPickerViewDelegate `pickerView(pickerView:, didSelectRow:, inComponent:)` method will be invoked.
     ///
@@ -57,7 +57,7 @@ extension UIViewController {
     }
     
     ///
-    /// Searches the entire view hierarchy of a view controller's primary view for any UIPickerView. If a UIPickerView is found, then it will attempt to search the title text for all rows of all columns for the search text.
+    /// Searches the entire view hierarchy of a view controller's primary view for any UIPickerView. If a UIPickerView is found, then it will attempt to search the title text for all rows of all columns for the specified search text.
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
@@ -72,7 +72,7 @@ extension UIViewController {
     }
 
     ///
-    /// Searches the entire view hierarchy of a view controller's primary view for any UIPickerView. If a UIPickerView is found, then it will attempt to search the title text for only the selected row of each column for the search text.
+    /// Searches the entire view hierarchy of a view controller's primary view for any UIPickerView. If a UIPickerView is found, then it will attempt to search the title text for only the selected row of each column for the specified search text.
     ///
     /// The selected row is checked using the UIPickerView `selectedRow(inComponent: componentIndex)` method.
     ///
