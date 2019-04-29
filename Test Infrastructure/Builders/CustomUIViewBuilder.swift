@@ -12,6 +12,14 @@ struct CustomUIViewBuilder<T: UIView> {
         return self
     }
     
+    func withSubviews(_ subviews: UIView...) -> CustomUIViewBuilder {
+        subviews.forEach { subview in
+            view.addSubview(subview)
+        }
+
+        return self
+    }
+
     func build() -> T {
         return view
     }

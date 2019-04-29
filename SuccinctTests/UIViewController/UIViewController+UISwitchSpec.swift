@@ -66,6 +66,155 @@ final class UIViewController_UISwitchSpec: QuickSpec {
             }
         }
 
+        describe("finding a switch when it is contained within a specific view") {
+            context("when a switch does not exist") {
+                it("does not find the switch when there are no subviews") {
+                    let viewController = UIViewControllerBuilder().build()
+
+
+                    let maybeSwitch = viewController.findSwitch(
+                        containedInView: UIView.self
+                    )
+
+
+                    expect(maybeSwitch).to(beNil())
+                }
+
+                it("does not find the switch when there are subviews") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(UIViewBuilder().build())
+                        .build()
+
+
+                    let maybeSwitch = viewController.findSwitch(
+                        containedInView: UIView.self
+                    )
+
+
+                    expect(maybeSwitch).to(beNil())
+                }
+            }
+
+            context("when a switch exists, but not within the specified view") {
+                final class SomeCustomView: UIView {}
+
+                it("does not find the switch when there are subviews") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubviews(
+                            UIViewBuilder()
+                                .withSubview(UISwitchBuilder().build())
+                                .build(),
+                            CustomUIViewBuilder<SomeCustomView>().build()
+                        )
+                        .build()
+
+
+                    let maybeSwitch = viewController.findSwitch(
+                        containedInView: SomeCustomView.self
+                    )
+
+
+                    expect(maybeSwitch).to(beNil())
+                }
+            }
+
+            // MARK: - First subview
+            context("when a switch exists inside a generic view inside the first subview") {
+                final class SomeCustomView: UIView {}
+
+                it("can find the switch when its in the first subview") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            CustomUIViewBuilder<SomeCustomView>()
+                                .withSubview(UISwitchBuilder().build())
+                                .build()
+                        )
+                        .build()
+
+
+                    let maybeSwitch = viewController.findSwitch(
+                        containedInView: SomeCustomView.self
+                    )
+
+
+                    expect(maybeSwitch).toNot(beNil())
+                }
+
+                it("can find the switch when its after another subview") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            CustomUIViewBuilder<SomeCustomView>()
+                                .withSubviews(
+                                    UIViewBuilder().build(),
+                                    UISwitchBuilder().build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    let maybeSwitch = viewController.findSwitch(
+                        containedInView: SomeCustomView.self
+                    )
+
+
+                    expect(maybeSwitch).toNot(beNil())
+                }
+            }
+
+            // MARK: - Second subview
+            context("when a switch exists inside a generic view inside the second subview") {
+                final class SomeCustomView: UIView {}
+
+                it("can find the switch when its in the second subview") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    CustomUIViewBuilder<SomeCustomView>()
+                                        .withSubview(UISwitchBuilder().build())
+                                        .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    let maybeSwitch = viewController.findSwitch(
+                        containedInView: SomeCustomView.self
+                    )
+
+
+                    expect(maybeSwitch).toNot(beNil())
+                }
+
+                it("can find the switch when its after another subview") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    CustomUIViewBuilder<SomeCustomView>()
+                                        .withSubviews(
+                                            UIViewBuilder().build(),
+                                            UISwitchBuilder().build()
+                                        )
+                                        .build()
+                                )
+                                .build()
+                        )
+                        .build()
+
+
+                    let maybeSwitch = viewController.findSwitch(
+                        containedInView: SomeCustomView.self
+                    )
+
+
+                    expect(maybeSwitch).toNot(beNil())
+                }
+            }
+        }
+
         describe("finding a switch using a co-located ui label") {
             context("when a switch does not exist") {
                 it("does not find the switch") {
