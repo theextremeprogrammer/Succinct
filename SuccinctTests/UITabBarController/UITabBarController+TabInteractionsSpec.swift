@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Succinct
 
-class UITabBarController_SelectTabSpec: QuickSpec {
+class UITabBarController_TabInteractionsSpec: QuickSpec {
     override func spec() {
         describe("selecting the tab of a UITabBarController") {
             it("cannot select the tab if no tabs exist") {
