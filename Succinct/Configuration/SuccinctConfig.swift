@@ -1,3 +1,6 @@
+///
+/// Object which allows access to cofigurable options within Succinct.
+///
 public class SuccinctConfig {
     private(set) var isDebuggingTurnedOn: Bool = false
 
