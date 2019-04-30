@@ -17,6 +17,11 @@ struct UITextFieldBuilder {
         return self
     }
 
+    func withInputAccessoryView(_ inputAccessoryView: UIView) -> UITextFieldBuilder {
+        textField.inputAccessoryView = inputAccessoryView
+        return self
+    }
+
     func build() -> UITextField {
         return textField
     }
