@@ -24,19 +24,19 @@ extension UITabBarController {
     ///
     /// - Note: This API method is helpful to confirm the type of UIViewController object without having to be coupled to whether or not the UIViewController is inside a UINavigationController or not.
     ///
-    /// - Parameter compareClass: Type of class to compare to the UITabBarController's `selectedViewController` property.
+    /// - Parameter viewControllerType: Type of class to compare to the UITabBarController's `selectedViewController` property.
     /// - Returns: A boolean value indicating if the selected tab's class matches or not.
     ///
-    public func selectedTab<T>(isAKindOf compareClass: T.Type) -> Bool where T: UIViewController {
+    public func selectedTab<T>(isAKindOf viewControllerType: T.Type) -> Bool where T: UIViewController {
         if
             let navController = selectedViewController as? UINavigationController,
             let topViewController = navController.topViewController
         {
-            return topViewController.isKind(of: compareClass)
+            return topViewController.isKind(of: viewControllerType)
         }
 
         if let selectedViewController = selectedViewController {
-            return selectedViewController.isKind(of: compareClass)
+            return selectedViewController.isKind(of: viewControllerType)
         }
 
         return false
