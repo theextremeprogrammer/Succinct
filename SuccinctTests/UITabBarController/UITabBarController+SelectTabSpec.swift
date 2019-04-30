@@ -6,7 +6,7 @@ class UITabBarController_SelectTabSpec: QuickSpec {
     override func spec() {
         describe("selecting the tab of a UITabBarController") {
             it("cannot select the tab if no tabs exist") {
-                let tabBarVC = UITabBarController()
+                let tabBarVC = UITabBarControllerBuilder().build()
 
 
                 tabBarVC.selectTab(withTitle: "Home")
@@ -16,28 +16,20 @@ class UITabBarController_SelectTabSpec: QuickSpec {
             }
 
             it("selects the first tab by default") {
-                let xVC = UIViewController()
-                xVC.tabBarItem = UITabBarItem(title: "X", image: nil, selectedImage: nil)
-
-                let tabBarVC = UITabBarController()
-                tabBarVC.setViewControllers([xVC], animated: false)
+                let tabBarVC = UITabBarControllerBuilder()
+                    .withViewController(withTitle: "X")
+                    .build()
 
 
                 expect(tabBarVC.selectedIndex).to(equal(0))
             }
 
             it("maintains the first tab selection if the indicated tab title does not match") {
-                let xVC = UIViewController()
-                xVC.tabBarItem = UITabBarItem(title: "X", image: nil, selectedImage: nil)
-
-                let yVC = UIViewController()
-                yVC.tabBarItem = UITabBarItem(title: "Y", image: nil, selectedImage: nil)
-
-                let zVC = UIViewController()
-                zVC.tabBarItem = UITabBarItem(title: "Z", image: nil, selectedImage: nil)
-
-                let tabBarVC = UITabBarController()
-                tabBarVC.setViewControllers([xVC, yVC, zVC], animated: false)
+                let tabBarVC = UITabBarControllerBuilder()
+                    .withViewController(withTitle: "X")
+                    .withViewController(withTitle: "Y")
+                    .withViewController(withTitle: "Z")
+                    .build()
 
 
                 tabBarVC.selectTab(withTitle: "Home")
@@ -47,17 +39,11 @@ class UITabBarController_SelectTabSpec: QuickSpec {
             }
 
             it("selects the desired tab when the title text matches") {
-                let xVC = UIViewController()
-                xVC.tabBarItem = UITabBarItem(title: "X", image: nil, selectedImage: nil)
-
-                let yVC = UIViewController()
-                yVC.tabBarItem = UITabBarItem(title: "Y", image: nil, selectedImage: nil)
-
-                let zVC = UIViewController()
-                zVC.tabBarItem = UITabBarItem(title: "Z", image: nil, selectedImage: nil)
-
-                let tabBarVC = UITabBarController()
-                tabBarVC.setViewControllers([xVC, yVC, zVC], animated: false)
+                let tabBarVC = UITabBarControllerBuilder()
+                    .withViewController(withTitle: "X")
+                    .withViewController(withTitle: "Y")
+                    .withViewController(withTitle: "Z")
+                    .build()
 
 
                 tabBarVC.selectTab(withTitle: "Y")

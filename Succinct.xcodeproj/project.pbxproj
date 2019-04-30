@@ -178,6 +178,8 @@
 		B8C4FC8C221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C4FC8B221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift */; };
 		B8D0F56F2278299E007346AF /* UITabBarController+SelectTabSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0F56E2278299E007346AF /* UITabBarController+SelectTabSpec.swift */; };
 		B8D0F571227829CB007346AF /* UITabBarController+SelectTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0F570227829CB007346AF /* UITabBarController+SelectTab.swift */; };
+		B8D0F57522782DE9007346AF /* UITabBarControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0F57222782D78007346AF /* UITabBarControllerBuilder.swift */; };
+		B8D0F57622782DE9007346AF /* UITabBarControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0F57222782D78007346AF /* UITabBarControllerBuilder.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 		B8F2DAA021B761AB00C703DA /* UnitTestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */; };
 /* End PBXBuildFile section */
@@ -378,6 +380,7 @@
 		B8C4FC8B221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		B8D0F56E2278299E007346AF /* UITabBarController+SelectTabSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+SelectTabSpec.swift"; sourceTree = "<group>"; };
 		B8D0F570227829CB007346AF /* UITabBarController+SelectTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+SelectTab.swift"; sourceTree = "<group>"; };
+		B8D0F57222782D78007346AF /* UITabBarControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerBuilder.swift; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCollectionView.swift; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
@@ -872,6 +875,7 @@
 				3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */,
 				B8B56E6B21B012B10008514A /* UISliderBuilder.swift */,
 				B836272C21AC1D27008264C5 /* UISwitchBuilder.swift */,
+				B8D0F57222782D78007346AF /* UITabBarControllerBuilder.swift */,
 				526DC7FC208475C1001314A7 /* UITableViewBuilder.swift */,
 				B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */,
 				B1FFB51721CF518D007AE34B /* UITextViewBuilder.swift */,
@@ -1321,6 +1325,7 @@
 				B865EECC226B159700B80E3F /* UISwitch+ReadabilitySpec.swift in Sources */,
 				B836272D21AC1D27008264C5 /* UISwitchBuilder.swift in Sources */,
 				B8D0F56F2278299E007346AF /* UITabBarController+SelectTabSpec.swift in Sources */,
+				B8D0F57622782DE9007346AF /* UITabBarControllerBuilder.swift in Sources */,
 				526DC7FD208475C1001314A7 /* UITableViewBuilder.swift in Sources */,
 				526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */,
 				526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */,
@@ -1383,6 +1388,7 @@
 				B88E39DB21DDFE9500A3B82B /* UISegmentedControlBuilder.swift in Sources */,
 				B88E39DC21DDFE9500A3B82B /* UISliderBuilder.swift in Sources */,
 				B88E39DD21DDFE9500A3B82B /* UISwitchBuilder.swift in Sources */,
+				B8D0F57522782DE9007346AF /* UITabBarControllerBuilder.swift in Sources */,
 				B15A4C8021B40FAF00398963 /* UITableViewBuilder.swift in Sources */,
 				B15A4C8321B40FEA00398963 /* UITableViewCellConfiguration.swift in Sources */,
 				B15A4C8121B40FD400398963 /* UITableViewConfiguration.swift in Sources */,
