@@ -5,7 +5,6 @@ extension UIViewController {
     /// Searches the entire view hierarchy of a view controller's primary view for all UISwitch objects whose `isOn` property matches the provided value.
     ///
     /// - Parameter switchIsOn: Boolean value indicating if the UISwitch object is on or not.
-    ///
     /// - Returns: A count for the total number of matching UISwitch objects.
     ///
     public func countOfSwitches(switchIsOn: Bool) -> Int {
@@ -17,7 +16,7 @@ extension UIViewController {
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
-    /// - Parameter compareClass: Type of class to compare to the containing UIView object(s).
+    /// - Parameter viewType: Type of class to compare to the containing UIView object(s).
     /// - Returns: An optional UISwitch, if one is found.
     ///
     public func findSwitch<T>(containedInView viewType: T.Type) -> UISwitch? where T: UIView {
@@ -41,10 +40,10 @@ extension UIViewController {
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
-    /// - Parameter compareClass: Type of class to compare to the containing UIView object(s).
+    /// - Parameter viewType: Type of class to compare to the containing UIView object(s).
     ///
-    public func tapSwitch<T>(containedInView viewClass: T.Type) where T: UIView {
-        view.findSwitch(containedInView: viewClass)?
+    public func tapSwitch<T>(containedInView viewType: T.Type) where T: UIView {
+        view.findSwitch(containedInView: viewType)?
             .tapAndFireTargetEvent()
     }
 
