@@ -17,7 +17,7 @@ class UITabBarController_TabInteractionsSpec: QuickSpec {
 
             it("selects the first tab by default") {
                 let tabBarVC = UITabBarControllerBuilder()
-                    .withViewController(withTitle: "X")
+                    .withGenericViewController(withTitle: "X")
                     .build()
 
 
@@ -26,9 +26,9 @@ class UITabBarController_TabInteractionsSpec: QuickSpec {
 
             it("maintains the first tab selection if the indicated tab title does not match") {
                 let tabBarVC = UITabBarControllerBuilder()
-                    .withViewController(withTitle: "X")
-                    .withViewController(withTitle: "Y")
-                    .withViewController(withTitle: "Z")
+                    .withGenericViewController(withTitle: "X")
+                    .withGenericViewController(withTitle: "Y")
+                    .withGenericViewController(withTitle: "Z")
                     .build()
 
 
@@ -40,9 +40,9 @@ class UITabBarController_TabInteractionsSpec: QuickSpec {
 
             it("selects the desired tab when the title text matches") {
                 let tabBarVC = UITabBarControllerBuilder()
-                    .withViewController(withTitle: "X")
-                    .withViewController(withTitle: "Y")
-                    .withViewController(withTitle: "Z")
+                    .withGenericViewController(withTitle: "X")
+                    .withGenericViewController(withTitle: "Y")
+                    .withGenericViewController(withTitle: "Z")
                     .build()
 
 
@@ -56,6 +56,67 @@ class UITabBarController_TabInteractionsSpec: QuickSpec {
 
 
                 expect(tabBarVC.selectedIndex).to(equal(2))
+            }
+        }
+
+        final class XViewController: UIViewController {}
+        final class YViewController: UIViewController {}
+
+        describe("checking the displayed tab's view controller class") {
+            it("returns false when there are no tabs") {
+                let tabBarVC = UITabBarControllerBuilder().build()
+
+
+                expect(tabBarVC.selectedTab(isAKindOf: UIViewController.self)).to(beFalse())
+            }
+
+            it("returns true when the selected tab's view controller is the tab that is displayed") {
+                let xVC = XViewController()
+                let yVC = YViewController()
+
+                let tabBarVC = UITabBarControllerBuilder()
+                    .withViewController(xVC, withTitle: "X")
+                    .withViewController(yVC, withTitle: "Y")
+                    .build()
+
+
+                tabBarVC.selectTab(withExactTitle: "Y")
+
+
+                expect(tabBarVC.selectedTab(isAKindOf: YViewController.self)).to(beTrue())
+            }
+
+            it("returns true when the selected tab's view controller is a UINavigationController that contains the requested type") {
+                let xVC = XViewController()
+                let yVC = YViewController()
+                let yNavController = UINavigationController(rootViewController: yVC)
+
+                let tabBarVC = UITabBarControllerBuilder()
+                    .withViewController(xVC, withTitle: "X")
+                    .withViewController(yNavController, withTitle: "Y")
+                    .build()
+
+
+                tabBarVC.selectTab(withExactTitle: "Y")
+
+
+                expect(tabBarVC.selectedTab(isAKindOf: YViewController.self)).to(beTrue())
+            }
+
+            it("returns false when the navigation controller has no topViewController") {
+                let xVC = XViewController()
+                let navController = UINavigationController(nibName: nil, bundle: nil)
+
+                let tabBarVC = UITabBarControllerBuilder()
+                    .withViewController(xVC, withTitle: "X")
+                    .withViewController(navController, withTitle: "Y")
+                    .build()
+
+
+                tabBarVC.selectTab(withExactTitle: "Y")
+
+
+                expect(tabBarVC.selectedTab(isAKindOf: YViewController.self)).to(beFalse())
             }
         }
     }

@@ -9,11 +9,20 @@ final class UITabBarControllerBuilder {
         viewControllers = []
     }
 
-    func withViewController(withTitle title: String) -> UITabBarControllerBuilder {
+    func withGenericViewController(withTitle title: String) -> UITabBarControllerBuilder {
         let viewController = UIViewController()
         viewController.tabBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
         viewControllers.append(viewController)
 
+        tabBarController.setViewControllers(viewControllers, animated: false)
+
+        return self
+    }
+
+    func withViewController(_ viewController: UIViewController, withTitle title: String) -> UITabBarControllerBuilder {
+        viewController.tabBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
+        viewControllers.append(viewController)
+        
         tabBarController.setViewControllers(viewControllers, animated: false)
 
         return self
