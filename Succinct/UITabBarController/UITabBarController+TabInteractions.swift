@@ -27,7 +27,7 @@ extension UITabBarController {
     /// - Parameter compareClass: Type of class to compare to the UITabBarController's `selectedViewController` property.
     /// - Returns: A boolean value indicating if the selected tab's class matches or not.
     ///
-    public func selectedTab(isAKindOf compareClass: AnyClass) -> Bool {
+    public func selectedTab<T>(isAKindOf compareClass: T.Type) -> Bool where T: UIViewController {
         if
             let navController = selectedViewController as? UINavigationController,
             let topViewController = navController.topViewController
