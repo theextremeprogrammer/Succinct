@@ -2,11 +2,13 @@ import UIKit
 
 extension UIViewController {
     ///
-    /// Searches the view controller's `navigationItem.leftBarButtonIttem` and `navigationItem.rightBarButtonItem` for a UIBarButtonItem whose `SystemItem` matches the searchSystemItem and then attempts to tap the UIBarButtonItem by firing its associated target event, if one exists.
+    /// Searches the view controller's `navigationItem.leftBarButtonIttem`, `navigationItem.rightBarButtonItem`, as well as the UIView hierarchy for a UIToolbar which may contain a UIBarButtonItem whose `SystemItem` matches the searchSystemItem and then attempts to tap the UIBarButtonItem by firing its associated target event, if one exists.
+    ///
+    /// This method is convenient for de-coupling from the details of where a UIBarButtonItem object may be located.
+    ///
+    /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
     /// - Parameter searchSystemItem: `UIBarButtonItem.SystemItem` to compare to the UIBarButtonItem objects that are found.
-    ///
-    /// - Note: This method is convenient for de-coupling from the details of where the searchSystemItem is located.
     ///
     public func tapBarButtonItem(withSystemItem searchSystemItem: UIBarButtonItem.SystemItem) {
         if let leftBarButtonItem = navigationItem.leftBarButtonItem {

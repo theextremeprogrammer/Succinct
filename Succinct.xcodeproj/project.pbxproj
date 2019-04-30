@@ -514,6 +514,7 @@
 				B867A2F9223C7DA1009724BE /* UILabel */,
 				AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */,
 				B865EEC5226B137400B80E3F /* UIView+Readability.swift */,
+				B8C4FC8B221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift */,
 				8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */,
 				3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */,
 				3B14E4A77852DD11B2A8ABFA /* UIView+UIPickerView.swift */,
@@ -524,7 +525,6 @@
 				B1D05E602160B5170044D2AD /* UIView+UITextField.swift */,
 				B1FFB51B21CF52BE007AE34B /* UIView+UITextView.swift */,
 				3B14E6688347C8F6D067590C /* UIView+UIView.swift */,
-				B8C4FC8B221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -869,9 +869,9 @@
 				526DC7FC208475C1001314A7 /* UITableViewBuilder.swift */,
 				B1D05E5E2160B2BE0044D2AD /* UITextFieldBuilder.swift */,
 				B1FFB51721CF518D007AE34B /* UITextViewBuilder.swift */,
+				B817317C221EC0C600F8D77F /* UIToolbarBuilder.swift */,
 				522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */,
 				522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */,
-				B817317C221EC0C600F8D77F /* UIToolbarBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -1224,9 +1224,9 @@
 				B8396FFD21BF59A1006FCBD1 /* UITableView+Evaluations.swift in Sources */,
 				AE3CCDD621F591CF00A3638D /* UIView+MKMapView.swift in Sources */,
 				B865EEC6226B137400B80E3F /* UIView+Readability.swift in Sources */,
+				B8C4FC8C221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift in Sources */,
 				522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */,
 				8F6F2D5E21EEF40A0004BFA3 /* UIView+UIDatePickerView.swift in Sources */,
-				B8C4FC8C221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift in Sources */,
 				3B14E75697B50E744EBCCDA5 /* UIView+UIImage.swift in Sources */,
 				3B14EEB6848544CF2CD93037 /* UIView+UILabel.swift in Sources */,
 				3B14EFF3D19AAA54581718B8 /* UIView+UIPickerView.swift in Sources */,
@@ -1279,7 +1279,6 @@
 				B17464A622217D33004C587B /* NSAttributedStringBuilder.swift in Sources */,
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
 				B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */,
-				B817317E221EC13800F8D77F /* UIToolbarBuilder.swift in Sources */,
 				B88E39E221DDFEDF00A3B82B /* TargetActionWithArg.swift in Sources */,
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
 				B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */,
@@ -1304,6 +1303,7 @@
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
 				B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */,
 				B1FFB51821CF518D007AE34B /* UITextViewBuilder.swift in Sources */,
+				B817317E221EC13800F8D77F /* UIToolbarBuilder.swift in Sources */,
 				B865EEC9226B139700B80E3F /* UIView+ReadabilitySpec.swift in Sources */,
 				522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */,
 				AE3CCDCB21F5742F00A3638D /* UIViewController+MKMapViewSpec.swift in Sources */,
@@ -1364,13 +1364,13 @@
 				B15A4C8121B40FD400398963 /* UITableViewConfiguration.swift in Sources */,
 				B88E39DE21DDFE9500A3B82B /* UITextFieldBuilder.swift in Sources */,
 				B88E39DF21DDFE9500A3B82B /* UITextViewBuilder.swift in Sources */,
+				B817317F221EC13900F8D77F /* UIToolbarBuilder.swift in Sources */,
 				B88E39E021DDFE9500A3B82B /* UIViewBuilder.swift in Sources */,
 				5230D83720ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift in Sources */,
 				3B14E087392B38610209029F /* UIViewController+UIButtonSpec.swift in Sources */,
 				B8B56E6E21B015B00008514A /* UIViewController+UISliderSpec.swift in Sources */,
 				B83F5CCF21ACD0710061494E /* UIViewController+UISwitchSpec.swift in Sources */,
 				B88E39E121DDFE9500A3B82B /* UIViewControllerBuilder.swift in Sources */,
-				B817317F221EC13900F8D77F /* UIToolbarBuilder.swift in Sources */,
 				B88E39E921DDFFB700A3B82B /* UnitTestCollectionView.swift in Sources */,
 				B88E39E621DDFF6F00A3B82B /* UnitTestUIPickerView.swift in Sources */,
 				B15A4C8221B40FDE00398963 /* UnitTestUITableView.swift in Sources */,
