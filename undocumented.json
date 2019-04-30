@@ -1,20 +1,6 @@
 {
   "warnings": [
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/Succinct.swift",
-      "line": 1,
-      "symbol": "Succinct",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/Configuration/SuccinctConfig.swift",
-      "line": 1,
-      "symbol": "SuccinctConfig",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/NSAttributedString/NSAttributedString+Attributes.swift",
       "line": 2,
       "symbol": "NSAttributedString.containsExactString(_:withAttributes:)",
