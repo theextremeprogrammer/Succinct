@@ -49,7 +49,7 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                     let targetAction = TargetAction(self.didTapBarButtonItem)
 
                     let viewController = UIViewControllerBuilder()
-                        .withLeftBarButtonItem(barButtonSystemItem: .add, targetAction: targetAction)
+                        .withLeftBarButtonItem(systemItem: .add, targetAction: targetAction)
                         .build()
 
 
@@ -63,7 +63,7 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                     let targetAction = TargetAction(self.didTapBarButtonItem)
 
                     let viewController = UIViewControllerBuilder()
-                        .withRightBarButtonItem(barButtonSystemItem: .camera, targetAction: targetAction)
+                        .withRightBarButtonItem(systemItem: .camera, targetAction: targetAction)
                         .build()
 
 

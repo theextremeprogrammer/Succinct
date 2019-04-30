@@ -41,11 +41,11 @@ struct UIViewControllerBuilder {
     }
 
     func withLeftBarButtonItem(
-        barButtonSystemItem: UIBarButtonItem.SystemItem,
+        systemItem: UIBarButtonItem.SystemItem,
         targetAction: TargetAction
     ) -> UIViewControllerBuilder {
         let barButtonItem = UIBarButtonItem(
-            barButtonSystemItem: barButtonSystemItem,
+            barButtonSystemItem: systemItem,
             target: targetAction,
             action: #selector(TargetAction.action(sender:))
         )
@@ -72,11 +72,11 @@ struct UIViewControllerBuilder {
     }
 
     func withRightBarButtonItem(
-        barButtonSystemItem: UIBarButtonItem.SystemItem,
+        systemItem: UIBarButtonItem.SystemItem,
         targetAction: TargetAction
     ) -> UIViewControllerBuilder {
         let barButtonItem = UIBarButtonItem(
-            barButtonSystemItem: barButtonSystemItem,
+            barButtonSystemItem: systemItem,
             target: targetAction,
             action: #selector(TargetAction.action(sender:))
         )
