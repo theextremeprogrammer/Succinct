@@ -16,9 +16,9 @@ extension UIView {
         return switchesCounted
     }
     
-    public func findSwitch<T>(containedInView viewClass: T.Type) -> UISwitch? where T: UIView {
+    public func findSwitch<T>(containedInView viewType: T.Type) -> UISwitch? where T: UIView {
         for subview in subviews {
-            if subview.isKind(of: viewClass) {
+            if subview.isKind(of: viewType) {
                 for subSubView in subview.subviews {
                     if let uiSwitch = subSubView as? UISwitch {
                         return uiSwitch
@@ -26,7 +26,7 @@ extension UIView {
                 }
             }
             
-            if let uiSwitch = subview.findSwitch(containedInView: viewClass) {
+            if let uiSwitch = subview.findSwitch(containedInView: viewType) {
                 return uiSwitch
             }
         }

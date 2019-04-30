@@ -5,8 +5,8 @@ extension UIViewController {
         return view.countOfSwitches(switchIsOn: switchIsOn)
     }
 
-    public func findSwitch<T>(containedInView viewClass: T.Type) -> UISwitch? where T: UIView {
-        return view.findSwitch(containedInView: viewClass)
+    public func findSwitch<T>(containedInView viewType: T.Type) -> UISwitch? where T: UIView {
+        return view.findSwitch(containedInView: viewType)
     }
 
     public func findSwitch(colocatedWithUILabelWithExactText searchText: String) -> UISwitch? {
