@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NSAttributedString Extension Reference</title>
+    <title>UITabBarController Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/NSAttributedString" class="dashAnchor"></a>
-    <a title="NSAttributedString Extension Reference"></a>
+    <a name="//apple_ref/swift/Extension/UITabBarController" class="dashAnchor"></a>
+    <a title="UITabBarController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Succinct Docs</a> (70% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Succinct Reference</a>
         <img id="carat" src="../img/carat.png" />
-        NSAttributedString Extension Reference
+        UITabBarController Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -93,10 +93,10 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>NSAttributedString</h1>
+            <h1>UITabBarController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">NSAttributedString</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt">NSMutableCopying</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UITabBarController</span> <span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">UITabBarDelegate</span><span class="p">,</span> <span class="kt">NSCoding</span></code></pre>
 
                 </div>
               </div>
@@ -108,9 +108,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So18NSAttributedStringC8SuccinctE013containsExactB0_14withAttributesSbSS_SDySo0aB3KeyaypGtF"></a>
-                    <a name="//apple_ref/swift/Method/containsExactString(_:withAttributes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So18NSAttributedStringC8SuccinctE013containsExactB0_14withAttributesSbSS_SDySo0aB3KeyaypGtF">containsExactString(_:withAttributes:)</a>
+                    <a name="/s:So18UITabBarControllerC8SuccinctE9selectTab14withExactTitleySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/selectTab(withExactTitle:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18UITabBarControllerC8SuccinctE9selectTab14withExactTitleySS_tF">selectTab(withExactTitle:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -118,16 +118,35 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Attempts to select a tab in a UITabBarController whose UITabBarItem <code>title</code> property matches the searchTitle text.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">containsExactString</span><span class="p">(</span><span class="n">_</span> <span class="nv">searchString</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withAttributes</span> <span class="nv">searchAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSAttributedString</span><span class="o">.</span><span class="kt">Key</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">selectTab</span><span class="p">(</span><span class="n">withExactTitle</span> <span class="nv">searchTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the title text of any UITabBarItem objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
