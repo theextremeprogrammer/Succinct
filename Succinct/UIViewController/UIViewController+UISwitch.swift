@@ -5,7 +5,7 @@ extension UIViewController {
         return view.countOfSwitches(switchIsOn: switchIsOn)
     }
 
-    public func findSwitch(containedInView viewClass: AnyClass) -> UISwitch? {
+    public func findSwitch<T>(containedInView viewClass: T.Type) -> UISwitch? where T: UIView {
         return view.findSwitch(containedInView: viewClass)
     }
 
@@ -13,7 +13,7 @@ extension UIViewController {
         return view.findSwitch(colocatedWithUILabelWithExactText: searchText)
     }
 
-    public func tapSwitch(containedInView viewClass: AnyClass) {
+    public func tapSwitch<T>(containedInView viewClass: T.Type) where T: UIView {
         view.findSwitch(containedInView: viewClass)?
             .tapAndFireTargetEvent()
     }
