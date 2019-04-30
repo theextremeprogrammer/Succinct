@@ -92,27 +92,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISwitch.swift",
-      "line": 4,
-      "symbol": "UIView.countOfSwitches(switchIsOn:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISwitch.swift",
-      "line": 19,
-      "symbol": "UIView.findSwitch(containedInView:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISwitch.swift",
-      "line": 37,
-      "symbol": "UIView.findSwitch(colocatedWithUILabelWithExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
       "line": 4,
       "symbol": "UIView.findInSubviews(satisfyingCondition:initialDepthLevel:)",
@@ -193,41 +172,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
       "line": 13,
       "symbol": "UIViewController.containStepper(withTag:toHaveValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
-      "line": 4,
-      "symbol": "UIViewController.countOfSwitches(switchIsOn:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
-      "line": 8,
-      "symbol": "UIViewController.findSwitch(containedInView:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
-      "line": 12,
-      "symbol": "UIViewController.findSwitch(colocatedWithUILabelWithExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
-      "line": 16,
-      "symbol": "UIViewController.tapSwitch(containedInView:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISwitch.swift",
-      "line": 21,
-      "symbol": "UIViewController.tapSwitch(colocatedWithUILabelWithExactText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
