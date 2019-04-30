@@ -20,6 +20,10 @@ extension UIViewController {
                 rightBarButtonItem.tap()
             }
         }
+
+        if let barButtonItem = view.findBarButtonItem(systemItem: searchSystemItem) {
+            barButtonItem.tap()
+        }
     }
 
     ///

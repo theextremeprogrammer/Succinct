@@ -105,6 +105,96 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                     expect(self.buttonWasTapped).to(beTrue())
                 }
             }
+            
+            describe("tapping bar button items within a toolbar") {
+                context("when there is no UIToolbar view") {
+                    it("cannot tap the bar button item") {
+                        let viewController = UIViewControllerBuilder()
+                            .withSubview(UIViewBuilder().build())
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                        expect(self.buttonWasTapped).to(beFalse())
+                    }
+                }
+
+                context("When there is a toolbar without any UIBarButtonItems") {
+                    it("cannot tap the bar button item") {
+                        let viewController = UIViewControllerBuilder()
+                            .withSubview(UIToolbarBuilder().build())
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                        expect(self.buttonWasTapped).to(beFalse())
+                    }
+                }
+
+                context("When there is no matching UIBarButtonItem") {
+                    it("cannot tap the bar button item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+
+                        let toolbar = UIToolbarBuilder()
+                            .withBarButtonItem(systemItem: .done, targetAction: targetAction)
+                            .build()
+
+                        let viewController = UIViewControllerBuilder()
+                            .withSubview(toolbar)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                        expect(self.buttonWasTapped).to(beFalse())
+                    }
+                }
+
+                context("when the toolbar is configured in a text view") {
+                    it("can tap the bar button item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+
+                        let toolbar = UIToolbarBuilder()
+                            .withBarButtonItem(systemItem: .camera, targetAction: targetAction)
+                            .build()
+
+                        let viewController = UIViewControllerBuilder()
+                            .withSubview(toolbar)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                    }
+                }
+
+                context("when the toolbar is in the second subview") {
+                    it("can tap the bar button item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+
+                        let toolbar = UIToolbarBuilder()
+                            .withBarButtonItem(systemItem: .camera, targetAction: targetAction)
+                            .build()
+
+                        let viewController = UIViewControllerBuilder()
+                            .withSubview(UIViewBuilder().withSubview(toolbar).build())
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                    }
+                }
+            }
         }
     }
 }
