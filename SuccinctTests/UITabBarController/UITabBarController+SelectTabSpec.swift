@@ -9,7 +9,7 @@ class UITabBarController_SelectTabSpec: QuickSpec {
                 let tabBarVC = UITabBarControllerBuilder().build()
 
 
-                tabBarVC.selectTab(withTitle: "Home")
+                tabBarVC.selectTab(withExactTitle: "Home")
 
 
                 expect(tabBarVC.selectedIndex).to(equal(NSNotFound))
@@ -32,7 +32,7 @@ class UITabBarController_SelectTabSpec: QuickSpec {
                     .build()
 
 
-                tabBarVC.selectTab(withTitle: "Home")
+                tabBarVC.selectTab(withExactTitle: "Home")
 
 
                 expect(tabBarVC.selectedIndex).to(equal(0))
@@ -46,13 +46,13 @@ class UITabBarController_SelectTabSpec: QuickSpec {
                     .build()
 
 
-                tabBarVC.selectTab(withTitle: "Y")
+                tabBarVC.selectTab(withExactTitle: "Y")
 
 
                 expect(tabBarVC.selectedIndex).to(equal(1))
 
 
-                tabBarVC.selectTab(withTitle: "Z")
+                tabBarVC.selectTab(withExactTitle: "Z")
 
 
                 expect(tabBarVC.selectedIndex).to(equal(2))
