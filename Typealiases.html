@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Guides  Reference</title>
+    <title>Type Aliases  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Section/Guides" class="dashAnchor"></a>
-    <a title="Guides  Reference"></a>
+    <a name="//apple_ref/swift/Section/Type Aliases" class="dashAnchor"></a>
+    <a title="Type Aliases  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">Succinct Docs</a> (79% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="index.html">Succinct Reference</a>
         <img id="carat" src="img/carat.png" />
-        Guides  Reference
+        Type Aliases  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -101,8 +101,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Guides</h1>
-            <p>The following guides are available globally.</p>
+            <h1>Type Aliases</h1>
+            <p>The following type aliases are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -111,10 +111,51 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/documentation.README"></a>
-                    <a name="//apple_ref/swift/Guide/README" class="dashAnchor"></a>
-                    <a class="direct-link" href="readme.html">README</a>
+                    <a name="/s:8Succinct15UIViewEvaluatora"></a>
+                    <a name="//apple_ref/swift/Alias/UIViewEvaluator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Succinct15UIViewEvaluatora">UIViewEvaluator</a>
                     </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Definition for a closure that takes a UIView as an argument in order to evaluates it against some kind of condition. If a UIView object that satisfies this conditio is found, then that UIView object is returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">UIViewEvaluator</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">viewToEvaluate</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewToEvaluate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The UIView object to evaluate against a condition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An optional UIView that matches the provided criteria, if one is found.</p>
+                      </div>
+                    </section>
                   </div>
                 </li>
               </ul>

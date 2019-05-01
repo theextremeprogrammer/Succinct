@@ -8,197 +8,176 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIButton/UIButton+Tap.swift",
-      "line": 4,
-      "symbol": "UIButton.tapAndFireTargetEvent()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISlider/UISlider+SetValue.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UISlider.setValueAndFireTargetEvent(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISwitch/UISwitch+Tap.swift",
-      "line": 4,
-      "symbol": "UISwitch.tapAndFireTargetEvent()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UITableView/UITableView+Evaluations.swift",
-      "line": 4,
-      "symbol": "UITableView.findView(satisfyingCondition:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISegmentedControl.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIView.hasSegmentedControlSegmentSelected(withExactText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISegmentedControl.swift",
-      "line": 24,
+      "line": 22,
       "symbol": "UIView.selectSegment(withTitleText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
-      "line": 5,
+      "line": 3,
       "symbol": "UIView.findSlider(withValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
-      "line": 24,
+      "line": 22,
       "symbol": "UIView.hasSlider(withValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
-      "line": 31,
+      "line": 29,
       "symbol": "UIView.sliderCount()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIView.hasStepper(currentCount:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
-      "line": 20,
+      "line": 18,
       "symbol": "UIView.findStepper(withTag:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
-      "line": 35,
+      "line": 33,
       "symbol": "UIView.adjustStepper(withTag:byValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIView.findInSubviews(satisfyingCondition:initialDepthLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
-      "line": 110,
+      "line": 108,
       "symbol": "UIView.hasView(withBackgroundColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
-      "line": 140,
+      "line": 138,
       "symbol": "UIView.countOfViews(withBackgroundColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+Testing.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIViewController.loadViewControllerForUnitTest()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIViewController.hasSegmentedControlSegmentSelected(withExactText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
-      "line": 8,
+      "line": 6,
       "symbol": "UIViewController.selectSegment(withTitleText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIViewController.hasSlider(withValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
-      "line": 8,
+      "line": 6,
       "symbol": "UIViewController.sliderCount()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
-      "line": 12,
+      "line": 10,
       "symbol": "UIViewController.setValueOf(sliderWithValue:toValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIViewController.hasStepper(expectedCount:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
-      "line": 9,
+      "line": 7,
       "symbol": "UIViewController.adjustStepper(withTag:byValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
-      "line": 13,
+      "line": 11,
       "symbol": "UIViewController.containStepper(withTag:toHaveValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITableView.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIViewController.findSelectedTableViewCell()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITableView.swift",
-      "line": 24,
+      "line": 22,
       "symbol": "UIViewController.tapCell(withExactText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIView.swift",
-      "line": 4,
+      "line": 2,
       "symbol": "UIViewController.hasView(withBackgroundColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIView.swift",
-      "line": 8,
+      "line": 6,
       "symbol": "UIViewController.countOfViews(withBackgroundColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
