@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIPickerView {
     ///
     /// Loops through all components (columns) of a UIPickerView and searches the title text for each row of the current column for the specified search text. If a row title matching the search text is found, then that row will be selected.

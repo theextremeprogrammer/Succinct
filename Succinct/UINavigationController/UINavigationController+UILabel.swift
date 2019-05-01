@@ -1,5 +1,3 @@
-import UIKit
-
 extension UINavigationController {
     func hasLabelInNavigationBar(withExactText searchText: String) -> Bool? {
         if view.hasLabel(withExactText: searchText) {

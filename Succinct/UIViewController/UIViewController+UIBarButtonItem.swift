@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIViewController {
     ///
     /// Searches the view controller's `navigationItem.leftBarButtonIttem`, `navigationItem.rightBarButtonItem`, as well as the UIView hierarchy for a UIToolbar which may contain a UIBarButtonItem whose `SystemItem` matches the searchSystemItem and then attempts to tap the UIBarButtonItem by firing its associated target event, if one exists.

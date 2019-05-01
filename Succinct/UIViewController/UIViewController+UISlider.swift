@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIViewController {
     public func hasSlider(withValue searchValue: Float) -> Bool {
         return view.hasSlider(withValue: searchValue)

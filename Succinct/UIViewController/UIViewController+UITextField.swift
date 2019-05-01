@@ -1,5 +1,3 @@
-import UIKit
-
 // MARK: - Has UITextField
 extension UIViewController {
     ///

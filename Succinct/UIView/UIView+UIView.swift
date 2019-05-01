@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIView {
     public func findInSubviews(
         satisfyingCondition satisfiesCondition: (UIView) -> Bool,

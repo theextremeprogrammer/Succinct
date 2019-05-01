@@ -1,6 +1,3 @@
-import Foundation
-import UIKit
-
 // MARK: - Has UITextView
 extension UIView {
     ///

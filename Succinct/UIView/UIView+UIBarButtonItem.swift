@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for a UIToolbar which may contain a UIBarButtonItem whose `SystemItem` matches the searchSystemItem.

@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIViewController {
     public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
         return view.hasView(withBackgroundColor: searchColor)

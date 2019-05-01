@@ -1,5 +1,3 @@
-import UIKit
-
 internal extension UIView {
     func isLabel(containingText searchText: String) -> Bool {
         guard let label = self as? UILabel else {

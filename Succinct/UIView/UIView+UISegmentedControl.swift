@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIView {
     public func hasSegmentedControlSegmentSelected(withExactText searchText: String) -> Bool {
         for subview in subviews {

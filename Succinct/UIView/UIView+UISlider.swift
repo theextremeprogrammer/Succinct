@@ -1,5 +1,3 @@
-import UIKit
-
 // MARK: - Finding UISliders
 extension UIView {
     public func findSlider(withValue searchValue: Float) -> UISlider? {

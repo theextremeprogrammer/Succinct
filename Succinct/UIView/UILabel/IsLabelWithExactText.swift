@@ -1,5 +1,3 @@
-import UIKit
-
 internal extension UIView {
     func isLabel(withExactText searchText: String) -> EvaluationResult {
         guard let label = self as? UILabel else {

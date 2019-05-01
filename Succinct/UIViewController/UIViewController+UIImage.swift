@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UIImageView object whose image matches the provided search image.

@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for all UISwitch objects whose `isOn` property matches the provided value.

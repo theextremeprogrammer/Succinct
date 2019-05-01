@@ -1,5 +1,3 @@
-import UIKit
-
 extension UIViewController {
     public func findSelectedTableViewCell() -> UITableViewCell? {
         for subview in view.subviews {
