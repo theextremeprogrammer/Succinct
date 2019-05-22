@@ -4,9 +4,14 @@ import Nimble
 
 final class UIViewController_UIBarButtonItemSpec: QuickSpec {
     private var buttonWasTapped: Bool = false
+    private var secondaryButtonWasTapped: Bool = false
 
     private func didTapBarButtonItem(_ sender: Any) {
         buttonWasTapped = true
+    }
+
+    private func didTapSecondBarButtonItem(_sender: Any) {
+        secondaryButtonWasTapped = true
     }
 
     override func spec() {
@@ -45,64 +50,136 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
             }
 
             describe("tapping system bar button items") {
-                it("can tap the *left* bar button item matching the specified system item") {
-                    let targetAction = TargetAction(self.didTapBarButtonItem)
+                context("when there is only one bar button item") {
+                    it("can tap the *left* bar button item matching the specified system item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
 
-                    let viewController = UIViewControllerBuilder()
-                        .withLeftBarButtonItem(systemItem: .add, targetAction: targetAction)
-                        .build()
-
-
-                    viewController.tapBarButtonItem(withSystemItem: .add)
+                        let viewController = UIViewControllerBuilder()
+                            .withLeftBarButtonItem(systemItem: .add, targetAction: targetAction)
+                            .build()
 
 
-                    expect(self.buttonWasTapped).to(beTrue())
+                        viewController.tapBarButtonItem(withSystemItem: .add)
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                    }
+
+                    it("can tap the *right* bar button item matching the specified system item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+
+                        let viewController = UIViewControllerBuilder()
+                            .withRightBarButtonItem(systemItem: .camera, targetAction: targetAction)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                    }
                 }
 
-                it("can tap the *right* bar button item matching the specified system item") {
-                    let targetAction = TargetAction(self.didTapBarButtonItem)
+                context("when there are multiple bar button items") {
+                    it("can tap the second *right* bar button item matching the specified system item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+                        let otherAction = TargetAction(self.didTapSecondBarButtonItem)
 
-                    let viewController = UIViewControllerBuilder()
-                        .withRightBarButtonItem(systemItem: .camera, targetAction: targetAction)
-                        .build()
+                        let viewController = UIViewControllerBuilder()
+                            .withRightBarButtonItem(systemItem: .camera, targetAction: otherAction)
+                            .withRightBarButtonItem(systemItem: .add, targetAction: targetAction)
+                            .build()
 
 
-                    viewController.tapBarButtonItem(withSystemItem: .camera)
+                        viewController.tapBarButtonItem(withSystemItem: .add)
 
 
-                    expect(self.buttonWasTapped).to(beTrue())
+                        expect(self.buttonWasTapped).to(beTrue())
+                        expect(self.secondaryButtonWasTapped).to(beFalse())
+                    }
+
+                    it("can tap the second *left* bar button item matching the specified system item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+                        let otherAction = TargetAction(self.didTapSecondBarButtonItem)
+
+                        let viewController = UIViewControllerBuilder()
+                            .withLeftBarButtonItem(systemItem: .add, targetAction: targetAction)
+                            .withLeftBarButtonItem(systemItem: .camera, targetAction: otherAction)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .add)
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                        expect(self.secondaryButtonWasTapped).to(beFalse())
+                    }
                 }
             }
 
-            describe("explicitly tapping the left bar button item that is not a system item") {
-                it("can tap the left bar button item") {
-                    let targetAction = TargetAction(self.didTapBarButtonItem)
+            describe("tapping bar button items with a title") {
+                context("when there is only one bar button item") {
+                    it("can tap the left bar button item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
 
-                    let viewController = UIViewControllerBuilder()
-                        .withLeftBarButtonItem(title: "Add", targetAction: targetAction)
-                        .build()
-
-
-                    viewController.tapLeftBarButtonItem()
+                        let viewController = UIViewControllerBuilder()
+                            .withLeftBarButtonItem(title: "Add", targetAction: targetAction)
+                            .build()
 
 
-                    expect(self.buttonWasTapped).to(beTrue())
+                        viewController.tapLeftBarButtonItem()
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                    }
+
+                    it("can tap the right bar button item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+
+                        let viewController = UIViewControllerBuilder()
+                            .withRightBarButtonItem(title: "Add", targetAction: targetAction)
+                            .build()
+
+
+                        viewController.tapRightBarButtonItem()
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                    }
                 }
-            }
 
-            describe("explicitly tapping the right bar button item that is not a system item") {
-                it("can tap the right bar button item") {
-                    let targetAction = TargetAction(self.didTapBarButtonItem)
+                context("when there are multiple bar button items") {
+                    it("can tap the left bar button item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+                        let otherAction = TargetAction(self.didTapSecondBarButtonItem)
 
-                    let viewController = UIViewControllerBuilder()
-                        .withRightBarButtonItem(title: "Add", targetAction: targetAction)
-                        .build()
-
-
-                    viewController.tapRightBarButtonItem()
+                        let viewController = UIViewControllerBuilder()
+                            .withLeftBarButtonItem(title: "Add", targetAction: targetAction)
+                            .withLeftBarButtonItem(title: "Camera", targetAction: otherAction)
+                            .build()
 
 
-                    expect(self.buttonWasTapped).to(beTrue())
+                        viewController.tapBarButtonItem(withTitle: "Add")
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                    }
+
+                    it("can tap the right bar button item") {
+                        let targetAction = TargetAction(self.didTapBarButtonItem)
+                        let otherAction = TargetAction(self.didTapSecondBarButtonItem)
+
+                        let viewController = UIViewControllerBuilder()
+                            .withRightBarButtonItem(title: "Add", targetAction: targetAction)
+                            .withRightBarButtonItem(title: "Camera", targetAction: otherAction)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withTitle: "Add")
+
+
+                        expect(self.buttonWasTapped).to(beTrue())
+                    }
                 }
             }
             
