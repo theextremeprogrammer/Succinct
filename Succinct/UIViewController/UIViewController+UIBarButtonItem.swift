@@ -1,6 +1,6 @@
 extension UIViewController {
     ///
-    /// Searches the view controller's `navigationItem.leftBarButtonItem`, `navigationItem.rightBarButtonItem`, as well as the UIView hierarchy for a UIToolbar which may contain a UIBarButtonItem whose `SystemItem` matches the searchSystemItem and then attempts to tap the UIBarButtonItem by firing its associated target event, if one exists.
+    /// Searches the view controller's `navigationItem.leftBarButtonItems`, `navigationItem.rightBarButtonItems`, as well as the UIView hierarchy for a UIToolbar which may contain a UIBarButtonItem whose `SystemItem` matches the searchSystemItem and then attempts to tap the UIBarButtonItem by firing its associated target event, if one exists.
     ///
     /// This method is convenient for de-coupling from the details of where a UIBarButtonItem object may be located.
     ///
@@ -19,7 +19,7 @@ extension UIViewController {
     }
 
     ///
-    /// Searches the view controller's `navigationItem.leftBarButtonItem`, `navigationItem.rightBarButtonItem` which may contain a UIBarButtonItem whose `Title` matches the searchTitle and then attempts to tap the UIBarButtonItem by firing its associated target event, if one exists.
+    /// Searches the view controller's `navigationItem.leftBarButtonItems`, `navigationItem.rightBarButtonItems` which may contain a UIBarButtonItem whose `Title` matches the searchTitle and then attempts to tap the UIBarButtonItem by firing its associated target event, if one exists.
     ///
     /// This method is convenient for de-coupling from the details of where a UIBarButtonItem object may be located.
     ///
@@ -55,7 +55,7 @@ extension UIViewController {
 }
 
 extension UINavigationItem {
-    public func findBarButtonItems(matchingCondition searchCondition: (_ item: UIBarButtonItem) -> Bool) -> UIBarButtonItem? {
+    internal func findBarButtonItems(matchingCondition searchCondition: (_ item: UIBarButtonItem) -> Bool) -> UIBarButtonItem? {
         if let leftBarButtonItems = leftBarButtonItems {
             for item in leftBarButtonItems {
                 if searchCondition(item) {
