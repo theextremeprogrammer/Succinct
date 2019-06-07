@@ -49,8 +49,8 @@ struct UIViewControllerBuilder {
             target: targetAction,
             action: #selector(TargetAction.action(sender:))
         )
-        
-        viewController.navigationItem.leftBarButtonItem = barButtonItem
+
+        viewController.navigationItem.addLeftBarButtonItem(barButtonItem)
         
         return self
     }
@@ -66,7 +66,7 @@ struct UIViewControllerBuilder {
             action: #selector(TargetAction.action(sender:))
         )
 
-        viewController.navigationItem.leftBarButtonItem = barButtonItem
+        viewController.navigationItem.addLeftBarButtonItem(barButtonItem)
 
         return self
     }
@@ -80,8 +80,8 @@ struct UIViewControllerBuilder {
             target: targetAction,
             action: #selector(TargetAction.action(sender:))
         )
-        
-        viewController.navigationItem.rightBarButtonItem = barButtonItem
+
+        viewController.navigationItem.addRightBarButtonItem(barButtonItem)
         
         return self
     }
@@ -97,12 +97,30 @@ struct UIViewControllerBuilder {
             action: #selector(TargetAction.action(sender:))
         )
 
-        viewController.navigationItem.rightBarButtonItem = barButtonItem
+        viewController.navigationItem.addRightBarButtonItem(barButtonItem)
 
         return self
     }
 
     func build() -> UIViewController {
         return viewController
+    }
+}
+
+private extension UINavigationItem {
+    func addLeftBarButtonItem(_ item: UIBarButtonItem) {
+        if leftBarButtonItems.isNil() {
+            leftBarButtonItems = []
+        }
+
+        leftBarButtonItems?.append(item)
+    }
+
+    func addRightBarButtonItem(_ item: UIBarButtonItem) {
+        if rightBarButtonItems.isNil() {
+            rightBarButtonItems = []
+        }
+
+        rightBarButtonItems?.append(item)
     }
 }
