@@ -9,7 +9,7 @@ extension UIViewController {
     /// - Parameter searchSystemItem: `UIBarButtonItem.SystemItem` to compare to the UIBarButtonItem objects that are found.
     ///
     public func tapBarButtonItem(withSystemItem searchSystemItem: UIBarButtonItem.SystemItem) {
-        if let barButtonItem = navigationItem.findBarButtonItems(matchingCondition: { $0.systemItem == searchSystemItem }) {
+        if let barButtonItem = navigationItem.findBarButtonItem(matchingCondition: { $0.systemItem == searchSystemItem }) {
             barButtonItem.tap()
         }
 
@@ -28,7 +28,7 @@ extension UIViewController {
     /// - Parameter searchTitle: `String` to compare to the Title strings that are found.
     ///
     public func tapBarButtonItem(withTitle searchTitle: String) {
-        if let barButtonItem = navigationItem.findBarButtonItems(matchingCondition: { $0.title == searchTitle}) {
+        if let barButtonItem = navigationItem.findBarButtonItem(matchingCondition: { $0.title == searchTitle}) {
             barButtonItem.tap()
         }
     }
@@ -49,29 +49,5 @@ extension UIViewController {
         if let rightBarButtonItem = navigationItem.rightBarButtonItem {
             rightBarButtonItem.tap()
         }
-    }
-
-    // MARK: - Finding Navigation Items
-}
-
-extension UINavigationItem {
-    internal func findBarButtonItems(matchingCondition searchCondition: (_ item: UIBarButtonItem) -> Bool) -> UIBarButtonItem? {
-        if let leftBarButtonItems = leftBarButtonItems {
-            for item in leftBarButtonItems {
-                if searchCondition(item) {
-                    return item
-                }
-            }
-        }
-
-        if let rightBarButtonItems = rightBarButtonItems {
-            for item in rightBarButtonItems {
-                if searchCondition(item) {
-                    return item
-                }
-            }
-        }
-
-        return nil
     }
 }

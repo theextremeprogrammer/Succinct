@@ -182,6 +182,7 @@
 		B8D0F57622782DE9007346AF /* UITabBarControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0F57222782D78007346AF /* UITabBarControllerBuilder.swift */; };
 		B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D21E4321AC22200059333E /* UIView+UISwitch.swift */; };
 		B8F2DAA021B761AB00C703DA /* UnitTestCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */; };
+		B8F8830022AAB016000189C2 /* UINavigationItem+UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F882FF22AAB016000189C2 /* UINavigationItem+UIBarButtonItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -383,6 +384,7 @@
 		B8D0F57222782D78007346AF /* UITabBarControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerBuilder.swift; sourceTree = "<group>"; };
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCollectionView.swift; sourceTree = "<group>"; };
+		B8F882FF22AAB016000189C2 /* UINavigationItem+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+UIBarButtonItem.swift"; sourceTree = "<group>"; };
 		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		B8FE917E2120F5F30097274D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 				52970E5C20833AC800297EF9 /* UICollectionView */,
 				B8A06D2922255F86002D7648 /* UIControl */,
 				B15A4C7C21B2C48F00398963 /* UINavigationController */,
+				B8F882FE22AAAFF9000189C2 /* UINavigationItem */,
 				52C77EB82051594400552CB4 /* UIPickerView */,
 				52C77EB92051594400552CB4 /* UISlider */,
 				B83F5CD421ACDAD70061494E /* UISwitch */,
@@ -1042,6 +1045,14 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		B8F882FE22AAAFF9000189C2 /* UINavigationItem */ = {
+			isa = PBXGroup;
+			children = (
+				B8F882FF22AAB016000189C2 /* UINavigationItem+UIBarButtonItem.swift */,
+			);
+			path = UINavigationItem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1243,6 +1254,7 @@
 				52970E5E20833AE200297EF9 /* UICollectionView+Evaluations.swift in Sources */,
 				B8A06D2B22255F91002D7648 /* UIControl+Readability.swift in Sources */,
 				B129324121B2A866009AE9D1 /* UINavigationController+UILabel.swift in Sources */,
+				B8F8830022AAB016000189C2 /* UINavigationItem+UIBarButtonItem.swift in Sources */,
 				3B14E52C804E819D50011851 /* UIPickerView+SelectComponent.swift in Sources */,
 				3B14E6207FE400CF70CE5A1F /* UISlider+SetValue.swift in Sources */,
 				B8A06D2822255E7F002D7648 /* UISwitch+Readability.swift in Sources */,

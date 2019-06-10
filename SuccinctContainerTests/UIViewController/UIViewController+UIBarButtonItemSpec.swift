@@ -20,6 +20,7 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
 
             beforeEach {
                 self.firstButtonWasTapped = false
+                self.secondButtonWasTapped = false
             }
 
             context("when there are no bar button items") {
@@ -27,8 +28,15 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                     viewController = UIViewControllerBuilder().build()
                 }
 
-                it("cannot tap any bar button item") {
+                it("cannot tap any bar button item specifying a system item") {
                     viewController.tapBarButtonItem(withSystemItem: .add)
+
+
+                    expect(self.firstButtonWasTapped).to(beFalse())
+                }
+
+                it("cannot tap any bar button item specifying a title") {
+                    viewController.tapBarButtonItem(withTitle: "Login")
 
 
                     expect(self.firstButtonWasTapped).to(beFalse())
@@ -49,8 +57,67 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                 }
             }
 
+            context("when there are bar button items but none match what we expect") {
+                beforeEach {
+                    let targetAction = TargetAction(self.didTapFirstBarButtonItem)
+
+                    viewController = UIViewControllerBuilder()
+                        .withLeftBarButtonItem(systemItem: .add, targetAction: targetAction)
+                        .withRightBarButtonItem(title: "New", targetAction: targetAction)
+                        .build()
+                }
+
+                it("cannot tap any bar button item specifying a system item") {
+                    viewController.tapBarButtonItem(withSystemItem: .stop)
+
+
+                    expect(self.firstButtonWasTapped).to(beFalse())
+                }
+
+                it("cannot tap any bar button item specifying a title") {
+                    viewController.tapBarButtonItem(withTitle: "Login")
+
+
+                    expect(self.firstButtonWasTapped).to(beFalse())
+                }
+            }
+
+            describe("tapping bar button items") {
+                it("can tap the left bar button item") {
+                    let targetAction = TargetAction(self.didTapFirstBarButtonItem)
+
+                    let viewController = UIViewControllerBuilder()
+                        .withLeftBarButtonItem(title: "Add", targetAction: targetAction)
+                        .build()
+
+
+                    viewController.tapLeftBarButtonItem()
+
+
+                    expect(self.firstButtonWasTapped).to(beTrue())
+                }
+
+                it("can tap the right bar button item") {
+                    let targetAction = TargetAction(self.didTapFirstBarButtonItem)
+
+                    let viewController = UIViewControllerBuilder()
+                        .withRightBarButtonItem(title: "Add", targetAction: targetAction)
+                        .build()
+
+
+                    viewController.tapRightBarButtonItem()
+
+
+                    expect(self.firstButtonWasTapped).to(beTrue())
+                }
+            }
+
             describe("tapping system bar button items") {
                 context("when there is only one bar button item") {
+                    beforeEach {
+                        expect(self.firstButtonWasTapped).to(beFalse())
+                    }
+
                     it("can tap the *left* bar button item matching the specified system item") {
                         let targetAction = TargetAction(self.didTapFirstBarButtonItem)
 
@@ -81,13 +148,13 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                 }
 
                 context("when there are multiple bar button items") {
-                    it("can tap the second *right* bar button item matching the specified system item") {
-                        let targetAction = TargetAction(self.didTapFirstBarButtonItem)
-                        let otherAction = TargetAction(self.didTapSecondBarButtonItem)
+                    it("can tap the first *left* bar button item matching the specified system item") {
+                        let firstAction = TargetAction(self.didTapFirstBarButtonItem)
+                        let secondAction = TargetAction(self.didTapSecondBarButtonItem)
 
                         let viewController = UIViewControllerBuilder()
-                            .withRightBarButtonItem(systemItem: .camera, targetAction: otherAction)
-                            .withRightBarButtonItem(systemItem: .add, targetAction: targetAction)
+                            .withLeftBarButtonItem(systemItem: .add, targetAction: firstAction)
+                            .withLeftBarButtonItem(systemItem: .camera, targetAction: secondAction)
                             .build()
 
 
@@ -99,12 +166,29 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                     }
 
                     it("can tap the second *left* bar button item matching the specified system item") {
+                        let firstAction = TargetAction(self.didTapFirstBarButtonItem)
+                        let secondAction = TargetAction(self.didTapSecondBarButtonItem)
+
+                        let viewController = UIViewControllerBuilder()
+                            .withLeftBarButtonItem(systemItem: .add, targetAction: firstAction)
+                            .withLeftBarButtonItem(systemItem: .camera, targetAction: secondAction)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                        expect(self.firstButtonWasTapped).to(beFalse())
+                        expect(self.secondButtonWasTapped).to(beTrue())
+                    }
+
+                    it("can tap the first *right* bar button item matching the specified system item") {
                         let targetAction = TargetAction(self.didTapFirstBarButtonItem)
                         let otherAction = TargetAction(self.didTapSecondBarButtonItem)
 
                         let viewController = UIViewControllerBuilder()
-                            .withLeftBarButtonItem(systemItem: .add, targetAction: targetAction)
-                            .withLeftBarButtonItem(systemItem: .camera, targetAction: otherAction)
+                            .withRightBarButtonItem(systemItem: .add, targetAction: targetAction)
+                            .withRightBarButtonItem(systemItem: .camera, targetAction: otherAction)
                             .build()
 
 
@@ -114,12 +198,33 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                         expect(self.firstButtonWasTapped).to(beTrue())
                         expect(self.secondButtonWasTapped).to(beFalse())
                     }
+
+                    it("can tap the second *right* bar button item matching the specified system item") {
+                        let targetAction = TargetAction(self.didTapFirstBarButtonItem)
+                        let otherAction = TargetAction(self.didTapSecondBarButtonItem)
+
+                        let viewController = UIViewControllerBuilder()
+                            .withRightBarButtonItem(systemItem: .add, targetAction: targetAction)
+                            .withRightBarButtonItem(systemItem: .camera, targetAction: otherAction)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withSystemItem: .camera)
+
+
+                        expect(self.firstButtonWasTapped).to(beFalse())
+                        expect(self.secondButtonWasTapped).to(beTrue())
+                    }
                 }
             }
 
             describe("tapping bar button items with a title") {
                 context("when there is only one bar button item") {
-                    it("can tap the left bar button item") {
+                    beforeEach {
+                        expect(self.firstButtonWasTapped).to(beFalse())
+                    }
+
+                    it("can tap the *left* bar button item matching the specified title") {
                         let targetAction = TargetAction(self.didTapFirstBarButtonItem)
 
                         let viewController = UIViewControllerBuilder()
@@ -133,7 +238,7 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                         expect(self.firstButtonWasTapped).to(beTrue())
                     }
 
-                    it("can tap the right bar button item") {
+                    it("can tap the *right* bar button item matching the specified title") {
                         let targetAction = TargetAction(self.didTapFirstBarButtonItem)
 
                         let viewController = UIViewControllerBuilder()
@@ -149,13 +254,13 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
                 }
 
                 context("when there are multiple bar button items") {
-                    it("can tap the left bar button item") {
-                        let targetAction = TargetAction(self.didTapFirstBarButtonItem)
-                        let otherAction = TargetAction(self.didTapSecondBarButtonItem)
+                    it("can tap the *first* left bar button item matching the specified title") {
+                        let firstAction = TargetAction(self.didTapFirstBarButtonItem)
+                        let secondAction = TargetAction(self.didTapSecondBarButtonItem)
 
                         let viewController = UIViewControllerBuilder()
-                            .withLeftBarButtonItem(title: "Add", targetAction: targetAction)
-                            .withLeftBarButtonItem(title: "Camera", targetAction: otherAction)
+                            .withLeftBarButtonItem(title: "Add", targetAction: firstAction)
+                            .withLeftBarButtonItem(title: "Camera", targetAction: secondAction)
                             .build()
 
 
@@ -163,15 +268,33 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
 
 
                         expect(self.firstButtonWasTapped).to(beTrue())
+                        expect(self.secondButtonWasTapped).to(beFalse())
                     }
 
-                    it("can tap the right bar button item") {
-                        let targetAction = TargetAction(self.didTapFirstBarButtonItem)
-                        let otherAction = TargetAction(self.didTapSecondBarButtonItem)
+                    it("can tap the *second* left bar button item matching the specified title") {
+                        let firstAction = TargetAction(self.didTapFirstBarButtonItem)
+                        let secondAction = TargetAction(self.didTapSecondBarButtonItem)
 
                         let viewController = UIViewControllerBuilder()
-                            .withRightBarButtonItem(title: "Add", targetAction: targetAction)
-                            .withRightBarButtonItem(title: "Camera", targetAction: otherAction)
+                            .withLeftBarButtonItem(title: "Add", targetAction: firstAction)
+                            .withLeftBarButtonItem(title: "Camera", targetAction: secondAction)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withTitle: "Camera")
+
+
+                        expect(self.secondButtonWasTapped).to(beTrue())
+                        expect(self.firstButtonWasTapped).to(beFalse())
+                    }
+
+                    it("can tap the *first* right bar button item matching the specified title") {
+                        let firstAction = TargetAction(self.didTapFirstBarButtonItem)
+                        let secondAction = TargetAction(self.didTapSecondBarButtonItem)
+
+                        let viewController = UIViewControllerBuilder()
+                            .withRightBarButtonItem(title: "Add", targetAction: firstAction)
+                            .withRightBarButtonItem(title: "Camera", targetAction: secondAction)
                             .build()
 
 
@@ -179,6 +302,24 @@ final class UIViewController_UIBarButtonItemSpec: QuickSpec {
 
 
                         expect(self.firstButtonWasTapped).to(beTrue())
+                        expect(self.secondButtonWasTapped).to(beFalse())
+                    }
+
+                    it("can tap the *second* right bar button item matching the specified title") {
+                        let firstAction = TargetAction(self.didTapFirstBarButtonItem)
+                        let secondAction = TargetAction(self.didTapSecondBarButtonItem)
+
+                        let viewController = UIViewControllerBuilder()
+                            .withRightBarButtonItem(title: "Add", targetAction: firstAction)
+                            .withRightBarButtonItem(title: "Camera", targetAction: secondAction)
+                            .build()
+
+
+                        viewController.tapBarButtonItem(withTitle: "Camera")
+
+
+                        expect(self.secondButtonWasTapped).to(beTrue())
+                        expect(self.firstButtonWasTapped).to(beFalse())
                     }
                 }
             }
