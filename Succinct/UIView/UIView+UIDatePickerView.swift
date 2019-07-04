@@ -13,7 +13,7 @@ extension UIView {
     }
 }
 
-extension UIView {
+internal extension UIView {
     ///
     /// When searching through the view hierarchy of a view, there appears to be times when some of Apple's UIKit widgets contain an innfinite number of subviews. When these are encountered, Succinct can get stuck within this infinite view hierarchy causing problems when running tests.
     ///
@@ -21,7 +21,7 @@ extension UIView {
     ///
     /// - Returns: A boolean value indicating if the current UIView object is a type of UIKit object that contains an infinite number of subviews.
     ///
-    public var isNotATypeThatContainsAnInfiniteNumberOfSubviews: Bool {
+    var isNotATypeThatContainsAnInfiniteNumberOfSubviews: Bool {
         get {
             return isDatePickerView() == false
         }
