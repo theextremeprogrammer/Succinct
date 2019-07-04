@@ -4,18 +4,14 @@ import Nimble
 
 class DebugLogging_UILabelSpec: QuickSpec {
     override func spec() {
+        var spyOutputMethod: SpyOutputMethod!
+
         describe("debug logging for UILabels") {
-            var view: UIView!
-            
-            var spyOutputMethod: SpyOutputMethod!
-            
             beforeEach {
                 spyOutputMethod = SpyOutputMethod()
                 
                 Succinct.config.enableDebugLog()
                 Succinct.log.useOutputMethod(spyOutputMethod)
-                
-                view = UILabelBuilder().withTitleText("Username").build()
             }
             
             afterEach {
@@ -23,37 +19,44 @@ class DebugLogging_UILabelSpec: QuickSpec {
                 Succinct.log.useDefaultOutputMethod()
             }
 
-            it("outputs debugging when finding a label with exact text") {
-                let _ = view.findLabel(withExactText: "")
-                
+            describe("outputting the UILabel view open/close tags") {
+                var view: UIView!
 
-                expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UILabel>"))
-                expect(spyOutputMethod.standardPrint_argument_messages.last).to(contain("</UILabel>"))
-            }
+                beforeEach {
+                    view = UILabelBuilder().withTitleText("Username").build()
+                }
 
-            it("outputs debugging when finding a label containing text") {
-                let _ = view.findLabel(containingText: "")
-
-
-                expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UILabel>"))
-                expect(spyOutputMethod.standardPrint_argument_messages.last).to(contain("</UILabel>"))
-            }
-
-            it("outputs debugging when checking if a label exists with exact text") {
-                let _ = view.hasLabel(withExactText: "")
+                it("outputs when finding a label with exact text") {
+                    let _ = view.findLabel(withExactText: "")
 
 
-                expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UILabel>"))
-                expect(spyOutputMethod.standardPrint_argument_messages.last).to(contain("</UILabel>"))
-            }
+                    expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UILabel>"))
+                    expect(spyOutputMethod.standardPrint_argument_messages.last).to(contain("</UILabel>"))
+                }
 
-            it("outputs debugging when checking if a label exists containing text") {
-                let _ = view.hasLabel(withExactText: "")
+                it("outputs when finding a label containing text") {
+                    let _ = view.findLabel(containingText: "")
 
 
-                expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UILabel>"))
-                expect(spyOutputMethod.standardPrint_argument_messages.last).to(contain("</UILabel>"))
-            }
+                    expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UILabel>"))
+                    expect(spyOutputMethod.standardPrint_argument_messages.last).to(contain("</UILabel>"))
+                }
+
+                it("outputs when checking if a label exists with exact text") {
+                    let _ = view.hasLabel(withExactText: "")
+
+
+                    expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UILabel>"))
+                    expect(spyOutputMethod.standardPrint_argument_messages.last).to(contain("</UILabel>"))
+                }
+
+                it("outputs when checking if a label exists containing text") {
+                    let _ = view.hasLabel(withExactText: "")
+
+
+                    expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("<UILabel>"))
+                    expect(spyOutputMethod.standardPrint_argument_messages.last).to(contain("</UILabel>"))
+                }            }
         }
     }
 }
