@@ -29,6 +29,7 @@
 		3B14EEB6848544CF2CD93037 /* UIView+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E3BBB03C4F125C1DADBD /* UIView+UILabel.swift */; };
 		3B14EFF3D19AAA54581718B8 /* UIView+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E4A77852DD11B2A8ABFA /* UIView+UIPickerView.swift */; };
 		521E6951208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E6950208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift */; };
+		5228E41722CE82BB005E8F56 /* ViewHierarchyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */; };
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */; };
@@ -262,6 +263,7 @@
 		3B14ED72118715E71C68E909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B14EF2A64AD0830F2034E38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		521E6950208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPickerView+SelectComponentSpec.swift"; sourceTree = "<group>"; };
+		5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyLogger.swift; sourceTree = "<group>"; };
 		522D99891FAD2A9C009BB1B9 /* Succinct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Succinct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D998C1FAD2A9C009BB1B9 /* Succinct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Succinct.h; sourceTree = "<group>"; };
 		522D998D1FAD2A9C009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -811,6 +813,7 @@
 			children = (
 				B867A2EF223BE5CF009724BE /* EvaluationResult.swift */,
 				B867A2ED223BE5B5009724BE /* EvaluationResultType.swift */,
+				5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */,
 			);
 			path = DebugLog;
 			sourceTree = "<group>";
@@ -1293,6 +1296,7 @@
 				B89E2D1E218C38BE004FE2A6 /* UIViewController+UITextField.swift in Sources */,
 				B1FFB51A21CF5269007AE34B /* UIViewController+UITextView.swift in Sources */,
 				B89E2D12218BFA48004FE2A6 /* UIViewController+UIView.swift in Sources */,
+				5228E41722CE82BB005E8F56 /* ViewHierarchyLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
