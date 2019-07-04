@@ -43,20 +43,12 @@ extension UIView {
 
     internal func findInSubviews(
         satisfyingCondition satisfiesCondition: SuccinctCondition,
-        initialDepthLevel: Int = 1
+        viewHierarchyLogger: ViewHierarchyLogger = DefaultViewHierarchyLogger()
     ) -> UIView? {
-        var depthLevel = initialDepthLevel
-        let shouldLogOutsideCloseTag = depthLevel == 1
-        let spaces = String(repeating: " ", count: depthLevel * 4)
-
-        if (depthLevel == 1) {
-            Succinct.log.debug("\(spaces)<\(String(describing: type(of: self)))>")
-            depthLevel += 1
-        }
+        viewHierarchyLogger.logEnterParentView(self)
 
         for subview in subviews {
-            let spaces = String(repeating: " ", count: depthLevel * 4)
-            Succinct.log.debug("\(spaces)<\(String(describing: type(of: subview)))>")
+            viewHierarchyLogger.logEnterChildView(subview)
 
             if satisfiesCondition.evaluate(subview) {
                 return subview
@@ -74,22 +66,19 @@ extension UIView {
 
             if subview.isNotATypeThatContainsAnInfiniteNumberOfSubviews {
                 if subview.subviews.count > 0 {
-                    let subviewDepthLevel = depthLevel + 1
                     if let result = subview.findInSubviews(
                         satisfyingCondition: satisfiesCondition,
-                        initialDepthLevel: subviewDepthLevel
+                        viewHierarchyLogger: viewHierarchyLogger
                     ) {
                         return result
                     }
                 }
             }
 
-            Succinct.log.debug("\(spaces)</\(String(describing: type(of: subview)))>")
+            viewHierarchyLogger.logExitChildView(subview)
         }
 
-        if (shouldLogOutsideCloseTag) {
-            Succinct.log.debug("\(spaces)</\(String(describing: type(of: self)))>")
-        }
+        viewHierarchyLogger.logExitParentView(self)
 
         return nil
     }
