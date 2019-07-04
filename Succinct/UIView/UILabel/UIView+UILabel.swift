@@ -51,7 +51,7 @@ extension UIView {
     ///
     public func findLabel(containingText searchText: String) -> UILabel? {
         return findInSubviews(
-            satisfyingCondition: { $0.isLabel(containingText: searchText) }
+            satisfyingCondition: SuccinctCondition { $0.isLabel(containingText: searchText) }
         ) as? UILabel
     }
 }

@@ -31,19 +31,8 @@ internal enum IsLabelWithExactTextResultType: EvaluationResultType {
     var resultMessage: String {
         get {
             switch self {
-
-            case .found:
+            default:
                 return ""
-
-            case .wrongType:
-                return ""
-
-            case .noText:
-                return ""
-
-            case .matchFailed:
-                return ""
-
             }
         }
     }
