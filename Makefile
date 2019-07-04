@@ -8,10 +8,10 @@ sort:
 	@perl ./bin/sortXcodeProject Succinct.xcodeproj/project.pbxproj
 
 unit-tests:
-	@/usr/bin/time xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone XR,OS=latest" build test
+	@/usr/bin/time xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone Xʀ,OS=latest" build test
 
 simulator-tests:
-	@/usr/bin/time xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone XR,OS=latest" build test
+	@/usr/bin/time xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone Xʀ,OS=latest" build test
 
 units tests: sort unit-tests
 
