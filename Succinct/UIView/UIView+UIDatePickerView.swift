@@ -8,7 +8,7 @@ extension UIView {
     ///
     public func findDatePickerView() -> UIDatePicker? {
         return findInSubviews(
-            satisfyingCondition: { $0.isDatePickerView() }
+            satisfyingCondition: SuccinctCondition { $0.isDatePickerView() }
         ) as? UIDatePicker
     }
 }
@@ -23,13 +23,37 @@ internal extension UIView {
     ///
     var isNotATypeThatContainsAnInfiniteNumberOfSubviews: Bool {
         get {
-            return isDatePickerView() == false
+            return isDatePickerView().booleanResult() == false
         }
     }
 }
 
 fileprivate extension UIView {
-    func isDatePickerView() -> Bool {
-        return self is UIDatePicker
+    func isDatePickerView() -> EvaluationResult {
+        guard self is UIDatePicker else {
+            return .failure(IsDatePickerViewResultType.wrongType)
+        }
+
+        return .success(IsDatePickerViewResultType.found)
+    }
+}
+
+internal enum IsDatePickerViewResultType: EvaluationResultType {
+    case found
+    case wrongType
+
+    var evaluatedMethod: String {
+        get {
+            return ""
+        }
+    }
+
+    var resultMessage: String {
+        get {
+            switch self {
+            default:
+                return ""
+            }
+        }
     }
 }
