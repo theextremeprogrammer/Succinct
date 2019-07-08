@@ -26,7 +26,7 @@ extension UIView {
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> Bool {
         return findInSubviews(
-            satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
+            satisfyingCondition: SuccinctCondition { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
             ).isNotNil()
     }
 
@@ -55,7 +55,7 @@ extension UIView {
     ///
     public func findTextView(withExactText searchText: String) -> UITextView? {
         return findInSubviews(
-            satisfyingCondition: { $0.isTextView(withExactText: searchText) }
+            satisfyingCondition: SuccinctCondition { $0.isTextView(withExactText: searchText) }
         ) as? UITextView
     }
 
@@ -73,7 +73,7 @@ extension UIView {
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> UITextView? {
         return findInSubviews(
-            satisfyingCondition: { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
+            satisfyingCondition: SuccinctCondition { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
         ) as? UITextView
     }
 
@@ -87,48 +87,81 @@ extension UIView {
     ///
     public func findTextView(containingText searchText: String) -> UITextView? {
         return findInSubviews(
-            satisfyingCondition: { $0.isTextView(containingText: searchText) }
+            satisfyingCondition: SuccinctCondition { $0.isTextView(containingText: searchText) }
         ) as? UITextView
     }
 }
 
 fileprivate extension UIView {
-    func isTextView(withExactText searchText: String) -> Bool {
+    func isTextView(withExactText searchText: String) -> EvaluationResult {
         guard let textfield = self as? UITextView else {
-            return false
+            return EvaluationResult.failure(IsTextViewResultType.wrongType)
         }
 
         guard let text = textfield.text else {
-            return false
+            return EvaluationResult.failure(IsTextViewResultType.textIsNil)
         }
 
-        return text == searchText
+        guard text == searchText else {
+            return EvaluationResult.failure(IsTextViewResultType.matchFailed)
+        }
+
+        return EvaluationResult.success(IsTextViewResultType.found)
     }
 
     func isTextView(
         withExactText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
-    ) -> Bool {
+    ) -> EvaluationResult {
         guard let textView = self as? UITextView else {
-            return false
+            return EvaluationResult.failure(IsTextViewResultType.wrongType)
         }
 
         guard let attributedText = textView.attributedText else {
-            return false
+            return EvaluationResult.failure(IsTextViewResultType.attributedTextIsNil)
         }
 
-        return attributedText.containsExactString(searchText, withAttributes: searchAttributes)
+        guard attributedText.containsExactString(searchText, withAttributes: searchAttributes) else {
+            return EvaluationResult.failure(IsTextViewResultType.stringDoesNotContainText)
+        }
+
+        return EvaluationResult.success(IsTextViewResultType.found)
     }
 
-    func isTextView(containingText searchText: String) -> Bool {
+    func isTextView(containingText searchText: String) -> EvaluationResult {
         guard let textfield = self as? UITextView else {
-            return false
+            return EvaluationResult.failure(IsTextViewResultType.wrongType)
         }
 
         guard let text = textfield.text else {
-            return false
+            return EvaluationResult.failure(IsTextViewResultType.textIsNil)
         }
 
-        return text.contains(searchText)
+        guard text.contains(searchText) else {
+            return EvaluationResult.failure(IsTextViewResultType.stringDoesNotContainText)
+        }
+
+        return EvaluationResult.success(IsTextViewResultType.found)
+    }
+}
+
+internal enum IsTextViewResultType: EvaluationResultType {
+    case found
+    case wrongType
+    case textIsNil
+    case attributedTextIsNil
+    case matchFailed
+    case stringDoesNotContainText
+
+    var evaluatedMethod: String {
+        get {
+            return ""
+        }
+    }
+
+    var resultMessage: String? {
+        get {
+            return nil
+        }
     }
 }
