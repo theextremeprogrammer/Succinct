@@ -1,36 +1,4 @@
 extension UIView {
-    public func findInSubviews(
-        satisfyingCondition satisfiesCondition: (UIView) -> Bool,
-        viewHierarchyLogger: ViewHierarchyLogger = DefaultViewHierarchyLogger()
-    ) -> UIView? {
-        viewHierarchyLogger.logEnterParentView(self)
-
-        for subview in subviews {
-            viewHierarchyLogger.logEnterChildView(subview)
-
-            if satisfiesCondition(subview) {
-                return subview
-            }
-
-            if subview.isNotATypeThatContainsAnInfiniteNumberOfSubviews {
-                if subview.subviews.count > 0 {
-                    if let result = subview.findInSubviews(
-                        satisfyingCondition: satisfiesCondition,
-                        viewHierarchyLogger: viewHierarchyLogger
-                    ) {
-                        return result
-                    }
-                }
-            }
-
-            viewHierarchyLogger.logExitChildView(subview)
-        }
-
-        viewHierarchyLogger.logExitParentView(self)
-
-        return nil
-    }
-
     internal func findInSubviews(
         satisfyingCondition condition: SuccinctCondition,
         viewHierarchyLogger: ViewHierarchyLogger = DefaultViewHierarchyLogger()
