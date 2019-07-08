@@ -34,6 +34,7 @@
 		5228E41F22D2CF43005E8F56 /* UIView+findInSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41E22D2CF43005E8F56 /* UIView+findInSubviews.swift */; };
 		5228E42222D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E42022D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift */; };
 		5228E42322D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E42122D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift */; };
+		5228E42622D2D2B6005E8F56 /* IsMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E42522D2D2B6005E8F56 /* IsMapView.swift */; };
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */; };
@@ -272,6 +273,7 @@
 		5228E41E22D2CF43005E8F56 /* UIView+findInSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+findInSubviews.swift"; sourceTree = "<group>"; };
 		5228E42022D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+countOfViewsWithBackgroundColor.swift"; sourceTree = "<group>"; };
 		5228E42122D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+hasViewWithBackgroundColor.swift"; sourceTree = "<group>"; };
+		5228E42522D2D2B6005E8F56 /* IsMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsMapView.swift; sourceTree = "<group>"; };
 		522D99891FAD2A9C009BB1B9 /* Succinct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Succinct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D998C1FAD2A9C009BB1B9 /* Succinct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Succinct.h; sourceTree = "<group>"; };
 		522D998D1FAD2A9C009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -467,6 +469,15 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		5228E42422D2D27D005E8F56 /* MKMapView */ = {
+			isa = PBXGroup;
+			children = (
+				5228E42522D2D2B6005E8F56 /* IsMapView.swift */,
+				AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */,
+			);
+			path = MKMapView;
+			sourceTree = "<group>";
+		};
 		522D997F1FAD2A9C009BB1B9 = {
 			isa = PBXGroup;
 			children = (
@@ -551,11 +562,11 @@
 		522D99A31FAD2ADA009BB1B9 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				5228E42422D2D27D005E8F56 /* MKMapView */,
 				B867A2F1223BE66A009724BE /* UIButton */,
 				5228E41A22D2C523005E8F56 /* UIImage */,
 				B867A2F9223C7DA1009724BE /* UILabel */,
 				5228E41D22D2CF1D005E8F56 /* UIView */,
-				AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */,
 				B865EEC5226B137400B80E3F /* UIView+Readability.swift */,
 				B8C4FC8B221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift */,
 				8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */,
@@ -1273,6 +1284,7 @@
 				5228E41C22D2C54F005E8F56 /* IsImageViewWithImage.swift in Sources */,
 				B867A2FD223C7DE4009724BE /* IsLabelContainingText.swift in Sources */,
 				B867A2FB223C7DD7009724BE /* IsLabelWithExactText.swift in Sources */,
+				5228E42622D2D2B6005E8F56 /* IsMapView.swift in Sources */,
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,
 				B17464AF22218008004C587B /* NSAttributedString+Attributes.swift in Sources */,
 				B86F2AEE2218D5DB00C72FEC /* NSObject+MemoryAddress.swift in Sources */,
