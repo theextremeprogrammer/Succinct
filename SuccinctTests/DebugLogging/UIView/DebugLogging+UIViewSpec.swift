@@ -20,14 +20,18 @@ class DebugLogging_UIViewSpec: QuickSpec {
                     Succinct.log.useDefaultOutputMethod()
                 }
 
-                context("when there are no subviews") {
+                context("when there are no subviews with no conditional debug messages") {
                     beforeEach {
                         let view = UIViewBuilder().build()
                         
                         
-                        _ = view.findInSubviews(satisfyingCondition: { _ in return false})
+                        _ = view.findInSubviews(
+                            satisfyingCondition: SuccinctCondition { _ in
+                                return EvaluationResult.failure(TestEvaluationResultType.notFound)
+                            }
+                        )
                     }
-                    
+
                     it("outputs the open tag of the containing view") {
                         expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("    <UIView"))
                     }
@@ -36,21 +40,25 @@ class DebugLogging_UIViewSpec: QuickSpec {
                         expect(spyOutputMethod.standardPrint_argument_messages.second).to(equal("    </UIView>"))
                     }
                 }
-                
-                context("when there is a single subview") {
+
+                context("when there is a single subview with no conditional debug messages") {
                     beforeEach {
                         let view = UIViewBuilder()
                             .withSubview(UIViewBuilder().build())
                             .build()
-                        
-                        
-                        _ = view.findInSubviews(satisfyingCondition: { _ in return false})
+
+
+                        _ = view.findInSubviews(
+                            satisfyingCondition: SuccinctCondition { _ in
+                                return EvaluationResult.failure(TestEvaluationResultType.notFound)
+                            }
+                        )
                     }
-                    
+
                     it("outputs the open tag of the containing view") {
                         expect(spyOutputMethod.standardPrint_argument_messages.first).to(contain("    <UIView"))
                     }
-                    
+
                     it("outputs the open tag of the inside view") {
                         expect(spyOutputMethod.standardPrint_argument_messages.second).to(contain("        <UIView"))
                     }
@@ -64,13 +72,17 @@ class DebugLogging_UIViewSpec: QuickSpec {
                     }
                 }
 
-                context("when there are date pickers") {
+                context("when there are date pickers with no conditional debug messages") {
                     beforeEach {
                         let view = UIViewBuilder()
                             .withSubview(UIDatePicker())
                             .build()
 
-                        _ = view.findInSubviews(satisfyingCondition: { _ in return false})
+                        _ = view.findInSubviews(
+                            satisfyingCondition: SuccinctCondition { _ in
+                                return EvaluationResult.failure(TestEvaluationResultType.notFound)
+                            }
+                        )
                     }
 
                     it("outputs the open tag of the containing view") {
@@ -90,7 +102,7 @@ class DebugLogging_UIViewSpec: QuickSpec {
                     }
                 }
 
-                context("when there are two levels of subviews") {
+                context("when there are two levels of subviews with no conditional debug messages") {
                     beforeEach {
                         let view = UIViewBuilder()
                             .withSubview(
@@ -101,7 +113,11 @@ class DebugLogging_UIViewSpec: QuickSpec {
                             .build()
                         
                         
-                        _ = view.findInSubviews(satisfyingCondition: { _ in return false})
+                        _ = view.findInSubviews(
+                            satisfyingCondition: SuccinctCondition { _ in
+                                return EvaluationResult.failure(TestEvaluationResultType.notFound)
+                            }
+                        )
                     }
                     
                     it("outputs the open tag of the containing view") {
@@ -139,7 +155,11 @@ class DebugLogging_UIViewSpec: QuickSpec {
                             .build()
                         
                         
-                        _ = view.findInSubviews(satisfyingCondition: { _ in return false})
+                        _ = view.findInSubviews(
+                            satisfyingCondition: SuccinctCondition { _ in
+                                return EvaluationResult.failure(TestEvaluationResultType.notFound)
+                            }
+                        )
                     }
                     
                     it("outputs the open tag of the containing view") {

@@ -1,9 +1,18 @@
-//
-//  TestEvaluationResultType.swift
-//  SuccinctTests
-//
-//  Created by Derek Lee on 7/7/19.
-//  Copyright © 2019 Sun Rising App Dev. All rights reserved.
-//
+@testable import Succinct
 
-import Foundation
+internal enum TestEvaluationResultType: EvaluationResultType {
+    case found
+    case notFound
+
+    var evaluatedMethod: String {
+        get {
+            return ""
+        }
+    }
+
+    var resultMessage: String? {
+        get {
+            return nil
+        }
+    }
+}

@@ -30,6 +30,7 @@
 		3B14EFF3D19AAA54581718B8 /* UIView+UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E4A77852DD11B2A8ABFA /* UIView+UIPickerView.swift */; };
 		521E6951208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E6950208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift */; };
 		5228E41722CE82BB005E8F56 /* ViewHierarchyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */; };
+		5228E41922D2C0C9005E8F56 /* TestEvaluationResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41822D2C0C9005E8F56 /* TestEvaluationResultType.swift */; };
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */; };
@@ -264,6 +265,7 @@
 		3B14EF2A64AD0830F2034E38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		521E6950208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPickerView+SelectComponentSpec.swift"; sourceTree = "<group>"; };
 		5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyLogger.swift; sourceTree = "<group>"; };
+		5228E41822D2C0C9005E8F56 /* TestEvaluationResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEvaluationResultType.swift; sourceTree = "<group>"; };
 		522D99891FAD2A9C009BB1B9 /* Succinct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Succinct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D998C1FAD2A9C009BB1B9 /* Succinct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Succinct.h; sourceTree = "<group>"; };
 		522D998D1FAD2A9C009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -960,6 +962,7 @@
 				B8AC7A3222144EF100D76A69 /* DebugLogging+UIDatePickerViewSpec.swift */,
 				5B6AD15A4AC038FBB05E01FC /* DebugLogging+UIPickerViewSpec.swift */,
 				B812407F21CB65FD00ADBDCC /* DebugLogging+UIViewSpec.swift */,
+				5228E41822D2C0C9005E8F56 /* TestEvaluationResultType.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1323,6 +1326,7 @@
 				525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */,
 				B8BC558921B28FCF00A1CD8C /* SpyOutputMethod.swift in Sources */,
 				B88E39E221DDFEDF00A3B82B /* TargetActionWithArg.swift in Sources */,
+				5228E41922D2C0C9005E8F56 /* TestEvaluationResultType.swift in Sources */,
 				522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */,
 				B8B56E7A21B0C0CC0008514A /* UICollectionViewBuilder.swift in Sources */,
 				B8B80B6421B0C42100EA315D /* UICollectionViewCellConfiguration.swift in Sources */,
