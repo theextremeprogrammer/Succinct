@@ -8,13 +8,34 @@ extension UIView {
     ///
     public func findPickerView() -> UIPickerView? {
         return findInSubviews(
-            satisfyingCondition: { $0.isPickerView() }
+            satisfyingCondition: SuccinctCondition { $0.isPickerView() }
         ) as? UIPickerView
     }
 }
 
 fileprivate extension UIView {
-    func isPickerView() -> Bool {
-        return self is UIPickerView
+    func isPickerView() -> EvaluationResult {
+        guard self is UIPickerView else {
+            return EvaluationResult.failure(IsDatePickerViewResultType.wrongType)
+        }
+
+        return EvaluationResult.success(IsDatePickerViewResultType.found)
+    }
+}
+
+internal enum IsPickerViewResultType: EvaluationResultType  {
+    case found
+    case wrongType
+
+    var evaluatedMethod: String {
+        get {
+            return ""
+        }
+    }
+
+    var resultMessage: String? {
+        get {
+            return nil
+        }
     }
 }
