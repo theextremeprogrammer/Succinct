@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>UISwitch Extension Reference</title>
+    <title>DefaultViewHierarchyLogger Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/UISwitch" class="dashAnchor"></a>
-    <a title="UISwitch Extension Reference"></a>
+    <a name="//apple_ref/swift/Class/DefaultViewHierarchyLogger" class="dashAnchor"></a>
+    <a title="DefaultViewHierarchyLogger Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Succinct Docs</a> (76% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Succinct Reference</a>
         <img id="carat" src="../img/carat.png" />
-        UISwitch Extension Reference
+        DefaultViewHierarchyLogger Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -112,14 +112,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>UISwitch</h1>
+            <h1>DefaultViewHierarchyLogger</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UISwitch</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">DefaultViewHierarchyLogger</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Undocumented</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -127,9 +128,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So8UISwitchC8SuccinctE5isOffSbvp"></a>
-                    <a name="//apple_ref/swift/Property/isOff" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So8UISwitchC8SuccinctE5isOffSbvp">isOff</a>
+                    <a name="/s:8Succinct26DefaultViewHierarchyLoggerCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Succinct26DefaultViewHierarchyLoggerCACycfc">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -137,14 +138,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Convenience property which indicates if the UISwitch is off. This can be helpful when writing assertions as opposed to testing the isOn property.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isOff</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -158,9 +159,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So8UISwitchC8SuccinctE21tapAndFireTargetEventyyF"></a>
-                    <a name="//apple_ref/swift/Method/tapAndFireTargetEvent()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So8UISwitchC8SuccinctE21tapAndFireTargetEventyyF">tapAndFireTargetEvent()</a>
+                    <a name="/s:8Succinct26DefaultViewHierarchyLoggerC014logEnterParentC0yySo6UIViewCF"></a>
+                    <a name="//apple_ref/swift/Method/logEnterParentView(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Succinct26DefaultViewHierarchyLoggerC014logEnterParentC0yySo6UIViewCF">logEnterParentView(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -168,14 +169,95 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Simulates tapping a UISwitch control by sending the <code>.touchUpInside</code> event action. Since simply sending the action does not change the state of the UISwitch, this method also flips the <code>isOn</code> property to simulate the effect tapping the switch would actually have.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tapAndFireTargetEvent</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logEnterParentView</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Succinct26DefaultViewHierarchyLoggerC013logExitParentC0yySo6UIViewCF"></a>
+                    <a name="//apple_ref/swift/Method/logExitParentView(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Succinct26DefaultViewHierarchyLoggerC013logExitParentC0yySo6UIViewCF">logExitParentView(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logExitParentView</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Succinct26DefaultViewHierarchyLoggerC013logEnterChildC0yySo6UIViewCF"></a>
+                    <a name="//apple_ref/swift/Method/logEnterChildView(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Succinct26DefaultViewHierarchyLoggerC013logEnterChildC0yySo6UIViewCF">logEnterChildView(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logEnterChildView</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Succinct26DefaultViewHierarchyLoggerC012logExitChildC0yySo6UIViewCF"></a>
+                    <a name="//apple_ref/swift/Method/logExitChildView(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Succinct26DefaultViewHierarchyLoggerC012logExitChildC0yySo6UIViewCF">logExitChildView(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logExitChildView</span><span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

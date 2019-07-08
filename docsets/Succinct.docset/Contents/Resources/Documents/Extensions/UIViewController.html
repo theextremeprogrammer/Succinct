@@ -14,7 +14,7 @@
     <a title="UIViewController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Succinct Docs</a> (79% documented)</p>
+        <p><a href="../index.html">Succinct Docs</a> (76% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -39,6 +39,9 @@
           <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DefaultViewHierarchyLogger.html">DefaultViewHierarchyLogger</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Classes/Succinct.html">Succinct</a>
               </li>
@@ -89,6 +92,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ViewHierarchyLogger.html">ViewHierarchyLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -104,7 +115,7 @@
             <h1>UIViewController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UIViewController</span> <span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">NSCoding</span><span class="p">,</span> <span class="kt">UIAppearanceContainer</span><span class="p">,</span> <span class="kt">UITraitEnvironment</span><span class="p">,</span> <span class="kt">UIContentContainer</span><span class="p">,</span> <span class="kt">UIFocusEnvironment</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIViewController</span></code></pre>
 
                 </div>
               </div>
@@ -2014,7 +2025,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for any UITableView objects to determine if there is a selected UITableViewCell within that UITableView.</p>
 
                       </div>
                       <div class="declaration">
@@ -2024,6 +2035,10 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">findSelectedTableViewCell</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The UITableViewCell that is selected, if one exists.</p>
                       </div>
                     </section>
                   </div>
@@ -2041,7 +2056,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for any UITableView objects to attempt to tap on the cell that contains a label with the prodivded searchText.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This method both selects the row where matching text was found as well as fires the tableview delegate method <q>didSelectRowAt:indexPath</q> since this does not usually occur from a unit test.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2051,6 +2076,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">tapCell</span><span class="p">(</span><span class="n">withExactText</span> <span class="nv">searchText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchText</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Text to compare to the text of any UILabel objects found within any UITableViewCell objects.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -2888,7 +2932,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for a UIView whose background color matches the searchColor.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2898,6 +2947,29 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasView</span><span class="p">(</span><span class="n">withBackgroundColor</span> <span class="nv">searchColor</span><span class="p">:</span> <span class="kt">UIColor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIColor to compare to the backgroundColor of any UIView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UIView object was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -2915,7 +2987,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the entire view hierarchy of a view controller&rsquo;s primary view for all UIView objects whose background color matches the provided searchColor.</p>
 
                       </div>
                       <div class="declaration">
@@ -2926,6 +2998,29 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchColor</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UIColor to compare to the backgroundColor of any UIView objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An integer representing the total number of views found where the searchColor matches the backgroundColor of a UIView object.</p>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2934,8 +3029,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2019-06-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2019-07-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

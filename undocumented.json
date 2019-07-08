@@ -1,6 +1,90 @@
 {
   "warnings": [
     {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 1,
+      "symbol": "ViewHierarchyLogger",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 2,
+      "symbol": "ViewHierarchyLogger.logEnterParentView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 3,
+      "symbol": "ViewHierarchyLogger.logExitParentView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 5,
+      "symbol": "ViewHierarchyLogger.logEnterChildView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 6,
+      "symbol": "ViewHierarchyLogger.logExitChildView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 9,
+      "symbol": "DefaultViewHierarchyLogger",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 12,
+      "symbol": "DefaultViewHierarchyLogger.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 17,
+      "symbol": "DefaultViewHierarchyLogger",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 18,
+      "symbol": "DefaultViewHierarchyLogger.logEnterParentView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 25,
+      "symbol": "DefaultViewHierarchyLogger.logExitParentView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 32,
+      "symbol": "DefaultViewHierarchyLogger.logEnterChildView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 39,
+      "symbol": "DefaultViewHierarchyLogger.logExitChildView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/NSAttributedString/NSAttributedString+Attributes.swift",
       "line": 2,
       "symbol": "NSAttributedString.containsExactString(_:withAttributes:)",
@@ -11,6 +95,20 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISlider/UISlider+SetValue.swift",
       "line": 2,
       "symbol": "UISlider.setValueAndFireTargetEvent(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView/UIView+countOfViewsWithBackgroundColor.swift",
+      "line": 2,
+      "symbol": "UIView.countOfViews(withBackgroundColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView/UIView+hasViewWithBackgroundColor.swift",
+      "line": 2,
+      "symbol": "UIView.hasView(withBackgroundColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -67,27 +165,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
       "line": 33,
       "symbol": "UIView.adjustStepper(withTag:byValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
-      "line": 2,
-      "symbol": "UIView.findInSubviews(satisfyingCondition:initialDepthLevel:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
-      "line": 108,
-      "symbol": "UIView.hasView(withBackgroundColor:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIView.swift",
-      "line": 138,
-      "symbol": "UIView.countOfViews(withBackgroundColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -151,34 +228,6 @@
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
       "line": 11,
       "symbol": "UIViewController.containStepper(withTag:toHaveValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITableView.swift",
-      "line": 2,
-      "symbol": "UIViewController.findSelectedTableViewCell()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UITableView.swift",
-      "line": 22,
-      "symbol": "UIViewController.tapCell(withExactText:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIView.swift",
-      "line": 2,
-      "symbol": "UIViewController.hasView(withBackgroundColor:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIView.swift",
-      "line": 6,
-      "symbol": "UIViewController.countOfViews(withBackgroundColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
