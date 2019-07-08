@@ -12,7 +12,6 @@
 		3B14E52C804E819D50011851 /* UIPickerView+SelectComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E9D41F6E67724E034E4D /* UIPickerView+SelectComponent.swift */; };
 		3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EA94F94F4C40DB2C604D /* UIButton+Tap.swift */; };
 		3B14E56D508DD5E376A392E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B14ED72118715E71C68E909 /* Assets.xcassets */; };
-		3B14E5701AAF98B39C2E6791 /* UIView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E6688347C8F6D067590C /* UIView+UIView.swift */; };
 		3B14E6207FE400CF70CE5A1F /* UISlider+SetValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EB571F0977180CC3EB04 /* UISlider+SetValue.swift */; };
 		3B14E75697B50E744EBCCDA5 /* UIView+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */; };
 		3B14E7A4F3198A86F98E9D92 /* TestImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B14E31087776C83E940D6F6 /* TestImages.xcassets */; };
@@ -32,6 +31,9 @@
 		5228E41722CE82BB005E8F56 /* ViewHierarchyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */; };
 		5228E41922D2C0C9005E8F56 /* TestEvaluationResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41822D2C0C9005E8F56 /* TestEvaluationResultType.swift */; };
 		5228E41C22D2C54F005E8F56 /* IsImageViewWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41B22D2C54F005E8F56 /* IsImageViewWithImage.swift */; };
+		5228E41F22D2CF43005E8F56 /* UIView+findInSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41E22D2CF43005E8F56 /* UIView+findInSubviews.swift */; };
+		5228E42222D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E42022D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift */; };
+		5228E42322D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E42122D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift */; };
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */; };
@@ -251,7 +253,6 @@
 		3B14E4A77852DD11B2A8ABFA /* UIView+UIPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIPickerView.swift"; sourceTree = "<group>"; };
 		3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIImage.swift"; sourceTree = "<group>"; };
 		3B14E5AE80806B1018A9B75F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3B14E6688347C8F6D067590C /* UIView+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIView.swift"; sourceTree = "<group>"; };
 		3B14E7673EACFC681FC9485B /* UIViewController+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Testing.swift"; sourceTree = "<group>"; };
 		3B14E883AEE14B5712B4379A /* UIView+UIStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIStepper.swift"; sourceTree = "<group>"; };
 		3B14E915821AEB8C865BA256 /* UIViewController+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButtonSpec.swift"; sourceTree = "<group>"; };
@@ -268,6 +269,9 @@
 		5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyLogger.swift; sourceTree = "<group>"; };
 		5228E41822D2C0C9005E8F56 /* TestEvaluationResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEvaluationResultType.swift; sourceTree = "<group>"; };
 		5228E41B22D2C54F005E8F56 /* IsImageViewWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsImageViewWithImage.swift; sourceTree = "<group>"; };
+		5228E41E22D2CF43005E8F56 /* UIView+findInSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+findInSubviews.swift"; sourceTree = "<group>"; };
+		5228E42022D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+countOfViewsWithBackgroundColor.swift"; sourceTree = "<group>"; };
+		5228E42122D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+hasViewWithBackgroundColor.swift"; sourceTree = "<group>"; };
 		522D99891FAD2A9C009BB1B9 /* Succinct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Succinct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D998C1FAD2A9C009BB1B9 /* Succinct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Succinct.h; sourceTree = "<group>"; };
 		522D998D1FAD2A9C009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -453,6 +457,16 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		5228E41D22D2CF1D005E8F56 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				5228E42022D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift */,
+				5228E41E22D2CF43005E8F56 /* UIView+findInSubviews.swift */,
+				5228E42122D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		522D997F1FAD2A9C009BB1B9 = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +554,7 @@
 				B867A2F1223BE66A009724BE /* UIButton */,
 				5228E41A22D2C523005E8F56 /* UIImage */,
 				B867A2F9223C7DA1009724BE /* UILabel */,
+				5228E41D22D2CF1D005E8F56 /* UIView */,
 				AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */,
 				B865EEC5226B137400B80E3F /* UIView+Readability.swift */,
 				B8C4FC8B221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift */,
@@ -551,7 +566,6 @@
 				B8D21E4321AC22200059333E /* UIView+UISwitch.swift */,
 				B1D05E602160B5170044D2AD /* UIView+UITextField.swift */,
 				B1FFB51B21CF52BE007AE34B /* UIView+UITextView.swift */,
-				3B14E6688347C8F6D067590C /* UIView+UIView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1279,6 +1293,9 @@
 				B83F5CD621ACDAF00061494E /* UISwitch+Tap.swift in Sources */,
 				B8D0F571227829CB007346AF /* UITabBarController+TabInteractions.swift in Sources */,
 				B8396FFD21BF59A1006FCBD1 /* UITableView+Evaluations.swift in Sources */,
+				5228E42222D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift in Sources */,
+				5228E41F22D2CF43005E8F56 /* UIView+findInSubviews.swift in Sources */,
+				5228E42322D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift in Sources */,
 				AE3CCDD621F591CF00A3638D /* UIView+MKMapView.swift in Sources */,
 				B865EEC6226B137400B80E3F /* UIView+Readability.swift in Sources */,
 				B8C4FC8C221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift in Sources */,
@@ -1293,7 +1310,6 @@
 				B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */,
 				B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */,
 				B1FFB51C21CF52BE007AE34B /* UIView+UITextView.swift in Sources */,
-				3B14E5701AAF98B39C2E6791 /* UIView+UIView.swift in Sources */,
 				B84DB1C521CB7E570041E9D2 /* UIViewController+Debugging.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* UIViewController+MKMapView.swift in Sources */,
 				3B14EDC64BD0D4315A13C89C /* UIViewController+Testing.swift in Sources */,

@@ -27,7 +27,7 @@ extension UIView {
     ) -> Bool {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
-            ).isNotNil()
+        ).isNotNil()
     }
 
     ///
