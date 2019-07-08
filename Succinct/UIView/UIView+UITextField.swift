@@ -61,7 +61,7 @@ extension UIView {
     ///
     public func findTextField(withExactPlaceholderText searchText: String) -> UITextField? {
         return findInSubviews(
-            satisfyingCondition: { $0.isTextField(withExactPlaceholderText: searchText) }
+            satisfyingCondition: SuccinctCondition { $0.isTextField(withExactPlaceholderText: searchText) }
         ) as? UITextField
     }
 
@@ -75,7 +75,7 @@ extension UIView {
     ///
     public func findTextField(containingPlaceholderText searchText: String) -> UITextField? {
         return findInSubviews(
-            satisfyingCondition: { $0.isTextField(containingPlaceholderText: searchText) }
+            satisfyingCondition: SuccinctCondition { $0.isTextField(containingPlaceholderText: searchText) }
         ) as? UITextField
     }
 
@@ -89,7 +89,7 @@ extension UIView {
     ///
     public func findTextField(withExactText searchText: String) -> UITextField? {
         return findInSubviews(
-            satisfyingCondition: { $0.isTextField(withExactText: searchText) }
+            satisfyingCondition: SuccinctCondition { $0.isTextField(withExactText: searchText) }
         ) as? UITextField
     }
 
@@ -103,57 +103,94 @@ extension UIView {
     ///
     public func findTextField(containingText searchText: String) -> UITextField? {
         return findInSubviews(
-            satisfyingCondition: { $0.isTextField(containingText: searchText) }
+            satisfyingCondition: SuccinctCondition { $0.isTextField(containingText: searchText) }
         ) as? UITextField
     }
 }
 
 fileprivate extension UIView {
-    func isTextField(withExactPlaceholderText searchText: String) -> Bool {
+    func isTextField(withExactPlaceholderText searchText: String) -> EvaluationResult {
         guard let textfield = self as? UITextField else {
-            return false
+            return EvaluationResult.failure(IsTextFieldResultType.wrongType)
         }
         
         guard let placeholderText = textfield.placeholder else {
-            return false
+            return EvaluationResult.failure(IsTextFieldResultType.placeholderTextIsNil)
         }
         
-        return placeholderText == searchText
+        guard placeholderText == searchText else {
+            return EvaluationResult.failure(IsTextFieldResultType.matchFailed)
+        }
+
+        return EvaluationResult.success(IsTextViewResultType.found)
     }
     
-    func isTextField(containingPlaceholderText searchText: String) -> Bool {
+    func isTextField(containingPlaceholderText searchText: String) -> EvaluationResult {
         guard let textfield = self as? UITextField else {
-            return false
+            return EvaluationResult.failure(IsTextFieldResultType.wrongType)
         }
         
         guard let placeholderText = textfield.placeholder else {
-            return false
+            return EvaluationResult.failure(IsTextFieldResultType.placeholderTextIsNil)
         }
         
-        return placeholderText.contains(searchText)
+        guard placeholderText.contains(searchText) else {
+            return EvaluationResult.failure(IsTextFieldResultType.stringDoesNotContainText)
+        }
+
+        return EvaluationResult.success(IsTextViewResultType.found)
     }
 
-    func isTextField(withExactText searchText: String) -> Bool {
+    func isTextField(withExactText searchText: String) -> EvaluationResult {
         guard let textfield = self as? UITextField else {
-            return false
+            return EvaluationResult.failure(IsTextFieldResultType.wrongType)
         }
         
         guard let text = textfield.text else {
-            return false
+            return EvaluationResult.failure(IsTextFieldResultType.textIsNil)
         }
         
-        return text == searchText
+        guard text == searchText else {
+            return EvaluationResult.failure(IsTextFieldResultType.matchFailed)
+        }
+
+        return EvaluationResult.success(IsTextViewResultType.found)
     }
 
-    func isTextField(containingText searchText: String) -> Bool {
+    func isTextField(containingText searchText: String) -> EvaluationResult {
         guard let textfield = self as? UITextField else {
-            return false
+            return EvaluationResult.failure(IsTextFieldResultType.wrongType)
         }
         
         guard let text = textfield.text else {
-            return false
+            return EvaluationResult.failure(IsTextFieldResultType.textIsNil)
         }
 
-        return text.contains(searchText)
+        guard text.contains(searchText) else {
+            return EvaluationResult.failure(IsTextFieldResultType.stringDoesNotContainText)
+        }
+
+        return EvaluationResult.success(IsTextViewResultType.found)
+    }
+}
+
+internal enum IsTextFieldResultType: EvaluationResultType {
+    case found
+    case wrongType
+    case textIsNil
+    case placeholderTextIsNil
+    case matchFailed
+    case stringDoesNotContainText
+
+    var evaluatedMethod: String {
+        get {
+            return ""
+        }
+    }
+
+    var resultMessage: String? {
+        get {
+            return nil
+        }
     }
 }
