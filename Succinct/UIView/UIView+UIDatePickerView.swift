@@ -48,11 +48,11 @@ internal enum IsDatePickerViewResultType: EvaluationResultType {
         }
     }
 
-    var resultMessage: String {
+    var resultMessage: String? {
         get {
             switch self {
             default:
-                return ""
+                return nil
             }
         }
     }

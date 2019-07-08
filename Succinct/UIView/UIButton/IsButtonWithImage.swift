@@ -28,9 +28,9 @@ internal enum IsButtonWithImageResultType: EvaluationResultType {
         }
     }
 
-    var resultMessage: String {
+    var resultMessage: String? {
         get {
-            return ""
+            return nil
         }
     }
 }

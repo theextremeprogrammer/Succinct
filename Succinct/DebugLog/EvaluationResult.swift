@@ -3,8 +3,10 @@ internal enum EvaluationResult {
     case failure(_ result: EvaluationResultType)
 
     func tryDebug() -> EvaluationResult {
-        let message = "**** Succinct: " + messageDetail
-        Succinct.log.debug(message)
+        if let messageDetail = maybeMessageDetail {
+            let message = "**** Succinct: " + messageDetail
+            Succinct.log.debug(message)
+        }
 
         return self
     }
@@ -18,7 +20,7 @@ internal enum EvaluationResult {
         }
     }
 
-    private var messageDetail: String {
+    private var maybeMessageDetail: String? {
         get {
             switch self {
             case .success(let successfulResult):

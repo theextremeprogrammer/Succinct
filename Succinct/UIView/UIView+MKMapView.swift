@@ -36,7 +36,7 @@ internal enum FindMapViewResultType: EvaluationResultType {
         }
     }
 
-    var resultMessage: String {
+    var resultMessage: String? {
         get {
             switch self {
 
