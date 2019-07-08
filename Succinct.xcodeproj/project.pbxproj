@@ -31,6 +31,7 @@
 		521E6951208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E6950208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift */; };
 		5228E41722CE82BB005E8F56 /* ViewHierarchyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */; };
 		5228E41922D2C0C9005E8F56 /* TestEvaluationResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41822D2C0C9005E8F56 /* TestEvaluationResultType.swift */; };
+		5228E41C22D2C54F005E8F56 /* IsImageViewWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228E41B22D2C54F005E8F56 /* IsImageViewWithImage.swift */; };
 		522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		522D999A1FAD2A9D009BB1B9 /* Succinct.h in Headers */ = {isa = PBXBuildFile; fileRef = 522D998C1FAD2A9C009BB1B9 /* Succinct.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		522D99A51FAD2AF6009BB1B9 /* UIView+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99A41FAD2AF6009BB1B9 /* UIView+UIButton.swift */; };
@@ -266,6 +267,7 @@
 		521E6950208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPickerView+SelectComponentSpec.swift"; sourceTree = "<group>"; };
 		5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyLogger.swift; sourceTree = "<group>"; };
 		5228E41822D2C0C9005E8F56 /* TestEvaluationResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEvaluationResultType.swift; sourceTree = "<group>"; };
+		5228E41B22D2C54F005E8F56 /* IsImageViewWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsImageViewWithImage.swift; sourceTree = "<group>"; };
 		522D99891FAD2A9C009BB1B9 /* Succinct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Succinct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		522D998C1FAD2A9C009BB1B9 /* Succinct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Succinct.h; sourceTree = "<group>"; };
 		522D998D1FAD2A9C009BB1B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -442,6 +444,15 @@
 			path = UIPickerView;
 			sourceTree = "<group>";
 		};
+		5228E41A22D2C523005E8F56 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				5228E41B22D2C54F005E8F56 /* IsImageViewWithImage.swift */,
+				3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		522D997F1FAD2A9C009BB1B9 = {
 			isa = PBXGroup;
 			children = (
@@ -527,12 +538,12 @@
 			isa = PBXGroup;
 			children = (
 				B867A2F1223BE66A009724BE /* UIButton */,
+				5228E41A22D2C523005E8F56 /* UIImage */,
 				B867A2F9223C7DA1009724BE /* UILabel */,
 				AE3CCDD521F591CF00A3638D /* UIView+MKMapView.swift */,
 				B865EEC5226B137400B80E3F /* UIView+Readability.swift */,
 				B8C4FC8B221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift */,
 				8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */,
-				3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */,
 				3B14E4A77852DD11B2A8ABFA /* UIView+UIPickerView.swift */,
 				52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */,
 				3B14E053556933C8E8A707E6 /* UIView+UISlider.swift */,
@@ -1245,6 +1256,7 @@
 				B867A2EE223BE5B5009724BE /* EvaluationResultType.swift in Sources */,
 				B867A2F3223BE6DC009724BE /* IsButtonWithExactText.swift in Sources */,
 				B867A2F5223BE73F009724BE /* IsButtonWithImage.swift in Sources */,
+				5228E41C22D2C54F005E8F56 /* IsImageViewWithImage.swift in Sources */,
 				B867A2FD223C7DE4009724BE /* IsLabelContainingText.swift in Sources */,
 				B867A2FB223C7DD7009724BE /* IsLabelWithExactText.swift in Sources */,
 				B8BC558221B28F8100A1CD8C /* Logger.swift in Sources */,

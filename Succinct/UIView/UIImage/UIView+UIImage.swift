@@ -8,7 +8,7 @@ extension UIView {
     ///
     public func hasImageView(withImage searchImage: UIImage) -> Bool {
         return findInSubviews(
-            satisfyingCondition: { $0.isImageView(withImage: searchImage) }
+            satisfyingCondition: SuccinctCondition { $0.isImageView(withImage: searchImage) }
         )
             .isNotNil()
     }
@@ -22,7 +22,7 @@ extension UIView {
     ///
     public func findImageView(withImage searchImage: UIImage) -> UIImageView? {
         return findInSubviews(
-            satisfyingCondition: { $0.isImageView(withImage: searchImage) }
+            satisfyingCondition: SuccinctCondition { $0.isImageView(withImage: searchImage) }
         ) as? UIImageView
     }
 
@@ -81,15 +81,5 @@ extension UIView {
         }
         
         return imagesCounted
-    }
-}
-
-fileprivate extension UIView {
-    func isImageView(withImage searchImage: UIImage) -> Bool {
-        guard let imageView = self as? UIImageView else {
-            return false
-        }
-        
-        return imageView.image == searchImage
     }
 }
