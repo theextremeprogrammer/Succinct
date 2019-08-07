@@ -8,7 +8,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: A boolean value indicating if a label was found or not.
     ///
-    public func hasLabel(withExactText searchText: String) -> Bool {
+    @objc public func hasLabel(withExactText searchText: String) -> Bool {
         return findLabel(withExactText: searchText).isNotNil()
     }
 
@@ -20,7 +20,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: A boolean value indicating if a label was found or not.
     ///
-    public func hasLabel(containingText searchText: String) -> Bool {
+    @objc public func hasLabel(containingText searchText: String) -> Bool {
         return findLabel(containingText: searchText).isNotNil()
     }
 }
@@ -35,7 +35,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: An optional UILabel, if one is found.
     ///
-    public func findLabel(withExactText searchText: String) -> UILabel? {
+    @objc public func findLabel(withExactText searchText: String) -> UILabel? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition { $0.isLabel(withExactText: searchText) }
         ) as? UILabel
@@ -49,7 +49,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: An optional UILabel, if one is found.
     ///
-    public func findLabel(containingText searchText: String) -> UILabel? {
+    @objc public func findLabel(containingText searchText: String) -> UILabel? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition { $0.isLabel(containingText: searchText) }
         ) as? UILabel

@@ -8,7 +8,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the placeholder text of any UITextField objects that are found.
     /// - Returns: A boolean value indicating if a UITextField object was found or not.
     ///
-    public func hasTextField(withExactPlaceholderText searchText: String) -> Bool {
+    @objc public func hasTextField(withExactPlaceholderText searchText: String) -> Bool {
         return view.hasTextField(withExactPlaceholderText: searchText)
     }
 
@@ -20,7 +20,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the placeholder text of any UITextField objects that are found.
     /// - Returns: A boolean value indicating if a UITextField object was found or not.
     ///
-    public func hasTextField(containingPlaceholderText searchText: String) -> Bool {
+    @objc public func hasTextField(containingPlaceholderText searchText: String) -> Bool {
         return view.hasTextField(containingPlaceholderText: searchText)
     }
 
@@ -32,7 +32,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the text of any UITextField objects that are found.
     /// - Returns: A boolean value indicating if a UITextField object was found or not.
     ///
-    public func hasTextField(withExactText searchText: String) -> Bool {
+    @objc public func hasTextField(withExactText searchText: String) -> Bool {
         return view.hasTextField(withExactText: searchText)
     }
     
@@ -44,7 +44,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the text of any UITextField objects that are found.
     /// - Returns: A boolean value indicating if a UITextField object was found or not.
     ///
-    public func hasTextField(containingText searchText: String) -> Bool {
+    @objc public func hasTextField(containingText searchText: String) -> Bool {
         return view.hasTextField(containingText: searchText)
     }
 }
@@ -59,7 +59,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the placeholder text of any UITextField objects that are found.
     /// - Returns: An optional UITextField, if one is found.
     ///
-    public func findTextField(withExactPlaceholderText searchText: String) -> UITextField? {
+    @objc public func findTextField(withExactPlaceholderText searchText: String) -> UITextField? {
         return view.findTextField(withExactPlaceholderText: searchText)
     }
 
@@ -71,7 +71,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the placeholder text of any UITextField objects that are found.
     /// - Returns: An optional UITextField, if one is found.
     ///
-    public func findTextField(containingPlaceholderText searchText: String) -> UITextField? {
+    @objc public func findTextField(containingPlaceholderText searchText: String) -> UITextField? {
         return view.findTextField(containingPlaceholderText: searchText)
     }
 
@@ -83,7 +83,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the text of any UITextField objects that are found.
     /// - Returns: An optional UITextField, if one is found.
     ///
-    public func findTextField(withExactText searchText: String) -> UITextField? {
+    @objc public func findTextField(withExactText searchText: String) -> UITextField? {
         return view.findTextField(withExactText: searchText)
     }
 
@@ -95,7 +95,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the text of any UITextField objects that are found.
     /// - Returns: An optional UITextField, if one is found.
     ///
-    public func findTextField(containingText searchText: String) -> UITextField? {
+    @objc public func findTextField(containingText searchText: String) -> UITextField? {
         return view.findTextField(containingText: searchText)
     }
 }

@@ -6,7 +6,7 @@ extension UIView {
     ///
     /// - Returns: An optional UIPickerView, if one is found.
     ///
-    public func findPickerView() -> UIPickerView? {
+    @objc public func findPickerView() -> UIPickerView? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition { $0.isPickerView() }
         ) as? UIPickerView

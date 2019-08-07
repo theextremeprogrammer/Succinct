@@ -8,7 +8,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: A boolean value indicating if a button was found or not.
     ///
-    public func hasButton(withExactText searchText: String) -> Bool {
+    @objc public func hasButton(withExactText searchText: String) -> Bool {
         return view
             .findButton(withExactText: searchText)
             .isNotNil()
@@ -22,7 +22,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: An optional UIButton, if one is found.
     ///
-    public func findButton(withExactText searchText: String) -> UIButton? {
+    @objc public func findButton(withExactText searchText: String) -> UIButton? {
         return view.findButton(withExactText: searchText)
     }
 
@@ -33,7 +33,7 @@ extension UIViewController {
     ///
     /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButton objects that are found.
     ///
-    public func tapButton(withExactText searchText: String) {
+    @objc public func tapButton(withExactText searchText: String) {
         view.findButton(withExactText: searchText)?
             .tapAndFireTargetEvent()
     }
@@ -49,7 +49,7 @@ extension UIViewController {
     /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: A boolean value indicating if a button was found or not.
     ///
-    public func hasButton(withImage searchImage: UIImage) -> Bool {
+    @objc public func hasButton(withImage searchImage: UIImage) -> Bool {
         return view
             .findButton(withImage: searchImage)
             .isNotNil()
@@ -63,7 +63,7 @@ extension UIViewController {
     /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: An optional UIButton, if one is found.
     ///
-    public func findButton(withImage searchImage: UIImage) -> UIButton? {
+    @objc public func findButton(withImage searchImage: UIImage) -> UIButton? {
         return executeWithEnterAndExitDebugLog {
             if let button = view.findButton(withImage: searchImage) {
                 return button
@@ -80,7 +80,7 @@ extension UIViewController {
     ///
     /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButton objects that are found.
     ///
-    public func tapButton(withImage searchImage: UIImage) {
+    @objc public func tapButton(withImage searchImage: UIImage) {
         view.findButton(withImage: searchImage)?
             .tapAndFireTargetEvent()
     }
@@ -94,7 +94,7 @@ extension UIViewController {
     /// - Parameter state: The `UIControl.State` to compare to any UIButton objects that are found.
     /// - Returns: An array of UIButton objects.
     ///
-    public func findButtons(withState state: UIControl.State) -> [UIButton] {
+    @objc public func findButtons(withState state: UIControl.State) -> [UIButton] {
         return view.findButtons(withState: state)
     }
 }

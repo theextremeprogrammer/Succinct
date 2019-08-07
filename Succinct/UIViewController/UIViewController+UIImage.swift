@@ -6,7 +6,7 @@ extension UIViewController {
     ///
     /// - Returns: A boolean value indicating if a UIImageView was found or not.
     ///
-    public func hasImageView(withImage searchImage: UIImage) -> Bool {
+    @objc public func hasImageView(withImage searchImage: UIImage) -> Bool {
         return view.hasImageView(withImage: searchImage)
     }
     
@@ -17,7 +17,7 @@ extension UIViewController {
     ///
     /// - Returns: An optional UIImageView, if one is found.
     ///
-    public func findImageView(withImage searchImage: UIImage) -> UIImageView? {
+    @objc public func findImageView(withImage searchImage: UIImage) -> UIImageView? {
         return view.findImageView(withImage: searchImage)
     }
     
@@ -26,7 +26,7 @@ extension UIViewController {
     ///
     /// - Returns: The total number of matching UIImageView objects.
     ///
-    public func countOfImages(_ searchImage: UIImage) -> Int {
+    @objc public func countOfImages(_ searchImage: UIImage) -> Int {
         return view.countOfImages(searchImage)
     }
 }

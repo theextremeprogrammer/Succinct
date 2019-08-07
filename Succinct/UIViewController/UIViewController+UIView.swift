@@ -6,7 +6,7 @@ extension UIViewController {
     ///
     /// - Parameter searchColor: UIColor to compare to the backgroundColor of any UIView objects that are found.
     /// - Returns: A boolean value indicating if a UIView object was found or not.
-    public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
+    @objc public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
         return view.hasView(withBackgroundColor: searchColor)
     }
 
@@ -15,7 +15,7 @@ extension UIViewController {
     ///
     /// - Parameter searchColor: UIColor to compare to the backgroundColor of any UIView objects that are found.
     /// - Returns: An integer representing the total number of views found where the searchColor matches the backgroundColor of a UIView object.
-    public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
+    @objc public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
         return view.countOfViews(withBackgroundColor: searchColor)
     }
 }

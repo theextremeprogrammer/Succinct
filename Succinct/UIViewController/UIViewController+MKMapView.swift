@@ -8,7 +8,7 @@ extension UIViewController {
     ///
     /// - Returns: A boolean value indicating if an MKMapView was found or not.
     ///
-    public func hasMapView() -> Bool {
+    @objc public func hasMapView() -> Bool {
         return view.findMapView().isNotNil()
     }
 
@@ -19,7 +19,7 @@ extension UIViewController {
     ///
     /// - Returns: An optional MKMapView, if one is found.
     ///
-    public func findMapView() -> MKMapView? {
+    @objc public func findMapView() -> MKMapView? {
         return view.findMapView()
     }
 }

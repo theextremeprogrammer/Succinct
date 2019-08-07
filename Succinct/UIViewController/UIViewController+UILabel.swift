@@ -14,7 +14,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: A boolean value indicating if a label was found or not.
     ///
-    public func hasLabel(withExactText searchText: String) -> Bool {
+    @objc public func hasLabel(withExactText searchText: String) -> Bool {
         if view.hasLabel(withExactText: searchText) {
             return true
         }
@@ -44,7 +44,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: A boolean value indicating if a label was found or not.
     ///
-    public func hasLabel(containingText searchText: String) -> Bool {
+    @objc public func hasLabel(containingText searchText: String) -> Bool {
         if view.hasLabel(containingText: searchText) {
             return true
         }
@@ -76,7 +76,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: An optional UILabel, if one is found.
     ///
-    public func findLabel(withExactText searchText: String) -> UILabel? {
+    @objc public func findLabel(withExactText searchText: String) -> UILabel? {
         if let labelInRootView = view.findLabel(withExactText: searchText) {
             return labelInRootView
         }
@@ -101,7 +101,7 @@ extension UIViewController {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: An optional UILabel, if one is found.
     ///
-    public func findLabel(containingText searchText: String) -> UILabel? {
+    @objc public func findLabel(containingText searchText: String) -> UILabel? {
         if let labelInRootView = view.findLabel(containingText: searchText) {
             return labelInRootView
         }

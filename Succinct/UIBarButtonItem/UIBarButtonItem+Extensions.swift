@@ -17,7 +17,7 @@ extension UIBarButtonItem {
     ///
     /// Attempts to tap this UIBarButtonItem object by firing its associated target event, if one exists.
     ///
-    public func tap() {
+    @objc public func tap() {
         if let action = action,
             let target = target {
             _ = UIApplication.shared.sendAction(

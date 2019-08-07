@@ -1,5 +1,5 @@
 extension UIView {
-    public func hasStepper(currentCount: Int) -> Int {
+    @objc public func hasStepper(currentCount: Int) -> Int {
         var thisLoopCount = currentCount
         for subview in subviews {
             if let _ = subview as? UIStepper {
@@ -15,7 +15,7 @@ extension UIView {
         return thisLoopCount
     }
 
-    public func findStepper(withTag tag: Int) -> UIStepper? {
+    @objc public func findStepper(withTag tag: Int) -> UIStepper? {
         for subview in subviews {
             if let stepper = subview as? UIStepper, stepper.tag == tag {
                 return stepper
@@ -30,7 +30,7 @@ extension UIView {
     }
 
 
-    public func adjustStepper(withTag tag: Int, byValue value: Int) {
+    @objc public func adjustStepper(withTag tag: Int, byValue value: Int) {
         if let stepper = findStepper(withTag: tag) {
             stepper.value += Double(value)
             stepper.sendActions(for: .valueChanged)

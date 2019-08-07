@@ -6,7 +6,7 @@ extension UIViewController {
     ///
     /// - Returns: A boolean value indicating if a UIPickerView was found or not.
     ///
-    public func hasPickerView() -> Bool {
+    @objc public func hasPickerView() -> Bool {
         return view
             .findPickerView()
             .isNotNil()
@@ -19,7 +19,7 @@ extension UIViewController {
     ///
     /// - Returns: An optional UIPickerView, if one is found.
     ///
-    public func findPickerView() -> UIPickerView? {
+    @objc public func findPickerView() -> UIPickerView? {
         return view.findPickerView()
     }
 
@@ -32,7 +32,7 @@ extension UIViewController {
     ///
     /// - Parameter withExactText: Text to compare to the text value of each row for the specified column.
     ///
-    public func selectPickerRow(withExactText searchText: String) {
+    @objc public func selectPickerRow(withExactText searchText: String) {
         view
             .findPickerView()?
             .selectRow(withExactText: searchText)
@@ -48,7 +48,7 @@ extension UIViewController {
     /// - Parameter columnIndex: Index of the column to search.
     /// - Parameter withExactText: Text to compare to the text value of each row for the specified column.
     ///
-    public func selectPickerRow(columnIndex: Int, withExactText searchText: String) {
+    @objc public func selectPickerRow(columnIndex: Int, withExactText searchText: String) {
         view
             .findPickerView()?
             .selectRow(columnIndex: columnIndex, withExactText: searchText)
@@ -63,7 +63,7 @@ extension UIViewController {
     ///
     /// - Returns: A boolean value indicating if the specified search text was found or not.
     ///
-    public func hasPickerRow(withExactText searchText: String) -> Bool {
+    @objc public func hasPickerRow(withExactText searchText: String) -> Bool {
         return view
             .findPickerView()?
             .hasRow(withExactText: searchText) ?? false
@@ -80,7 +80,7 @@ extension UIViewController {
     ///
     /// - Returns: A boolean value indicating if the specified search text was found or not.
     ///
-    public func hasSelectedPickerRow(withExactText searchText: String) -> Bool {
+    @objc public func hasSelectedPickerRow(withExactText searchText: String) -> Bool {
         return view
             .findPickerView()?
             .hasSelectedRow(withExactText: searchText) ?? false

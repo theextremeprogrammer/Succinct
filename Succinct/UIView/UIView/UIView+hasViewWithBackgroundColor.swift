@@ -1,5 +1,5 @@
 extension UIView {
-    public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
+    @objc public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
         if backgroundColor == searchColor {
             return true
         }

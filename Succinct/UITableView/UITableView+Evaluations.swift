@@ -15,7 +15,7 @@ extension UITableView {
     /// - Parameter satisfyingCondition: A UIViewEvaluator closure that takes a UIView as an argument and evaluates it against some kind of condition and returns an optional UIView if a view is found that matches the condition.
     /// - Returns: An optional UIView, if one is found.
     ///
-    public func findView(satisfyingCondition: UIViewEvaluator) -> UIView? {
+    @objc public func findView(satisfyingCondition: UIViewEvaluator) -> UIView? {
         for section in 0..<numberOfSections {
             if let headerView = delegate?.tableView?(self, viewForHeaderInSection: section) {
                 if let view = satisfyingCondition(headerView) {

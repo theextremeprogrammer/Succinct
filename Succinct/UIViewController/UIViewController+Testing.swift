@@ -1,5 +1,5 @@
 extension UIViewController {
-    public func loadViewControllerForUnitTest() {
+    @objc public func loadViewControllerForUnitTest() {
         view.setNeedsLayout()
     }
 }

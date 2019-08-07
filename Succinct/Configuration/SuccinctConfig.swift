@@ -11,7 +11,7 @@ public class SuccinctConfig {
     ///
     /// - Warning: Enabling logging in Succinct outputs the view hierarchy information as view controllers and views are being searched which can have a negative impact on performance. It is recommended to turn debugging on only when you need to understand why a test may be failing unexpectedly.
     ///
-    public func enableDebugLog() {
+    @objc public func enableDebugLog() {
         isDebuggingTurnedOn = true
     }
     
@@ -22,7 +22,7 @@ public class SuccinctConfig {
     ///
     /// - Warning: Enabling logging in Succinct outputs the view hierarchy information as view controllers and views are being searched which can have a negative impact on performance. It is recommended to turn debugging on only when you need to understand why a test may be failing unexpectedly.
     ///
-    public func disableDebugLog() {
+    @objc public func disableDebugLog() {
         isDebuggingTurnedOn = false
     }
 }

@@ -7,7 +7,7 @@ extension UIView {
     /// - Parameter searchSystemItem: `UIBarButtonItem.SystemItem` to compare to the UIBarButtonItem objects that are found.
     /// - Returns: An optional UIBarButtonItem, if one is found.
     ///
-    func findBarButtonItem(systemItem searchSystemItem: UIBarButtonItem.SystemItem) -> UIBarButtonItem? {
+    @objc func findBarButtonItem(systemItem searchSystemItem: UIBarButtonItem.SystemItem) -> UIBarButtonItem? {
         for subview in subviews {
             if let toolbar = subview as? UIToolbar {
                 for barButtonItem in toolbar.items ?? [] {

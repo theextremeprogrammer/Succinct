@@ -9,7 +9,7 @@ extension UIView {
     ///
     /// - Returns: An optional MKMapView, if one is found.
     ///
-    public func findMapView() -> MKMapView? {
+    @objc public func findMapView() -> MKMapView? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isMapView() })
         ) as? MKMapView

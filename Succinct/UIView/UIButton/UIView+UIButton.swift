@@ -7,7 +7,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the title for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: An optional UIButton, if one is found.
     ///
-    public func findButton(withExactText searchText: String) -> UIButton? {
+    @objc public func findButton(withExactText searchText: String) -> UIButton? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition {
                 $0.isButton(withExactText: searchText)
@@ -23,7 +23,7 @@ extension UIView {
     /// - Parameter searchImage: Image to compare to the image for `UIControl.State.normal` of any UIButton objects that are found.
     /// - Returns: An optional UIButton, if one is found.
     ///
-    public func findButton(withImage searchImage: UIImage) -> UIButton? {
+    @objc public func findButton(withImage searchImage: UIImage) -> UIButton? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition {
                 $0.isButton(withImage: searchImage)
@@ -37,7 +37,7 @@ extension UIView {
     /// - Parameter state: The `UIControl.State` to compare to any UIButton objects that are found.
     /// - Returns: An array of UIButton objects.
     ///
-    public func findButtons(withState searchState: UIControl.State) -> [UIButton] {
+    @objc public func findButtons(withState searchState: UIControl.State) -> [UIButton] {
         var buttons: [UIButton] = []
 
         for subview in subviews {

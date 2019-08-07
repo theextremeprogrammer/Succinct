@@ -8,7 +8,7 @@ extension UIViewController {
     ///
     /// - Parameter searchSystemItem: `UIBarButtonItem.SystemItem` to compare to the UIBarButtonItem objects that are found.
     ///
-    public func tapBarButtonItem(withSystemItem searchSystemItem: UIBarButtonItem.SystemItem) {
+    @objc public func tapBarButtonItem(withSystemItem searchSystemItem: UIBarButtonItem.SystemItem) {
         if let barButtonItem = navigationItem.findBarButtonItem(matchingCondition: { $0.systemItem == searchSystemItem }) {
             barButtonItem.tap()
         }
@@ -27,7 +27,7 @@ extension UIViewController {
     ///
     /// - Parameter searchTitle: `String` to compare to the Title strings that are found.
     ///
-    public func tapBarButtonItem(withTitle searchTitle: String) {
+    @objc public func tapBarButtonItem(withTitle searchTitle: String) {
         if let barButtonItem = navigationItem.findBarButtonItem(matchingCondition: { $0.title == searchTitle}) {
             barButtonItem.tap()
         }
@@ -36,7 +36,7 @@ extension UIViewController {
     ///
     /// Attempts to tap the view controller's `navigationItem.leftBarButtonItem` UIBarButtonItem object regardless of what it is (so long as one exists) by firing its associated target event, if one exists.
     ///
-    public func tapLeftBarButtonItem() {
+    @objc public func tapLeftBarButtonItem() {
         if let leftBarButtonItem = navigationItem.leftBarButtonItem {
             leftBarButtonItem.tap()
         }
@@ -45,7 +45,7 @@ extension UIViewController {
     ///
     /// Attempts to tap the view controller's `navigationItem.rightBarButtonItem` UIBarButtonItem object regardless of what it is (so long as one exists) by firing its associated target event, if one exists.
     ///
-    public func tapRightBarButtonItem() {
+    @objc public func tapRightBarButtonItem() {
         if let rightBarButtonItem = navigationItem.rightBarButtonItem {
             rightBarButtonItem.tap()
         }
