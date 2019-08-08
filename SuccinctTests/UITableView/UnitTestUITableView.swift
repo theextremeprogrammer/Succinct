@@ -61,6 +61,6 @@ extension UnitTestUITableView: UITableViewDataSource {
 
 extension UnitTestUITableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return configuration.headerDefinitions[section]?.view
+        return configuration.headerDefinitions?[section]?.view
     }
 }

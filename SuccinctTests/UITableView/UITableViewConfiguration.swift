@@ -3,7 +3,7 @@ import UIKit
 struct UITableViewConfiguration {
     let tableViewStyle: UITableView.Style
     let cellDefinitions: [IndexPath : UITableViewCellConfiguration]
-    let headerDefinitions: [Int : UITableViewHeaderConfiguration]
+    let headerDefinitions: [Int : UITableViewHeaderConfiguration]?
 
     var numberOfSections: Int {
         get {
