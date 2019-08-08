@@ -1,7 +1,7 @@
 ///
 /// Object which allows access to cofigurable options within Succinct.
 ///
-public class SuccinctConfig {
+@objc public class SuccinctConfig: NSObject {
     private(set) var isDebuggingTurnedOn: Bool = false
 
     ///
