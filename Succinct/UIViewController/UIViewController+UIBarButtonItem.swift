@@ -10,11 +10,11 @@ extension UIViewController {
     ///
     @objc public func tapBarButtonItem(withSystemItem searchSystemItem: UIBarButtonItem.SystemItem) {
         if let barButtonItem = navigationItem.findBarButtonItem(matchingCondition: { $0.systemItem == searchSystemItem }) {
-            barButtonItem.tap()
+            barButtonItem.tapAndFireTargetAction()
         }
 
         if let barButtonItemInView = view.findBarButtonItem(systemItem: searchSystemItem) {
-            barButtonItemInView.tap()
+            barButtonItemInView.tapAndFireTargetAction()
         }
     }
 
@@ -29,7 +29,7 @@ extension UIViewController {
     ///
     @objc public func tapBarButtonItem(withTitle searchTitle: String) {
         if let barButtonItem = navigationItem.findBarButtonItem(matchingCondition: { $0.title == searchTitle}) {
-            barButtonItem.tap()
+            barButtonItem.tapAndFireTargetAction()
         }
     }
 
@@ -38,7 +38,7 @@ extension UIViewController {
     ///
     @objc public func tapLeftBarButtonItem() {
         if let leftBarButtonItem = navigationItem.leftBarButtonItem {
-            leftBarButtonItem.tap()
+            leftBarButtonItem.tapAndFireTargetAction()
         }
     }
 
@@ -47,7 +47,7 @@ extension UIViewController {
     ///
     @objc public func tapRightBarButtonItem() {
         if let rightBarButtonItem = navigationItem.rightBarButtonItem {
-            rightBarButtonItem.tap()
+            rightBarButtonItem.tapAndFireTargetAction()
         }
     }
 }
