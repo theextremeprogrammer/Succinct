@@ -7,19 +7,21 @@ matrix:
   include:
   - name: "Succinct Unit Tests"
     language: swift
-    osx_image: xcode10.2
+    os: osx
+    osx_image: xcode11.3
     xcode_project: Succinct.xcodeproj
     xcode_scheme: Succinct
-    xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone 7
+    xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone 11
     install:
       - carthage bootstrap --platform iOS --cache-builds
 
   - name: "Succinct Simulator Tests"
     language: swift
-    osx_image: xcode10.2
+    os: osx
+    osx_image: xcode11.3
     xcode_project: Succinct.xcodeproj
     xcode_scheme: SuccinctContainer
-    xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone 7
+    xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone 11
     install:
       - carthage bootstrap --platform iOS --cache-builds
 
@@ -27,6 +29,9 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
   - gem install jazzy
   - make documentation
+
+after_failure:
+  - cat $TMPDIR/carthage-*.log
 
 deploy:
   provider: pages

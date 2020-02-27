@@ -487,7 +487,6 @@
 		522D997F1FAD2A9C009BB1B9 = {
 			isa = PBXGroup;
 			children = (
-				525F5AA82407EECA0039F42A /* .travis.yml */,
 				525FF7D7203252C5007AE6C8 /* Frameworks */,
 				B89A3EB521A2AFD2008B15C0 /* LICENSE */,
 				B8FE917D2120F5F30097274D /* Makefile */,
@@ -497,6 +496,7 @@
 				5230D81220EC89FE00E9459B /* SuccinctContainerTests */,
 				522D99961FAD2A9D009BB1B9 /* SuccinctTests */,
 				B88E39D321DDFE6C00A3B82B /* Test Infrastructure */,
+				525F5AA82407EECA0039F42A /* .travis.yml */,
 				B8FE917F2120F5F30097274D /* Cartfile.private */,
 				B8FE917C2120F5F30097274D /* Cartfile.resolved */,
 				B8FE917E2120F5F30097274D /* README.md */,
