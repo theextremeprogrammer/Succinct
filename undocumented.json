@@ -1,6 +1,236 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 1,
+      "symbol": "ViewHierarchyLogger",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 2,
+      "symbol": "ViewHierarchyLogger.logEnterParentView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 3,
+      "symbol": "ViewHierarchyLogger.logExitParentView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 5,
+      "symbol": "ViewHierarchyLogger.logEnterChildView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 6,
+      "symbol": "ViewHierarchyLogger.logExitChildView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 9,
+      "symbol": "DefaultViewHierarchyLogger",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 12,
+      "symbol": "DefaultViewHierarchyLogger.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 17,
+      "symbol": "DefaultViewHierarchyLogger",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 18,
+      "symbol": "DefaultViewHierarchyLogger.logEnterParentView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 25,
+      "symbol": "DefaultViewHierarchyLogger.logExitParentView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 32,
+      "symbol": "DefaultViewHierarchyLogger.logEnterChildView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
+      "line": 39,
+      "symbol": "DefaultViewHierarchyLogger.logExitChildView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/NSAttributedString/NSAttributedString+Attributes.swift",
+      "line": 2,
+      "symbol": "NSAttributedString.containsExactString(_:withAttributes:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UISlider/UISlider+SetValue.swift",
+      "line": 2,
+      "symbol": "UISlider.setValueAndFireTargetEvent(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView/UIView+countOfViewsWithBackgroundColor.swift",
+      "line": 2,
+      "symbol": "UIView.countOfViews(withBackgroundColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView/UIView+hasViewWithBackgroundColor.swift",
+      "line": 2,
+      "symbol": "UIView.hasView(withBackgroundColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISegmentedControl.swift",
+      "line": 2,
+      "symbol": "UIView.hasSegmentedControlSegmentSelected(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISegmentedControl.swift",
+      "line": 22,
+      "symbol": "UIView.selectSegment(withTitleText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
+      "line": 3,
+      "symbol": "UIView.findSlider(withValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
+      "line": 22,
+      "symbol": "UIView.hasSlider(withValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISlider.swift",
+      "line": 29,
+      "symbol": "UIView.sliderCount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
+      "line": 2,
+      "symbol": "UIView.hasStepper(currentCount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
+      "line": 18,
+      "symbol": "UIView.findStepper(withTag:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIStepper.swift",
+      "line": 33,
+      "symbol": "UIView.adjustStepper(withTag:byValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+Testing.swift",
+      "line": 2,
+      "symbol": "UIViewController.loadViewControllerForUnitTest()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
+      "line": 2,
+      "symbol": "UIViewController.hasSegmentedControlSegmentSelected(withExactText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
+      "line": 6,
+      "symbol": "UIViewController.selectSegment(withTitleText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
+      "line": 2,
+      "symbol": "UIViewController.hasSlider(withValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
+      "line": 6,
+      "symbol": "UIViewController.sliderCount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
+      "line": 10,
+      "symbol": "UIViewController.setValueOf(sliderWithValue:toValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
+      "line": 2,
+      "symbol": "UIViewController.hasStepper(expectedCount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
+      "line": 7,
+      "symbol": "UIViewController.adjustStepper(withTag:byValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
+      "line": 11,
+      "symbol": "UIViewController.containStepper(withTag:toHaveValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
   ],
   "source_directory": "/Users/travis/build/derekleerock/Succinct"
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>README  Reference</title>
+    <title>Protocols  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,8 @@
     
   </head>
   <body>
-    <a title="README  Reference"></a>
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
+    <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">Succinct Docs</a> (76% documented)</p>
@@ -21,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="index.html">Succinct Reference</a>
         <img id="carat" src="img/carat.png" />
-        README  Reference
+        Protocols  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -111,50 +112,43 @@
       <article class="main-content">
         <section>
           <section class="section">
-            
-            <h1 id='succinct-サシンクト' class='heading'>Succinct (サシンクト)</h1>
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
 
-<p><a href="https://travis-ci.org/derekleerock/Succinct"><img src="https://travis-ci.org/derekleerock/Succinct.svg?branch=master" alt="Build Status"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>
-<a href="https://GitHub.com/derekleerock/Succinct/tags/"><img src="https://img.shields.io/github/tag/derekleerock/Succinct.svg" alt="GitHub tag"></a>
-<a href="https://codecov.io/gh/derekleerock/Succinct"><img src="https://codecov.io/gh/derekleerock/Succinct/branch/master/graph/badge.svg" alt="codecov"></a>
-<a href="https://derekleerock.github.io/Succinct"><img src="https://raw.githubusercontent.com/derekleerock/Succinct/gh-pages/badge.svg?sanitize=true" alt="jazzy docs"></a>
-<a href="https://github.com/derekleerock/Succinct/blob/master/LICENSE"><img src="https://img.shields.io/github/license/derekleerock/Succinct.svg" alt="GitHub license"></a></p>
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8Succinct19ViewHierarchyLoggerP"></a>
+                    <a name="//apple_ref/swift/Protocol/ViewHierarchyLogger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8Succinct19ViewHierarchyLoggerP">ViewHierarchyLogger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
 
-<p>I started to build out this framework so I could have a de-coupled approach to unit testing my iOS apps using a BDD-style approach - without the time it takes to run UI tests. After re-creating the same style of tests several times I thought it&rsquo;d be best to pull them together into a framework to help myself and possibly others.</p>
+                        <a href="Protocols/ViewHierarchyLogger.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ViewHierarchyLogger</span></code></pre>
 
-<p><strong><em>Caveat:</em></strong> <em>Succinct doesn&rsquo;t support every single aspect of testing iOS view hierarchies just yet. I&rsquo;m slowly adding functionality in as it is needed. If there&rsquo;s something you&rsquo;d like to see included please feel free to open an issue or make a PR.</em> 👍🏻</p>
-<h2 id='documentation' class='heading'>Documentation</h2>
-
-<p><a href="https://derekleerock.github.io/Succinct/"> 📄 (Soon to be fully) Complete Documentation via GitHubPages</a></p>
-
-<p>Automatic documentation generated thanks to <a href="https://github.com/realm/jazzy">Jazzy</a>, <a href="https://pages.github.com/">GitHubPages</a> and <a href="https://docs.travis-ci.com/user/deployment/pages/">Travis-CI integration</a> and some great guidance from @jgsamudio <a href="https://medium.com/@jonathan2457/generate-host-your-ios-documentation-39e21b382ce8">in this blog post</a>. Keep an eye on the documentation badge above.</p>
-<h2 id='getting-setup' class='heading'>Getting Setup</h2>
-
-<p>Succinct supports installation via Carthage. Simple include Succinct in your Cartfile.private (<code>github &quot;derekleerock/Succinct&quot;</code>) and <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework">include it in your test target</a>.</p>
-<h2 id='making-a-contribution' class='heading'>Making a Contribution</h2>
-
-<p>If there is functionality that you&rsquo;re looking for that is not included, please feel free to make a PR with your suggested feature and tests so we can discuss.</p>
-<h3 id='running-the-tests' class='heading'>Running the tests</h3>
-
-<p>All of Succinct&rsquo;s tests have been written using Quick and Nimble. Assuming you already have Carthage installed, you can easily fetch these dependencies by executing:</p>
-
-<p><code>$ make bootstrap</code></p>
-
-<p>There are two different test suites for Succinct: one which does not require the simulator to run, and one that does.</p>
-<h4 id='unit-tests' class='heading'>Unit Tests</h4>
-
-<p><code>$ make tests</code></p>
-<h4 id='simulator-tests' class='heading'>Simulator Tests</h4>
-
-<p><code>$ make simulator-tests</code></p>
-<h4 id='execute-all-tests' class='heading'>Execute All Tests</h4>
-
-<p><code>$ make alltests</code></p>
-<h2 id='license' class='heading'>License</h2>
-
-<p>Succinct is licensed under the MIT License. Please see the <a href="https://github.com/derekleerock/succinct/blob/master/LICENSE"><code>LICENSE</code></a> file.</p>
-
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
