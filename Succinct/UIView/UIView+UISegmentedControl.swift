@@ -1,22 +1,11 @@
 extension UIView {
     @objc public func hasSegmentedControlSegmentSelected(withExactText searchText: String) -> Bool {
-        for subview in subviews {
-            if let segmentedControl = subview as? UISegmentedControl {
-                let selectedSegmentIndex = segmentedControl.selectedSegmentIndex
-
-                for index in 0..<segmentedControl.numberOfSegments {
-                    let segmentTitle = segmentedControl.titleForSegment(at: index)
-
-                    if segmentTitle == searchText && index == selectedSegmentIndex {
-                        return true
-                    }
-                }
-            } else if subview.hasSegmentedControlSegmentSelected(withExactText: searchText) {
-                return true
+        return findInSubviews(
+            satisfyingCondition: SuccinctCondition {
+                $0.isSegmentedControl(whereSelectedSegmentHasExactText: searchText)
             }
-        }
-
-        return false
+        )
+            .isNotNil()
     }
 
     @objc public func selectSegment(withTitleText searchText: String) {

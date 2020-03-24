@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B14E087392B38610209029F /* UIViewController+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E915821AEB8C865BA256 /* UIViewController+UIButtonSpec.swift */; };
+		3B14E221D7B01C41F7F9DC98 /* UIView+hasSegmentedControlSegmentSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EE49FD9B80156A3C1F6E /* UIView+hasSegmentedControlSegmentSelected.swift */; };
 		3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E2376D3AE2A0B051C507 /* Optional+NilCheck.swift */; };
 		3B14E52C804E819D50011851 /* UIPickerView+SelectComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E9D41F6E67724E034E4D /* UIPickerView+SelectComponent.swift */; };
 		3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EA94F94F4C40DB2C604D /* UIButton+Tap.swift */; };
@@ -268,6 +269,7 @@
 		3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControlBuilder.swift; sourceTree = "<group>"; };
 		3B14ED2A55D7B067E5D43B41 /* UIViewController+UITableViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UITableViewSpec.swift"; sourceTree = "<group>"; };
 		3B14ED72118715E71C68E909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B14EE49FD9B80156A3C1F6E /* UIView+hasSegmentedControlSegmentSelected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+hasSegmentedControlSegmentSelected.swift"; sourceTree = "<group>"; };
 		3B14EF2A64AD0830F2034E38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		521E6950208E183A0056FF8F /* UIPickerView+SelectComponentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPickerView+SelectComponentSpec.swift"; sourceTree = "<group>"; };
 		5228E41622CE82BB005E8F56 /* ViewHierarchyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHierarchyLogger.swift; sourceTree = "<group>"; };
@@ -456,6 +458,14 @@
 			path = UIPickerView;
 			sourceTree = "<group>";
 		};
+		3B14EF96F3CDAAFFCD8725FE /* UISegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				3B14EE49FD9B80156A3C1F6E /* UIView+hasSegmentedControlSegmentSelected.swift */,
+			);
+			path = UISegmentedControl;
+			sourceTree = "<group>";
+		};
 		5228E41A22D2C523005E8F56 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +584,7 @@
 				B867A2F1223BE66A009724BE /* UIButton */,
 				5228E41A22D2C523005E8F56 /* UIImage */,
 				B867A2F9223C7DA1009724BE /* UILabel */,
+				3B14EF96F3CDAAFFCD8725FE /* UISegmentedControl */,
 				5228E41D22D2CF1D005E8F56 /* UIView */,
 				B865EEC5226B137400B80E3F /* UIView+Readability.swift */,
 				B8C4FC8B221E1E6F0024BF14 /* UIView+UIBarButtonItem.swift */,
@@ -1324,6 +1335,7 @@
 				B8396FFD21BF59A1006FCBD1 /* UITableView+Evaluations.swift in Sources */,
 				5228E42222D2CF65005E8F56 /* UIView+countOfViewsWithBackgroundColor.swift in Sources */,
 				5228E41F22D2CF43005E8F56 /* UIView+findInSubviews.swift in Sources */,
+				3B14E221D7B01C41F7F9DC98 /* UIView+hasSegmentedControlSegmentSelected.swift in Sources */,
 				5228E42322D2CF65005E8F56 /* UIView+hasViewWithBackgroundColor.swift in Sources */,
 				AE3CCDD621F591CF00A3638D /* UIView+MKMapView.swift in Sources */,
 				B865EEC6226B137400B80E3F /* UIView+Readability.swift in Sources */,
