@@ -1,5 +1,5 @@
 ///
-/// Definition for a closure that takes a UIView as an argument in order to evaluates it against some kind of condition. If a UIView object that satisfies this conditio is found, then that UIView object is returned.
+/// Definition for a closure that takes a UIView as an argument in order to evaluates it against some kind of condition. If a UIView object that satisfies this condition is found, then that UIView object is returned.
 ///
 /// - Parameter viewToEvaluate: The UIView object to evaluate against a condition.
 /// - Returns: An optional UIView that matches the provided criteria, if one is found.
