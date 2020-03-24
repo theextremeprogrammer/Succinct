@@ -1,4 +1,12 @@
 internal extension UIView {
+    func isSegmentedControl() -> EvaluationResult {
+        guard let _ = self as? UISegmentedControl else {
+            return EvaluationResult.failure(SegmentedControlSegmentSelectedResultType.wrongType)
+        }
+
+        return EvaluationResult.success(SegmentedControlSegmentSelectedResultType.found)
+    }
+
     func isSegmentedControl(whereSelectedSegmentHasExactText searchText: String) -> EvaluationResult {
         guard let segmentedControl = self as? UISegmentedControl else {
             return EvaluationResult.failure(SegmentedControlSegmentSelectedResultType.wrongType)

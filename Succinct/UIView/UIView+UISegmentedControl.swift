@@ -9,18 +9,20 @@ extension UIView {
     }
 
     @objc public func selectSegment(withTitleText searchText: String) {
-        for subview in subviews {
-            if let segmentedControl = subview as? UISegmentedControl {
-                for index in 0..<segmentedControl.numberOfSegments {
-                    let segmentTitle = segmentedControl.titleForSegment(at: index)
+        guard let segmentedControl = findInSubviews(
+            satisfyingCondition: SuccinctCondition {
+                $0.isSegmentedControl()
+            }
+        ) as? UISegmentedControl else {
+            return
+        }
 
-                    if segmentTitle == searchText {
-                        segmentedControl.selectedSegmentIndex = index
-                        segmentedControl.sendActions(for: .valueChanged)
-                    }
-                }
-            } else {
-                subview.selectSegment(withTitleText: searchText)
+        for index in 0..<segmentedControl.numberOfSegments {
+            let segmentTitle = segmentedControl.titleForSegment(at: index)
+
+            if segmentTitle == searchText {
+                segmentedControl.selectedSegmentIndex = index
+                segmentedControl.sendActions(for: .valueChanged)
             }
         }
     }

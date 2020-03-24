@@ -65,5 +65,70 @@ final class UIViewController_UISegmentedControlSpec: QuickSpec {
                 }
             }
         }
+
+        describe("selecting a different segment by exact text") {
+            context("when a segmented control exists in the first subview") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UISegmentedControlBuilder()
+                                .withSegment(titleText: "ABC")
+                                .withSelectedSegment(titleText: "DEF")
+                                .withSegment(titleText: "GHI")
+                                .build()
+                        )
+                        .build()
+                }
+
+                it("selecting the first item updates the selected and unselected segments properly") {
+                    viewController.selectSegment(withTitleText: "ABC")
+
+
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "ABC")).to(beTrue())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "DEF")).to(beFalse())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "GHI")).to(beFalse())
+                }
+
+                it("selecting the third item updates the selected and unselected segments properly") {
+                    viewController.selectSegment(withTitleText: "GHI")
+
+
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "ABC")).to(beFalse())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "DEF")).to(beFalse())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "GHI")).to(beTrue())
+                }
+            }
+
+            context("when a segmented control exists in the second subview") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UISegmentedControlBuilder()
+                                        .withSegment(titleText: "ABC")
+                                        .withSelectedSegment(titleText: "DEF")
+                                        .withSegment(titleText: "GHI")
+                                        .build()
+                                )
+                                .build()
+                        )
+                        .build()
+                }
+
+                it("selecting the first item updates the selected and unselected segments properly") {
+                    viewController.selectSegment(withTitleText: "ABC")
+
+
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "ABC")).to(beTrue())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "DEF")).to(beFalse())
+                    expect(viewController.hasSegmentedControlSegmentSelected(withExactText: "GHI")).to(beFalse())
+                }
+            }
+        }
     }
 }
