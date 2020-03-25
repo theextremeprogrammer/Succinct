@@ -1,8 +1,6 @@
 internal extension UIView {
     func isLabel(withExactText searchText: String) -> EvaluationResult {
-        if let uiSegmentLabel: AnyClass = NSClassFromString("UISegmentLabel"),
-           self.isKind(of: uiSegmentLabel)
-        {
+        if self.isUISegmentLabel() {
             return .failure(IsLabelWithExactTextResultType.wrongType)
         }
 
