@@ -137,6 +137,21 @@ final class UIViewController_UILabelSpec: QuickSpec {
                     expect(viewController.findLabel(withExactText: "Navigation Title")).toNot(beNil())
                 }
             }
+
+            context("when a UISegmentedControl exists in the first subview") {
+                it("cannot find the label because UISegmentedControls are excluded from this search") {
+                    let viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UISegmentedControlBuilder()
+                                .withSegment(titleText: "ABC")
+                                .build()
+                        )
+                        .build()
+
+
+                    expect(viewController.findLabel(withExactText: "ABC")).to(beNil())
+                }
+            }
         }
 
         describe("has label with exact text") {
