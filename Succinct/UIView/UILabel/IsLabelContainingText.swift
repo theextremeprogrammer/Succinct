@@ -1,5 +1,9 @@
 internal extension UIView {
     func isLabel(containingText searchText: String) -> EvaluationResult {
+        if self.isUISegmentLabel() {
+            return .failure(IsLabelContainingTextResult.wrongType)
+        }
+
         guard let label = self as? UILabel else {
             return .failure(IsLabelContainingTextResult.wrongType)
         }
