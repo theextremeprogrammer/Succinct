@@ -8,7 +8,7 @@ extension UIView {
     ///
     @objc public func findDatePickerView() -> UIDatePicker? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isDatePickerView() }
+            satisfyingCondition: SuccinctCondition({ $0.isDatePickerView() })
         ) as? UIDatePicker
     }
 }

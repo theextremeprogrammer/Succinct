@@ -26,7 +26,9 @@ extension UIView {
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> Bool {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
+            satisfyingCondition: SuccinctCondition({
+                $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes)
+            })
         ).isNotNil()
     }
 
@@ -55,7 +57,7 @@ extension UIView {
     ///
     @objc public func findTextView(withExactText searchText: String) -> UITextView? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isTextView(withExactText: searchText) }
+            satisfyingCondition: SuccinctCondition({ $0.isTextView(withExactText: searchText) })
         ) as? UITextView
     }
 
@@ -73,7 +75,9 @@ extension UIView {
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> UITextView? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes) }
+            satisfyingCondition: SuccinctCondition({
+                $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes)
+            })
         ) as? UITextView
     }
 
@@ -87,7 +91,7 @@ extension UIView {
     ///
     @objc public func findTextView(containingText searchText: String) -> UITextView? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isTextView(containingText: searchText) }
+            satisfyingCondition: SuccinctCondition({ $0.isTextView(containingText: searchText) })
         ) as? UITextView
     }
 }

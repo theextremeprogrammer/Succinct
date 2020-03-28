@@ -8,7 +8,7 @@ extension UIView {
     ///
     @objc public func findPickerView() -> UIPickerView? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isPickerView() }
+            satisfyingCondition: SuccinctCondition({ $0.isPickerView() })
         ) as? UIPickerView
     }
 }

@@ -61,7 +61,7 @@ extension UIView {
     ///
     @objc public func findTextField(withExactPlaceholderText searchText: String) -> UITextField? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isTextField(withExactPlaceholderText: searchText) }
+            satisfyingCondition: SuccinctCondition({ $0.isTextField(withExactPlaceholderText: searchText) })
         ) as? UITextField
     }
 
@@ -75,7 +75,7 @@ extension UIView {
     ///
     @objc public func findTextField(containingPlaceholderText searchText: String) -> UITextField? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isTextField(containingPlaceholderText: searchText) }
+            satisfyingCondition: SuccinctCondition({ $0.isTextField(containingPlaceholderText: searchText) })
         ) as? UITextField
     }
 
@@ -89,7 +89,7 @@ extension UIView {
     ///
     @objc public func findTextField(withExactText searchText: String) -> UITextField? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isTextField(withExactText: searchText) }
+            satisfyingCondition: SuccinctCondition({ $0.isTextField(withExactText: searchText) })
         ) as? UITextField
     }
 
@@ -103,7 +103,7 @@ extension UIView {
     ///
     @objc public func findTextField(containingText searchText: String) -> UITextField? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition { $0.isTextField(containingText: searchText) }
+            satisfyingCondition: SuccinctCondition({ $0.isTextField(containingText: searchText) })
         ) as? UITextField
     }
 }

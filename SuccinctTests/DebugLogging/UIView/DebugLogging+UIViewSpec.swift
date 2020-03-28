@@ -26,9 +26,9 @@ class DebugLogging_UIViewSpec: QuickSpec {
                         
                         
                         _ = view.findInSubviews(
-                            satisfyingCondition: SuccinctCondition { _ in
+                            satisfyingCondition: SuccinctCondition({ _ in
                                 return EvaluationResult.failure(TestEvaluationResultType.notFound)
-                            }
+                            })
                         )
                     }
 
@@ -49,9 +49,9 @@ class DebugLogging_UIViewSpec: QuickSpec {
 
 
                         _ = view.findInSubviews(
-                            satisfyingCondition: SuccinctCondition { _ in
+                            satisfyingCondition: SuccinctCondition({ _ in
                                 return EvaluationResult.failure(TestEvaluationResultType.notFound)
-                            }
+                            })
                         )
                     }
 
@@ -79,9 +79,9 @@ class DebugLogging_UIViewSpec: QuickSpec {
                             .build()
 
                         _ = view.findInSubviews(
-                            satisfyingCondition: SuccinctCondition { _ in
+                            satisfyingCondition: SuccinctCondition({ _ in
                                 return EvaluationResult.failure(TestEvaluationResultType.notFound)
-                            }
+                            })
                         )
                     }
 
@@ -114,9 +114,9 @@ class DebugLogging_UIViewSpec: QuickSpec {
                         
                         
                         _ = view.findInSubviews(
-                            satisfyingCondition: SuccinctCondition { _ in
+                            satisfyingCondition: SuccinctCondition({ _ in
                                 return EvaluationResult.failure(TestEvaluationResultType.notFound)
-                            }
+                            })
                         )
                     }
                     
@@ -156,9 +156,9 @@ class DebugLogging_UIViewSpec: QuickSpec {
                         
                         
                         _ = view.findInSubviews(
-                            satisfyingCondition: SuccinctCondition { _ in
+                            satisfyingCondition: SuccinctCondition({ _ in
                                 return EvaluationResult.failure(TestEvaluationResultType.notFound)
-                            }
+                            })
                         )
                     }
                     

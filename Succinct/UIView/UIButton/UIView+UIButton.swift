@@ -9,9 +9,9 @@ extension UIView {
     ///
     @objc public func findButton(withExactText searchText: String) -> UIButton? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition {
+            satisfyingCondition: SuccinctCondition({
                 $0.isButton(withExactText: searchText)
-            }
+            })
         ) as? UIButton
     }
 
@@ -25,9 +25,9 @@ extension UIView {
     ///
     @objc public func findButton(withImage searchImage: UIImage) -> UIButton? {
         return findInSubviews(
-            satisfyingCondition: SuccinctCondition {
+            satisfyingCondition: SuccinctCondition({
                 $0.isButton(withImage: searchImage)
-            }
+            })
         ) as? UIButton
     }
 
