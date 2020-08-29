@@ -11,8 +11,8 @@ Pod::Spec.new do |spec|
   spec.author                = "Derek Lee"
   spec.social_media_url      = "https://twitter.com/derekleerock"
   spec.platform              = :ios, "10.0"
+  spec.swift_versions        = ['5.0']
   spec.source                = { :git => "https://github.com/derekleerock/Succinct.git",
                                  :tag => "v#{spec.version}" }
-  spec.source_files          = "**"
-  spec.exclude_files         = "Succinct/Cartfile.*", "Succinct/Makefile", "Succinct/LICENSE", "Succinct/README.md"
+  spec.source_files          = "Succinct/**/*.swift"
 end
