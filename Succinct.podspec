@@ -12,6 +12,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url      = "https://twitter.com/derekleerock"
   spec.platform              = :ios, "10.0"
   spec.swift_versions        = ['5.0']
+  spec.frameworks            = 'MapKit'
   spec.source                = { :git => "https://github.com/derekleerock/Succinct.git",
                                  :tag => "v#{spec.version}" }
   spec.source_files          = "Succinct/**/*.swift"
