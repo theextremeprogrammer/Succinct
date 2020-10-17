@@ -13,7 +13,7 @@ extension UIView {
     }
 
     ///
-    /// Searches the entire view hierarchy of the current view for a UITextView whose text matches the searchText exactly and the provided searchAttributes.
+    /// Searches the entire view hierarchy of the current view for a UITextView whose text contains the searchText and has the provided searchAttributes.
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
@@ -22,12 +22,12 @@ extension UIView {
     /// - Returns: A boolean value indicating if a UITextView object was found or not.
     ///
     @objc public func hasTextView(
-        withExactText searchText: String,
+        containingText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> Bool {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({
-                $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes)
+                $0.isTextView(containingText: searchText, matchingAttributes: searchAttributes)
             })
         ).isNotNil()
     }
@@ -62,7 +62,7 @@ extension UIView {
     }
 
     ///
-    /// Searches the entire view hierarchy of the current view for a UITextView whose text matches the searchText exactly and the provided searchAttributes.
+    /// Searches the entire view hierarchy of the current view for a UITextView whose text contains the searchText and has the provided searchAttributes.
     ///
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
@@ -71,12 +71,12 @@ extension UIView {
     /// - Returns: An optional UITextView, if one is found.
     ///
     @objc public func findTextView(
-        withExactText searchText: String,
+        containingText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> UITextView? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({
-                $0.isTextView(withExactText: searchText, matchingAttributes: searchAttributes)
+                $0.isTextView(containingText: searchText, matchingAttributes: searchAttributes)
             })
         ) as? UITextView
     }
@@ -114,7 +114,7 @@ fileprivate extension UIView {
     }
 
     func isTextView(
-        withExactText searchText: String,
+        containingText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> EvaluationResult {
         guard let textView = self as? UITextView else {
