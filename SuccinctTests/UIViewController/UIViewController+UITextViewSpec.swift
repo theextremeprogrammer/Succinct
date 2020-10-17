@@ -259,7 +259,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
 
 
                 let expectedAttributes = AttributedStringKeyValueFixture.tappableJapaneseText
-                expect(viewController.findTextView(withExactText: "かかり", matchingAttributes: expectedAttributes)).toNot(beNil())
+                expect(viewController.findTextView(containingText: "かかり", matchingAttributes: expectedAttributes)).toNot(beNil())
             }
         }
 
@@ -282,7 +282,7 @@ final class UIViewController_UITextViewSpec: QuickSpec {
 
 
                 let expectedAttributes = AttributedStringKeyValueFixture.tappableJapaneseText
-                expect(viewController.hasTextView(withExactText: "かかり", matchingAttributes: expectedAttributes)).to(beTrue())
+                expect(viewController.hasTextView(containingText: "かかり", matchingAttributes: expectedAttributes)).to(beTrue())
             }
         }
     }
