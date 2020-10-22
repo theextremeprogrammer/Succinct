@@ -1,8 +1,8 @@
 bootstrap:
-	@/usr/bin/time carthage bootstrap --platform iOS --no-use-binaries --cache-builds
+	@/usr/bin/time ./bin/carthageWrapper.sh bootstrap --platform iOS --no-use-binaries --cache-builds
 
 update:
-	@/usr/bin/time carthage update --platform iOS --no-use-binaries --cache-builds
+	@/usr/bin/time ./bin/carthageWrapper.sh update --platform iOS --no-use-binaries --cache-builds
 
 sort:
 	@perl ./bin/sortXcodeProject Succinct.xcodeproj/project.pbxproj
