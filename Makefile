@@ -1,3 +1,6 @@
+install-gems:
+	@/usr/bin/time sudo bundle update
+
 bootstrap:
 	@/usr/bin/time ./bin/carthageWrapper.sh bootstrap --platform iOS --no-use-binaries --cache-builds
 
