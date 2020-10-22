@@ -315,6 +315,8 @@
 		52C1E5052541B4EC00A207E8 /* carthageWrapper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageWrapper.sh; sourceTree = "<group>"; };
 		52C1E5142541B7B800A207E8 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		52C1E5152541BE4C00A207E8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		52C1E5162541C3A800A207E8 /* Succinct.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Succinct.podspec; sourceTree = "<group>"; };
+		52C1E5172541C3A900A207E8 /* Gemfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
 		52C2ECBF242AFE1400156481 /* UISegmentedControl+UISegmentLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+UISegmentLabel.swift"; sourceTree = "<group>"; };
 		52C2ECC3242B017200156481 /* PrivateTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateTypes.swift; sourceTree = "<group>"; };
 		5B6AD15A4AC038FBB05E01FC /* DebugLogging+UIPickerViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIPickerViewSpec.swift"; sourceTree = "<group>"; };
@@ -506,10 +508,9 @@
 		522D997F1FAD2A9C009BB1B9 = {
 			isa = PBXGroup;
 			children = (
-				52C1E5152541BE4C00A207E8 /* .gitignore */,
-				52C1E5142541B7B800A207E8 /* Gemfile */,
 				52C1E5022541B4EC00A207E8 /* bin */,
 				525FF7D7203252C5007AE6C8 /* Frameworks */,
+				52C1E5142541B7B800A207E8 /* Gemfile */,
 				B89A3EB521A2AFD2008B15C0 /* LICENSE */,
 				B8FE917D2120F5F30097274D /* Makefile */,
 				522D998A1FAD2A9C009BB1B9 /* Products */,
@@ -518,10 +519,13 @@
 				5230D81220EC89FE00E9459B /* SuccinctContainerTests */,
 				522D99961FAD2A9D009BB1B9 /* SuccinctTests */,
 				B88E39D321DDFE6C00A3B82B /* Test Infrastructure */,
+				52C1E5152541BE4C00A207E8 /* .gitignore */,
 				525F5AA82407EECA0039F42A /* .travis.yml */,
 				B8FE917F2120F5F30097274D /* Cartfile.private */,
 				B8FE917C2120F5F30097274D /* Cartfile.resolved */,
+				52C1E5172541C3A900A207E8 /* Gemfile.lock */,
 				B8FE917E2120F5F30097274D /* README.md */,
+				52C1E5162541C3A800A207E8 /* Succinct.podspec */,
 			);
 			sourceTree = "<group>";
 		};
