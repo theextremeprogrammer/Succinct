@@ -8,13 +8,21 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a title="README  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Succinct Docs</a> (76% documented)</p>
+        <p><a href="index.html">Succinct 0.4.30 Docs</a> (76% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -121,45 +129,84 @@
 <a href="https://derekleerock.github.io/Succinct"><img src="https://raw.githubusercontent.com/derekleerock/Succinct/gh-pages/badge.svg?sanitize=true" alt="jazzy docs"></a>
 <a href="https://github.com/derekleerock/Succinct/blob/master/LICENSE"><img src="https://img.shields.io/github/license/derekleerock/Succinct.svg" alt="GitHub license"></a></p>
 
-<p>I started to build out this framework so I could have a de-coupled approach to unit testing my iOS apps using a BDD-style approach - without the time it takes to run UI tests. After re-creating the same style of tests several times I thought it&rsquo;d be best to pull them together into a framework to help myself and possibly others.</p>
+<p>Use Succinct to unit test the behaviors of your iOS UI in a way that is de-coupled from the private implementation details of your views. </p>
 
-<p><strong><em>Caveat:</em></strong> <em>Succinct doesn&rsquo;t support every single aspect of testing iOS view hierarchies just yet. I&rsquo;m slowly adding functionality in as it is needed. If there&rsquo;s something you&rsquo;d like to see included please feel free to open an issue or make a PR.</em> 👍🏻</p>
-<h2 id='documentation' class='heading'>Documentation</h2>
+<ul>
+<li>⚡️ SPEED: Get lightning fast feedback through unit tests instead of waiting around for your UI tests to give you an accurate result&hellip; sometimes.</li>
+<li>🔍 ENCAPSULATION: By searching through the view hierarchy, the internals of your UI can be kept private, honoring encapsulation.</li>
+<li>🛠 ARCHITECTURE AGNOSTIC: Any architectural pattern (MVC, MVP, MVVM, etc) can be used to implement your UI.</li>
+<li>🧩 FREEDOM TO REFACTOR: Refactor to a different architectural pattern without having to change your tests.</li>
+</ul>
 
-<p><a href="https://derekleerock.github.io/Succinct/"> 📄 (Soon to be fully) Complete Documentation via GitHubPages</a></p>
+<p><strong>IMPORTANT:_</strong> <em>Succinct is a work in progress and does not support every single aspect of testing iOS view hierarchies just yet. Functionality in as it is needed. If there&rsquo;s something you&rsquo;d like to see included please feel free to open an issue or make a PR.</em> 👍🏻</p>
+<h1 id='installation' class='heading'>Installation</h1>
+<h2 id='carthage' class='heading'>Carthage</h2>
 
-<p>Automatic documentation generated thanks to <a href="https://github.com/realm/jazzy">Jazzy</a>, <a href="https://pages.github.com/">GitHubPages</a> and <a href="https://docs.travis-ci.com/user/deployment/pages/">Travis-CI integration</a> and some great guidance from @jgsamudio <a href="https://medium.com/@jonathan2457/generate-host-your-ios-documentation-39e21b382ce8">in this blog post</a>. Keep an eye on the documentation badge above.</p>
-<h2 id='getting-setup' class='heading'>Getting Setup</h2>
+<p>Simply include Succinct in your Cartfile.private: </p>
+<pre class="highlight plaintext"><code>github "derekleerock/Succinct"
+</code></pre>
 
-<p>Succinct supports installation via Carthage. Simple include Succinct in your Cartfile.private (<code>github &quot;derekleerock/Succinct&quot;</code>) and <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework">include it in your test target</a>.</p>
-<h2 id='making-a-contribution' class='heading'>Making a Contribution</h2>
+<p>And <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-unit-tests-or-a-framework">include it in your test target</a>.</p>
+<h2 id='cocoapods' class='heading'>Cocoapods</h2>
 
-<p>If there is functionality that you&rsquo;re looking for that is not included, please feel free to make a PR with your suggested feature and tests so we can discuss.</p>
-<h3 id='running-the-tests' class='heading'>Running the tests</h3>
+<p>Simply add Succinct to your Podfile&rsquo;s test target:</p>
+<pre class="highlight plaintext"><code>target 'MyAmazingApp' do
+  ...
 
-<p>All of Succinct&rsquo;s tests have been written using Quick and Nimble. Assuming you already have Carthage installed, you can easily fetch these dependencies by executing:</p>
+  target 'MyAmazingAppTests' do
+    inherit! :search_paths
+
+    pod 'Succinct'
+  end
+end
+</code></pre>
+<h1 id='documentation' class='heading'>Documentation</h1>
+
+<p><a href="https://derekleerock.github.io/Succinct/"> 📄 Documentation via GitHubPages</a></p>
+
+<p>Automatic documentation generated thanks to <a href="https://github.com/realm/jazzy">Jazzy</a>, <a href="https://pages.github.com/">GitHubPages</a> and <a href="https://docs.travis-ci.com/user/deployment/pages/">Travis-CI integration</a> and some great guidance from @jgsamudio <a href="https://medium.com/@jonathan2457/generate-host-your-ios-documentation-39e21b382ce8">in this blog post</a>.</p>
+<h1 id='making-a-contribution' class='heading'>Making a Contribution</h1>
+
+<p>Development for Succinct is done right here through <a href="https://github.com/derekleerock/Succinct/issues">GitHub Issues</a> so anyone can contribute and understand the current state of the framework. If there is functionality that you&rsquo;re looking for that is not included, please feel free to open an issue or make a PR with your suggested feature and tests so we can discuss.</p>
+<h2 id='setting-up-for-development' class='heading'>Setting up for development</h2>
+
+<p>Assuming you already have Carthage installed, you can easily fetch the necessary dependencies by executing:</p>
 
 <p><code>$ make bootstrap</code></p>
+<h2 id='running-the-tests' class='heading'>Running the tests</h2>
 
-<p>There are two different test suites for Succinct: one which does not require the simulator to run, and one that does.</p>
-<h4 id='unit-tests' class='heading'>Unit Tests</h4>
+<p>All of Succinct&rsquo;s tests have been TDD&rsquo;d using Quick and Nimble - meaning that you can use Succinct with confidence that it will give you accurate results for the functionality that it provides. </p>
+
+<p>There are two different test suites for Succinct: Unit Tests and Simulator Tests. </p>
+<h3 id='unit-tests' class='heading'>Unit Tests</h3>
+
+<p>These unit tests do not require a host application to run, which means that they can run without the simulator. This makes them lightning fast! </p>
+
+<p>They can be executed using:</p>
 
 <p><code>$ make tests</code></p>
-<h4 id='simulator-tests' class='heading'>Simulator Tests</h4>
+<h3 id='simulator-tests' class='heading'>Simulator Tests</h3>
 
-<p><code>$ make simulator-tests</code></p>
-<h4 id='execute-all-tests' class='heading'>Execute All Tests</h4>
+<p>These unit tests require the simulator since they are interacting with elements in the UI. They are still fast because they are unit tests, but launching the simulator takes a little bit of time. </p>
+
+<p>They can be executed using:
+<code>$ make simulator-tests</code></p>
+<h3 id='all-tests' class='heading'>All Tests</h3>
+
+<p>Both test suites can be executed using: </p>
 
 <p><code>$ make alltests</code></p>
-<h2 id='license' class='heading'>License</h2>
+
+<p>Before completing your PR please be sure your functionality is properly tested and you&rsquo;ve confirmed that all tests run successfully - thank you! 🙇🏻‍♂️</p>
+<h1 id='license' class='heading'>License</h1>
 
 <p>Succinct is licensed under the MIT License. Please see the <a href="https://github.com/derekleerock/succinct/blob/master/LICENSE"><code>LICENSE</code></a> file.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2020-03-28)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2020-10-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
