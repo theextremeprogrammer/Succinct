@@ -310,6 +310,9 @@
 		526DC8022084761C001314A7 /* IndexPathFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathFixture.swift; sourceTree = "<group>"; };
 		52970E5D20833AE200297EF9 /* UICollectionView+Evaluations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Evaluations.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
+		52C1E5032541B4EC00A207E8 /* generate_jazzy_docs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_jazzy_docs.sh; sourceTree = "<group>"; };
+		52C1E5042541B4EC00A207E8 /* sortXcodeProject */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = sortXcodeProject; sourceTree = "<group>"; };
+		52C1E5052541B4EC00A207E8 /* carthageWrapper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageWrapper.sh; sourceTree = "<group>"; };
 		52C2ECBF242AFE1400156481 /* UISegmentedControl+UISegmentLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+UISegmentLabel.swift"; sourceTree = "<group>"; };
 		52C2ECC3242B017200156481 /* PrivateTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateTypes.swift; sourceTree = "<group>"; };
 		5B6AD15A4AC038FBB05E01FC /* DebugLogging+UIPickerViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIPickerViewSpec.swift"; sourceTree = "<group>"; };
@@ -501,6 +504,7 @@
 		522D997F1FAD2A9C009BB1B9 = {
 			isa = PBXGroup;
 			children = (
+				52C1E5022541B4EC00A207E8 /* bin */,
 				525FF7D7203252C5007AE6C8 /* Frameworks */,
 				B89A3EB521A2AFD2008B15C0 /* LICENSE */,
 				B8FE917D2120F5F30097274D /* Makefile */,
@@ -746,6 +750,16 @@
 				B8B56E7721B0B3EC0008514A /* UIViewController+UIViewSpec.swift */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		52C1E5022541B4EC00A207E8 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				52C1E5042541B4EC00A207E8 /* sortXcodeProject */,
+				52C1E5052541B4EC00A207E8 /* carthageWrapper.sh */,
+				52C1E5032541B4EC00A207E8 /* generate_jazzy_docs.sh */,
+			);
+			path = bin;
 			sourceTree = "<group>";
 		};
 		52C2ECC1242B011600156481 /* UISegmentedControl */ = {
