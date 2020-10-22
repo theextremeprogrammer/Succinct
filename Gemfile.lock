@@ -106,7 +106,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jazzy
+  jazzy (= 0.13.5)
 
 BUNDLED WITH
    2.1.4
