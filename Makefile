@@ -22,3 +22,6 @@ alltests: sort unit-tests simulator-tests
 
 documentation:
 	@/usr/bin/time ./bin/generate_jazzy_docs.sh
+
+deploy-podspec:
+	@/usr/bin/time pod trunk push Succinct.podspec
