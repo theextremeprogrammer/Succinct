@@ -53,6 +53,22 @@ final class UIViewController_UILabelSpec: QuickSpec {
                 }
             }
 
+            fcontext("when a UILabel is not displayed to the user") {
+                var viewController: UIViewController!
+
+                beforeEach {
+                    viewController = UIViewControllerBuilder()
+                        .withSubview(
+                            UILabelBuilder().withTitleText("Username").isHidden().build()
+                        )
+                        .build()
+                }
+
+                it("cannot find the label because it is hidden") {
+                    expect(viewController.findLabel(withExactText: "Username")).to(beNil())
+                }
+            }
+
             context("when a UILabel exists in the second subview") {
                 it("can find a label whose text matches exactly") {
                     let viewController = UIViewControllerBuilder()

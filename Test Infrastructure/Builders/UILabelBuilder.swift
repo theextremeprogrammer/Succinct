@@ -12,6 +12,11 @@ struct UILabelBuilder {
         return self
     }
 
+    func isHidden() -> UILabelBuilder {
+        label.isHidden = true
+        return self
+    }
+
     func build() -> UILabel {
         return label
     }
