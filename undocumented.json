@@ -113,6 +113,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UIPickerView.swift",
+      "line": 15,
+      "symbol": "UIView.findPickerViews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/travis/build/derekleerock/Succinct/Succinct/UIView/UIView+UISegmentedControl.swift",
       "line": 2,
       "symbol": "UIView.hasSegmentedControlSegmentSelected(withExactText:)",
