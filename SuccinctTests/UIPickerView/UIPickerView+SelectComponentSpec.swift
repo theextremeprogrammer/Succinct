@@ -22,7 +22,7 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
             }
         }
 
-        describe("confirming if a picker view contains a selected option in any component") {
+        context("when there is only one UIPickerView in the view hierarchy") {
             var viewController: UIViewController!
 
             beforeEach {
@@ -30,42 +30,68 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
                     .withSubview(
                         UIPickerViewBuilder()
                             .withComponentConfiguration(["One", "Two"])
-                            .withComponentConfiguration(["Sarah", "Michael"])
+                            .withComponentConfiguration(["Iron Man", "Black Widow"])
                             .build()
                     )
                     .build()
             }
 
-            context("for options within the first component") {
-                it("contains the option in the first component and is selected by default") {
-                    expect(viewController.hasSelectedPickerRow(withExactText: "One")).to(beTrue())
+            describe("confirming picker rows that are selected by default") {
+                context("for options within the first component") {
+                    it("selects the first option by default") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "One")).to(beTrue())
+                    }
+
+                    it("does not select other options by default") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Two")).to(beFalse())
+                    }
+
+                    it("does not select options that don't exist") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Three")).to(beFalse())
+                    }
                 }
 
-                it("contains the option in the first component but is not selected") {
-                    expect(viewController.hasSelectedPickerRow(withExactText: "Two")).to(beFalse())
-                }
+                context("for options within the second component") {
+                    it("selects the first option by default") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Iron Man")).to(beTrue())
+                    }
 
-                it("does not contain the option in the first component at all") {
-                    expect(viewController.hasSelectedPickerRow(withExactText: "Three")).to(beFalse())
+                    it("does not select other options by default") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Black Widow")).to(beFalse())
+                    }
+
+                    it("does not select options that don't exist") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Thor")).to(beFalse())
+                    }
                 }
             }
 
-            context("for options within the second component") {
-                it("contains the option in the second component and is selected by default") {
-                    expect(viewController.hasSelectedPickerRow(withExactText: "Sarah")).to(beTrue())
+            describe("confirming picker row data") {
+                context("for options within the first component") {
+                    it("finds picker rows that exist") {
+                        expect(viewController.hasPickerRow(withExactText: "One")).to(beTrue())
+                        expect(viewController.hasPickerRow(withExactText: "Two")).to(beTrue())
+                    }
+
+                    it("does not finds picker rows that don't exist") {
+                        expect(viewController.hasPickerRow(withExactText: "Three")).to(beFalse())
+                    }
                 }
 
-                it("contains the option in the second component but is not selected") {
-                    expect(viewController.hasSelectedPickerRow(withExactText: "Michael")).to(beFalse())
-                }
+                context("for options within the second component") {
+                    it("finds picker rows that exist") {
+                        expect(viewController.hasPickerRow(withExactText: "Iron Man")).to(beTrue())
+                        expect(viewController.hasPickerRow(withExactText: "Black Widow")).to(beTrue())
+                    }
 
-                it("does not contain the option in the second component at all") {
-                    expect(viewController.hasSelectedPickerRow(withExactText: "Roger")).to(beFalse())
+                    it("does not finds picker rows that don't exist") {
+                        expect(viewController.hasPickerRow(withExactText: "Thor")).to(beFalse())
+                    }
                 }
             }
         }
 
-        describe("confirming if a picker view contains an option in any component (selected or not)") {
+        context("when there are two or more UIPickerView objects in the view hierarchy") {
             var viewController: UIViewController!
 
             beforeEach {
@@ -73,33 +99,69 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
                     .withSubview(
                         UIPickerViewBuilder()
                             .withComponentConfiguration(["One", "Two"])
-                            .withComponentConfiguration(["Sarah", "Michael"])
+                            .withComponentConfiguration(["Iron Man", "Black Widow"])
+                            .build()
+                    )
+                    .withSubview(
+                        UIPickerViewBuilder()
+                            .withComponentConfiguration(["Three", "Four"])
+                            .withComponentConfiguration(["Hulk", "Captain America"])
                             .build()
                     )
                     .build()
             }
 
-            context("when there is only one component") {
-                it("contains the option in the first component") {
-                    expect(viewController.hasPickerRow(withExactText: "One")).to(beTrue())
-                    expect(viewController.hasPickerRow(withExactText: "Two")).to(beTrue())
+            describe("confirming picker rows that are selected by default") {
+                context("for options within the first component") {
+                    it("selects the first option by default") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Three")).to(beTrue())
+                    }
+
+                    it("does not select other options by default") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Four")).to(beFalse())
+                    }
+
+                    it("does not select options that don't exist") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Five")).to(beFalse())
+                    }
                 }
 
-                it("does not contain the option in the first component at all") {
-                    expect(viewController.hasPickerRow(withExactText: "Three")).to(beFalse())
-                    expect(viewController.hasPickerRow(withExactText: "Four")).to(beFalse())
+                context("for options within the second component") {
+                    it("selects the first option by default") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Hulk")).to(beTrue())
+                    }
+
+                    it("does not select other options by default") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Captain America")).to(beFalse())
+                    }
+
+                    it("does not select options that don't exist") {
+                        expect(viewController.hasSelectedPickerRow(withExactText: "Loki")).to(beFalse())
+                    }
                 }
             }
 
-            context("for options within the second component") {
-                it("contains the option in the second component") {
-                    expect(viewController.hasPickerRow(withExactText: "Sarah")).to(beTrue())
-                    expect(viewController.hasPickerRow(withExactText: "Michael")).to(beTrue())
+            describe("confirming picker row data") {
+                context("for options within the first component") {
+                    it("finds picker rows that exist") {
+                        expect(viewController.hasPickerRow(withExactText: "Three")).to(beTrue())
+                        expect(viewController.hasPickerRow(withExactText: "Four")).to(beTrue())
+                    }
+
+                    it("does not finds picker rows that don't exist") {
+                        expect(viewController.hasPickerRow(withExactText: "Five")).to(beFalse())
+                    }
                 }
 
-                it("does not contain the option in the second component at all") {
-                    expect(viewController.hasPickerRow(withExactText: "Lacy")).to(beFalse())
-                    expect(viewController.hasPickerRow(withExactText: "Jay")).to(beFalse())
+                context("for options within the second component") {
+                    it("finds picker rows that exist") {
+                        expect(viewController.hasPickerRow(withExactText: "Hulk")).to(beTrue())
+                        expect(viewController.hasPickerRow(withExactText: "Captain America")).to(beTrue())
+                    }
+
+                    it("does not finds picker rows that don't exist") {
+                        expect(viewController.hasPickerRow(withExactText: "Loki")).to(beFalse())
+                    }
                 }
             }
         }

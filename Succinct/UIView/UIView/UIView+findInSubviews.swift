@@ -34,6 +34,32 @@ extension UIView {
 
         return nil
     }
+
+    internal func filterSubviews(
+        satisfyingCondition condition: SuccinctCondition,
+        viewHierarchyLogger: ViewHierarchyLogger = DefaultViewHierarchyLogger()
+    ) -> [UIView] {
+        var discoveredViews: [UIView] = []
+
+        for subview in subviews {
+            if condition.evaluate(subview) {
+                discoveredViews.append(subview)
+            }
+
+            if subview.isNotATypeThatContainsAnInfiniteNumberOfSubviews {
+                if subview.subviews.count > 0 {
+                    discoveredViews.append(contentsOf:
+                        subview.filterSubviews(
+                            satisfyingCondition: condition,
+                            viewHierarchyLogger: viewHierarchyLogger
+                        )
+                    )
+                }
+            }
+        }
+
+        return discoveredViews
+    }
 }
 
 fileprivate extension UIView {

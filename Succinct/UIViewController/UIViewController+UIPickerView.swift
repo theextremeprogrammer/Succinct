@@ -65,8 +65,10 @@ extension UIViewController {
     ///
     @objc public func hasPickerRow(withExactText searchText: String) -> Bool {
         return view
-            .findPickerView()?
-            .hasRow(withExactText: searchText) ?? false
+            .findPickerViews()
+            .reduce(false, { (result: Bool, pickerView: UIPickerView) -> Bool in
+                return result || pickerView.hasRow(withExactText: searchText)
+            })
     }
 
     ///
@@ -82,7 +84,9 @@ extension UIViewController {
     ///
     @objc public func hasSelectedPickerRow(withExactText searchText: String) -> Bool {
         return view
-            .findPickerView()?
-            .hasSelectedRow(withExactText: searchText) ?? false
+            .findPickerViews()
+            .reduce(false, { (result: Bool, pickerView: UIPickerView) -> Bool in
+                return result || pickerView.hasSelectedRow(withExactText: searchText)
+            })
     }
 }

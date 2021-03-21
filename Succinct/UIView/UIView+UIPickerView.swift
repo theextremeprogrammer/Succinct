@@ -11,6 +11,15 @@ extension UIView {
             satisfyingCondition: SuccinctCondition({ $0.isPickerView() })
         ) as? UIPickerView
     }
+
+    @objc public func findPickerViews() -> [UIPickerView] {
+        return filterSubviews(
+            satisfyingCondition: SuccinctCondition({ $0.isPickerView() })
+        )
+            .map { view -> UIPickerView in
+                view as! UIPickerView
+            }
+    }
 }
 
 fileprivate extension UIView {
