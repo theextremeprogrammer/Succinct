@@ -39,6 +39,14 @@ extension UnitTestUITableView: UITableViewDataSource {
         return configuration.numberOfRows(inSection: section)
     }
 
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section < configuration.sectionHeaderTitles.count {
+            return configuration.sectionHeaderTitles[section]
+        }
+
+        return nil
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = String(describing: UITableViewCell.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)

@@ -2,6 +2,7 @@ import UIKit
 
 struct UITableViewConfiguration {
     let tableViewStyle: UITableView.Style
+    let sectionHeaderTitles: [String]
     let cellDefinitions: [IndexPath : UITableViewCellConfiguration]
     let headerDefinitions: [Int : UITableViewHeaderConfiguration]?
 

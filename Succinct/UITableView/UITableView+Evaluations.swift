@@ -17,6 +17,15 @@ extension UITableView {
     ///
     @objc public func findView(satisfyingCondition: UIViewEvaluator) -> UIView? {
         for section in 0..<numberOfSections {
+            if let sectionHeaderTitle = dataSource?.tableView?(self, titleForHeaderInSection: section) {
+                let sectionHeaderLabel = UILabel()
+                sectionHeaderLabel.text = sectionHeaderTitle
+
+                if let view = satisfyingCondition(sectionHeaderLabel) {
+                    return view
+                }
+            }
+
             if let headerView = delegate?.tableView?(self, viewForHeaderInSection: section) {
                 if let view = satisfyingCondition(headerView) {
                     return view

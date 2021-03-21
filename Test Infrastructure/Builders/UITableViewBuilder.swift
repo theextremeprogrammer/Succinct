@@ -3,6 +3,7 @@ import UIKit
 final class UITableViewBuilder {
     private var delegate: UITableViewDelegate? = nil
     private var cellConfigurations: [IndexPath : UITableViewCellConfiguration] = [:]
+    private var sectionHeaders: [String] = []
     private var headerConfigurations: [Int : UITableViewHeaderConfiguration] = [:]
 
     func withDelegate(_ delegate: UITableViewDelegate?) -> UITableViewBuilder {
@@ -20,10 +21,15 @@ final class UITableViewBuilder {
         return self
     }
 
-    
+    func withSectionHeaders(_ sectionHeaders: [String]) -> UITableViewBuilder {
+        self.sectionHeaders = sectionHeaders
+        return self
+    }
+
     func build() -> UITableView {
         let config = UITableViewConfiguration(
             tableViewStyle: UITableView.Style.plain,
+            sectionHeaderTitles: sectionHeaders,
             cellDefinitions: cellConfigurations,
             headerDefinitions: headerConfigurations
         )

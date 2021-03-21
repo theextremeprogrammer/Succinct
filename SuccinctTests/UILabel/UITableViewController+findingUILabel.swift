@@ -20,6 +20,61 @@ final class UITableViewController_findingUILabel: QuickSpec {
                 }
             }
 
+            context("when table view section header titles are configured") {
+                var tableViewController: UITableViewController!
+
+                beforeEach {
+                    tableViewController = UITableViewControllerBuilder()
+                        .withSectionHeaderTitles([
+                            "Avengers", "X-Men", "Guardians of the Galaxy"
+                        ])
+                        .withCellConfiguration(
+                            UITableViewCellConfiguration(
+                                indexPath: IndexPath(row: 0, section: 0),
+                                titleLabelText: "Black Widow",
+                                selected: false,
+                                subviews: []
+                            )
+                        )
+                        .withCellConfiguration(
+                            UITableViewCellConfiguration(
+                                indexPath: IndexPath(row: 0, section: 1),
+                                titleLabelText: "Wolverine",
+                                selected: false,
+                                subviews: []
+                            )
+                        )
+                        .withCellConfiguration(
+                            UITableViewCellConfiguration(
+                                indexPath: IndexPath(row: 0, section: 2),
+                                titleLabelText: "Groot",
+                                selected: false,
+                                subviews: []
+                            )
+                        )
+                        .build()
+                }
+
+                it("can find a section header whose text matches exactly") {
+                    expect(tableViewController.hasLabel(withExactText: "Avengers")).to(beTrue())
+                    expect(tableViewController.findLabel(withExactText: "Avengers")).toNot(beNil())
+                    expect(tableViewController.hasLabel(containingText: "Avenge")).to(beTrue())
+                    expect(tableViewController.findLabel(containingText: "Avenge")).toNot(beNil())
+
+                    expect(tableViewController.hasLabel(withExactText: "Guardians of the Galaxy")).to(beTrue())
+                    expect(tableViewController.findLabel(withExactText: "Guardians of the Galaxy")).toNot(beNil())
+                    expect(tableViewController.hasLabel(containingText: "Guardians")).to(beTrue())
+                    expect(tableViewController.findLabel(containingText: "Guardians")).toNot(beNil())
+                }
+
+                it("cannot find a section header whose text does not match exactly") {
+                    expect(tableViewController.hasLabel(withExactText: "Fantastic Four")).to(beFalse())
+                    expect(tableViewController.findLabel(withExactText: "Fantastic Four")).to(beNil())
+                    expect(tableViewController.hasLabel(containingText: "Fantastic")).to(beFalse())
+                    expect(tableViewController.findLabel(containingText: "Fantastic")).to(beNil())
+                }
+            }
+
             context("when a label exists in the first cell") {
                 var tableViewController: UITableViewController!
 

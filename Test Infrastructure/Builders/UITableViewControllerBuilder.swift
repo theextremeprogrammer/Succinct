@@ -4,6 +4,7 @@ final class UITableViewControllerBuilder {
     private var tableViewController: UITableViewController
 
     private var cellConfigurations: [IndexPath : UITableViewCellConfiguration] = [:]
+    private var sectionHeaderTitles: [String] = []
 
     init() {
         tableViewController = UITableViewController()
@@ -19,9 +20,15 @@ final class UITableViewControllerBuilder {
         return self
     }
 
+    func withSectionHeaderTitles(_ sectionHeaderTitles: [String]) -> UITableViewControllerBuilder {
+        self.sectionHeaderTitles = sectionHeaderTitles
+        return self
+    }
+
     func build() -> UITableViewController {
         let config = UITableViewConfiguration(
             tableViewStyle: UITableView.Style.plain,
+            sectionHeaderTitles: sectionHeaderTitles,
             cellDefinitions: cellConfigurations,
             headerDefinitions: nil
         )
