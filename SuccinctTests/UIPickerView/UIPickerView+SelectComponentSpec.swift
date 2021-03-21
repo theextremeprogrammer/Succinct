@@ -3,6 +3,8 @@ import Nimble
 import Succinct
 
 final class UIPickerView_SelectComponentSpec: QuickSpec {
+    private var didSelectPickerRowWithText: String? = nil
+
     override func spec() {
         describe("when a picker view does not exist in the view hierarchy") {
             var viewController: UIViewController!
@@ -26,11 +28,16 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
             var viewController: UIViewController!
 
             beforeEach {
+                self.didSelectPickerRowWithText = nil
+
                 viewController = UIViewControllerBuilder()
                     .withSubview(
                         UIPickerViewBuilder()
                             .withComponentConfiguration(["One", "Two"])
                             .withComponentConfiguration(["Iron Man", "Black Widow"])
+                            .withDidSelectBlock { selectedPickerRowText in
+                                self.didSelectPickerRowWithText = selectedPickerRowText
+                            }
                             .build()
                     )
                     .build()
@@ -86,6 +93,42 @@ final class UIPickerView_SelectComponentSpec: QuickSpec {
 
                     it("does not finds picker rows that don't exist") {
                         expect(viewController.hasPickerRow(withExactText: "Thor")).to(beFalse())
+                    }
+                }
+            }
+
+            describe("selecting picker rows") {
+                context("for options within the first component") {
+                    it("selects picker row with valid data") {
+                        viewController.selectPickerRow(withExactText: "Two")
+
+
+                        expect(self.didSelectPickerRowWithText).to(equal("Two"))
+                    }
+                }
+
+                context("for options within the second component") {
+                    it("selects picker row with valid data") {
+                        viewController.selectPickerRow(withExactText: "Black Widow")
+
+
+                        expect(self.didSelectPickerRowWithText).to(equal("Black Widow"))
+                    }
+                }
+
+                context("when specifying only a specific component") {
+                    it("selects picker row with valid data in the first component") {
+                        viewController.selectPickerRow(columnIndex: 0, withExactText: "Two")
+
+
+                        expect(self.didSelectPickerRowWithText).to(equal("Two"))
+                    }
+
+                    it("selects picker row with valid data in the second component") {
+                        viewController.selectPickerRow(columnIndex: 1, withExactText: "Black Widow")
+
+
+                        expect(self.didSelectPickerRowWithText).to(equal("Black Widow"))
                     }
                 }
             }
