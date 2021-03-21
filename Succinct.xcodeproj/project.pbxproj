@@ -10,6 +10,7 @@
 		3B14E087392B38610209029F /* UIViewController+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E915821AEB8C865BA256 /* UIViewController+UIButtonSpec.swift */; };
 		3B14E221D7B01C41F7F9DC98 /* UIView+hasSegmentedControlSegmentSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EE49FD9B80156A3C1F6E /* UIView+hasSegmentedControlSegmentSelected.swift */; };
 		3B14E2D54EE14C2535FD0D2B /* Optional+NilCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E2376D3AE2A0B051C507 /* Optional+NilCheck.swift */; };
+		3B14E3AD968378C7672DADB0 /* UITableViewController+findingUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E7A07029FE4599E8E159 /* UITableViewController+findingUILabel.swift */; };
 		3B14E52C804E819D50011851 /* UIPickerView+SelectComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14E9D41F6E67724E034E4D /* UIPickerView+SelectComponent.swift */; };
 		3B14E55E9EE98768956E5CA9 /* UIButton+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EA94F94F4C40DB2C604D /* UIButton+Tap.swift */; };
 		3B14E56D508DD5E376A392E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B14ED72118715E71C68E909 /* Assets.xcassets */; };
@@ -49,7 +50,6 @@
 		5230D83720ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230D83620ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift */; };
 		5235C2A3208F511700C0CEEA /* UIPickerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235C2A2208F511700C0CEEA /* UIPickerViewBuilder.swift */; };
 		5235C2A5208F51AD00C0CEEA /* UnitTestUIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235C2A4208F51AD00C0CEEA /* UnitTestUIPickerView.swift */; };
-		52412BD822FC679D004CE5B3 /* UITableViewController+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412BD722FC679D004CE5B3 /* UITableViewController+UILabelSpec.swift */; };
 		52412BDA22FC6843004CE5B3 /* UITableViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412BD922FC6843004CE5B3 /* UITableViewControllerBuilder.swift */; };
 		52412BDB22FC6888004CE5B3 /* UITableViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412BD922FC6843004CE5B3 /* UITableViewControllerBuilder.swift */; };
 		524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */; };
@@ -230,6 +230,7 @@
 		3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIImage.swift"; sourceTree = "<group>"; };
 		3B14E5AE80806B1018A9B75F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3B14E7673EACFC681FC9485B /* UIViewController+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Testing.swift"; sourceTree = "<group>"; };
+		3B14E7A07029FE4599E8E159 /* UITableViewController+findingUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+findingUILabel.swift"; sourceTree = "<group>"; };
 		3B14E883AEE14B5712B4379A /* UIView+UIStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIStepper.swift"; sourceTree = "<group>"; };
 		3B14E915821AEB8C865BA256 /* UIViewController+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		3B14E9D41F6E67724E034E4D /* UIPickerView+SelectComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPickerView+SelectComponent.swift"; sourceTree = "<group>"; };
@@ -265,7 +266,6 @@
 		5230D83620ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIBarButtonItemSpec.swift"; sourceTree = "<group>"; };
 		5235C2A2208F511700C0CEEA /* UIPickerViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewBuilder.swift; sourceTree = "<group>"; };
 		5235C2A4208F51AD00C0CEEA /* UnitTestUIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestUIPickerView.swift; sourceTree = "<group>"; };
-		52412BD722FC679D004CE5B3 /* UITableViewController+UILabelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+UILabelSpec.swift"; sourceTree = "<group>"; };
 		52412BD922FC6843004CE5B3 /* UITableViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerBuilder.swift; sourceTree = "<group>"; };
 		524FF43F20B689B700CA71D4 /* UIImage+TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestAssets.swift"; sourceTree = "<group>"; };
 		525F5AA82407EECA0039F42A /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
@@ -439,6 +439,14 @@
 			path = UIPickerView;
 			sourceTree = "<group>";
 		};
+		3B14ECC14901D9B5BEC59F2E /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				3B14E7A07029FE4599E8E159 /* UITableViewController+findingUILabel.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 		3B14EF96F3CDAAFFCD8725FE /* UISegmentedControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -552,12 +560,12 @@
 				B8B80B6021B0C38300EA315D /* UICollectionView */,
 				B865EECD226B17AC00B80E3F /* UIControl */,
 				524FF43E20B689A000CA71D4 /* UIImage */,
+				3B14ECC14901D9B5BEC59F2E /* UILabel */,
 				B17464AB22217DB9004C587B /* UINavigationController */,
 				3B14E22EABD43967F4CA5CAF /* UIPickerView */,
 				B865EECA226B158300B80E3F /* UISwitch */,
 				B8D0F56D22782988007346AF /* UITabBarController */,
 				526DC7F920846AA1001314A7 /* UITableView */,
-				52412BD622FC6778004CE5B3 /* UITableViewController */,
 				B865EEC7226B138B00B80E3F /* UIView */,
 				52AAB3852072F1BF0021BA62 /* UIViewController */,
 				522D99991FAD2A9D009BB1B9 /* Info.plist */,
@@ -636,14 +644,6 @@
 				3B14EF2A64AD0830F2034E38 /* Info.plist */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		52412BD622FC6778004CE5B3 /* UITableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				52412BD722FC679D004CE5B3 /* UITableViewController+UILabelSpec.swift */,
-			);
-			path = UITableViewController;
 			sourceTree = "<group>";
 		};
 		524FF43820B6688600CA71D4 /* Resources */ = {
@@ -1476,7 +1476,7 @@
 				526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */,
 				526DC7FF208475DC001314A7 /* UITableViewConfiguration.swift in Sources */,
 				526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */,
-				52412BD822FC679D004CE5B3 /* UITableViewController+UILabelSpec.swift in Sources */,
+				3B14E3AD968378C7672DADB0 /* UITableViewController+findingUILabel.swift in Sources */,
 				52412BDA22FC6843004CE5B3 /* UITableViewControllerBuilder.swift in Sources */,
 				B1D05E5F2160B2BE0044D2AD /* UITextFieldBuilder.swift in Sources */,
 				B1FFB51821CF518D007AE34B /* UITextViewBuilder.swift in Sources */,
@@ -1712,7 +1712,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 0.4.31;
+				MARKETING_VERSION = 0.4.32;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1738,7 +1738,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 0.4.31;
+				MARKETING_VERSION = 0.4.32;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1798,7 +1798,7 @@
 				INFOPLIST_FILE = SuccinctContainer/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.4.29;
+				MARKETING_VERSION = 0.4.32;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1817,7 +1817,7 @@
 				INFOPLIST_FILE = SuccinctContainer/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 0.4.29;
+				MARKETING_VERSION = 0.4.32;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
