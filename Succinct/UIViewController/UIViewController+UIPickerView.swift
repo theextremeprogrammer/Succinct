@@ -34,8 +34,10 @@ extension UIViewController {
     ///
     @objc public func selectPickerRow(withExactText searchText: String) {
         view
-            .findPickerView()?
-            .selectRow(withExactText: searchText)
+            .findPickerViews()
+            .forEach { pickerView in
+                pickerView.selectRow(withExactText: searchText)
+            }
     }
 
     ///
@@ -50,8 +52,10 @@ extension UIViewController {
     ///
     @objc public func selectPickerRow(columnIndex: Int, withExactText searchText: String) {
         view
-            .findPickerView()?
-            .selectRow(columnIndex: columnIndex, withExactText: searchText)
+            .findPickerViews()
+            .forEach { pickerView in
+                pickerView.selectRow(columnIndex: columnIndex, withExactText: searchText)
+            }
     }
     
     ///
