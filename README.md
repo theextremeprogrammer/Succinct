@@ -52,9 +52,7 @@ Automatic documentation generated thanks to [Jazzy](https://github.com/realm/jaz
 Development for Succinct is done right here through [GitHub Issues](https://github.com/derekleerock/Succinct/issues) so anyone can contribute and understand the current state of the framework. If there is functionality that you're looking for that is not included, please feel free to open an issue or make a PR with your suggested feature and tests so we can discuss.
 
 ## Setting up for development
-Assuming you already have Carthage installed, you can easily fetch the necessary dependencies by executing:
-
-`$ make bootstrap`
+Succinct uses the Swift Package Manager integration in Xcode to install dependencies. Xcode will fetch these the first time you build and run the tests.
 
 ## Running the tests
 All of Succinct's tests have been TDD'd using Quick and Nimble - meaning that you can use Succinct with confidence that it will give you accurate results for the functionality that it provides. 

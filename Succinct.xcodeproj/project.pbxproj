@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,8 +44,6 @@
 		522D99AF1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99AE1FAD2CFB009BB1B9 /* UIViewControllerBuilder.swift */; };
 		522D99B11FAD2E2D009BB1B9 /* UIButtonBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B01FAD2E2D009BB1B9 /* UIButtonBuilder.swift */; };
 		522D99B31FAD2F21009BB1B9 /* UIViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522D99B21FAD2F21009BB1B9 /* UIViewBuilder.swift */; };
-		5230D82020ECBC0F00E9459B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; };
-		5230D82120ECBC0F00E9459B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; };
 		5230D82420ECBC2900E9459B /* Succinct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D99891FAD2A9C009BB1B9 /* Succinct.framework */; };
 		5230D83720ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5230D83620ECC40C00E9459B /* UIViewController+UIBarButtonItemSpec.swift */; };
 		5235C2A3208F511700C0CEEA /* UIPickerViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235C2A2208F511700C0CEEA /* UIPickerViewBuilder.swift */; };
@@ -54,8 +52,6 @@
 		52412BDB22FC6888004CE5B3 /* UITableViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412BD922FC6843004CE5B3 /* UITableViewControllerBuilder.swift */; };
 		524D6F972072F7C7004C9B34 /* UISegmentedControlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B14EBC2D8CE4239C37D4166 /* UISegmentedControlBuilder.swift */; };
 		524FF44020B689B700CA71D4 /* UIImage+TestAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524FF43F20B689B700CA71D4 /* UIImage+TestAssets.swift */; };
-		525FF7DA203252C6007AE6C8 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D8203252C6007AE6C8 /* Quick.framework */; };
-		525FF7DB203252C6007AE6C8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525FF7D9203252C6007AE6C8 /* Nimble.framework */; };
 		525FF7DF2032573C007AE6C8 /* UILabelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */; };
 		525FF7F020331DEE007AE6C8 /* Optional+NilCheckSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */; };
 		526DC7FB20846AB9001314A7 /* UITableViewConfigurationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC7FA20846AB9001314A7 /* UITableViewConfigurationSpec.swift */; };
@@ -69,6 +65,10 @@
 		52C2ECC4242B017200156481 /* PrivateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2ECC3242B017200156481 /* PrivateTypes.swift */; };
 		5B6AD4135FEF642C9CE370C7 /* DebugLogging+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */; };
 		8F6F2D5E21EEF40A0004BFA3 /* UIView+UIDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */; };
+		9764B386272F620700B9FECC /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 9764B385272F620700B9FECC /* Quick */; };
+		9764B389272F622600B9FECC /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 9764B388272F622600B9FECC /* Nimble */; };
+		9764B38B272F62E300B9FECC /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 9764B38A272F62E300B9FECC /* Quick */; };
+		9764B38D272F62E600B9FECC /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 9764B38C272F62E600B9FECC /* Nimble */; };
 		AE3CCDCB21F5742F00A3638D /* UIViewController+MKMapViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3CCDCA21F5742F00A3638D /* UIViewController+MKMapViewSpec.swift */; };
 		AE3CCDCE21F58A7400A3638D /* UIViewController+MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3CCDCD21F58A7400A3638D /* UIViewController+MKMapView.swift */; };
 		AE3CCDD021F58BE400A3638D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3CCDCF21F58BE400A3638D /* MapKit.framework */; };
@@ -269,8 +269,6 @@
 		52412BD922FC6843004CE5B3 /* UITableViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerBuilder.swift; sourceTree = "<group>"; };
 		524FF43F20B689B700CA71D4 /* UIImage+TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestAssets.swift"; sourceTree = "<group>"; };
 		525F5AA82407EECA0039F42A /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
-		525FF7D8203252C6007AE6C8 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		525FF7D9203252C6007AE6C8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
 		525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheckSpec.swift"; sourceTree = "<group>"; };
 		526DC7FA20846AB9001314A7 /* UITableViewConfigurationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewConfigurationSpec.swift; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
 		52C1E5032541B4EC00A207E8 /* generate_jazzy_docs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_jazzy_docs.sh; sourceTree = "<group>"; };
 		52C1E5042541B4EC00A207E8 /* sortXcodeProject */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = sortXcodeProject; sourceTree = "<group>"; };
-		52C1E5052541B4EC00A207E8 /* carthageWrapper.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthageWrapper.sh; sourceTree = "<group>"; };
 		52C1E5142541B7B800A207E8 /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
 		52C1E5152541BE4C00A207E8 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		52C1E5162541C3A800A207E8 /* Succinct.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Succinct.podspec; sourceTree = "<group>"; };
@@ -385,10 +382,8 @@
 		B8D21E4321AC22200059333E /* UIView+UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISwitch.swift"; sourceTree = "<group>"; };
 		B8F2DA9F21B761AB00C703DA /* UnitTestCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestCollectionView.swift; sourceTree = "<group>"; };
 		B8F882FF22AAB016000189C2 /* UINavigationItem+UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+UIBarButtonItem.swift"; sourceTree = "<group>"; };
-		B8FE917C2120F5F30097274D /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B8FE917D2120F5F30097274D /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		B8FE917E2120F5F30097274D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B8FE917F2120F5F30097274D /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,8 +399,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				525FF7DB203252C6007AE6C8 /* Nimble.framework in Frameworks */,
-				525FF7DA203252C6007AE6C8 /* Quick.framework in Frameworks */,
+				9764B389272F622600B9FECC /* Nimble in Frameworks */,
+				9764B386272F620700B9FECC /* Quick in Frameworks */,
 				522D99931FAD2A9D009BB1B9 /* Succinct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,8 +416,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5230D82020ECBC0F00E9459B /* Nimble.framework in Frameworks */,
-				5230D82120ECBC0F00E9459B /* Quick.framework in Frameworks */,
+				9764B38D272F62E600B9FECC /* Nimble in Frameworks */,
+				9764B38B272F62E300B9FECC /* Quick in Frameworks */,
 				5230D82420ECBC2900E9459B /* Succinct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,8 +494,6 @@
 				B88E39D321DDFE6C00A3B82B /* Test Infrastructure */,
 				52C1E5152541BE4C00A207E8 /* .gitignore */,
 				525F5AA82407EECA0039F42A /* .travis.yml */,
-				B8FE917F2120F5F30097274D /* Cartfile.private */,
-				B8FE917C2120F5F30097274D /* Cartfile.resolved */,
 				52C1E5172541C3A900A207E8 /* Gemfile.lock */,
 				B8FE917E2120F5F30097274D /* README.md */,
 				52C1E5162541C3A800A207E8 /* Succinct.podspec */,
@@ -666,8 +659,6 @@
 			isa = PBXGroup;
 			children = (
 				AE3CCDCF21F58BE400A3638D /* MapKit.framework */,
-				525FF7D9203252C6007AE6C8 /* Nimble.framework */,
-				525FF7D8203252C6007AE6C8 /* Quick.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -733,7 +724,6 @@
 			isa = PBXGroup;
 			children = (
 				52C1E5042541B4EC00A207E8 /* sortXcodeProject */,
-				52C1E5052541B4EC00A207E8 /* carthageWrapper.sh */,
 				52C1E5032541B4EC00A207E8 /* generate_jazzy_docs.sh */,
 			);
 			path = bin;
@@ -1175,7 +1165,6 @@
 				522D998E1FAD2A9D009BB1B9 /* Sources */,
 				522D998F1FAD2A9D009BB1B9 /* Frameworks */,
 				522D99901FAD2A9D009BB1B9 /* Resources */,
-				520B5A7725B7B02F00110090 /* Carthage: Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1183,6 +1172,10 @@
 				522D99951FAD2A9D009BB1B9 /* PBXTargetDependency */,
 			);
 			name = SuccinctTests;
+			packageProductDependencies = (
+				9764B385272F620700B9FECC /* Quick */,
+				9764B388272F622600B9FECC /* Nimble */,
+			);
 			productName = SuccinctTests;
 			productReference = 522D99921FAD2A9D009BB1B9 /* SuccinctTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1211,7 +1204,6 @@
 				5230D80B20EC89FE00E9459B /* Sources */,
 				5230D80C20EC89FE00E9459B /* Frameworks */,
 				5230D80D20EC89FE00E9459B /* Resources */,
-				520B5A7E25B7B0A100110090 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1220,6 +1212,10 @@
 				5230D81120EC89FE00E9459B /* PBXTargetDependency */,
 			);
 			name = SuccinctContainerTests;
+			packageProductDependencies = (
+				9764B38A272F62E300B9FECC /* Quick */,
+				9764B38C272F62E600B9FECC /* Nimble */,
+			);
 			productName = SuccinctContainerTests;
 			productReference = 5230D80F20EC89FE00E9459B /* SuccinctContainerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1231,7 +1227,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "Sun Rising App Dev";
 				TargetAttributes = {
 					522D99881FAD2A9C009BB1B9 = {
@@ -1266,6 +1262,10 @@
 				Base,
 			);
 			mainGroup = 522D997F1FAD2A9C009BB1B9;
+			packageReferences = (
+				9764B384272F620700B9FECC /* XCRemoteSwiftPackageReference "Quick" */,
+				9764B387272F622600B9FECC /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = 522D998A1FAD2A9C009BB1B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1312,48 +1312,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		520B5A7725B7B02F00110090 /* Carthage: Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-			);
-			name = "Carthage: Copy Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		520B5A7E25B7B0A100110090 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		522D99841FAD2A9C009BB1B9 /* Sources */ = {
@@ -1629,7 +1587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1686,10 +1644,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1710,8 +1669,12 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = Succinct/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.4.32;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1736,8 +1699,12 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = Succinct/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.4.32;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1754,12 +1721,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LFKG3J295;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuccinctTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1774,12 +1742,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LFKG3J295;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuccinctTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1797,7 +1766,10 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = SuccinctContainer/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.4.32;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1816,7 +1788,10 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = SuccinctContainer/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 0.4.32;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1834,13 +1809,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LFKG3J295;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuccinctContainerTests/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctContainerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1858,13 +1834,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LFKG3J295;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SuccinctContainerTests/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctContainerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1922,6 +1899,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9764B384272F620700B9FECC /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		9764B387272F622600B9FECC /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9764B385272F620700B9FECC /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9764B384272F620700B9FECC /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		9764B388272F622600B9FECC /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9764B387272F622600B9FECC /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		9764B38A272F62E300B9FECC /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9764B384272F620700B9FECC /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		9764B38C272F62E600B9FECC /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9764B387272F622600B9FECC /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 522D99801FAD2A9C009BB1B9 /* Project object */;
 }
