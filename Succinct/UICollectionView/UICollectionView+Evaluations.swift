@@ -1,3 +1,5 @@
+import UIKit
+
 extension UICollectionView {
     ///
     /// Searches through all cells of all sections within a UICollectionView for a cell that satisfies the passed in condition.

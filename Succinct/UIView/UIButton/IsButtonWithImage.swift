@@ -1,3 +1,5 @@
+import UIKit
+
 internal extension UIView {
     func isButton(withImage searchImage: UIImage) -> EvaluationResult {
         guard let button = self as? UIButton else {

@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIView {
     @objc public func hasStepper(currentCount: Int) -> Int {
         var thisLoopCount = currentCount

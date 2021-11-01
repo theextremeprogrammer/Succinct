@@ -1,3 +1,5 @@
+import UIKit
+
 // MARK: - Searching by exact text
 extension UIViewController {
     ///

@@ -1,3 +1,5 @@
+import UIKit
+
 extension UINavigationItem {
     internal func findBarButtonItem(matchingCondition searchCondition: (_ item: UIBarButtonItem) -> Bool) -> UIBarButtonItem? {
         if let leftBarButtonItems = leftBarButtonItems {

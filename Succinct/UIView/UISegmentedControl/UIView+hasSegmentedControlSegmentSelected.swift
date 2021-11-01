@@ -1,3 +1,5 @@
+import UIKit
+
 internal extension UIView {
     func isSegmentedControl() -> EvaluationResult {
         guard let _ = self as? UISegmentedControl else {

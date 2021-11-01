@@ -1,3 +1,5 @@
+import UIKit
+
 // MARK: - Has UILabels
 extension UIView {
     ///

@@ -1,3 +1,5 @@
+import UIKit
+
 internal extension UIView {
     func isLabel(withExactText searchText: String) -> EvaluationResult {
         if self.isUISegmentLabel() {

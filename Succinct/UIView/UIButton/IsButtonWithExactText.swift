@@ -1,3 +1,5 @@
+import UIKit
+
 internal extension UIView {
     func isButton(withExactText searchText: String) -> EvaluationResult {
         guard let button = self as? UIButton else {

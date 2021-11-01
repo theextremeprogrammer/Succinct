@@ -289,6 +289,7 @@
 		5B6AD15A4AC038FBB05E01FC /* DebugLogging+UIPickerViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIPickerViewSpec.swift"; sourceTree = "<group>"; };
 		5B6AD1B2557FA9D911BCD269 /* DebugLogging+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DebugLogging+UIButtonSpec.swift"; sourceTree = "<group>"; };
 		8F6F2D5C21EEF3DF0004BFA3 /* UIView+UIDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UIDatePickerView.swift"; sourceTree = "<group>"; };
+		9764B38E272F822500B9FECC /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
 		AE3CCDCA21F5742F00A3638D /* UIViewController+MKMapViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MKMapViewSpec.swift"; sourceTree = "<group>"; };
 		AE3CCDCD21F58A7400A3638D /* UIViewController+MKMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MKMapView.swift"; sourceTree = "<group>"; };
 		AE3CCDCF21F58BE400A3638D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -495,6 +496,7 @@
 				52C1E5152541BE4C00A207E8 /* .gitignore */,
 				525F5AA82407EECA0039F42A /* .travis.yml */,
 				52C1E5172541C3A900A207E8 /* Gemfile.lock */,
+				9764B38E272F822500B9FECC /* Package.swift */,
 				B8FE917E2120F5F30097274D /* README.md */,
 				52C1E5162541C3A800A207E8 /* Succinct.podspec */,
 			);

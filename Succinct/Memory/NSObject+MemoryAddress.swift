@@ -1,3 +1,5 @@
+import UIKit
+
 extension NSObject {
     internal var memoryAddress: String {
         get {

@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+#import <Foundation/NSObjCRuntime.h>
 
 //! Project version number for Succinct.
 FOUNDATION_EXPORT double SuccinctVersionNumber;

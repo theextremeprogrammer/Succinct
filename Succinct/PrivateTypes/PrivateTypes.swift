@@ -1,3 +1,5 @@
+import Foundation
+
 class PrivateTypes {
     private struct Constants {
         struct ClassName {

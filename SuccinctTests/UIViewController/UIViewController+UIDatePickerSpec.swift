@@ -1,3 +1,4 @@
+import UIKit
 import Quick
 import Nimble
 import Succinct

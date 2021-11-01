@@ -1,3 +1,5 @@
+import UIKit
+
 public protocol ViewHierarchyLogger {
     func logEnterParentView(_ view: UIView)
     func logExitParentView(_ view: UIView)

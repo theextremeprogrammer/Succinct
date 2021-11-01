@@ -1,3 +1,5 @@
+import UIKit
+
 // MARK: - Has UITextView
 extension UIViewController {
     ///
