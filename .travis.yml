@@ -1,8 +1,4 @@
 ---
-cache:
-  directories:
-    - ./Carthage
-
 matrix:
   include:
   - name: "Succinct Unit Tests"
@@ -12,8 +8,6 @@ matrix:
     xcode_project: Succinct.xcodeproj
     xcode_scheme: Succinct
     xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone 11
-    install:
-      - ./bin/carthageWrapper.sh bootstrap --platform iOS --cache-builds
 
   - name: "Succinct Simulator Tests"
     language: swift
@@ -22,8 +16,6 @@ matrix:
     xcode_project: Succinct.xcodeproj
     xcode_scheme: SuccinctContainer
     xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone 11
-    install:
-      - ./bin/carthageWrapper.sh bootstrap --platform iOS --cache-builds
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
