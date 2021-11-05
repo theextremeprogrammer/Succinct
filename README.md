@@ -1,5 +1,6 @@
 # Succinct (サシンクト)
 [![Build Status](https://travis-ci.org/derekleerock/Succinct.svg?branch=master)](https://travis-ci.org/derekleerock/Succinct)
+[![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swiftpackageregistry.com/derekleerock/Succinct)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Cocoapods Compatible](http://img.shields.io/cocoapods/v/Succinct.svg?style=flat)](https://cocoapods.org/pods/Succinct)
 [![GitHub tag](https://img.shields.io/github/tag/derekleerock/Succinct.svg)](https://GitHub.com/derekleerock/Succinct/tags/)
@@ -16,6 +17,11 @@ Use Succinct to unit test the behaviors of your iOS UI in a way that is de-coupl
 **IMPORTANT:_** _Succinct is a work in progress and does not support every single aspect of testing iOS view hierarchies just yet. Functionality in as it is needed. If there's something you'd like to see included please feel free to open an issue or make a PR._ 👍🏻
 
 # Installation
+
+## Swift Package Manager (SPM)
+
+In Xcode, select the `File -> Add Packages...` menu option and enter `https://github.com/derekleerock/Succinct` for the the repository URL. Select the desired Dependency Rule and Target then click "Add Package".
+
 
 ## Carthage
 
@@ -42,10 +48,6 @@ target 'MyAmazingApp' do
   end
 end
 ```
-
-## Swift Package Manager
-
-In Xcode, select the `File -> Add Packages...` menu option and enter `https://github.com/derekleerock/Succinct` for the the repository URL. Select the desired Dependency Rule and Target then click "Add Package"
 
 
 # Documentation
