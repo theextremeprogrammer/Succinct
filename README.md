@@ -1,5 +1,6 @@
 # Succinct (サシンクト)
 [![Build Status](https://travis-ci.org/derekleerock/Succinct.svg?branch=master)](https://travis-ci.org/derekleerock/Succinct)
+[![Swift Package Manager Compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat)](https://swiftpackageregistry.com/derekleerock/Succinct)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Cocoapods Compatible](http://img.shields.io/cocoapods/v/Succinct.svg?style=flat)](https://cocoapods.org/pods/Succinct)
 [![GitHub tag](https://img.shields.io/github/tag/derekleerock/Succinct.svg)](https://GitHub.com/derekleerock/Succinct/tags/)
