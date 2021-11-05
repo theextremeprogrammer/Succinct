@@ -18,6 +18,11 @@ Use Succinct to unit test the behaviors of your iOS UI in a way that is de-coupl
 
 # Installation
 
+## Swift Package Manager (SPM)
+
+In Xcode, select the `File -> Add Packages...` menu option and enter `https://github.com/derekleerock/Succinct` for the the repository URL. Select the desired Dependency Rule and Target then click "Add Package".
+
+
 ## Carthage
 
 Simply include Succinct in your Cartfile.private: 
@@ -43,10 +48,6 @@ target 'MyAmazingApp' do
   end
 end
 ```
-
-## Swift Package Manager
-
-In Xcode, select the `File -> Add Packages...` menu option and enter `https://github.com/derekleerock/Succinct` for the the repository URL. Select the desired Dependency Rule and Target then click "Add Package"
 
 
 # Documentation
