@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIViewController {
     internal func executeWithEnterAndExitDebugLog(closure: () -> UIView?) -> UIView? {
         let objectType = String(describing: type(of: self))

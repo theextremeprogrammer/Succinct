@@ -1,3 +1,5 @@
+import Foundation
+
 ///
 /// Object which allows access to cofigurable options within Succinct.
 ///

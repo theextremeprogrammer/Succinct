@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIViewController {
     @objc public func hasSegmentedControlSegmentSelected(withExactText searchText: String) -> Bool {
         return view.hasSegmentedControlSegmentSelected(withExactText: searchText)

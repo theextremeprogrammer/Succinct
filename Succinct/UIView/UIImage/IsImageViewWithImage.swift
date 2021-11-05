@@ -1,3 +1,5 @@
+import UIKit
+
 internal extension UIView {
     func isImageView(withImage searchImage: UIImage) -> EvaluationResult {
         guard let imageView = self as? UIImageView else {

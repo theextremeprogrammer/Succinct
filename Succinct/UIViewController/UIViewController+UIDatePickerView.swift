@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UIDatePicker object.

@@ -1,3 +1,5 @@
+import UIKit
+
 extension UITabBarController {
     ///
     /// Attempts to select a tab in a UITabBarController whose UITabBarItem `title` property matches the searchTitle text.

@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIView {
     @objc public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
         var viewsCounted = 0

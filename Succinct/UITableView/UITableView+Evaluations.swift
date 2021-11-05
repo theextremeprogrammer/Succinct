@@ -1,3 +1,5 @@
+import UIKit
+
 ///
 /// Definition for a closure that takes a UIView as an argument in order to evaluates it against some kind of condition. If a UIView object that satisfies this condition is found, then that UIView object is returned.
 ///

@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIBarButtonItem {
     ///
     /// Convenience property for accessing the `SystemItem` for this UIBarButtonItem, if one has been set.

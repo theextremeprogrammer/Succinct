@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIView {
     internal func findInSubviews(
         satisfyingCondition condition: SuccinctCondition,

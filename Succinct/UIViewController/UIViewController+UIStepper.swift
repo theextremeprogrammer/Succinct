@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIViewController {
     @objc public func hasStepper(expectedCount: Int = 1) -> Bool {
         let stepperCount = view.hasStepper(currentCount: 0)

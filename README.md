@@ -43,6 +43,11 @@ target 'MyAmazingApp' do
 end
 ```
 
+## Swift Package Manager
+
+In Xcode, select the `File -> Add Packages...` menu option and enter `https://github.com/derekleerock/Succinct` for the the repository URL. Select the desired Dependency Rule and Target then click "Add Package"
+
+
 # Documentation
 [ 📄 Documentation via GitHubPages](https://derekleerock.github.io/Succinct/)
 

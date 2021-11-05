@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for a UIImageView object whose image matches the provided search image.
