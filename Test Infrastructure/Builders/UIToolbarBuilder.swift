@@ -26,6 +26,26 @@ struct UIToolbarBuilder {
         return self
     }
 
+    func withBarButtonItem(
+        title: String,
+        targetAction: TargetAction
+    ) -> UIToolbarBuilder {
+        let barButtonItem = UIBarButtonItem(
+            title: title,
+            style: .plain,
+            target: self,
+            action: #selector(TargetAction.action(sender:))
+        )
+
+        if toolbar.items != nil {
+            toolbar.items?.append(barButtonItem)
+        } else {
+            toolbar.items = [barButtonItem]
+        }
+
+        return self
+    }
+
     func build() -> UIToolbar {
         return toolbar
     }

@@ -26,4 +26,26 @@ extension UIView {
 
         return nil
     }
+
+    // TODO: Documentation
+    @objc func findBarButtonItem(title searchTitle: String) -> UIBarButtonItem? {
+        for subview in subviews {
+            if let toolbar = subview as? UIToolbar {
+                for barButtonItem in toolbar.items ?? [] {
+                    if
+                        let barButtonItemTitle = barButtonItem.title,
+                        barButtonItemTitle == searchTitle
+                    {
+                        return barButtonItem
+                    }
+                }
+            }
+
+            if let barButtonItem = subview.findBarButtonItem(title: searchTitle) {
+                return barButtonItem
+            }
+        }
+
+        return nil
+    }
 }
