@@ -10,7 +10,7 @@ extension UIPickerView {
     ///
     /// - Parameter withExactText: Text to compare to the text value of each row for the specified column.
     ///
-    @objc public func selectRow(withExactText searchText: String) {
+    @objc internal func selectRow(withExactText searchText: String) {
         for componentIndex in 0..<numberOfComponents {
             selectRow(columnIndex: componentIndex, withExactText: searchText)
         }
@@ -26,7 +26,7 @@ extension UIPickerView {
     /// - Parameter columnIndex: Index of the column to search.
     /// - Parameter withExactText: Text to compare to the text value of each row for the specified column.
     ///
-    @objc public func selectRow(columnIndex: Int, withExactText searchText: String) {
+    @objc internal func selectRow(columnIndex: Int, withExactText searchText: String) {
         let numberOfRowsForColumn = numberOfRows(inComponent: columnIndex)
 
         for rowIndex in 0..<numberOfRowsForColumn {
@@ -48,7 +48,7 @@ extension UIPickerView {
     ///
     /// - Returns: A boolean value indicating if the specified search text was found or not.
     ///
-    @objc public func hasRow(withExactText searchText: String) -> Bool {
+    @objc internal func hasRow(withExactText searchText: String) -> Bool {
         for columnIndex in 0..<numberOfComponents {
             let numberOfRowsForColumn = numberOfRows(inComponent: columnIndex)
 
@@ -75,7 +75,7 @@ extension UIPickerView {
     ///
     /// - Returns: A boolean value indicating if the specified search text was found or not.
     ///
-    @objc public func hasSelectedRow(withExactText searchText: String) -> Bool {
+    @objc internal func hasSelectedRow(withExactText searchText: String) -> Bool {
         for columnIndex in 0..<numberOfComponents {
             let selectedRowForColumn = selectedRow(inComponent: columnIndex)
 

@@ -8,7 +8,7 @@ extension UIView {
     ///
     /// - Returns: An optional UIDatePicker, if one is found.
     ///
-    @objc public func findDatePickerView() -> UIDatePicker? {
+    @objc internal func findDatePickerView() -> UIDatePicker? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isDatePickerView() })
         ) as? UIDatePicker

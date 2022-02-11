@@ -10,7 +10,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the placeholder text of any UITextField objects that are found.
     /// - Returns: A boolean value indicating if a UITextField object was found or not.
     ///
-    @objc public func hasTextField(withExactPlaceholderText searchText: String) -> Bool {
+    @objc internal func hasTextField(withExactPlaceholderText searchText: String) -> Bool {
         return findTextField(withExactPlaceholderText: searchText).isNotNil()
     }
 
@@ -22,7 +22,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the placeholder text of any UITextField objects that are found.
     /// - Returns: A boolean value indicating if a UITextField object was found or not.
     ///
-    @objc public func hasTextField(containingPlaceholderText searchText: String) -> Bool {
+    @objc internal func hasTextField(containingPlaceholderText searchText: String) -> Bool {
         return findTextField(containingPlaceholderText: searchText).isNotNil()
     }
 
@@ -34,7 +34,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UITextField objects that are found.
     /// - Returns: A boolean value indicating if a UITextField object was found or not.
     ///
-    @objc public func hasTextField(withExactText searchText: String) -> Bool {
+    @objc internal func hasTextField(withExactText searchText: String) -> Bool {
         return findTextField(withExactText: searchText).isNotNil()
     }
 
@@ -46,7 +46,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UITextField objects that are found.
     /// - Returns: A boolean value indicating if a UITextField object was found or not.
     ///
-    @objc public func hasTextField(containingText searchText: String) -> Bool {
+    @objc internal func hasTextField(containingText searchText: String) -> Bool {
         return findTextField(containingText: searchText).isNotNil()
     }
 }
@@ -61,7 +61,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the placeholder text of any UITextField objects that are found.
     /// - Returns: An optional UITextField, if one is found.
     ///
-    @objc public func findTextField(withExactPlaceholderText searchText: String) -> UITextField? {
+    @objc internal func findTextField(withExactPlaceholderText searchText: String) -> UITextField? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isTextField(withExactPlaceholderText: searchText) })
         ) as? UITextField
@@ -75,7 +75,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the placeholder text of any UITextField objects that are found.
     /// - Returns: An optional UITextField, if one is found.
     ///
-    @objc public func findTextField(containingPlaceholderText searchText: String) -> UITextField? {
+    @objc internal func findTextField(containingPlaceholderText searchText: String) -> UITextField? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isTextField(containingPlaceholderText: searchText) })
         ) as? UITextField
@@ -89,7 +89,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UITextField objects that are found.
     /// - Returns: An optional UITextField, if one is found.
     ///
-    @objc public func findTextField(withExactText searchText: String) -> UITextField? {
+    @objc internal func findTextField(withExactText searchText: String) -> UITextField? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isTextField(withExactText: searchText) })
         ) as? UITextField
@@ -103,7 +103,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UITextField objects that are found.
     /// - Returns: An optional UITextField, if one is found.
     ///
-    @objc public func findTextField(containingText searchText: String) -> UITextField? {
+    @objc internal func findTextField(containingText searchText: String) -> UITextField? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isTextField(containingText: searchText) })
         ) as? UITextField

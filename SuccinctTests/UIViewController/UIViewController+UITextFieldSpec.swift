@@ -1,7 +1,7 @@
 import UIKit
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 
 final class UIViewController_UITextFieldSpec: QuickSpec {
     override func spec() {

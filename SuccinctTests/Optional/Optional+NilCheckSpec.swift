@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 
 final class Optional_NilCheckSpec: QuickSpec {
     override func spec() {

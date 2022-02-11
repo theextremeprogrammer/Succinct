@@ -4,7 +4,7 @@ extension Optional {
     ///
     /// - Returns: True if the optional is nil, false otherwise.
     ///
-    public func isNil() -> Bool {
+    internal func isNil() -> Bool {
         return self == nil
     }
 
@@ -13,7 +13,7 @@ extension Optional {
     ///
     /// - Returns: True if the optional is **not** nil, false otherwise.
     ///
-    public func isNotNil() -> Bool {
+    internal func isNotNil() -> Bool {
         return self != nil
     }
 }

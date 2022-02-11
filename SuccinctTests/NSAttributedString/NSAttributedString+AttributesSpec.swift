@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 
 final class NSAttributedString_AttributeSpec: QuickSpec {
     override func spec() {

@@ -7,7 +7,7 @@ extension UIView {
     /// - Parameter switchIsOn: Boolean value indicating if the UISwitch object is on or not.
     /// - Returns: The total number of matching UISwitch objects.
     ///
-    @objc public func countOfSwitches(switchIsOn: Bool) -> Int {
+    @objc internal func countOfSwitches(switchIsOn: Bool) -> Int {
         var switchesCounted = 0
         
         for subview in subviews {
@@ -30,7 +30,7 @@ extension UIView {
     /// - Parameter viewType: Type of class to compare to the containing UIView object(s).
     /// - Returns: An optional UISwitch, if one is found.
     ///
-    public func findSwitch<T>(containedInView viewType: T.Type) -> UISwitch? where T: UIView {
+    internal func findSwitch<T>(containedInView viewType: T.Type) -> UISwitch? where T: UIView {
         for subview in subviews {
             if subview.isKind(of: viewType) {
                 for subSubView in subview.subviews {
@@ -56,7 +56,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found within the same view as a UISwitch.
     /// - Returns: An optional UISwitch, if one is found.
     ///
-    @objc public func findSwitch(colocatedWithUILabelWithExactText searchText: String) -> UISwitch? {
+    @objc internal func findSwitch(colocatedWithUILabelWithExactText searchText: String) -> UISwitch? {
         var matchingLabelWasFoundAtThisLevel = false
 
         for subview in subviews {

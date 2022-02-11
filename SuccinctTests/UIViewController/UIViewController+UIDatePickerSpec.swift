@@ -1,7 +1,7 @@
 import UIKit
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 
 class UIViewControllerUIDatePickerViewSpec: QuickSpec {
     override func spec() {

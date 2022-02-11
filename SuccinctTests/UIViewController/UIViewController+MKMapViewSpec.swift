@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 import MapKit
 
 final class UIViewController_MKMapViewSpec: QuickSpec {

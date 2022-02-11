@@ -4,7 +4,7 @@ extension UIButton {
     ///
     /// Simulates tapping a UIButton control by sending the `.touchUpInside` event action.
     ///
-    @objc public func tapAndFireTargetEvent() {
+    @objc internal func tapAndFireTargetEvent() {
         sendActions(for: .touchUpInside)
     }
 }

@@ -1,7 +1,7 @@
 import UIKit
 
 extension NSAttributedString {
-    @objc public func containsExactString(_ searchString: String, withAttributes searchAttributes: [NSAttributedString.Key : Any]) -> Bool {
+    @objc internal func containsExactString(_ searchString: String, withAttributes searchAttributes: [NSAttributedString.Key : Any]) -> Bool {
         guard let matchingAttributes = findAttributeKeysMatching(searchAttributes, atSubstring: searchString) else {
             return false
         }

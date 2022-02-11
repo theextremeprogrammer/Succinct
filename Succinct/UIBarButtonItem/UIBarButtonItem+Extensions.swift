@@ -6,7 +6,7 @@ extension UIBarButtonItem {
     ///
     /// - Warning: This property is not exposed as a part of Apple's public API. While this can be accessed during testing, it is not recommended to access this in production code.
     ///
-    public var systemItem: SystemItem? {
+    internal var systemItem: SystemItem? {
         get {
             if let systemItemRawValue = value(forKey: "systemItem") as? Int {
                 return SystemItem(rawValue: systemItemRawValue)
@@ -19,7 +19,7 @@ extension UIBarButtonItem {
     ///
     /// Attempts to tap this UIBarButtonItem object by firing its associated target event, if one exists.
     ///
-    @objc public func tapAndFireTargetAction() {
+    @objc internal func tapAndFireTargetAction() {
         if let action = action,
             let target = target {
             _ = UIApplication.shared.sendAction(

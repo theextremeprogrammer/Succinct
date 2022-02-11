@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 
 class UIControl_ReadabilitySpec: QuickSpec {
     override func spec() {

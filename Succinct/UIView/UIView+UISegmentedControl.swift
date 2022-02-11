@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView {
-    @objc public func hasSegmentedControlSegmentSelected(withExactText searchText: String) -> Bool {
+    @objc internal func hasSegmentedControlSegmentSelected(withExactText searchText: String) -> Bool {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({
                 $0.isSegmentedControl(whereSelectedSegmentHasExactText: searchText)
@@ -10,7 +10,7 @@ extension UIView {
             .isNotNil()
     }
 
-    @objc public func selectSegment(withTitleText searchText: String) {
+    @objc internal func selectSegment(withTitleText searchText: String) {
         guard let segmentedControl = findInSubviews(
             satisfyingCondition: SuccinctCondition({
                 $0.isSegmentedControl()

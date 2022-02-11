@@ -2,7 +2,7 @@ import UIKit
 
 // MARK: - Finding UISliders
 extension UIView {
-    @objc public func findSlider(withValue searchValue: Float) -> UISlider? {
+    @objc internal func findSlider(withValue searchValue: Float) -> UISlider? {
         for subview in subviews {
             if let slider = subview as? UISlider {
                 if slider.value == searchValue {
@@ -21,7 +21,7 @@ extension UIView {
 
 // MARK: - Has UISliders
 extension UIView {
-    @objc public func hasSlider(withValue searchValue: Float) -> Bool {
+    @objc internal func hasSlider(withValue searchValue: Float) -> Bool {
         return findSlider(withValue: searchValue).isNotNil()
     }
 }

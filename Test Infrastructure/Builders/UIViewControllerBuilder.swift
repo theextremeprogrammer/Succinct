@@ -1,4 +1,5 @@
 import UIKit
+@testable import Succinct
 
 struct UIViewControllerBuilder {
     private var viewController: UIViewController

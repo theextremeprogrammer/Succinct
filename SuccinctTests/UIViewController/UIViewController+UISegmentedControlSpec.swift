@@ -1,7 +1,7 @@
 import UIKit
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 
 final class UIViewController_UISegmentedControlSpec: QuickSpec {
     override func spec() {

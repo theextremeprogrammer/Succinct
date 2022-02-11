@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import Succinct
+@testable import Succinct
 
 final class UINavigationController_UILabelSpec: QuickSpec {
     override func spec() {

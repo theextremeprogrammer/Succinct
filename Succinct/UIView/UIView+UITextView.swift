@@ -10,7 +10,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UITextView objects that are found.
     /// - Returns: A boolean value indicating if a UITextView object was found or not.
     ///
-    @objc public func hasTextView(withExactText searchText: String) -> Bool {
+    @objc internal func hasTextView(withExactText searchText: String) -> Bool {
         return findTextView(withExactText: searchText).isNotNil()
     }
 
@@ -23,7 +23,7 @@ extension UIView {
     /// - Parameter searchAttributes: Attributes to compare to the attributes of the text of any UITextView objects that are found.
     /// - Returns: A boolean value indicating if a UITextView object was found or not.
     ///
-    @objc public func hasTextView(
+    @objc internal func hasTextView(
         containingText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> Bool {
@@ -42,7 +42,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UITextView objects that are found.
     /// - Returns: A boolean value indicating if a UITextView object was found or not.
     ///
-    @objc public func hasTextView(containingText searchText: String) -> Bool {
+    @objc internal func hasTextView(containingText searchText: String) -> Bool {
         return findTextView(containingText: searchText).isNotNil()
     }
 }
@@ -57,7 +57,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UITextView objects that are found.
     /// - Returns: An optional UITextView, if one is found.
     ///
-    @objc public func findTextView(withExactText searchText: String) -> UITextView? {
+    @objc internal func findTextView(withExactText searchText: String) -> UITextView? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isTextView(withExactText: searchText) })
         ) as? UITextView
@@ -72,7 +72,7 @@ extension UIView {
     /// - Parameter searchAttributes: Attributes to compare to the attributes of the text of any UITextView objects that are found.
     /// - Returns: An optional UITextView, if one is found.
     ///
-    @objc public func findTextView(
+    @objc internal func findTextView(
         containingText searchText: String,
         matchingAttributes searchAttributes: [NSAttributedString.Key : Any]
     ) -> UITextView? {
@@ -91,7 +91,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UITextView objects that are found.
     /// - Returns: An optional UITextView, if one is found.
     ///
-    @objc public func findTextView(containingText searchText: String) -> UITextView? {
+    @objc internal func findTextView(containingText searchText: String) -> UITextView? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isTextView(containingText: searchText) })
         ) as? UITextView
