@@ -6,10 +6,12 @@ on:
   pull_request:
     branches: [ main ]
 
-jobs:
+jobs:    
   build:
     name: Succinct Tests
     runs-on: macos-latest
+    strategy:
+      max-parallel: 1
 
     steps:
       - name: Checkout
@@ -17,19 +19,21 @@ jobs:
 
       - name: Build
         run: |
-          xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone13,OS=latest" build-for-testing
+          xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" build-for-testing
 
       - name: Unit Tests
         run: |
-          xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone13,OS=latest" test-without-building
+          xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" test-without-building
 
       - name: Simulator Tests
         run: |
-          xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone13,OS=latest" test-without-building
+          xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" test-without-building
 
   codecov:
     name: Generate Code Coverage
     runs-on: macos-latest
+    strategy:
+      max-parallel: 1
     
     steps:  
       - name: Send Code Coverage Data to codecov
@@ -39,6 +43,8 @@ jobs:
   documentation:
     name: Generate & Deploy Documentation
     runs-on: macos-latest
+    strategy:
+      max-parallel: 1
     
     steps:
       - name: Checkout
