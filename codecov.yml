@@ -1,0 +1,4 @@
+ignore:
+  - "SuccinctTests"
+  - "SuccinctContainerTests"
+  - "Test Infrastructure"
