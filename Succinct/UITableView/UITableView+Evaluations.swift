@@ -6,7 +6,7 @@ import UIKit
 /// - Parameter viewToEvaluate: The UIView object to evaluate against a condition.
 /// - Returns: An optional UIView that matches the provided criteria, if one is found.
 ///
-public typealias UIViewEvaluator = (_ viewToEvaluate: UIView) -> UIView?
+internal typealias UIViewEvaluator = (_ viewToEvaluate: UIView) -> UIView?
 
 extension UITableView {
     ///

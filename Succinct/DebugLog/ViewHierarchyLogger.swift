@@ -1,6 +1,6 @@
 import UIKit
 
-public protocol ViewHierarchyLogger {
+internal protocol ViewHierarchyLogger {
     func logEnterParentView(_ view: UIView)
     func logExitParentView(_ view: UIView)
 
@@ -8,7 +8,7 @@ public protocol ViewHierarchyLogger {
     func logExitChildView(_ view: UIView)
 }
 
-public class DefaultViewHierarchyLogger {
+internal class DefaultViewHierarchyLogger {
     private var currentDepthLevel: Int
 
     public init() {
