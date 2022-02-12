@@ -17,15 +17,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Build
+      - name: Build Succinct
         run: |
           xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" build-for-testing
 
-      - name: Unit Tests
+      - name: Succinct Unit Tests
         run: |
           xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" test-without-building
 
-      - name: Simulator Tests
+      - name: Build SuccinctContainer
+        run: |
+          xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" build-for-testing
+
+      - name: SuccinctContainer Tests
         run: |
           xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" test-without-building
 
