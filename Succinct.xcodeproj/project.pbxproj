@@ -60,6 +60,7 @@
 		526DC801208475E4001314A7 /* UITableViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC800208475E4001314A7 /* UITableViewCellConfiguration.swift */; };
 		526DC8032084761C001314A7 /* IndexPathFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526DC8022084761C001314A7 /* IndexPathFixture.swift */; };
 		52970E5E20833AE200297EF9 /* UICollectionView+Evaluations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52970E5D20833AE200297EF9 /* UICollectionView+Evaluations.swift */; };
+		529A7D0127B773F500E9FCC3 /* UIView+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529A7D0027B773F500E9FCC3 /* UIView+UIImageView.swift */; };
 		52AAB3872072F4D10021BA62 /* UIView+UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */; };
 		52C2ECC0242AFE1400156481 /* UISegmentedControl+UISegmentLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2ECBF242AFE1400156481 /* UISegmentedControl+UISegmentLabel.swift */; };
 		52C2ECC4242B017200156481 /* PrivateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2ECC3242B017200156481 /* PrivateTypes.swift */; };
@@ -278,6 +279,7 @@
 		526DC800208475E4001314A7 /* UITableViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellConfiguration.swift; sourceTree = "<group>"; };
 		526DC8022084761C001314A7 /* IndexPathFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathFixture.swift; sourceTree = "<group>"; };
 		52970E5D20833AE200297EF9 /* UICollectionView+Evaluations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Evaluations.swift"; sourceTree = "<group>"; };
+		529A7D0027B773F500E9FCC3 /* UIView+UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UIImageView.swift"; sourceTree = "<group>"; };
 		52AAB3862072F4D10021BA62 /* UIView+UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UISegmentedControl.swift"; sourceTree = "<group>"; };
 		52C1E5032541B4EC00A207E8 /* generate_jazzy_docs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_jazzy_docs.sh; sourceTree = "<group>"; };
 		52C1E5042541B4EC00A207E8 /* sortXcodeProject */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = sortXcodeProject; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 			children = (
 				5228E41B22D2C54F005E8F56 /* IsImageViewWithImage.swift */,
 				3B14E55AB873302849E0ED80 /* UIView+UIImage.swift */,
+				529A7D0027B773F500E9FCC3 /* UIView+UIImageView.swift */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -1371,6 +1374,7 @@
 				B8D21E4421AC22200059333E /* UIView+UISwitch.swift in Sources */,
 				B1D05E612160B5170044D2AD /* UIView+UITextField.swift in Sources */,
 				B1FFB51C21CF52BE007AE34B /* UIView+UITextView.swift in Sources */,
+				529A7D0127B773F500E9FCC3 /* UIView+UIImageView.swift in Sources */,
 				B84DB1C521CB7E570041E9D2 /* UIViewController+Debugging.swift in Sources */,
 				AE3CCDCE21F58A7400A3638D /* UIViewController+MKMapView.swift in Sources */,
 				3B14EDC64BD0D4315A13C89C /* UIViewController+Testing.swift in Sources */,

@@ -1,6 +1,6 @@
 import MapKit
 
-// MARK: - Find MKMapView
+// MARK: - MKMapView
 extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for an MKMapView object.
@@ -9,7 +9,7 @@ extension UIView {
     ///
     /// - Returns: An optional MKMapView, if one is found.
     ///
-    @objc public func findMapView() -> MKMapView? {
+    @objc internal func findMapView() -> MKMapView? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isMapView() })
         ) as? MKMapView

@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - UIBarButtonItem
 extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for a UIToolbar which may contain a UIBarButtonItem whose `SystemItem` matches the searchSystemItem.
@@ -27,7 +28,14 @@ extension UIView {
         return nil
     }
 
-    // TODO: Documentation
+    ///
+    /// Searches the entire view hierarchy of the current view for a UIToolbar which may contain a UIBarButtonItem whose `title` matches the searchTitle.
+    ///
+    /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
+    ///
+    /// - Parameter searchTitle: Text to compare to the text of the title property for any UIBarButtonItem objects that are found.
+    /// - Returns: An optional UIBarButtonItem, if one is found.
+    ///
     @objc internal func findBarButtonItem(title searchTitle: String) -> UIBarButtonItem? {
         for subview in subviews {
             if let toolbar = subview as? UIToolbar {

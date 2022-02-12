@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - [UILabel] Checking for existence of a UILabel based on its text
+// MARK: - UILabel
 extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for a UILabel whose text matches the searchText exactly.
@@ -10,7 +10,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: A boolean value indicating if a UILabel object was found or not.
     ///
-    @objc public func hasLabel(withExactText searchText: String) -> Bool {
+    @objc internal func hasLabel(withExactText searchText: String) -> Bool {
         return findLabel(withExactText: searchText).isNotNil()
     }
 
@@ -22,13 +22,10 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: A boolean value indicating if a UILabel object was found or not.
     ///
-    @objc public func hasLabel(containingText searchText: String) -> Bool {
+    @objc internal func hasLabel(containingText searchText: String) -> Bool {
         return findLabel(containingText: searchText).isNotNil()
     }
-}
 
-// MARK: - [UILabel] Retrieving a specific UILabel based on its text
-extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for a UILabel whose text matches the searchText exactly.
     ///
@@ -37,7 +34,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: An optional UILabel, if one is found.
     ///
-    @objc public func findLabel(withExactText searchText: String) -> UILabel? {
+    @objc internal func findLabel(withExactText searchText: String) -> UILabel? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isLabel(withExactText: searchText) })
         ) as? UILabel
@@ -51,7 +48,7 @@ extension UIView {
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
     /// - Returns: An optional UILabel, if one is found.
     ///
-    @objc public func findLabel(containingText searchText: String) -> UILabel? {
+    @objc internal func findLabel(containingText searchText: String) -> UILabel? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isLabel(containingText: searchText) })
         ) as? UILabel
