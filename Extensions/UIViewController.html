@@ -17,7 +17,7 @@
     <a title="UIViewController Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Succinct 0.4.31 Docs</a> (80% documented)</p>
+        <p><a href="../index.html">Succinct 0.4.31 Docs</a> (82% documented)</p>
         <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
         <div class="header-right">
           <form role="search" action="../search.json">
@@ -228,7 +228,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the view controller&rsquo;s <code>navigationItem.leftBarButtonItems</code>, <code>navigationItem.rightBarButtonItems</code>, as well as the UIView hierarchy for a UIToolbar which may contain a UIBarButtonItem whose <code>SystemItem</code> matches the searchSystemItem.</p>
+
+<p>This method is convenient for de-coupling from the details of where a UIBarButtonItem object may be located.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -239,6 +246,29 @@
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasBarButtonItem</span><span class="p">(</span><span class="n">withSystemItem</span> <span class="nv">searchSystemItem</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="o">.</span><span class="kt">SystemItem</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchSystemItem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>UIBarButtonItem.SystemItem</code> to compare to the UIBarButtonItem objects that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UIBarButtonItem object was found or not.</p>
                       </div>
                     </section>
                   </div>
@@ -256,7 +286,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Searches the view controller&rsquo;s <code>navigationItem.leftBarButtonItems</code>, <code>navigationItem.rightBarButtonItems</code> which may contain a UIBarButtonItem whose <code>Title</code> matches the searchTitle.</p>
+
+<p>This method is convenient for de-coupling from the details of where a UIBarButtonItem object may be located.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Once an object is found matching the provided criteria the remainder of the view hierarchy is <strong>not</strong> searched.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -267,6 +304,29 @@
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasBarButtonItem</span><span class="p">(</span><span class="n">withTitle</span> <span class="nv">searchTitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchTitle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>String</code> to compare to the Title strings that are found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A boolean value indicating if a UIBarButtonItem object was found or not.</p>
                       </div>
                     </section>
                   </div>

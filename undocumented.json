@@ -36,20 +36,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
-      "line": 6,
-      "symbol": "UIViewController.hasBarButtonItem(withSystemItem:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
-      "line": 19,
-      "symbol": "UIViewController.hasBarButtonItem(withTitle:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
       "line": 5,
       "symbol": "UIViewController.hasSegmentedControlSegmentSelected(withExactText:)",
