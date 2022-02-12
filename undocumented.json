@@ -2,62 +2,6 @@
   "warnings": [
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
-      "line": 3,
-      "symbol": "ViewHierarchyLogger",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
-      "line": 4,
-      "symbol": "ViewHierarchyLogger.logEnterParentView(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
-      "line": 5,
-      "symbol": "ViewHierarchyLogger.logExitParentView(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
-      "line": 7,
-      "symbol": "ViewHierarchyLogger.logEnterChildView(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
-      "line": 8,
-      "symbol": "ViewHierarchyLogger.logExitChildView(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
-      "line": 11,
-      "symbol": "DefaultViewHierarchyLogger",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
-      "line": 14,
-      "symbol": "DefaultViewHierarchyLogger.init()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
-      "line": 19,
-      "symbol": "DefaultViewHierarchyLogger",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/DebugLog/ViewHierarchyLogger.swift",
       "line": 20,
       "symbol": "DefaultViewHierarchyLogger.logEnterParentView(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
