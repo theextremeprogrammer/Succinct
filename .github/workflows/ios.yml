@@ -10,8 +10,6 @@ jobs:
   build:
     name: Succinct Tests
     runs-on: macos-latest
-    strategy:
-      max-parallel: 1
 
     steps:
       - name: Checkout
@@ -33,27 +31,10 @@ jobs:
         run: |
           xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" test-without-building
 
-  codecov:
-    name: Generate Code Coverage
-    runs-on: macos-latest
-    strategy:
-      max-parallel: 1
-    
-    steps:  
       - name: Send Code Coverage Data to codecov
         run: |
           bash <(curl -s https://codecov.io/bash)
   
-  documentation:
-    name: Generate & Deploy Documentation
-    runs-on: macos-latest
-    strategy:
-      max-parallel: 1
-    
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
       - name: Build Documentation
         run: |
           bundle install
