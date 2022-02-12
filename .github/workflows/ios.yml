@@ -32,7 +32,7 @@ jobs:
           xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" test-without-building
 
       - name: Generate coverage report
-      - uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v2
         with:
           verbose: true
 
