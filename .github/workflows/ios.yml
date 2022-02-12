@@ -1,0 +1,56 @@
+name: iOS starter workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Succinct Tests
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone13,OS=latest" build-for-testing
+
+      - name: Unit Tests
+        run: |
+          xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone13,OS=latest" test-without-building
+
+      - name: Simulator Tests
+        run: |
+          xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone13,OS=latest" test-without-building
+
+  codecov:
+    name: Generate Code Coverage
+    runs-on: macos-latest
+    
+    steps:  
+      - name: Send Code Coverage Data to codecov
+        run: |
+          bash <(curl -s https://codecov.io/bash)
+  
+  documentation:
+    name: Generate & Deploy Documentation
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build Documentation
+        run: |
+          bundle install
+          make documentation
+      
+      - name: Deploy Documentation
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: docs
