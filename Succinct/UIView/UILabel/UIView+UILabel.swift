@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - Has UILabels
+// MARK: - [UILabel] Checking for existence of a UILabel based on its text
 extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for a UILabel whose text matches the searchText exactly.
@@ -8,7 +8,7 @@ extension UIView {
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
-    /// - Returns: A boolean value indicating if a label was found or not.
+    /// - Returns: A boolean value indicating if a UILabel object was found or not.
     ///
     @objc public func hasLabel(withExactText searchText: String) -> Bool {
         return findLabel(withExactText: searchText).isNotNil()
@@ -20,14 +20,14 @@ extension UIView {
     /// - Note: Once an object is found matching the provided criteria the remainder of the view hierarchy is **not** searched.
     ///
     /// - Parameter searchText: Text to compare to the text of any UILabel objects that are found.
-    /// - Returns: A boolean value indicating if a label was found or not.
+    /// - Returns: A boolean value indicating if a UILabel object was found or not.
     ///
     @objc public func hasLabel(containingText searchText: String) -> Bool {
         return findLabel(containingText: searchText).isNotNil()
     }
 }
 
-// MARK: - Finding UILabels
+// MARK: - [UILabel] Retrieving a specific UILabel based on its text
 extension UIView {
     ///
     /// Searches the entire view hierarchy of the current view for a UILabel whose text matches the searchText exactly.

@@ -1,7 +1,26 @@
 import UIKit
 
-// MARK: - Finding UISliders
+// MARK: - [UISlider] Checking for existence of a UISlider based on its value
 extension UIView {
+    ///
+    /// Searches the entire view hierarchy of the current view for a UISlider whose value matches the searchValue exactly.
+    ///
+    /// - Parameter searchValue: Float value to compare to the value of any UISlider objects that are found.
+    /// - Returns: A boolean value indicating if a UISlider object was found or not.
+    ///
+    @objc internal func hasSlider(withValue searchValue: Float) -> Bool {
+        return findSlider(withValue: searchValue).isNotNil()
+    }
+}
+
+// MARK: - [UISlider] Finding a UISlider based on its value
+extension UIView {
+    ///
+    /// Searches the entire view hierarchy of the current view for a UISlider whose value matches the searchValue exactly.
+    ///
+    /// - Parameter searchValue: Float value to compare to the value of any UISlider objects that are found.
+    /// - Returns: An optional UISlider, if one is found.
+    ///
     @objc internal func findSlider(withValue searchValue: Float) -> UISlider? {
         for subview in subviews {
             if let slider = subview as? UISlider {
@@ -19,15 +38,13 @@ extension UIView {
     }
 }
 
-// MARK: - Has UISliders
+// MARK: - [UISlider] Get the count of UISlider objects within the view
 extension UIView {
-    @objc internal func hasSlider(withValue searchValue: Float) -> Bool {
-        return findSlider(withValue: searchValue).isNotNil()
-    }
-}
-
-// MARK: - Slider Count
-extension UIView {
+    ///
+    /// Searches the entire view hierarchy of the current view for any UISlider objects.
+    ///
+    /// - Returns: The total count of UISlider objects found.
+    ///
     @objc public func sliderCount() -> Int {
         var sliderCount = 0
 
