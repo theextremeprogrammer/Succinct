@@ -1,0 +1,47 @@
+name: Unit Tests & Deploy Docs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:    
+  build:
+    name: Succinct Tests
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build Succinct
+        run: |
+          xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" build-for-testing
+
+      - name: Succinct Unit Tests
+        run: |
+          xcodebuild -project Succinct.xcodeproj -scheme "Succinct" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" test-without-building
+
+      - name: Build SuccinctContainer
+        run: |
+          xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" build-for-testing
+
+      - name: SuccinctContainer Tests
+        run: |
+          xcodebuild -project Succinct.xcodeproj -scheme "SuccinctContainer" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest" test-without-building
+
+      - name: Send Code Coverage Data to codecov
+        run: |
+          bash <(curl -s https://codecov.io/bash)
+  
+      - name: Build Documentation
+        run: |
+          bundle install
+          make documentation
+      
+      - name: Deploy Documentation
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: docs
