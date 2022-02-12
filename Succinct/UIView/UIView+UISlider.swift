@@ -39,7 +39,7 @@ extension UIView {
     ///
     /// - Returns: The total count of UISlider objects found.
     ///
-    @objc public func sliderCount() -> Int {
+    @objc internal func sliderCount() -> Int {
         var sliderCount = 0
 
         for subview in subviews {

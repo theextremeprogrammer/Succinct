@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - Has UITextView
+// MARK: - UITextView
 extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UITextView whose text matches the searchText exactly.
@@ -41,10 +41,7 @@ extension UIViewController {
     @objc public func hasTextView(containingText searchText: String) -> Bool {
         return view.hasTextView(containingText: searchText)
     }
-}
 
-// MARK: - Finding UITextView
-extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UITextView whose text matches the searchText exactly.
     ///

@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - Has UILabel
+// MARK: - UILabel
 extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UILabel whose text matches the searchText exactly.
@@ -61,10 +61,7 @@ extension UIViewController {
 
         return navigationController?.hasLabelInNavigationBar(containingText: searchText) ?? false
     }
-}
 
-// MARK: - Find UILabel
-extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UILabel whose text matches the searchText exactly.
     ///

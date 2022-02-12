@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView {
-    @objc public func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
+    @objc internal func countOfViews(withBackgroundColor searchColor: UIColor) -> Int {
         var viewsCounted = 0
 
         for subview in subviews {

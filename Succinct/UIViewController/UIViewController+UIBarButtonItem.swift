@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - UIBarButtonItem
 extension UIViewController {
     // TODO: Documentation
     @objc public func hasBarButtonItem(withSystemItem searchSystemItem: UIBarButtonItem.SystemItem) -> Bool {

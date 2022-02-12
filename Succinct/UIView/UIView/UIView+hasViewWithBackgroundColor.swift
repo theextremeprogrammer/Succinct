@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView {
-    @objc public func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
+    @objc internal func hasView(withBackgroundColor searchColor: UIColor) -> Bool {
         if backgroundColor == searchColor {
             return true
         }

@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - Searching by exact text
+// MARK: - UIButton
 extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UIButton whose title for `UIControl.State.normal` matches the searchText exactly.
@@ -39,10 +39,7 @@ extension UIViewController {
         view.findButton(withExactText: searchText)?
             .tapAndFireTargetEvent()
     }
-}
 
-// MARK: - Searching by image
-extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UIButton whose image for `UIControl.State.normal` matches the searchImage.
     ///
@@ -86,10 +83,7 @@ extension UIViewController {
         view.findButton(withImage: searchImage)?
             .tapAndFireTargetEvent()
     }
-}
 
-// MARK: - Searching by state
-extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for all UIButton objects whose state matches the indicated state.
     ///

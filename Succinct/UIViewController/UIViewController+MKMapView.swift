@@ -1,5 +1,6 @@
 import MapKit
 
+// MARK: - MKMapView
 extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for an MKMapView object.

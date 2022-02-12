@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - Has UITextField
+// MARK: - UITextField
 extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UITextField whose placeholder text matches the searchText exactly.
@@ -49,10 +49,7 @@ extension UIViewController {
     @objc public func hasTextField(containingText searchText: String) -> Bool {
         return view.hasTextField(containingText: searchText)
     }
-}
 
-// MARK: - Finding UITextField
-extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for a UITextField whose placeholder text matches the searchText exactly.
     ///

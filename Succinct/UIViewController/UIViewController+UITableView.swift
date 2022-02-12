@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - UITableView
 extension UIViewController {
     ///
     /// Searches the entire view hierarchy of a view controller's primary view for any UITableView objects to determine if there is a selected UITableViewCell within that UITableView.
