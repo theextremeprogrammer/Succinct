@@ -29,92 +29,78 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIView/UIView/UIView+countOfViewsWithBackgroundColor.swift",
-      "line": 4,
-      "symbol": "UIView.countOfViews(withBackgroundColor:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIView/UIView/UIView+hasViewWithBackgroundColor.swift",
-      "line": 4,
-      "symbol": "UIView.hasView(withBackgroundColor:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+Testing.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "UIViewController.loadViewControllerForUnitTest()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
-      "line": 5,
+      "line": 6,
       "symbol": "UIViewController.hasBarButtonItem(withSystemItem:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UIBarButtonItem.swift",
-      "line": 18,
+      "line": 19,
       "symbol": "UIViewController.hasBarButtonItem(withTitle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "UIViewController.hasSegmentedControlSegmentSelected(withExactText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UISegmentedControl.swift",
-      "line": 8,
+      "line": 9,
       "symbol": "UIViewController.selectSegment(withTitleText:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "UIViewController.hasSlider(withValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
-      "line": 8,
+      "line": 9,
       "symbol": "UIViewController.sliderCount()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UISlider.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "UIViewController.setValueOf(sliderWithValue:toValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "UIViewController.hasStepper(expectedCount:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
-      "line": 9,
+      "line": 10,
       "symbol": "UIViewController.adjustStepper(withTag:byValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+UIStepper.swift",
-      "line": 13,
+      "line": 14,
       "symbol": "UIViewController.containStepper(withTag:toHaveValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
