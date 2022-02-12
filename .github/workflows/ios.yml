@@ -1,4 +1,4 @@
-name: iOS starter workflow
+name: Unit Tests & Deploy Docs
 
 on:
   push:
