@@ -43,13 +43,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIView/UIView+UISlider.swift",
-      "line": 31,
-      "symbol": "UIView.sliderCount()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/runner/work/Succinct/Succinct/Succinct/UIViewController/UIViewController+Testing.swift",
       "line": 4,
       "symbol": "UIViewController.loadViewControllerForUnitTest()",
