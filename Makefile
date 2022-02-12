@@ -1,3 +1,5 @@
+.PHONY:	docs
+
 install-gems:
 	@/usr/bin/time sudo bundle update
 
@@ -14,7 +16,7 @@ units tests: sort unit-tests
 
 alltests: sort unit-tests simulator-tests
 
-documentation:
+docs:
 	@/usr/bin/time ./bin/generate_jazzy_docs.sh
 
 deploy-podspec:

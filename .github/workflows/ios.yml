@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 
-jobs:    
+jobs:
   build:
     name: Succinct Tests
     runs-on: macos-latest
@@ -34,12 +34,12 @@ jobs:
       - name: Send Code Coverage Data to codecov
         run: |
           bash <(curl -s https://codecov.io/bash)
-  
+
       - name: Build Documentation
         run: |
           bundle install
-          make documentation
-      
+          make docs
+
       - name: Deploy Documentation
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
