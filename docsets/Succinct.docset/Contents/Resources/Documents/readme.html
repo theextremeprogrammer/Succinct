@@ -16,19 +16,19 @@
     <a title="README  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Succinct 0.4.31 Docs</a> (75% documented)</p>
-        <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right">
+        <p><a href="index.html">Succinct 0.4.31 Docs</a> (73% documented)</p>
+        <p class="header-right"><a href="https://github.com/derekleerock/Succinct"><img src="img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html">Succinct Reference</a>
-        <img id="carat" src="img/carat.png" />
+        <img id="carat" src="img/carat.png" alt=""/>
         README  Reference
       </p>
     </div>
@@ -61,34 +61,10 @@
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/NSAttributedString.html">NSAttributedString</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Optional.html">Optional</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIBarButtonItem.html">UIBarButtonItem</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIButton.html">UIButton</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIControl.html">UIControl</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UIPickerView.html">UIPickerView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UISlider.html">UISlider</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Extensions/UISwitch.html">UISwitch</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/UITabBarController.html">UITabBarController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UITableView.html">UITableView</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/UIView.html">UIView</a>
@@ -123,6 +99,7 @@
             <h1 id='succinct-サシンクト' class='heading'>Succinct (サシンクト)</h1>
 
 <p><a href="https://travis-ci.org/derekleerock/Succinct"><img src="https://travis-ci.org/derekleerock/Succinct.svg?branch=master" alt="Build Status"></a>
+<a href="https://swiftpackageregistry.com/derekleerock/Succinct"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-4BC51D.svg?style=flat" alt="Swift Package Manager Compatible"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>
 <a href="https://cocoapods.org/pods/Succinct"><img src="http://img.shields.io/cocoapods/v/Succinct.svg?style=flat" alt="Cocoapods Compatible"></a>
 <a href="https://GitHub.com/derekleerock/Succinct/tags/"><img src="https://img.shields.io/github/tag/derekleerock/Succinct.svg" alt="GitHub tag"></a>
@@ -141,6 +118,9 @@
 
 <p><strong>IMPORTANT:_</strong> <em>Succinct is a work in progress and does not support every single aspect of testing iOS view hierarchies just yet. Functionality in as it is needed. If there&rsquo;s something you&rsquo;d like to see included please feel free to open an issue or make a PR.</em> 👍🏻</p>
 <h1 id='installation' class='heading'>Installation</h1>
+<h2 id='swift-package-manager-spm' class='heading'>Swift Package Manager (SPM)</h2>
+
+<p>In Xcode, select the <code>File -&gt; Add Packages...</code> menu option and enter <code>https://github.com/derekleerock/Succinct</code> for the the repository URL. Select the desired Dependency Rule and Target then click &ldquo;Add Package&rdquo;.</p>
 <h2 id='carthage' class='heading'>Carthage</h2>
 
 <p>Simply include Succinct in your Cartfile.private: </p>
@@ -171,9 +151,7 @@ end
 <p>Development for Succinct is done right here through <a href="https://github.com/derekleerock/Succinct/issues">GitHub Issues</a> so anyone can contribute and understand the current state of the framework. If there is functionality that you&rsquo;re looking for that is not included, please feel free to open an issue or make a PR with your suggested feature and tests so we can discuss.</p>
 <h2 id='setting-up-for-development' class='heading'>Setting up for development</h2>
 
-<p>Assuming you already have Carthage installed, you can easily fetch the necessary dependencies by executing:</p>
-
-<p><code>$ make bootstrap</code></p>
+<p>Succinct uses the Swift Package Manager integration in Xcode to install dependencies. Xcode will fetch these the first time you build and run the tests.</p>
 <h2 id='running-the-tests' class='heading'>Running the tests</h2>
 
 <p>All of Succinct&rsquo;s tests have been TDD&rsquo;d using Quick and Nimble - meaning that you can use Succinct with confidence that it will give you accurate results for the functionality that it provides. </p>
@@ -206,11 +184,10 @@ end
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external">Derek Lee</a>. All rights reserved. (Last updated: 2021-04-16)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://github.com/derekleerock" target="_blank" rel="external noopener">Derek Lee</a>. All rights reserved. (Last updated: 2022-02-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>
