@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/dereklee/Dropbox/ios-dev/GitProjects/Succinct -maxdepth 2 -type f -name README* -o -name Makefile -o -name .cursorrules -o -name CLAUDE.md -o -name .github)",
+      "Bash(xcodebuild -list)"
+    ]
+  }
+}
