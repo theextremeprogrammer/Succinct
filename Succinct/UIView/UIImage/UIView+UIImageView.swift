@@ -9,7 +9,7 @@ extension UIView {
     ///
     /// - Returns: A boolean value indicating if a UIImageView was found or not.
     ///
-    @objc internal func hasImageView(withImage searchImage: UIImage) -> Bool {
+    @objc public func hasImageView(withImage searchImage: UIImage) -> Bool {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isImageView(withImage: searchImage) })
         )
@@ -23,7 +23,7 @@ extension UIView {
     ///
     /// - Returns: An optional UIImageView, if one is found.
     ///
-    @objc internal func findImageView(withImage searchImage: UIImage) -> UIImageView? {
+    @objc public func findImageView(withImage searchImage: UIImage) -> UIImageView? {
         return findInSubviews(
             satisfyingCondition: SuccinctCondition({ $0.isImageView(withImage: searchImage) })
         ) as? UIImageView
