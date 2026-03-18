@@ -270,7 +270,6 @@
 		5235C2A4208F51AD00C0CEEA /* UnitTestUIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestUIPickerView.swift; sourceTree = "<group>"; };
 		52412BD922FC6843004CE5B3 /* UITableViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerBuilder.swift; sourceTree = "<group>"; };
 		524FF43F20B689B700CA71D4 /* UIImage+TestAssets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestAssets.swift"; sourceTree = "<group>"; };
-		525F5AA82407EECA0039F42A /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 		525FF7DE2032573C007AE6C8 /* UILabelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelBuilder.swift; sourceTree = "<group>"; };
 		525FF7EF20331DEE007AE6C8 /* Optional+NilCheckSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilCheckSpec.swift"; sourceTree = "<group>"; };
 		526DC7FA20846AB9001314A7 /* UITableViewConfigurationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewConfigurationSpec.swift; sourceTree = "<group>"; };
@@ -499,7 +498,6 @@
 				522D99961FAD2A9D009BB1B9 /* SuccinctTests */,
 				B88E39D321DDFE6C00A3B82B /* Test Infrastructure */,
 				52C1E5152541BE4C00A207E8 /* .gitignore */,
-				525F5AA82407EECA0039F42A /* .travis.yml */,
 				52C1E5172541C3A900A207E8 /* Gemfile.lock */,
 				9764B38E272F822500B9FECC /* Package.swift */,
 				B8FE917E2120F5F30097274D /* README.md */,
@@ -1684,7 +1682,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.36;
+				MARKETING_VERSION = 0.4.37;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1713,7 +1711,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.36;
+				MARKETING_VERSION = 0.4.37;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
