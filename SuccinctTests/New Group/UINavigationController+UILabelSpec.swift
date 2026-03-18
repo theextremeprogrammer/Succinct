@@ -7,20 +7,20 @@ final class UINavigationController_UILabelSpec: QuickSpec {
         describe("finding labels by exact text") {
             context("when a UILabel exists in the navigation controller") {
                 it("can find a label inside of the navigationItems titleView whose text matches exactly") {
-                    let viewController = UIViewControllerBuilder()
-                        .withNavigationController(
-                            UINavigationControllerBuilder()
-                                .withNavigationItemTitleView(
-                                    UIViewBuilder()
-                                        .withSubview(
-                                            UILabelBuilder()
-                                                .withTitleText("Login")
-                                                .build()
-                                        )
+                    let navController = UINavigationControllerBuilder()
+                        .withNavigationItemTitleView(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UILabelBuilder()
+                                        .withTitleText("Login")
                                         .build()
                                 )
                                 .build()
                         )
+                        .build()
+
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(navController)
                         .build()
 
 
@@ -100,20 +100,21 @@ final class UINavigationController_UILabelSpec: QuickSpec {
                 }
                 
                 it("can find a label inside of the navigationItems titleView whose text matches exactly") {
-                    let viewController = UIViewControllerBuilder()
-                        .withNavigationController(
-                            UINavigationControllerBuilder()
-                                .withNavigationItemTitleView(
-                                    UIViewBuilder()
-                                        .withSubview(
-                                            UILabelBuilder()
-                                                .withTitleText("Login")
-                                                .build()
-                                        )
+                    let navController = UINavigationControllerBuilder()
+                        .withNavigationItemTitleView(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UILabelBuilder()
+                                        .withTitleText("Login")
                                         .build()
                                 )
                                 .build()
                         )
+                        .build()
+
+
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(navController)
                         .build()
 
 
@@ -173,20 +174,20 @@ final class UINavigationController_UILabelSpec: QuickSpec {
         describe("finding labels by containing text") {
             context("when a UILabel exists in the navigation controller") {
                 it("can find a label inside of the navigationItems titleView whose text contains the search text") {
-                    let viewController = UIViewControllerBuilder()
-                        .withNavigationController(
-                            UINavigationControllerBuilder()
-                                .withNavigationItemTitleView(
-                                    UIViewBuilder()
-                                        .withSubview(
-                                            UILabelBuilder()
-                                                .withTitleText("Login")
-                                                .build()
-                                        )
+                    let navController = UINavigationControllerBuilder()
+                        .withNavigationItemTitleView(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UILabelBuilder()
+                                        .withTitleText("Login")
                                         .build()
                                 )
                                 .build()
                         )
+                        .build()
+
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(navController)
                         .build()
 
 
@@ -267,20 +268,19 @@ final class UINavigationController_UILabelSpec: QuickSpec {
                 }
                 
                 it("can find a label inside of the navigationItems titleView whose text contains the search text") {
-                    let viewController = UIViewControllerBuilder()
-                        .withNavigationController(
-                            UINavigationControllerBuilder()
-                                .withNavigationItemTitleView(
-                                    UIViewBuilder()
-                                        .withSubview(
-                                            UILabelBuilder()
-                                                .withTitleText("Login")
-                                                .build()
-                                        )
+                    let navController = UINavigationControllerBuilder()
+                        .withNavigationItemTitleView(
+                            UIViewBuilder()
+                                .withSubview(
+                                    UILabelBuilder()
+                                        .withTitleText("Login")
                                         .build()
                                 )
                                 .build()
                         )
+                        .build()
+                    let viewController = UIViewControllerBuilder()
+                        .withNavigationController(navController)
                         .build()
 
 
