@@ -14,15 +14,17 @@ extension UIView {
     ///
     @objc internal func countOfImages(_ searchImage: UIImage) -> Int {
         var imagesCounted = 0
-        
+
         for subview in subviews {
-            if let imageView = subview as? UIImageView,
-                
-                imageView.image == searchImage {
+            if
+                let imageView = subview as? UIImageView,
+                imageView.image == searchImage
+            {
+
                 imagesCounted += 1
                 
             } else if let collectionView = subview as? UICollectionView {
-                
+
                 let numberOfSections = collectionView.numberOfSections
                 for section in 0..<numberOfSections {
                     let numberOfItems = collectionView.numberOfItems(inSection: section)
@@ -36,7 +38,7 @@ extension UIView {
                 }
                 
             } else if let tableView = subview as? UITableView {
-                
+
                 for section in 0..<tableView.numberOfSections {
                     if let headerView = tableView.delegate?.tableView?(tableView, viewForHeaderInSection: section) {
                         imagesCounted += headerView.countOfImages(searchImage)
@@ -51,11 +53,13 @@ extension UIView {
                     }
                 }
 
+            } else {
+
+                imagesCounted += subview.countOfImages(searchImage)
+
             }
-            
-            imagesCounted += subview.countOfImages(searchImage)
         }
-        
+
         return imagesCounted
     }
 }
