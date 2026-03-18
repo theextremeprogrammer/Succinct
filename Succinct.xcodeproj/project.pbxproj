@@ -1684,7 +1684,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.32;
+				MARKETING_VERSION = 0.4.36;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1713,7 +1713,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.32;
+				MARKETING_VERSION = 0.4.36;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.Succinct;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1776,7 +1776,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.32;
+				MARKETING_VERSION = 0.4.33;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1798,7 +1798,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.4.32;
+				MARKETING_VERSION = 0.4.33;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunrisingappdev.SuccinctContainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
